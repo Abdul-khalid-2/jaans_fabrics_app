@@ -1,416 +1,442 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JaansFabrics.com | Luxury Fabrics Collection</title>
-    <!-- CSRF Token for Laravel -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+    <title>PAK-PINDI</title>
 
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="shortcut icon" href=" {{ asset('/backend/assets/images/favicon.ico') }}" />
+    <!-- Select2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 
-    <!-- Styles -->
     <style>
-        :root {
-            --primary-black: #121212;
-            --secondary-black: #1e1e1e;
-            --primary-gold: radial-gradient(circle at 30% 30%, #f7e486 0%, #e9d275 18%, #E6C35C 35%, #D4AF37 55%, #e7b836 72%, #daac2d 88%, #a58019 100%);
-            --primary-gold-solid: #D4AF37;
-            --light-gold: #F4E4A6;
-            --dark-gold: #8C6F1C;
-            --primary-white: #FFFFFF;
-            --off-white: #F8F8F8;
-            --light-gray: #E5E5E5;
-            --text-gray: #888888;
+        /* Select2 Global Styling */
+        .select_two_functionality+.select2-container {
+            width: 100% !important;
+            /* margin-bottom: 15px; */
         }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            color: var(--primary-black);
-            background-color: var(--primary-white);
-            overflow-x: hidden;
+        .select_two_functionality+.select2-container .select2-selection {
+            min-height: 45px;
+            border: 2px solid #ced4da;
+            border-radius: 10px;
+            padding: 8px 12px;
         }
 
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            font-family: 'Playfair Display', serif;
-            font-weight: 600;
+        .select_two_functionality+.select2-container--default .select2-selection--single .select2-selection__arrow {
+            height: 36px;
         }
 
-        /* Header Styles */
-        .navbar {
-            background-color: var(--primary-white);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-            padding: 1rem 0;
-            transition: all 0.3s ease;
+        /* Fix for modals */
+        .modal .select2-dropdown {
+            z-index: 1060 !important;
         }
 
-        .navbar-brand {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: var(--primary-black) !important;
+        /* Dark mode support */
+        [data-bs-theme="dark"] .select_two_functionality+.select2-container .select2-selection {
+            background-color: #212529;
+            border-color: #495057;
+            color: #f8f9fa;
         }
 
-        .navbar-brand span {
-            background: var(--primary-gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
 
-        .nav-link {
-            color: var(--primary-black) !important;
-            font-weight: 500;
-            margin: 0 0.5rem;
-            transition: color 0.3s;
-            position: relative;
-        }
 
-        .nav-link:hover {
-            color: var(--primary-black) !important;
-        }
 
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: 0;
+        /* loader style start  */
+
+        .advanced-loader {
+            position: fixed;
+            top: 0;
             left: 0;
-            background: var(--primary-gold);
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover:after {
             width: 100%;
+            height: 100%;
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        /* Product Card */
-        .product-card {
-            border-radius: 8px;
+        .loader-backdrop {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(3px);
+        }
+
+        .loader-content {
+            position: relative;
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            width: 300px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            z-index: 10000;
+        }
+
+        .spinner-container {
+            margin: 0 auto 20px;
+            width: 80px;
+            height: 80px;
+            position: relative;
+        }
+
+        .spinner {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .spinner-circle {
+            position: absolute;
+            border-radius: 50%;
+            border: 4px solid transparent;
+            animation: spin 1.5s linear infinite;
+        }
+
+        .spinner-circle-outer {
+            width: 100%;
+            height: 100%;
+            border-top-color: #3498db;
+            border-bottom-color: #3498db;
+        }
+
+        .spinner-circle-inner {
+            width: 70%;
+            height: 70%;
+            top: 15%;
+            left: 15%;
+            border-top-color: #e74c3c;
+            border-bottom-color: #e74c3c;
+            animation-direction: reverse;
+        }
+
+        .spinner-circle-single-1 {
+            width: 40%;
+            height: 40%;
+            top: 30%;
+            left: 30%;
+            border-top-color: #2ecc71;
+            animation-duration: 2s;
+        }
+
+        .spinner-circle-single-2 {
+            width: 20%;
+            height: 20%;
+            top: 40%;
+            left: 40%;
+            border-top-color: #f39c12;
+            animation-duration: 2.5s;
+        }
+
+        .loader-text {
+            margin-bottom: 15px;
+            font-size: 16px;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .progress-container {
+            width: 100%;
+            height: 6px;
+            background: #f0f0f0;
+            border-radius: 3px;
             overflow: hidden;
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-            transition: all 0.3s ease;
-            background-color: var(--primary-white);
-            position: relative;
-            border: 1px solid var(--light-gray);
         }
 
-        .product-card:hover {
-            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-            transform: translateY(-5px);
-            border-color: transparent;
-        }
-
-        .product-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background: var(--primary-gold);
-            color: var(--primary-black);
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 0.8rem;
-            font-weight: 700;
-            z-index: 2;
-            box-shadow: 0 4px 10px rgba(140, 111, 28, 0.3);
-        }
-
-        /* Footer */
-        .footer {
-            background-color: var(--primary-black);
-            color: var(--primary-white);
-            padding: 4rem 0 2rem;
-            margin-top: 4rem;
-            position: relative;
-        }
-
-        .footer:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--primary-gold);
-        }
-
-        .footer-title {
-            font-size: 1.5rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-white);
-        }
-
-        .footer-title span {
-            background: var(--primary-gold);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .footer-links {
-            list-style: none;
-            padding: 0;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.8rem;
-            position: relative;
-            padding-left: 0;
-            transition: padding-left 0.3s ease;
-        }
-
-        .footer-links li:hover {
-            padding-left: 10px;
-        }
-
-        .footer-links li:before {
-            content: '';
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
+        .progress-bar {
+            height: 100%;
             width: 0;
-            height: 2px;
-            background: var(--primary-gold);
+            background: linear-gradient(90deg, #3498db, #2ecc71);
             transition: width 0.3s ease;
         }
 
-        .footer-links li:hover:before {
-            width: 6px;
+        .progress-bar.error {
+            background: #e74c3c;
         }
 
-        .footer-links a {
-            color: var(--text-gray);
-            text-decoration: none;
-            transition: color 0.3s;
+        .error-icon {
+            font-size: 50px;
+            color: #e74c3c;
+            animation: bounce 0.5s;
         }
 
-        .footer-links a:hover {
-            color: var(--light-gold);
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
 
-        .social-icons {
-            display: flex;
-            margin-top: 1.5rem;
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
         }
 
-        .social-icon {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background-color: var(--secondary-black);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 10px;
-            color: var(--primary-white);
-            text-decoration: none;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .social-icon:before {
-            content: '';
-            position: absolute;
+        /* loader style end  */
+        #loading {
+            position: fixed;
             top: 0;
             left: 0;
-            right: 0;
-            bottom: 0;
-            background: var(--primary-gold);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.8);
+            z-index: 9999;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .social-icon:hover {
-            transform: translateY(-5px);
-        }
-
-        .social-icon:hover:before {
-            opacity: 1;
-        }
-
-        .social-icon i {
+        #loading-center-custom {
+            width: 100px;
+            height: 100px;
             position: relative;
-            z-index: 1;
         }
 
-        .copyright {
-            border-top: 1px solid var(--secondary-black);
-            padding-top: 2rem;
-            margin-top: 3rem;
+        /* Custom spinner styles */
+        .spinner-container {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .spinner {
+            position: relative;
+            width: 60px;
+            height: 60px;
+        }
+
+        .spinner-circle {
+            position: absolute;
+            border-radius: 50%;
+            border: 3px solid transparent;
+            animation: spin 1.5s linear infinite;
+        }
+
+        .spinner-circle-outer {
+            width: 100%;
+            height: 100%;
+            border-top-color: #3498db;
+            border-bottom-color: #3498db;
+        }
+
+        .spinner-circle-inner {
+            width: 70%;
+            height: 70%;
+            top: 15%;
+            left: 15%;
+            border-top-color: #e74c3c;
+            border-bottom-color: #e74c3c;
+            animation-direction: reverse;
+        }
+
+        .spinner-circle-single-1 {
+            width: 40%;
+            height: 40%;
+            top: 30%;
+            left: 30%;
+            border-top-color: #f1c40f;
+            animation-duration: 2s;
+        }
+
+        .spinner-circle-single-2 {
+            width: 25%;
+            height: 25%;
+            top: 37.5%;
+            left: 37.5%;
+            border-top-color: #2ecc71;
+            animation-duration: 2.5s;
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .loader-text {
             text-align: center;
-            color: var(--text-gray);
+            margin-top: 15px;
+            color: #333;
+            font-family: Arial, sans-serif;
         }
-
-        /* Buttons with Gold Gradient */
-        .btn-gold {
-            background: var(--primary-gold);
-            color: var(--primary-black);
-            font-weight: 600;
-            border: none;
-            padding: 0.8rem 2rem;
-            border-radius: 4px;
-            transition: all 0.3s ease;
-        }
-
-        .btn-gold:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(140, 111, 28, 0.3);
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: var(--off-white);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--primary-gold);
-            border-radius: 4px;
-        }
-
-        /* Add more styles as needed from your template */
     </style>
-
-    @yield('styles')
+    @stack('css')
 </head>
 
-<body>
-    <!-- Header/Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top">
-        <div class="container">
-            <a class="navbar-brand" href="{{ url('/') }}">
-                <img src="{{ asset('assets/images/Jaans_Fabrics_Logo_Print_Ready_page-0002.jpg') }}" alt="Jaans Fabrics Logo" height="50">
-                <span>Fabrics</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link {{ request()->is('/') ? 'active' : '' }}" href="{{ url('/') }}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Collections</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Masterpieces</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Luxury Fabrics</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Embroideries</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Fancy Collection</a>
-                    </li>
-                    @auth
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            {{ Auth::user()->name }}
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                            <li><a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li>
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
-                                    <button type="submit" class="dropdown-item">Logout</button>
-                                </form>
-                            </li>
-                        </ul>
-                    </li>
-                    @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('login') }}">Login</a>
-                    </li>
-                    @if (Route::has('register'))
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('register') }}">Register</a>
-                    </li>
-                    @endif
-                    @endauth
-                </ul>
+<body class="  ">
+    <!-- loader Start -->
+    <div id="loading">
+        <div id="loading-center-custom">
+            <div class="spinner-container">
+                <div class="spinner">
+                    <div class="spinner-circle spinner-circle-outer"></div>
+                    <div class="spinner-circle spinner-circle-inner"></div>
+                    <div class="spinner-circle spinner-circle-single-1"></div>
+                    <div class="spinner-circle spinner-circle-single-2"></div>
+                </div>
             </div>
+            {{-- <div class="loader-text">Loading...</div> --}}
         </div>
-    </nav>
+    </div>
+    <!-- loader END -->
+    <!-- Wrapper Start -->
+    <div class="wrapper">
 
-    <!-- Main Content -->
-    <main>
-        @yield('content')
-    </main>
+        {{-- sidebar code here start  --}}
+        @include('layouts.sidebar')
+        {{-- sidebar code here end  --}}
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h4 class="footer-title">Jaans<span>Fabrics</span></h4>
-                    <p>Providing premium quality fabrics and embroideries since 2010.</p>
-                    <div class="social-icons">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-pinterest-p"></i></a>
+        {{-- navigation code here start  --}}
+        @include('layouts.navigation')
+        {{-- navigation code here end  --}}
+
+
+
+
+        <div class="modal fade" id="new-order" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="popup text-left">
+                            <h4 class="mb-3">New Order</h4>
+                            <div class="content create-workform bg-body">
+                                <div class="pb-3">
+                                    <label class="mb-2">Email</label>
+                                    <input type="text" class="form-control" placeholder="Enter Name or Email">
+                                </div>
+                                <div class="col-lg-12 mt-4">
+                                    <div class="d-flex flex-wrap align-items-ceter justify-content-center">
+                                        <div class="btn btn-primary mr-4" data-dismiss="modal">Cancel</div>
+                                        <div class="btn btn-outline-primary" data-dismiss="modal">Create</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-6 mb-4">
-                    <h5 class="footer-title">Quick Links</h5>
-                    <ul class="footer-links">
-                        <li><a href="{{ url('/') }}">Home</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Collections</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-6 mb-4">
-                    <h5 class="footer-title">Categories</h5>
-                    <ul class="footer-links">
-                        <li><a href="#">Masterpieces</a></li>
-                        <li><a href="#">Luxury Fabrics</a></li>
-                        <li><a href="#">Embroideries</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 mb-4">
-                    <h5 class="footer-title">Contact Info</h5>
-                    <ul class="footer-links">
-                        <li><i class="fas fa-map-marker-alt me-2"></i> Main Street, Lahore, Pakistan</li>
-                        <li><i class="fas fa-phone me-2"></i> +92 300 1234567</li>
-                        <li><i class="fas fa-envelope me-2"></i> info@jaansfabrics.com</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; {{ date('Y') }} JaansFabrics.com. All Rights Reserved.</p>
             </div>
         </div>
-    </footer>
+        <div class="content-page">
 
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom Scripts -->
-    @yield('scripts')
+
+
+            {{ $slot }}
+
+
+
+
+        </div>
+    </div>
+
+    <script>
+        // Global variable to store progress interval
+        let progressInterval;
+
+        function showLoader(text = 'Loading...', showProgress = true) {
+            // Remove any existing loader first
+            $('.advanced-loader').remove();
+
+            const loaderHtml = `
+            <div class="advanced-loader">
+                <div class="loader-backdrop"></div>
+                <div class="loader-content">
+                    <div class="spinner-container">
+                        <div class="spinner">
+                            <div class="spinner-circle spinner-circle-outer"></div>
+                            <div class="spinner-circle spinner-circle-inner"></div>
+                            <div class="spinner-circle spinner-circle-single-1"></div>
+                            <div class="spinner-circle spinner-circle-single-2"></div>
+                        </div>
+                    </div>
+                    <div class="loader-text">${text}</div>
+                    <div class="progress-container" style="${showProgress ? '' : 'display: none;'}">
+                        <div class="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+        `;
+
+            $('body').append(loaderHtml);
+            $('.advanced-loader').fadeIn(200);
+
+            // Start progress bar animation if enabled
+            if (showProgress) {
+                const progressBar = $('.progress-bar');
+                let progress = 0;
+                progressBar.css('width', '0%');
+
+                // Clear any existing interval
+                if (progressInterval) {
+                    clearInterval(progressInterval);
+                }
+
+                progressInterval = setInterval(() => {
+                    progress += 5;
+                    progressBar.css('width', `${Math.min(progress, 90)}%`);
+                }, 200);
+            }
+        }
+
+        // Hide loader with optional completion progress
+        function hideLoader(completeProgress = true) {
+            if (completeProgress) {
+                // Complete the progress bar
+                $('.progress-bar').css('width', '100%');
+            }
+
+            // Clear the progress interval
+            if (progressInterval) {
+                clearInterval(progressInterval);
+            }
+
+            // Add slight delay for smooth transition
+            setTimeout(() => {
+                $('.advanced-loader').fadeOut(300, function() {
+                    $(this).remove();
+                });
+            }, 200);
+        }
+
+
+        // // Show loader with default text and progress bar
+        // showLoader(); 
+
+        // // Show loader with custom text and progress bar
+        // showLoader("Processing your request...");
+
+        // // Show loader without progress bar
+        // showLoader("Please wait...", false);
+
+        // // Hide loader (will complete progress bar)
+        // hideLoader();
+
+        // // Hide loader immediately without completing progress
+        // hideLoader(false);
+    </script>
+    @stack('js')
+
 </body>
 
 </html>

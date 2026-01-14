@@ -58,13 +58,28 @@
         body {
             background-color: #f5f7fb;
             color: #333;
+            overflow-x: hidden;
+        }
+
+        /* Preloader Styles */
+        #preloader {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: white;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
 
 <body>
     <!-- Preloader -->
-    <div id="preloader" style="position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: white; z-index: 9999; display: flex; align-items: center; justify-content: center;">
+    <div id="preloader">
         <div class="spinner-border text-primary" role="status">
             <span class="visually-hidden">Loading...</span>
         </div>
@@ -83,107 +98,108 @@
         </div>
 
         <div class="sidebar-content">
-            <!-- In your sidebar navigation, update the links: -->
+            <ul class="sidebar-menu">
+                <!-- Dashboard -->
+                <li class="menu-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
+                    <a href="{{ route('dashboard') }}">
+                        <i class="fas fa-home"></i>
+                        <span class="menu-text">Dashboard</span>
+                    </a>
+                </li>
 
-            <!-- Dashboard -->
-            <li class="menu-item {{ request()->routeIs('dashboard') ? 'active' : '' }}">
-                <a href="{{ route('dashboard') }}">
-                    <i class="fas fa-home"></i>
-                    <span class="menu-text">Dashboard</span>
-                </a>
-            </li>
+                <!-- Sales -->
+                <li class="menu-item {{ request()->is('dashboard/sales*') ? 'active' : '' }}">
+                    <a href="{{ route('sales.index') }}">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="menu-text">Sales</span>
+                    </a>
+                </li>
+                <li class="menu-item {{ request()->is('dashboard/pos*') ? 'active' : '' }}">
+                    <a href="{{ route('pos.index') }}">
+                        <i class="fas fa-cash-register"></i>
+                        <span class="menu-text">POS</span>
+                        <span class="badge bg-success ms-auto">Live</span>
+                    </a>
+                </li>
 
-            <!-- Sales -->
-            <li class="menu-item {{ request()->is('dashboard/sales*') || request()->is('dashboard/pos*') ? 'active' : '' }}">
-                <a href="{{ route('sales.index') }}">
-                    <i class="fas fa-shopping-cart"></i>
-                    <span class="menu-text">Sales</span>
-                </a>
-            </li>
-            <li class="menu-item {{ request()->is('dashboard/pos*') ? 'active' : '' }}">
-                <a href="{{ route('pos.index') }}">
-                    <i class="fas fa-cash-register"></i>
-                    <span class="menu-text">POS</span>
-                    <span class="badge bg-success ms-auto">Live</span>
-                </a>
-            </li>
+                <!-- Products -->
+                <li class="menu-item {{ request()->is('dashboard/products*') ? 'active' : '' }}">
+                    <a href="{{ route('products.index') }}">
+                        <i class="fas fa-box"></i>
+                        <span class="menu-text">Products</span>
+                    </a>
+                </li>
 
-            <!-- Products -->
-            <li class="menu-item {{ request()->is('dashboard/products*') || request()->is('dashboard/categories*') || request()->is('dashboard/brands*') ? 'active' : '' }}">
-                <a href="{{ route('products.index') }}">
-                    <i class="fas fa-box"></i>
-                    <span class="menu-text">Products</span>
-                </a>
-            </li>
+                <!-- Inventory -->
+                <li class="menu-item {{ request()->is('dashboard/inventory*') ? 'active' : '' }}">
+                    <a href="{{ route('inventory.index') }}">
+                        <i class="fas fa-warehouse"></i>
+                        <span class="menu-text">Inventory</span>
+                    </a>
+                </li>
 
-            <!-- Inventory -->
-            <li class="menu-item {{ request()->is('dashboard/inventory*') ? 'active' : '' }}">
-                <a href="{{ route('inventory.index') }}">
-                    <i class="fas fa-warehouse"></i>
-                    <span class="menu-text">Inventory</span>
-                </a>
-            </li>
+                <!-- Customers -->
+                <li class="menu-item {{ request()->is('dashboard/customers*') ? 'active' : '' }}">
+                    <a href="{{ route('customers.index') }}">
+                        <i class="fas fa-users"></i>
+                        <span class="menu-text">Customers</span>
+                    </a>
+                </li>
 
-            <!-- Customers -->
-            <li class="menu-item {{ request()->is('dashboard/customers*') ? 'active' : '' }}">
-                <a href="{{ route('customers.index') }}">
-                    <i class="fas fa-users"></i>
-                    <span class="menu-text">Customers</span>
-                </a>
-            </li>
+                <!-- Purchases -->
+                <li class="menu-item {{ request()->is('dashboard/purchases*') ? 'active' : '' }}">
+                    <a href="{{ route('purchases.index') }}">
+                        <i class="fas fa-truck"></i>
+                        <span class="menu-text">Purchases</span>
+                    </a>
+                </li>
 
-            <!-- Purchases -->
-            <li class="menu-item {{ request()->is('dashboard/purchases*') || request()->is('dashboard/suppliers*') ? 'active' : '' }}">
-                <a href="{{ route('purchases.index') }}">
-                    <i class="fas fa-truck"></i>
-                    <span class="menu-text">Purchases</span>
-                </a>
-            </li>
+                <!-- Staff -->
+                <li class="menu-item {{ request()->is('dashboard/staff*') ? 'active' : '' }}">
+                    <a href="{{ route('staff.index') }}">
+                        <i class="fas fa-user-tie"></i>
+                        <span class="menu-text">Staff</span>
+                    </a>
+                </li>
 
-            <!-- Staff -->
-            <li class="menu-item {{ request()->is('dashboard/staff*') || request()->is('dashboard/attendance*') || request()->is('dashboard/payroll*') ? 'active' : '' }}">
-                <a href="{{ route('staff.index') }}">
-                    <i class="fas fa-user-tie"></i>
-                    <span class="menu-text">Staff</span>
-                </a>
-            </li>
+                <!-- Accounts -->
+                <li class="menu-item {{ request()->is('dashboard/accounts*') ? 'active' : '' }}">
+                    <a href="{{ route('accounts.index') }}">
+                        <i class="fas fa-chart-pie"></i>
+                        <span class="menu-text">Accounts</span>
+                    </a>
+                </li>
 
-            <!-- Accounts -->
-            <li class="menu-item {{ request()->is('dashboard/accounts*') || request()->is('dashboard/expenses*') ? 'active' : '' }}">
-                <a href="{{ route('accounts.index') }}">
-                    <i class="fas fa-chart-pie"></i>
-                    <span class="menu-text">Accounts</span>
-                </a>
-            </li>
+                <!-- Reports -->
+                <li class="menu-item {{ request()->is('dashboard/reports*') ? 'active' : '' }}">
+                    <a href="{{ route('reports.sales') }}">
+                        <i class="fas fa-chart-bar"></i>
+                        <span class="menu-text">Reports</span>
+                    </a>
+                </li>
 
-            <!-- Reports -->
-            <li class="menu-item {{ request()->is('dashboard/reports*') ? 'active' : '' }}">
-                <a href="{{ route('reports.sales') }}">
-                    <i class="fas fa-chart-bar"></i>
-                    <span class="menu-text">Reports</span>
-                </a>
-            </li>
+                <!-- Branches -->
+                <li class="menu-item {{ request()->is('dashboard/branches*') ? 'active' : '' }}">
+                    <a href="{{ route('branches.index') }}">
+                        <i class="fas fa-code-branch"></i>
+                        <span class="menu-text">Branches</span>
+                    </a>
+                </li>
 
-            <!-- Branches -->
-            <li class="menu-item {{ request()->is('dashboard/branches*') ? 'active' : '' }}">
-                <a href="{{ route('branches.index') }}">
-                    <i class="fas fa-code-branch"></i>
-                    <span class="menu-text">Branches</span>
-                </a>
-            </li>
-
-            <!-- Settings -->
-            <li class="menu-item {{ request()->is('dashboard/settings*') ? 'active' : '' }}">
-                <a href="{{ route('settings.index') }}">
-                    <i class="fas fa-cog"></i>
-                    <span class="menu-text">Settings</span>
-                </a>
-            </li>
+                <!-- Settings -->
+                <li class="menu-item {{ request()->is('dashboard/settings*') ? 'active' : '' }}">
+                    <a href="{{ route('settings.index') }}">
+                        <i class="fas fa-cog"></i>
+                        <span class="menu-text">Settings</span>
+                    </a>
+                </li>
+            </ul>
         </div>
 
         <div class="sidebar-footer">
             <div class="user-info">
                 <div class="user-avatar">
+                    @auth
                     @if(Auth::user()->profile_image)
                     <img src="{{ asset('storage/' . Auth::user()->profile_image) }}" alt="{{ Auth::user()->name }}">
                     @else
@@ -191,10 +207,11 @@
                         {{ substr(Auth::user()->name, 0, 1) }}
                     </div>
                     @endif
+                    @endauth
                 </div>
                 <div class="user-details">
-                    <h6 class="user-name">{{ Auth::user()->name }}</h6>
-                    <span class="user-role text-muted">{{ Auth::user()->name }}</span>
+                    <h6 class="user-name">{{ Auth::user()->name ?? 'User' }}</h6>
+                    <span class="user-role text-muted">Admin</span>
                 </div>
                 <div class="user-actions">
                     <div class="dropdown">
@@ -276,7 +293,7 @@
                         <div class="dropdown-menu dropdown-menu-end shadow-lg" style="min-width: 320px;">
                             <div class="dropdown-header d-flex justify-content-between align-items-center">
                                 <h6 class="mb-0">Notifications</h6>
-                                <a href="{{ route('notifications.index') }}" class="small text-primary">View All</a>
+                                <a href="#" class="small text-primary">View All</a>
                             </div>
                             <div class="dropdown-divider"></div>
                             <div class="notification-list" style="max-height: 300px; overflow-y: auto;">
@@ -370,15 +387,47 @@
 
     <script>
         // Hide preloader
-        $(window).on('load', function() {
-            $('#preloader').fadeOut('slow');
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                document.getElementById('preloader').style.display = 'none';
+            }, 500);
         });
 
         // Initialize dashboard
         $(document).ready(function() {
-            // Sidebar toggle
-            $('#sidebarToggle, #sidebarToggleMobile').click(function() {
+            // Sidebar toggle for desktop
+            $('#sidebarToggle').click(function(e) {
+                e.preventDefault();
+                e.stopPropagation();
                 $('body').toggleClass('sidebar-collapsed');
+
+                // Toggle icon
+                const icon = $(this).find('i');
+                if ($('body').hasClass('sidebar-collapsed')) {
+                    icon.removeClass('fa-times').addClass('fa-bars');
+                } else {
+                    icon.removeClass('fa-bars').addClass('fa-times');
+                }
+
+                // Save state to localStorage
+                localStorage.setItem('sidebarCollapsed', $('body').hasClass('sidebar-collapsed'));
+            });
+
+            // Sidebar toggle for mobile
+            $('#sidebarToggleMobile').click(function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                $('body').toggleClass('sidebar-collapsed');
+
+                // Toggle icon on desktop toggle button
+                const icon = $('#sidebarToggle').find('i');
+                if ($('body').hasClass('sidebar-collapsed')) {
+                    icon.removeClass('fa-times').addClass('fa-bars');
+                } else {
+                    icon.removeClass('fa-bars').addClass('fa-times');
+                }
+
+                // Save state to localStorage
                 localStorage.setItem('sidebarCollapsed', $('body').hasClass('sidebar-collapsed'));
             });
 
@@ -404,15 +453,23 @@
             // Branch selector
             $('#branchSelector').change(function() {
                 const branchId = $(this).val();
+                toastr.info('Switching branch to ' + $(this).find('option:selected').text());
                 // In real app, make AJAX call to switch branch
-                toastr.info('Switching branch...');
             });
 
             // Update server time
             function updateServerTime() {
                 const now = new Date();
-                $('#serverTime').text(now.toLocaleString());
+                $('#serverTime').text(now.toLocaleString('en-US', {
+                    year: 'numeric',
+                    month: 'short',
+                    day: 'numeric',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit'
+                }));
             }
+            updateServerTime();
             setInterval(updateServerTime, 1000);
 
             // Initialize select2
@@ -428,26 +485,35 @@
                 "timeOut": "3000"
             };
 
-            // Load sidebar state
-            if (localStorage.getItem('sidebarCollapsed') === 'true') {
+            // Load sidebar state from localStorage
+            const sidebarCollapsed = localStorage.getItem('sidebarCollapsed') === 'true';
+            if (sidebarCollapsed) {
                 $('body').addClass('sidebar-collapsed');
+                $('#sidebarToggle i').removeClass('fa-times').addClass('fa-bars');
             }
 
-            // Auto-hide sidebar on mobile after click
-            $(window).resize(function() {
-                if ($(window).width() < 992) {
-                    $('body').removeClass('sidebar-collapsed');
-                }
-            });
-
-            // Close sidebar when clicking outside on mobile
+            // Auto-hide sidebar on mobile when clicking outside
             $(document).click(function(e) {
                 if ($(window).width() < 992) {
                     if (!$(e.target).closest('#sidebar').length &&
                         !$(e.target).closest('#sidebarToggleMobile').length &&
                         !$('body').hasClass('sidebar-collapsed')) {
                         $('body').addClass('sidebar-collapsed');
+                        $('#sidebarToggle i').removeClass('fa-times').addClass('fa-bars');
                     }
+                }
+            });
+
+            // Prevent sidebar toggle from closing when clicking inside sidebar
+            $('#sidebar').click(function(e) {
+                e.stopPropagation();
+            });
+
+            // Handle window resize
+            $(window).resize(function() {
+                if ($(window).width() >= 992) {
+                    // On desktop, remove mobile sidebar collapsed state
+                    $('body').removeClass('sidebar-collapsed');
                 }
             });
         });
