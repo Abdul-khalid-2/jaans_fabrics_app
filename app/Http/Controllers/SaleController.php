@@ -12,7 +12,7 @@ class SaleController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.sales.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class SaleController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.sales.create');
     }
 
     /**
@@ -34,17 +34,19 @@ class SaleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Sale $sale)
+    // public function show(Sale $sale)
+    public function show()
     {
-        //
+        return view('dashboard.sales.show');
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Sale $sale)
+    // public function edit(Sale $sale)
+    public function edit()
     {
-        //
+        return view('dashboard.sales.edit');
     }
 
     /**
