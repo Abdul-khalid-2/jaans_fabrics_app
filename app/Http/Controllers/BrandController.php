@@ -2,17 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Customer;
+use App\Models\Brand;
 use Illuminate\Http\Request;
 
-class CustomerController extends Controller
+class BrandController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('dashboard.customers.index');
+        //
     }
 
     /**
@@ -20,7 +20,7 @@ class CustomerController extends Controller
      */
     public function create()
     {
-        return view('dashboard.customers.create');
+        //
     }
 
     /**
@@ -34,23 +34,23 @@ class CustomerController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Customer $customer)
+    public function show(Brand $brand)
     {
-        return view('dashboard.customers.create');
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Customer $customer)
+    public function edit(Brand $brand)
     {
-        return view('dashboard.customers.edit');
+        //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Customer $customer)
+    public function update(Request $request, Brand $brand)
     {
         //
     }
@@ -58,7 +58,7 @@ class CustomerController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Customer $customer)
+    public function destroy(Brand $brand)
     {
         //
     }
