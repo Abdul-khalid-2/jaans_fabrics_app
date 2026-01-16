@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Brand;
 use Illuminate\Http\Request;
 
-class BrandController extends Controller
+class StockMovementController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        return view('dashboard.brands.index');
+        return view('dashboard.inventory.movements.index');
     }
 
     /**
@@ -20,7 +19,7 @@ class BrandController extends Controller
      */
     public function create()
     {
-        return view('dashboard.brands.create');
+        //
     }
 
     /**
@@ -34,25 +33,23 @@ class BrandController extends Controller
     /**
      * Display the specified resource.
      */
-    // public function show(Brand $brand)
-    public function show()
+    public function show(string $id)
     {
-        return view('dashboard.brands.show');
+        //
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    // public function edit(Brand $brand)
-    public function edit()
+    public function edit(string $id)
     {
-        return view('dashboard.brands.edit');
+        //
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, Brand $brand)
+    public function update(Request $request, string $id)
     {
         //
     }
@@ -60,7 +57,7 @@ class BrandController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Brand $brand)
+    public function destroy(string $id)
     {
         //
     }

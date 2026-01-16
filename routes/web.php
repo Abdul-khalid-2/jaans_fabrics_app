@@ -31,7 +31,12 @@ use App\Http\Controllers\ShopSettingsController;
 use App\Http\Controllers\TaxSettingsController;
 use App\Http\Controllers\UserManagementController;
 use App\Http\Controllers\BackupController;
-
+use App\Http\Controllers\CustomerReportController;
+use App\Http\Controllers\InventoryReportController;
+use App\Http\Controllers\PurchaseReceiveController;
+use App\Http\Controllers\SalesReportController;
+use App\Http\Controllers\StockAdjustmentController;
+use App\Http\Controllers\StockMovementController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -39,25 +44,101 @@ Route::get('/', function () {
 
 Route::get('/dashboard/analytics', [DashboardController::class, 'analytics'])->name('dashboard.analytics');
 
-Route::resource('products', ProductController::class);
-Route::resource('sales', SaleController::class);
-Route::resource('customers', CustomerController::class);
+Route::middleware(['auth'])->group(function () {
 
-// Categories Routes
-Route::resource('categories', CategoryController::class);
+    Route::resource('products', ProductController::class);
+    Route::resource('sales', SaleController::class);
+    Route::resource('customers', CustomerController::class);
+    Route::resource('categories', CategoryController::class);
+    Route::resource('brands', BrandController::class);
 
-// Brands Routes
-Route::resource('brands', BrandController::class);
+    // Inventory Routes
+    Route::prefix('inventory')->name('inventory.')->group(function () {
+        // Dashboard
+        Route::get('/', [InventoryController::class, 'index'])->name('index');
+        // Route::get('/{product}', [InventoryController::class, 'show'])->name('show');
+
+        // Stock Adjustments
+        Route::get('/adjustments', [StockAdjustmentController::class, 'index'])->name('adjustments.index');
+        Route::get('/adjustments/create', [StockAdjustmentController::class, 'create'])->name('adjustments.create');
+        Route::get('/adjustments/{adjustment}', [StockAdjustmentController::class, 'show'])->name('adjustments.show');
+        Route::get('/adjustments/{adjustment}/edit', [StockAdjustmentController::class, 'edit'])->name('adjustments.edit');
+
+
+        Route::get('/{product}', [InventoryController::class, 'show'])->name('show');
+        // Stock Movements
+        Route::prefix('movements')->name('movements.')->group(function () {
+            Route::get('/', [StockMovementController::class, 'index'])->name('index');
+        });
+    });
+
+
+    Route::resource('suppliers', SupplierController::class);
+
+    // Purchase Routes
+    Route::prefix('purchases')->name('purchases.')->group(function () {
+        Route::resource('/', PurchaseController::class);
+        // Route::get('/', [PurchaseController::class, 'index'])->name('index');
+        // Route::get('/create', [PurchaseController::class, 'create'])->name('create');
+        // Route::post('/', [PurchaseController::class, 'store'])->name('store');
+        // Route::get('/{purchase}', [PurchaseController::class, 'show'])->name('show');
+        // Route::get('/{purchase}/edit', [PurchaseController::class, 'edit'])->name('edit');
+        // Route::put('/{purchase}', [PurchaseController::class, 'update'])->name('update');
+        // Route::delete('/{purchase}', [PurchaseController::class, 'destroy'])->name('destroy');
+
+        // Purchase Receiving Routes
+        Route::prefix('{purchase}/receive')->name('receive.')->group(function () {
+            Route::get('/create', [PurchaseReceiveController::class, 'create'])->name('create');
+            Route::post('/', [PurchaseReceiveController::class, 'store'])->name('store');
+            Route::get('/{receive}', [PurchaseReceiveController::class, 'show'])->name('show');
+        });
+    });
+
+
+
+
+    // Dashboard Routes
+    Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard/charts/sales', [DashboardController::class, 'salesChart'])->name('dashboard.charts.sales');
+    Route::get('/dashboard/widgets/sales-summary', [DashboardController::class, 'salesSummaryWidget'])->name('dashboard.widgets.sales-summary');
+    Route::get('/dashboard/widgets/low-stock', [DashboardController::class, 'lowStockWidget'])->name('dashboard.widgets.low-stock');
+    Route::get('/dashboard/widgets/top-products', [DashboardController::class, 'topProductsWidget'])->name('dashboard.widgets.top-products');
+    Route::get('/dashboard/charts/inventory', [DashboardController::class, 'inventoryChart'])->name('dashboard.charts.inventory');
+
+    // Reports Routes
+    Route::prefix('reports')->name('reports.')->group(function () {
+        // Reports Dashboard
+        Route::get('/', [ReportController::class, 'index'])->name('index');
+
+        // Sales Reports
+        Route::prefix('sales')->name('sales.')->group(function () {
+            Route::get('/', [SalesReportController::class, 'index'])->name('index');
+            Route::get('/daily', [SalesReportController::class, 'daily'])->name('daily');
+            Route::get('/product', [SalesReportController::class, 'product'])->name('product');
+        });
+
+        // Inventory Reports
+        Route::prefix('inventory')->name('inventory.')->group(function () {
+            Route::get('/stock-levels', [InventoryReportController::class, 'stockLevels'])->name('stock-levels');
+            Route::get('/movements', [InventoryReportController::class, 'movements'])->name('movements');
+        });
+
+        // Customer Reports
+        Route::prefix('customers')->name('customers.')->group(function () {
+            Route::get('/sales', [CustomerReportController::class, 'sales'])->name('sales');
+            Route::get('/loyalty', [CustomerReportController::class, 'loyalty'])->name('loyalty');
+        });
+    });
+});
+// Route::prefix('purchases-receive/{purchase}/receive')->name('purchases.receive.')->group(function () {
+
+//         Route::get('/create', [PurchaseReceiveController::class, 'create'])->name('create');
+//         Route::post('/', [PurchaseReceiveController::class, 'store'])->name('store');
+//         Route::get('/{receive}', [PurchaseReceiveController::class, 'show'])->name('show');
+//     });
 
 // Collections Routes
 Route::resource('collections', CollectionController::class);
-
-// Inventory Routes
-Route::get('/inventory', [InventoryController::class, 'index'])->name('inventory.index');
-Route::get('/inventory/{product}/edit', [InventoryController::class, 'edit'])->name('inventory.edit');
-Route::put('/inventory/{product}', [InventoryController::class, 'update'])->name('inventory.update');
-Route::get('/inventory/low-stock', [InventoryController::class, 'lowStock'])->name('inventory.low-stock');
-Route::get('/inventory/stock-movements', [InventoryController::class, 'stockMovements'])->name('inventory.stock-movements');
 
 
 
@@ -70,20 +151,7 @@ Route::post('/pos/process-sale', [PosController::class, 'processSale'])->name('p
 Route::get('/pos/get-products', [PosController::class, 'getProducts'])->name('pos.get-products');
 Route::get('/pos/get-customers', [PosController::class, 'getCustomers'])->name('pos.get-customers');
 
-// Purchases Routes
-Route::prefix('purchases')->group(function () {
-    Route::get('/', [PurchaseController::class, 'index'])->name('purchases.index');
-    Route::get('/create', [PurchaseController::class, 'create'])->name('purchases.create');
-    Route::post('/', [PurchaseController::class, 'store'])->name('purchases.store');
-    Route::get('/{purchase}', [PurchaseController::class, 'show'])->name('purchases.show');
-    Route::get('/{purchase}/edit', [PurchaseController::class, 'edit'])->name('purchases.edit');
-    Route::put('/{purchase}', [PurchaseController::class, 'update'])->name('purchases.update');
-    Route::delete('/{purchase}', [PurchaseController::class, 'destroy'])->name('purchases.destroy');
-    Route::post('/{purchase}/receive', [PurchaseController::class, 'receive'])->name('purchases.receive');
-});
 
-// Suppliers Routes
-Route::resource('suppliers', SupplierController::class);
 
 // Customer Groups Routes
 Route::resource('customer-groups', CustomerGroupController::class);
