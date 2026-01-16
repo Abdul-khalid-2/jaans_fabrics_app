@@ -14,16 +14,19 @@
             padding: 20px;
             margin-bottom: 20px;
         }
+
         .amount-input-group {
             position: relative;
         }
+
         .amount-input-group .form-control {
             padding-left: 40px;
             font-size: 1.5rem;
             font-weight: 600;
         }
+
         .amount-input-group::before {
-            content: "₹";
+            content: "Rs";
             position: absolute;
             left: 15px;
             top: 50%;
@@ -32,12 +35,14 @@
             font-weight: 600;
             z-index: 5;
         }
+
         .form-section {
             background: #f8f9fa;
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
         }
+
         .form-section-title {
             font-weight: 600;
             color: #495057;
@@ -45,21 +50,25 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #dee2e6;
         }
+
         .account-balance {
             font-size: 0.9rem;
             color: #6c757d;
             margin-top: 5px;
         }
+
         .readonly-field {
             background-color: #f8f9fa;
             cursor: not-allowed;
         }
+
         .audit-trail {
             background: #e9ecef;
             border-radius: 8px;
             padding: 15px;
             margin-top: 20px;
         }
+
         .reversal-section {
             background: #fff3cd;
             border: 1px solid #ffeaa7;
@@ -109,7 +118,7 @@
                     <p class="mb-0 mt-2">Cash sale for clothing items - Invoice #INV-20240320-045</p>
                 </div>
                 <div class="text-right">
-                    <h2 class="mb-0">₹5,000</h2>
+                    <h2 class="mb-0">Rs5,000</h2>
                     <small>March 20, 2024 10:30 AM</small>
                 </div>
             </div>
@@ -133,54 +142,54 @@
                         <form id="transactionEditForm" action="{{ route('accounts.transactions.update', 1) }}" method="POST">
                             @csrf
                             @method('PUT')
-                            
+
                             <!-- Basic Information -->
                             <div class="form-section">
                                 <h6 class="form-section-title">Transaction Details</h6>
-                                
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Transaction Date <span class="text-danger">*</span></label>
-                                            <input type="text" class="form-control datepicker" 
-                                                   name="transaction_date" value="2024-03-20" required>
+                                            <input type="text" class="form-control datepicker"
+                                                name="transaction_date" value="2024-03-20" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Transaction Time</label>
-                                            <input type="time" class="form-control" 
-                                                   name="transaction_time" value="10:30">
+                                            <input type="time" class="form-control"
+                                                name="transaction_time" value="10:30">
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Description <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" name="description" 
-                                           value="Cash sale - Invoice #INV-20240320-045" required>
+                                    <input type="text" class="form-control" name="description"
+                                        value="Cash sale - Invoice #INV-20240320-045" required>
                                 </div>
-                                
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Amount <span class="text-danger">*</span></label>
                                             <div class="amount-input-group">
-                                                <input type="number" class="form-control" name="amount" 
-                                                       value="5000" step="0.01" min="0" required>
+                                                <input type="number" class="form-control" name="amount"
+                                                    value="5000" step="0.01" min="0" required>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Transaction Number</label>
-                                            <input type="text" class="form-control readonly-field" 
-                                                   value="TRX-20240320-001" readonly>
+                                            <input type="text" class="form-control readonly-field"
+                                                value="TRX-20240320-001" readonly>
                                             <small class="form-text text-muted">Transaction number cannot be changed</small>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Transaction Type</label>
                                     <select class="form-control" name="transaction_type" id="transactionType">
@@ -190,11 +199,11 @@
                                     </select>
                                 </div>
                             </div>
-                            
+
                             <!-- Account Information -->
                             <div class="form-section">
                                 <h6 class="form-section-title">Account Details</h6>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Account <span class="text-danger">*</span></label>
                                     <select class="form-control" name="account_id" required>
@@ -205,10 +214,10 @@
                                         <option value="4">Accounts Receivable (1101)</option>
                                     </select>
                                     <div class="account-balance">
-                                        Current Balance: ₹125,000 (debit)
+                                        Current Balance: Rs125,000 (debit)
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Branch</label>
                                     <select class="form-control" name="branch_id">
@@ -218,11 +227,11 @@
                                     </select>
                                 </div>
                             </div>
-                            
+
                             <!-- Reference Information -->
                             <div class="form-section">
                                 <h6 class="form-section-title">Reference Information</h6>
-                                
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -239,22 +248,22 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Reference ID</label>
-                                            <input type="text" class="form-control" name="reference_id" 
-                                                   value="INV-20240320-045">
+                                            <input type="text" class="form-control" name="reference_id"
+                                                value="INV-20240320-045">
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Reference Details</label>
                                     <textarea class="form-control" name="reference_details" rows="2">Cash sale for clothing items</textarea>
                                 </div>
                             </div>
-                            
+
                             <!-- Additional Information -->
                             <div class="form-section">
                                 <h6 class="form-section-title">Additional Information</h6>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Attachments</label>
                                     <div class="mb-2">
@@ -271,12 +280,12 @@
                                     </div>
                                     <small class="form-text text-muted">Upload additional supporting documents</small>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Internal Notes</label>
                                     <textarea class="form-control" name="notes" rows="3">Cash sale processed during morning shift</textarea>
                                 </div>
-                                
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -302,7 +311,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Audit Trail -->
                             <div class="audit-trail">
                                 <h6 class="mb-3">Audit Trail</h6>
@@ -321,11 +330,11 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Danger Zone -->
                             <div class="form-section border border-danger mt-4">
                                 <h6 class="form-section-title text-danger">Danger Zone</h6>
-                                
+
                                 <div class="alert alert-warning">
                                     <div class="d-flex align-items-center">
                                         <i class="las la-exclamation-triangle fa-2x mr-3"></i>
@@ -335,7 +344,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="row">
                                     <div class="col-md-4">
                                         <button type="button" class="btn btn-outline-warning btn-block" onclick="reverseTransaction()">
@@ -357,7 +366,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="d-flex justify-content-between mt-4">
                                 <button type="button" class="btn btn-outline-secondary" onclick="resetForm()">
                                     <i class="las la-redo mr-2"></i>Reset Changes
@@ -393,19 +402,19 @@
                         <i class="las la-exchange-alt fa-4x text-warning"></i>
                     </div>
                     <h5 class="text-center mb-3">Create Reversing Entry</h5>
-                    
+
                     <div class="alert alert-info">
                         <strong>Transaction Details:</strong><br>
-                        Amount: <strong>₹5,000</strong><br>
+                        Amount: <strong>Rs5,000</strong><br>
                         Account: <strong>Cash in Hand (1001)</strong><br>
                         Type: <strong>Debit</strong>
                     </div>
-                    
+
                     <div class="form-group">
                         <label>Reversal Date</label>
                         <input type="text" class="form-control datepicker" id="reversalDate" value="{{ date('Y-m-d') }}">
                     </div>
-                    
+
                     <div class="form-group">
                         <label>Reversal Reason</label>
                         <select class="form-control" id="reversalReason">
@@ -417,12 +426,12 @@
                             <option value="other">Other</option>
                         </select>
                     </div>
-                    
+
                     <div class="form-group">
                         <label>Additional Notes</label>
                         <textarea class="form-control" id="reversalNotes" rows="3" placeholder="Explain why this transaction is being reversed"></textarea>
                     </div>
-                    
+
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input" id="createReversalEntry" checked>
                         <label class="custom-control-label" for="createReversalEntry">
@@ -456,11 +465,11 @@
                         <i class="las la-trash fa-4x text-danger"></i>
                     </div>
                     <h5 class="text-center mb-3">Are you sure you want to delete this transaction?</h5>
-                    
+
                     <div class="alert alert-danger">
                         <strong>Warning:</strong> This action cannot be undone. The transaction will be permanently deleted from the system.
                     </div>
-                    
+
                     <div class="form-group">
                         <label>Please type "DELETE" to confirm:</label>
                         <input type="text" class="form-control" id="deleteConfirmation" placeholder="Type DELETE here">
@@ -479,13 +488,13 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- Flatpickr -->
     <script src="{{ asset('backend/assets/vendor/flatpickr/dist/flatpickr.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Initialize datepicker
@@ -493,78 +502,78 @@
                 dateFormat: "Y-m-d",
                 defaultDate: "today"
             });
-            
+
             // Initialize reversal datepicker
             flatpickr("#reversalDate", {
                 dateFormat: "Y-m-d",
                 defaultDate: "today"
             });
-            
+
             // File input label
             $('.custom-file-input').on('change', function() {
                 let fileName = $(this).val().split('\\').pop();
                 $(this).next('.custom-file-label').addClass("selected").html(fileName);
             });
-            
+
             // Form submission
             $('#transactionEditForm').submit(function(e) {
                 e.preventDefault();
-                
+
                 // Validation
                 const description = $('input[name="description"]').val().trim();
                 const amount = $('input[name="amount"]').val();
                 const accountId = $('select[name="account_id"]').val();
-                
-                if(!description) {
+
+                if (!description) {
                     alert('Please enter transaction description');
                     $('input[name="description"]').focus();
                     return false;
                 }
-                
-                if(!amount || parseFloat(amount) <= 0) {
+
+                if (!amount || parseFloat(amount) <= 0) {
                     alert('Please enter a valid amount');
                     $('input[name="amount"]').focus();
                     return false;
                 }
-                
-                if(!accountId) {
+
+                if (!accountId) {
                     alert('Please select an account');
                     $('select[name="account_id"]').focus();
                     return false;
                 }
-                
+
                 // Show loading
                 $('button[type="submit"]').prop('disabled', true).html('<i class="las la-spinner la-spin mr-2"></i>Saving...');
-                
+
                 // Collect form data
                 const formData = new FormData(this);
-                
+
                 // Simulate API call
                 setTimeout(() => {
                     console.log('Form data:', Object.fromEntries(formData));
                     alert('Transaction updated successfully!');
                     window.location.href = "{{ route('accounts.transactions.show', 1) }}";
                 }, 1500);
-                
+
                 return false;
             });
-            
+
             // Delete confirmation input
             $('#deleteConfirmation').on('input', function() {
                 const confirmBtn = $('#confirmDeleteBtn');
-                if($(this).val().toUpperCase() === 'DELETE') {
+                if ($(this).val().toUpperCase() === 'DELETE') {
                     confirmBtn.prop('disabled', false);
                 } else {
                     confirmBtn.prop('disabled', true);
                 }
             });
-            
+
             // Confirm delete
             $('#confirmDeleteBtn').click(function() {
-                if($('#deleteConfirmation').val().toUpperCase() === 'DELETE') {
+                if ($('#deleteConfirmation').val().toUpperCase() === 'DELETE') {
                     // Show loading
                     $(this).prop('disabled', true).html('<i class="las la-spinner la-spin mr-2"></i>Deleting...');
-                    
+
                     // Simulate delete API call
                     setTimeout(() => {
                         alert('Transaction deleted successfully!');
@@ -573,28 +582,28 @@
                 }
             });
         });
-        
+
         // Reverse transaction
         window.reverseTransaction = function() {
             $('#reverseModal').modal('show');
         };
-        
+
         // Confirm reversal
         window.confirmReversal = function() {
             const reversalDate = $('#reversalDate').val();
             const reversalReason = $('#reversalReason').val();
             const reversalNotes = $('#reversalNotes').val();
             const createEntry = $('#createReversalEntry').prop('checked');
-            
-            if(!reversalReason) {
+
+            if (!reversalReason) {
                 alert('Please select a reversal reason');
                 return;
             }
-            
-            if(confirm(`Create ${createEntry ? 'reversal transaction' : 'reversal entry'} for this transaction?`)) {
+
+            if (confirm(`Create ${createEntry ? 'reversal transaction' : 'reversal entry'} for this transaction?`)) {
                 // Show loading
                 $('#reverseModal').modal('hide');
-                
+
                 // Simulate reversal API call
                 setTimeout(() => {
                     alert('Transaction reversal created successfully!');
@@ -603,23 +612,23 @@
                 }, 1500);
             }
         };
-        
+
         // Duplicate transaction
         window.duplicateTransaction = function() {
-            if(confirm('Create a duplicate of this transaction?')) {
+            if (confirm('Create a duplicate of this transaction?')) {
                 // In real app: API call to duplicate
                 window.location.href = "{{ route('accounts.transactions.create') }}?duplicate=1";
             }
         };
-        
+
         // Delete transaction
         window.deleteTransaction = function() {
             $('#deleteModal').modal('show');
         };
-        
+
         // Reset form to original values
         window.resetForm = function() {
-            if(confirm('Are you sure you want to reset all changes?')) {
+            if (confirm('Are you sure you want to reset all changes?')) {
                 // In real app, this would reset form to original values
                 $('#transactionEditForm')[0].reset();
                 $('select[name="account_id"]').val('1');
@@ -628,20 +637,32 @@
                 alert('Form reset to original values');
             }
         };
-        
+
         // Update account balance
         window.updateAccountBalance = function(accountId) {
             const accountBalances = {
-                '1': { balance: 125000, type: 'debit' },
-                '2': { balance: 850000, type: 'debit' },
-                '3': { balance: 250000, type: 'debit' },
-                '4': { balance: 150000, type: 'debit' }
+                '1': {
+                    balance: 125000,
+                    type: 'debit'
+                },
+                '2': {
+                    balance: 850000,
+                    type: 'debit'
+                },
+                '3': {
+                    balance: 250000,
+                    type: 'debit'
+                },
+                '4': {
+                    balance: 150000,
+                    type: 'debit'
+                }
             };
-            
+
             const info = $('.account-balance');
-            if(accountId && accountBalances[accountId]) {
+            if (accountId && accountBalances[accountId]) {
                 const acc = accountBalances[accountId];
-                info.text(`Current Balance: ₹${acc.balance.toLocaleString()} (${acc.type} balance)`);
+                info.text(`Current Balance: Rs${acc.balance.toLocaleString()} (${acc.type} balance)`);
             } else {
                 info.text('Select an account to view balance');
             }

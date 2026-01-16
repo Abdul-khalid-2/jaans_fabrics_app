@@ -59,21 +59,21 @@
                             <div class="col-md-4 col-6 mb-3">
                                 <div class="border rounded p-3">
                                     <div class="text-muted">Monthly Revenue</div>
-                                    <div class="h4 font-weight-bold">₹ 245,680</div>
+                                    <div class="h4 font-weight-bold">Rs245,680</div>
                                     <small class="text-success"><i class="las la-arrow-up"></i> 15.2% growth</small>
                                 </div>
                             </div>
                             <div class="col-md-4 col-6 mb-3">
                                 <div class="border rounded p-3">
                                     <div class="text-muted">Monthly Expenses</div>
-                                    <div class="h4 font-weight-bold">₹ 85,420</div>
+                                    <div class="h4 font-weight-bold">Rs85,420</div>
                                     <small class="text-warning"><i class="las la-chart-pie"></i> 34.8% of revenue</small>
                                 </div>
                             </div>
                             <div class="col-md-4 col-6 mb-3">
                                 <div class="border rounded p-3">
                                     <div class="text-muted">Net Profit</div>
-                                    <div class="h4 font-weight-bold">₹ 160,260</div>
+                                    <div class="h4 font-weight-bold">Rs160,260</div>
                                     <small class="text-success"><i class="las la-percentage"></i> 65.2% margin</small>
                                 </div>
                             </div>

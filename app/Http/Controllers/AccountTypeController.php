@@ -11,7 +11,7 @@ class AccountTypeController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.accounts.types.index');
     }
 
     /**

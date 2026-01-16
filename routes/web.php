@@ -144,7 +144,9 @@ Route::middleware(['auth'])->group(function () {
     // Accounts Routes
     Route::prefix('accounts')->name('accounts.')->group(function () {
         // Chart of Accounts
-        Route::resource('/', AccountController::class);
+        Route::resource('accounts', AccountController::class)->parameters([
+            'accounts' => 'account'
+        ])->except(['show']); // Remove 'show' if you don't need it
 
         // Account Types
         Route::prefix('types')->name('types.')->group(function () {
@@ -152,7 +154,7 @@ Route::middleware(['auth'])->group(function () {
         });
 
         // Transactions
-        Route::prefix('transactions')->name('transactions.')->group(function () {
+        Route::name('transactions.')->group(function () {
             Route::resource('transactions/', TransactionController::class);
         });
 

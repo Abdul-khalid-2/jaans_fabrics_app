@@ -14,87 +14,108 @@
             padding: 20px;
             margin-bottom: 20px;
         }
+
         .aging-bucket {
             text-align: center;
             padding: 15px;
             border-radius: 8px;
             margin-bottom: 15px;
         }
+
         .current {
             background: #d4edda;
             border-left: 4px solid #28a745;
         }
+
         .days30 {
             background: #fff3cd;
             border-left: 4px solid #ffc107;
         }
+
         .days60 {
             background: #f8d7da;
             border-left: 4px solid #dc3545;
         }
+
         .days90 {
             background: #d1ecf1;
             border-left: 4px solid #17a2b8;
         }
+
         .over90 {
             background: #e2e3e5;
             border-left: 4px solid #6c757d;
         }
+
         .supplier-row {
             padding: 10px 15px;
             border-bottom: 1px solid #e9ecef;
             transition: all 0.3s;
         }
+
         .supplier-row:hover {
             background-color: #f8f9fa;
         }
+
         .invoice-item {
             padding-left: 30px;
             font-size: 0.9rem;
         }
+
         .invoice-date {
             width: 100px;
         }
+
         .invoice-amount {
             width: 120px;
             text-align: right;
         }
+
         .invoice-age {
             width: 80px;
             text-align: center;
         }
+
         .invoice-status {
             width: 100px;
         }
+
         .age-badge {
             font-size: 0.8rem;
             padding: 3px 8px;
             border-radius: 10px;
         }
+
         .age-current {
             background: #d4edda;
             color: #155724;
         }
+
         .age-warning {
             background: #fff3cd;
             color: #856404;
         }
+
         .age-danger {
             background: #f8d7da;
             color: #721c24;
         }
+
         .action-buttons {
             width: 150px;
         }
+
         .total-row {
             background: #e9ecef;
             font-weight: 600;
             padding: 15px;
             font-size: 1.1rem;
         }
+
         .payment-priority {
             width: 120px;
         }
+
         .priority-high {
             background: #f8d7da;
             color: #721c24;
@@ -102,6 +123,7 @@
             border-radius: 4px;
             font-size: 0.8rem;
         }
+
         .priority-medium {
             background: #fff3cd;
             color: #856404;
@@ -109,6 +131,7 @@
             border-radius: 4px;
             font-size: 0.8rem;
         }
+
         .priority-low {
             background: #d4edda;
             color: #155724;
@@ -152,7 +175,7 @@
         <div class="aging-header">
             <div class="row align-items-center">
                 <div class="col-md-8">
-                    <h2 class="mb-2">Total Payables: ₹650,000</h2>
+                    <h2 class="mb-2">Total Payables: Rs650,000</h2>
                     <div class="d-flex">
                         <div class="mr-4">
                             <small class="d-block">Active Suppliers</small>
@@ -185,42 +208,42 @@
             <div class="col-xl-2 col-md-4 col-sm-6">
                 <div class="aging-bucket current">
                     <h5 class="mb-1">Current</h5>
-                    <h3 class="mb-2">₹400,000</h3>
+                    <h3 class="mb-2">Rs400,000</h3>
                     <small>0-30 days</small>
                 </div>
             </div>
             <div class="col-xl-2 col-md-4 col-sm-6">
                 <div class="aging-bucket days30">
                     <h5 class="mb-1">31-60 Days</h5>
-                    <h3 class="mb-2">₹150,000</h3>
+                    <h3 class="mb-2">Rs150,000</h3>
                     <small>15 bills</small>
                 </div>
             </div>
             <div class="col-xl-2 col-md-4 col-sm-6">
                 <div class="aging-bucket days60">
                     <h5 class="mb-1">61-90 Days</h5>
-                    <h3 class="mb-2">₹75,000</h3>
+                    <h3 class="mb-2">Rs75,000</h3>
                     <small>10 bills</small>
                 </div>
             </div>
             <div class="col-xl-2 col-md-4 col-sm-6">
                 <div class="aging-bucket days90">
                     <h5 class="mb-1">91-180 Days</h5>
-                    <h3 class="mb-2">₹20,000</h3>
+                    <h3 class="mb-2">Rs20,000</h3>
                     <small>4 bills</small>
                 </div>
             </div>
             <div class="col-xl-2 col-md-4 col-sm-6">
                 <div class="aging-bucket over90">
                     <h5 class="mb-1">Over 180 Days</h5>
-                    <h3 class="mb-2">₹5,000</h3>
+                    <h3 class="mb-2">Rs5,000</h3>
                     <small>2 bills</small>
                 </div>
             </div>
             <div class="col-xl-2 col-md-4 col-sm-6">
                 <div class="aging-bucket" style="background: #f8f9fa; border-left: 4px solid #6c757d;">
                     <h5 class="mb-1">Total Due</h5>
-                    <h3 class="mb-2">₹650,000</h3>
+                    <h3 class="mb-2">Rs650,000</h3>
                     <small>45 bills</small>
                 </div>
             </div>
@@ -231,8 +254,8 @@
             <div class="card-header d-flex justify-content-between">
                 <h5 class="mb-0">Supplier Aging Details</h5>
                 <div>
-                    <input type="text" class="form-control form-control-sm" placeholder="Search suppliers..." 
-                           style="width: 200px;" onkeyup="searchSuppliers(this.value)">
+                    <input type="text" class="form-control form-control-sm" placeholder="Search suppliers..."
+                        style="width: 200px;" onkeyup="searchSuppliers(this.value)">
                 </div>
             </div>
             <div class="card-body p-0">
@@ -266,13 +289,13 @@
                                     </div>
                                 </td>
                                 <td class="text-center">
-                                    <span class="badge age-current">₹75,000</span>
+                                    <span class="badge age-current">Rs75,000</span>
                                 </td>
                                 <td class="text-center">
-                                    <span class="badge age-warning">₹25,000</span>
+                                    <span class="badge age-warning">Rs25,000</span>
                                 </td>
                                 <td class="text-center">
-                                    <span class="badge age-danger">₹15,000</span>
+                                    <span class="badge age-danger">Rs15,000</span>
                                 </td>
                                 <td class="text-center">
                                     <span>-</span>
@@ -281,13 +304,13 @@
                                     <span>-</span>
                                 </td>
                                 <td class="text-right">
-                                    <strong>₹115,000</strong>
+                                    <strong>Rs115,000</strong>
                                 </td>
                                 <td>
                                     <div class="progress" style="height: 6px;">
                                         <div class="progress-bar bg-danger" style="width: 95%"></div>
                                     </div>
-                                    <small>Used: ₹115,000 of ₹120,000</small>
+                                    <small>Used: Rs115,000 of Rs120,000</small>
                                 </td>
                                 <td class="payment-priority">
                                     <span class="priority-high">High Priority</span>
@@ -304,7 +327,7 @@
                                     </button>
                                 </td>
                             </tr>
-                            
+
                             <!-- Supplier Invoice Details (Collapsible) -->
                             <tr id="supplierDetails1" style="display: none;">
                                 <td colspan="10" class="p-0">
@@ -328,7 +351,7 @@
                                                         <td>BILL-20240315-001</td>
                                                         <td>2024-03-15</td>
                                                         <td>2024-04-14</td>
-                                                        <td class="text-right">₹50,000</td>
+                                                        <td class="text-right">Rs50,000</td>
                                                         <td class="text-center">
                                                             <span class="badge age-current">Current</span>
                                                         </td>
@@ -349,18 +372,18 @@
                                     </div>
                                 </td>
                             </tr>
-                            
+
                             <!-- More supplier rows... -->
                         </tbody>
                         <tfoot>
                             <tr class="total-row">
                                 <td><strong>TOTAL</strong></td>
-                                <td class="text-center"><strong>₹400,000</strong></td>
-                                <td class="text-center"><strong>₹150,000</strong></td>
-                                <td class="text-center"><strong>₹75,000</strong></td>
-                                <td class="text-center"><strong>₹20,000</strong></td>
-                                <td class="text-center"><strong>₹5,000</strong></td>
-                                <td class="text-right"><strong>₹650,000</strong></td>
+                                <td class="text-center"><strong>Rs400,000</strong></td>
+                                <td class="text-center"><strong>Rs150,000</strong></td>
+                                <td class="text-center"><strong>Rs75,000</strong></td>
+                                <td class="text-center"><strong>Rs20,000</strong></td>
+                                <td class="text-center"><strong>Rs5,000</strong></td>
+                                <td class="text-right"><strong>Rs650,000</strong></td>
                                 <td colspan="3"></td>
                             </tr>
                         </tfoot>
@@ -391,45 +414,45 @@
                                 <tbody>
                                     <tr>
                                         <td>Current (0-30 days)</td>
-                                        <td class="text-success">₹400,000</td>
+                                        <td class="text-success">Rs400,000</td>
                                         <td>61.5%</td>
                                         <td>30</td>
-                                        <td>₹13,333</td>
+                                        <td>Rs13,333</td>
                                     </tr>
                                     <tr>
                                         <td>31-60 days</td>
-                                        <td class="text-warning">₹150,000</td>
+                                        <td class="text-warning">Rs150,000</td>
                                         <td>23.1%</td>
                                         <td>15</td>
-                                        <td>₹10,000</td>
+                                        <td>Rs10,000</td>
                                     </tr>
                                     <tr>
                                         <td>61-90 days</td>
-                                        <td class="text-danger">₹75,000</td>
+                                        <td class="text-danger">Rs75,000</td>
                                         <td>11.5%</td>
                                         <td>10</td>
-                                        <td>₹7,500</td>
+                                        <td>Rs7,500</td>
                                     </tr>
                                     <tr>
                                         <td>91-180 days</td>
-                                        <td>₹20,000</td>
+                                        <td>Rs20,000</td>
                                         <td>3.1%</td>
                                         <td>4</td>
-                                        <td>₹5,000</td>
+                                        <td>Rs5,000</td>
                                     </tr>
                                     <tr>
                                         <td>Over 180 days</td>
-                                        <td>₹5,000</td>
+                                        <td>Rs5,000</td>
                                         <td>0.8%</td>
                                         <td>2</td>
-                                        <td>₹2,500</td>
+                                        <td>Rs2,500</td>
                                     </tr>
                                     <tr class="table-active">
                                         <td><strong>Total</strong></td>
-                                        <td><strong>₹650,000</strong></td>
+                                        <td><strong>Rs650,000</strong></td>
                                         <td><strong>100%</strong></td>
                                         <td><strong>61</strong></td>
-                                        <td><strong>₹10,656</strong></td>
+                                        <td><strong>Rs10,656</strong></td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -437,7 +460,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-lg-6">
                 <div class="card">
                     <div class="card-header">
@@ -451,7 +474,7 @@
                                         <h6 class="mb-1">Immediate Payment Required</h6>
                                         <p class="mb-0 small">Critical suppliers with overdue bills</p>
                                     </div>
-                                    <span class="badge badge-danger">₹95,000</span>
+                                    <span class="badge badge-danger">Rs95,000</span>
                                 </div>
                             </div>
                             <div class="list-group-item">
@@ -460,7 +483,7 @@
                                         <h6 class="mb-1">Schedule This Week</h6>
                                         <p class="mb-0 small">Bills due within 7 days</p>
                                     </div>
-                                    <span class="badge badge-warning">₹150,000</span>
+                                    <span class="badge badge-warning">Rs150,000</span>
                                 </div>
                             </div>
                             <div class="list-group-item">
@@ -469,7 +492,7 @@
                                         <h6 class="mb-1">Negotiate Payment Terms</h6>
                                         <p class="mb-0 small">Suppliers with long overdue amounts</p>
                                     </div>
-                                    <span class="badge badge-info">₹45,000</span>
+                                    <span class="badge badge-info">Rs45,000</span>
                                 </div>
                             </div>
                             <div class="list-group-item">
@@ -478,11 +501,11 @@
                                         <h6 class="mb-1">Upcoming Payments</h6>
                                         <p class="mb-0 small">Bills due next 30 days</p>
                                     </div>
-                                    <span class="badge badge-primary">₹360,000</span>
+                                    <span class="badge badge-primary">Rs360,000</span>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="mt-4">
                             <h6>Payment Strategy</h6>
                             <div class="progress mb-2" style="height: 10px;">
@@ -512,24 +535,24 @@
                         <div class="row">
                             <div class="col-md-4">
                                 <div class="text-center p-3 border rounded">
-                                    <h3 class="mb-1 text-danger">₹650,000</h3>
+                                    <h3 class="mb-1 text-danger">Rs650,000</h3>
                                     <p class="mb-0 small">Total Payables</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="text-center p-3 border rounded">
-                                    <h3 class="mb-1 text-warning">₹245,000</h3>
+                                    <h3 class="mb-1 text-warning">Rs245,000</h3>
                                     <p class="mb-0 small">Overdue Amount</p>
                                 </div>
                             </div>
                             <div class="col-md-4">
                                 <div class="text-center p-3 border rounded">
-                                    <h3 class="mb-1 text-success">₹405,000</h3>
+                                    <h3 class="mb-1 text-success">Rs405,000</h3>
                                     <p class="mb-0 small">Available Cash for Payments</p>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="mt-4">
                             <h6>Payment Schedule Recommendation</h6>
                             <div class="table-responsive">
@@ -549,24 +572,24 @@
                                             <td>This Week</td>
                                             <td><span class="priority-high">High</span></td>
                                             <td>8</td>
-                                            <td>₹95,000</td>
-                                            <td class="text-success">₹95,000</td>
+                                            <td>Rs95,000</td>
+                                            <td class="text-success">Rs95,000</td>
                                             <td><span class="badge badge-warning">Pending</span></td>
                                         </tr>
                                         <tr>
                                             <td>Next Week</td>
                                             <td><span class="priority-medium">Medium</span></td>
                                             <td>12</td>
-                                            <td>₹150,000</td>
-                                            <td class="text-success">₹245,000</td>
+                                            <td>Rs150,000</td>
+                                            <td class="text-success">Rs245,000</td>
                                             <td><span class="badge badge-info">Scheduled</span></td>
                                         </tr>
                                         <tr>
                                             <td>Week 3</td>
                                             <td><span class="priority-low">Low</span></td>
                                             <td>15</td>
-                                            <td>₹200,000</td>
-                                            <td class="text-danger">₹445,000</td>
+                                            <td>Rs200,000</td>
+                                            <td class="text-danger">Rs445,000</td>
                                             <td><span class="badge badge-secondary">Review</span></td>
                                         </tr>
                                     </tbody>
@@ -645,78 +668,81 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- DataTable -->
     <script src="{{ asset('backend/assets/vendor/datatables.net/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('backend/assets/vendor/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Initialize DataTable
             $('#agingTable').DataTable({
                 pageLength: 10,
                 responsive: true,
-                order: [[6, 'desc']],
-                columnDefs: [
-                    { orderable: false, targets: [9] }
-                ]
+                order: [
+                    [6, 'desc']
+                ],
+                columnDefs: [{
+                    orderable: false,
+                    targets: [9]
+                }]
             });
-            
+
             // Toggle supplier details
             window.viewSupplier = function(supplierId) {
                 const detailsRow = $(`#supplierDetails${supplierId}`);
-                if(detailsRow.is(':visible')) {
+                if (detailsRow.is(':visible')) {
                     detailsRow.slideUp();
                 } else {
                     detailsRow.slideDown();
                 }
             };
-            
+
             // Make payment
             window.makePayment = function(supplierId) {
                 alert('Opening payment processing form...');
                 // In real app: open payment modal or redirect
             };
-            
+
             // Schedule payment
             window.schedulePayment = function(supplierId) {
                 const paymentDate = prompt('Enter payment date (YYYY-MM-DD):', '{{ date("Y-m-d", strtotime("+7 days")) }}');
-                if(paymentDate) {
+                if (paymentDate) {
                     alert(`Payment scheduled for ${paymentDate}`);
                     // In real app: API call to schedule payment
                 }
             };
         });
-        
+
         // Search suppliers
         window.searchSuppliers = function(searchTerm) {
             const table = $('#agingTable').DataTable();
             table.search(searchTerm).draw();
         };
-        
+
         // Print report
         window.printReport = function() {
             window.print();
         };
-        
+
         // Export report
         window.exportReport = function() {
             const format = prompt('Select export format (PDF, Excel, CSV):', 'PDF');
-            if(format) {
+            if (format) {
                 alert(`Exporting payables aging report in ${format} format...`);
                 // In real app: window.location.href = `/accounts/reports/aging/payables/export?format=${format}`;
             }
         };
-        
+
         // Apply filters
         window.applyFilters = function() {
             const formData = new FormData(document.getElementById('filterForm'));
             const filters = Object.fromEntries(formData);
             console.log('Applying filters:', filters);
-            
+
             alert('Generaging payables aging report with selected filters...');
             $('#filterModal').modal('hide');
             // In real app: reload page with filters or make API call

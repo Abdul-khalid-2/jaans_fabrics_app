@@ -12,33 +12,41 @@
             border-left: 4px solid;
             transition: all 0.3s;
         }
+
         .transaction-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+
         .transaction-debit {
             border-left-color: #28a745;
         }
+
         .transaction-credit {
             border-left-color: #dc3545;
         }
+
         .transaction-journal {
             border-left-color: #17a2b8;
         }
+
         .amount-debit {
             color: #28a745;
             font-weight: 600;
         }
+
         .amount-credit {
             color: #dc3545;
             font-weight: 600;
         }
+
         .filter-section {
             background: #f8f9fa;
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
         }
+
         .quick-stats {
             display: flex;
             justify-content: space-between;
@@ -48,9 +56,11 @@
             border-radius: 8px;
             margin-bottom: 20px;
         }
+
         .stat-item {
             text-align: center;
         }
+
         .transaction-badge {
             font-size: 0.7rem;
             padding: 3px 8px;
@@ -86,11 +96,11 @@
         <!-- Quick Stats -->
         <div class="quick-stats">
             <div class="stat-item">
-                <h4 class="mb-1">₹1,250,000</h4>
+                <h4 class="mb-1">Rs1,250,000</h4>
                 <small>Total Debits</small>
             </div>
             <div class="stat-item">
-                <h4 class="mb-1">₹1,100,000</h4>
+                <h4 class="mb-1">Rs1,100,000</h4>
                 <small>Total Credits</small>
             </div>
             <div class="stat-item">
@@ -119,7 +129,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Transaction Type</label>
@@ -131,7 +141,7 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Account</label>
@@ -143,7 +153,7 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Status</label>
@@ -156,7 +166,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-md-3">
                             <div class="form-group">
@@ -171,7 +181,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Reference Type</label>
@@ -184,7 +194,7 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Branch</label>
@@ -195,7 +205,7 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Created By</label>
@@ -207,7 +217,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="d-flex justify-content-between">
                         <button type="button" class="btn btn-outline-secondary" onclick="resetFilters()">
                             <i class="las la-redo mr-2"></i>Reset Filters
@@ -247,17 +257,17 @@
                                                 <span class="badge badge-light">TRX-20240320-001</span>
                                             </div>
                                             <div class="text-right">
-                                                <h5 class="amount-debit mb-1">₹5,000</h5>
+                                                <h5 class="amount-debit mb-1">Rs5,000</h5>
                                                 <span class="badge badge-success">Debit</span>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="mb-3">
                                             <small class="text-muted">
                                                 <i class="las la-calendar mr-1"></i> 2024-03-20 10:30 AM
                                             </small>
                                         </div>
-                                        
+
                                         <div class="d-flex justify-content-between align-items-center mb-3">
                                             <div>
                                                 <small class="text-muted">Account:</small>
@@ -268,9 +278,9 @@
                                                 <div class="font-weight-bold">Sale #INV-20240320-045</div>
                                             </div>
                                         </div>
-                                        
+
                                         <p class="mb-3">Cash sale for clothing items</p>
-                                        
+
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div>
                                                 <span class="badge badge-success transaction-badge">Approved</span>
@@ -288,7 +298,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Transaction Card 2 -->
                             <div class="col-md-6 mb-3">
                                 <div class="card transaction-card transaction-credit">
@@ -299,17 +309,17 @@
                                                 <span class="badge badge-light">TRX-20240319-002</span>
                                             </div>
                                             <div class="text-right">
-                                                <h5 class="amount-credit mb-1">₹2,500</h5>
+                                                <h5 class="amount-credit mb-1">Rs2,500</h5>
                                                 <span class="badge badge-danger">Credit</span>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="mb-3">
                                             <small class="text-muted">
                                                 <i class="las la-calendar mr-1"></i> 2024-03-19 3:45 PM
                                             </small>
                                         </div>
-                                        
+
                                         <div class="d-flex justify-content-between align-items-center mb-3">
                                             <div>
                                                 <small class="text-muted">Account:</small>
@@ -320,9 +330,9 @@
                                                 <div class="font-weight-bold">Purchase #PUR-20240315-012</div>
                                             </div>
                                         </div>
-                                        
+
                                         <p class="mb-3">Payment to supplier for inventory purchase</p>
-                                        
+
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div>
                                                 <span class="badge badge-success transaction-badge">Approved</span>
@@ -343,7 +353,7 @@
                             <!-- More transaction cards... -->
                         </div>
                     </div>
-                    
+
                     <!-- Table View (Hidden by default) -->
                     <div class="card-body d-none" id="tableView">
                         <div class="table-responsive">
@@ -367,7 +377,7 @@
                                         <td>Cash in Hand</td>
                                         <td>Cash sale - Invoice #INV-20240320-045</td>
                                         <td><span class="badge badge-success">Debit</span></td>
-                                        <td class="amount-debit">₹5,000</td>
+                                        <td class="amount-debit">Rs5,000</td>
                                         <td><span class="badge badge-success">Approved</span></td>
                                         <td>
                                             <div class="dropdown">
@@ -397,7 +407,7 @@
                             </table>
                         </div>
                     </div>
-                    
+
                     <div class="card-footer">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
@@ -480,17 +490,17 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- DataTable -->
     <script src="{{ asset('backend/assets/vendor/datatables.net/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('backend/assets/vendor/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-    
+
     <!-- Flatpickr -->
     <script src="{{ asset('backend/assets/vendor/flatpickr/dist/flatpickr.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Initialize datepicker
@@ -499,18 +509,20 @@
                 dateFormat: "Y-m-d",
                 defaultDate: ["2024-03-01", "2024-03-20"]
             });
-            
+
             // Initialize DataTable
             $('#transactionsTable').DataTable({
                 pageLength: 10,
                 responsive: true,
-                order: [[0, 'desc']]
+                order: [
+                    [0, 'desc']
+                ]
             });
-            
+
             // View mode toggle
             $('input[name="viewMode"]').change(function() {
                 const viewMode = $(this).val();
-                if(viewMode === 'cards') {
+                if (viewMode === 'cards') {
                     $('#cardsView').removeClass('d-none');
                     $('#tableView').addClass('d-none');
                 } else {
@@ -518,72 +530,72 @@
                     $('#tableView').removeClass('d-none');
                 }
             });
-            
+
             // Initialize tooltips
             $('[data-toggle="tooltip"]').tooltip();
         });
-        
+
         // Apply filters
         window.applyFilters = function() {
             const formData = new FormData(document.getElementById('filterForm'));
             const filters = Object.fromEntries(formData);
             console.log('Applying filters:', filters);
-            
+
             // In real app, this would reload the transactions with filters
             alert('Filters applied! Loading filtered transactions...');
             $('#filterSection').collapse('hide');
         };
-        
+
         // Reset filters
         window.resetFilters = function() {
-            if(confirm('Reset all filters to default?')) {
+            if (confirm('Reset all filters to default?')) {
                 $('#filterForm')[0].reset();
                 $('#dateRange').val('');
                 alert('Filters reset successfully');
             }
         };
-        
+
         // Edit transaction
         window.editTransaction = function(id) {
             window.location.href = `/accounts/transactions/${id}/edit`;
         };
-        
+
         // View transaction
         window.viewTransaction = function(id) {
             window.location.href = `/accounts/transactions/${id}`;
         };
-        
+
         // Batch operations
         window.selectAll = function() {
             $('.transaction-select').prop('checked', true);
             updateSelectedCount();
         };
-        
+
         window.deselectAll = function() {
             $('.transaction-select').prop('checked', false);
             updateSelectedCount();
         };
-        
+
         window.updateSelectedCount = function() {
             const selectedCount = $('.transaction-select:checked').length;
             $('#selectedCount').text(selectedCount);
         };
-        
+
         window.executeBatchAction = function() {
             const action = $('#batchAction').val();
             const selectedCount = $('.transaction-select:checked').length;
-            
-            if(!action) {
+
+            if (!action) {
                 alert('Please select an action');
                 return;
             }
-            
-            if(selectedCount === 0) {
+
+            if (selectedCount === 0) {
                 alert('Please select at least one transaction');
                 return;
             }
-            
-            if(confirm(`Are you sure you want to ${action} ${selectedCount} transaction(s)?`)) {
+
+            if (confirm(`Are you sure you want to ${action} ${selectedCount} transaction(s)?`)) {
                 // In real app: API call for batch action
                 alert(`${action.charAt(0).toUpperCase() + action.slice(1)} action executed on ${selectedCount} transaction(s)`);
                 $('#batchAction').val('');
@@ -591,23 +603,23 @@
                 updateSelectedCount();
             }
         };
-        
+
         // Export transactions
         window.exportTransactions = function(format) {
             const filters = Object.fromEntries(new FormData(document.getElementById('filterForm')));
             const queryString = new URLSearchParams(filters).toString();
-            
+
             alert(`Exporting transactions in ${format} format...`);
             // In real app: window.location.href = `/accounts/transactions/export?format=${format}&${queryString}`;
         };
-        
+
         // Quick filter shortcuts
         window.filterToday = function() {
             const today = new Date().toISOString().split('T')[0];
             $('#dateRange').val(`${today} to ${today}`);
             applyFilters();
         };
-        
+
         window.filterThisMonth = function() {
             const now = new Date();
             const firstDay = new Date(now.getFullYear(), now.getMonth(), 1).toISOString().split('T')[0];

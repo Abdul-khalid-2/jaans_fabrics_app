@@ -11,31 +11,38 @@
             border-left: 4px solid #007bff;
             transition: all 0.3s;
         }
+
         .account-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+
         .account-type-badge {
             font-size: 0.7rem;
             padding: 3px 8px;
             border-radius: 10px;
         }
+
         .balance-positive {
             color: #28a745;
             font-weight: 600;
         }
+
         .balance-negative {
             color: #dc3545;
             font-weight: 600;
         }
+
         .tree-view {
             margin-left: 20px;
         }
+
         .tree-node {
             position: relative;
             padding-left: 30px;
             margin-bottom: 10px;
         }
+
         .tree-node::before {
             content: "";
             position: absolute;
@@ -45,6 +52,7 @@
             height: 1px;
             background: #dee2e6;
         }
+
         .tree-node::after {
             content: "";
             position: absolute;
@@ -54,6 +62,7 @@
             height: calc(100% - 15px);
             background: #dee2e6;
         }
+
         .tree-node:last-child::after {
             display: none;
         }
@@ -91,7 +100,7 @@
                         <div class="row">
                             <div class="col">
                                 <h5 class="card-title text-uppercase text-muted mb-0">Total Assets</h5>
-                                <span class="h2 font-weight-bold mb-0">₹1,250,000</span>
+                                <span class="h2 font-weight-bold mb-0">Rs1,250,000</span>
                             </div>
                             <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-green text-white rounded-circle shadow">
@@ -112,7 +121,7 @@
                         <div class="row">
                             <div class="col">
                                 <h5 class="card-title text-uppercase text-muted mb-0">Total Liabilities</h5>
-                                <span class="h2 font-weight-bold mb-0">₹850,000</span>
+                                <span class="h2 font-weight-bold mb-0">Rs850,000</span>
                             </div>
                             <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-orange text-white rounded-circle shadow">
@@ -133,7 +142,7 @@
                         <div class="row">
                             <div class="col">
                                 <h5 class="card-title text-uppercase text-muted mb-0">Total Equity</h5>
-                                <span class="h2 font-weight-bold mb-0">₹400,000</span>
+                                <span class="h2 font-weight-bold mb-0">Rs400,000</span>
                             </div>
                             <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-info text-white rounded-circle shadow">
@@ -249,7 +258,7 @@
                                                 <td>
                                                     <span class="badge bg-gradient-green account-type-badge">Cash Account</span>
                                                 </td>
-                                                <td class="balance-positive">₹125,000</td>
+                                                <td class="balance-positive">Rs125,000</td>
                                                 <td>Main Branch</td>
                                                 <td>
                                                     <span class="badge badge-success">Active</span>
@@ -293,7 +302,7 @@
                                                 <td>
                                                     <span class="badge bg-gradient-blue account-type-badge">Bank Account</span>
                                                 </td>
-                                                <td class="balance-positive">₹850,000</td>
+                                                <td class="balance-positive">Rs850,000</td>
                                                 <td>Main Branch</td>
                                                 <td>
                                                     <span class="badge badge-success">Active</span>
@@ -322,7 +331,7 @@
                                         <tfoot>
                                             <tr class="table-active">
                                                 <td colspan="3" class="text-right"><strong>Total Assets:</strong></td>
-                                                <td class="balance-positive"><strong>₹1,250,000</strong></td>
+                                                <td class="balance-positive"><strong>Rs1,250,000</strong></td>
                                                 <td colspan="3"></td>
                                             </tr>
                                         </tfoot>
@@ -374,7 +383,7 @@
                                     <div class="d-flex align-items-center mb-2">
                                         <i class="las la-folder text-warning mr-2"></i>
                                         <h6 class="mb-0">Assets</h6>
-                                        <span class="badge badge-light ml-2">₹1,250,000</span>
+                                        <span class="badge badge-light ml-2">Rs1,250,000</span>
                                     </div>
                                     <div class="tree-view ml-4">
                                         <!-- Current Assets -->
@@ -388,14 +397,14 @@
                                                     <div class="d-flex align-items-center">
                                                         <i class="las la-file-alt text-success mr-2"></i>
                                                         <span>Cash in Hand</span>
-                                                        <span class="badge badge-light ml-auto">₹125,000</span>
+                                                        <span class="badge badge-light ml-auto">Rs125,000</span>
                                                     </div>
                                                 </div>
                                                 <div class="tree-node">
                                                     <div class="d-flex align-items-center">
                                                         <i class="las la-file-alt text-success mr-2"></i>
                                                         <span>Bank Accounts</span>
-                                                        <span class="badge badge-light ml-auto">₹850,000</span>
+                                                        <span class="badge badge-light ml-auto">Rs850,000</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -414,7 +423,7 @@
                                     <div class="d-flex align-items-center mb-2">
                                         <i class="las la-folder text-danger mr-2"></i>
                                         <h6 class="mb-0">Liabilities</h6>
-                                        <span class="badge badge-light ml-2">₹850,000</span>
+                                        <span class="badge badge-light ml-2">Rs850,000</span>
                                     </div>
                                 </div>
                                 <!-- Equity -->
@@ -422,7 +431,7 @@
                                     <div class="d-flex align-items-center mb-2">
                                         <i class="las la-folder text-success mr-2"></i>
                                         <h6 class="mb-0">Equity</h6>
-                                        <span class="badge badge-light ml-2">₹400,000</span>
+                                        <span class="badge badge-light ml-2">Rs400,000</span>
                                     </div>
                                 </div>
                             </div>
@@ -491,59 +500,61 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- DataTable -->
     <script src="{{ asset('backend/assets/vendor/datatables.net/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('backend/assets/vendor/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Initialize DataTable
             $('#assetsTable').DataTable({
                 pageLength: 10,
                 responsive: true,
-                order: [[0, 'asc']]
+                order: [
+                    [0, 'asc']
+                ]
             });
-            
+
             // Tab switching with URL hash
             $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
                 const hash = $(e.target).attr('href');
                 window.location.hash = hash;
             });
-            
+
             // Restore tab from URL hash
             const hash = window.location.hash;
-            if(hash) {
+            if (hash) {
                 $(`a[href="${hash}"]`).tab('show');
             }
-            
+
             // Expand/collapse tree nodes
             $('.tree-view .fa-folder').on('click', function() {
                 $(this).toggleClass('fa-folder-open');
                 $(this).closest('.tree-node').find('.tree-view').first().slideToggle();
             });
         });
-        
+
         // Apply filters
         window.applyFilters = function() {
             const formData = new FormData(document.getElementById('filterForm'));
             const filters = Object.fromEntries(formData);
             console.log('Applying filters:', filters);
-            
+
             // Simulate filtering
             alert('Filters applied! (In a real app, this would reload the table with filtered data)');
             $('#filterModal').modal('hide');
         };
-        
+
         // Export accounts
         window.exportAccounts = function(format) {
             alert(`Exporting accounts in ${format} format...`);
             // In real app: window.location.href = `/accounts/export?format=${format}`;
         };
-        
+
         // Print accounts
         window.printAccounts = function() {
             window.print();

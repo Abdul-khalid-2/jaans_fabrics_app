@@ -44,39 +44,39 @@
                             <div class="col-md-4">
                                 <!-- Main Product Image -->
                                 <div class="product-main-image mb-3">
-                                    <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                         class="img-fluid rounded" alt="Product Image" id="mainProductImage">
+                                    <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
+                                        class="img-fluid rounded" alt="Product Image" id="mainProductImage">
                                 </div>
-                                
+
                                 <!-- Thumbnail Images -->
                                 <div class="row">
                                     <div class="col-3">
-                                        <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
-                                             class="img-fluid rounded border cursor-pointer" 
-                                             onclick="changeMainImage(this.src)" 
-                                             style="cursor: pointer;">
+                                        <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                                            class="img-fluid rounded border cursor-pointer"
+                                            onclick="changeMainImage(this.src)"
+                                            style="cursor: pointer;">
                                     </div>
                                     <div class="col-3">
-                                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
-                                             class="img-fluid rounded border cursor-pointer" 
-                                             onclick="changeMainImage(this.src)" 
-                                             style="cursor: pointer;">
+                                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                                            class="img-fluid rounded border cursor-pointer"
+                                            onclick="changeMainImage(this.src)"
+                                            style="cursor: pointer;">
                                     </div>
                                     <div class="col-3">
-                                        <img src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
-                                             class="img-fluid rounded border cursor-pointer" 
-                                             onclick="changeMainImage(this.src)" 
-                                             style="cursor: pointer;">
+                                        <img src="https://images.unsplash.com/photo-1586790170083-2f9ceadc732d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                                            class="img-fluid rounded border cursor-pointer"
+                                            onclick="changeMainImage(this.src)"
+                                            style="cursor: pointer;">
                                     </div>
                                     <div class="col-3">
-                                        <img src="https://images.unsplash.com/photo-1558769132-cb1a40ed0ada?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
-                                             class="img-fluid rounded border cursor-pointer" 
-                                             onclick="changeMainImage(this.src)" 
-                                             style="cursor: pointer;">
+                                        <img src="https://images.unsplash.com/photo-1558769132-cb1a40ed0ada?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80"
+                                            class="img-fluid rounded border cursor-pointer"
+                                            onclick="changeMainImage(this.src)"
+                                            style="cursor: pointer;">
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-md-8">
                                 <div class="d-flex justify-content-between align-items-start mb-3">
                                     <div>
@@ -98,15 +98,15 @@
                                         <span class="badge badge-primary ml-1">Best Seller</span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="mb-4">
-                                    <h2 class="text-primary mb-0">₹1,299</h2>
+                                    <h2 class="text-primary mb-0">Rs1,299</h2>
                                     <div class="d-flex align-items-center">
-                                        <del class="text-muted mr-2">₹1,599</del>
+                                        <del class="text-muted mr-2">Rs1,599</del>
                                         <span class="badge badge-danger">19% OFF</span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="row mb-4">
                                     <div class="col-6">
                                         <small class="text-muted d-block">SKU</small>
@@ -117,7 +117,7 @@
                                         <strong>PROD-001</strong>
                                     </div>
                                 </div>
-                                
+
                                 <div class="row mb-4">
                                     <div class="col-6">
                                         <small class="text-muted d-block">Category</small>
@@ -128,12 +128,12 @@
                                         <strong>Nike</strong>
                                     </div>
                                 </div>
-                                
+
                                 <div class="mb-4">
                                     <small class="text-muted d-block">Description</small>
                                     <p class="mb-0">Premium cotton t-shirt for men, comfortable and stylish. Perfect for casual wear, sports, and daily activities.</p>
                                 </div>
-                                
+
                                 <div class="d-flex">
                                     <div class="mr-4">
                                         <small class="text-muted d-block">Current Stock</small>
@@ -178,7 +178,7 @@
                                 </a>
                             </li>
                         </ul>
-                        
+
                         <div class="tab-content mt-4" id="productTabContent">
                             <!-- Details Tab -->
                             <div class="tab-pane fade show active" id="details" role="tabpanel">
@@ -240,10 +240,10 @@
                                         </table>
                                     </div>
                                 </div>
-                                
+
                                 <h6 class="mt-4 mb-3">Full Description</h6>
                                 <p>Made from 100% premium cotton, this t-shirt offers exceptional comfort and durability. Perfect for casual wear, sports, and daily activities. Features a classic crew neck design with ribbed collar for better fit. Machine washable, retains shape and color after multiple washes.</p>
-                                
+
                                 <h6 class="mt-4 mb-3">Care Instructions</h6>
                                 <ul>
                                     <li>Machine wash cold with similar colors</li>
@@ -253,7 +253,7 @@
                                     <li>Do not dry clean</li>
                                 </ul>
                             </div>
-                            
+
                             <!-- Specifications Tab -->
                             <div class="tab-pane fade" id="specs" role="tabpanel">
                                 <div class="row">
@@ -322,7 +322,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Inventory Tab -->
                             <div class="tab-pane fade" id="inventory" role="tabpanel">
                                 <div class="row mb-4">
@@ -354,7 +354,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <h6>Variant-wise Stock</h6>
                                 <div class="table-responsive">
                                     <table class="table table-sm">
@@ -418,7 +418,7 @@
                                         </tbody>
                                     </table>
                                 </div>
-                                
+
                                 <div class="mt-4">
                                     <button class="btn btn-outline-primary" data-toggle="modal" data-target="#stockHistoryModal">
                                         <i class="las la-history mr-2"></i>View Stock History
@@ -428,7 +428,7 @@
                                     </button>
                                 </div>
                             </div>
-                            
+
                             <!-- Sales Tab -->
                             <div class="tab-pane fade" id="sales" role="tabpanel">
                                 <div class="row mb-4">
@@ -454,7 +454,7 @@
                                         <div class="card bg-light">
                                             <div class="card-body text-center">
                                                 <h6 class="text-muted">Revenue</h6>
-                                                <h2 class="text-info">₹5,94,542</h2>
+                                                <h2 class="text-info">Rs5,94,542</h2>
                                             </div>
                                         </div>
                                     </div>
@@ -462,12 +462,12 @@
                                         <div class="card bg-light">
                                             <div class="card-body text-center">
                                                 <h6 class="text-muted">Profit</h2>
-                                                <h2 class="text-success">₹2,27,143</h2>
+                                                    <h2 class="text-success">Rs2,27,143</h2>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <h6>Recent Sales</h6>
                                 <div class="table-responsive">
                                     <table class="table table-sm">
@@ -487,7 +487,7 @@
                                                 <td>INV-2024-00123</td>
                                                 <td>John Smith</td>
                                                 <td>3</td>
-                                                <td>₹3,897</td>
+                                                <td>Rs3,897</td>
                                                 <td><span class="badge badge-success">Completed</span></td>
                                             </tr>
                                             <tr>
@@ -495,7 +495,7 @@
                                                 <td>INV-2024-00119</td>
                                                 <td>Sarah Johnson</td>
                                                 <td>2</td>
-                                                <td>₹2,598</td>
+                                                <td>Rs2,598</td>
                                                 <td><span class="badge badge-success">Completed</span></td>
                                             </tr>
                                             <tr>
@@ -503,7 +503,7 @@
                                                 <td>INV-2024-00107</td>
                                                 <td>Mike Brown</td>
                                                 <td>1</td>
-                                                <td>₹1,299</td>
+                                                <td>Rs1,299</td>
                                                 <td><span class="badge badge-success">Completed</span></td>
                                             </tr>
                                             <tr>
@@ -511,7 +511,7 @@
                                                 <td>INV-2024-00098</td>
                                                 <td>Emma Wilson</td>
                                                 <td>5</td>
-                                                <td>₹6,495</td>
+                                                <td>Rs6,495</td>
                                                 <td><span class="badge badge-success">Completed</span></td>
                                             </tr>
                                             <tr>
@@ -519,7 +519,7 @@
                                                 <td>INV-2024-00087</td>
                                                 <td>David Miller</td>
                                                 <td>2</td>
-                                                <td>₹2,598</td>
+                                                <td>Rs2,598</td>
                                                 <td><span class="badge badge-success">Completed</span></td>
                                             </tr>
                                         </tbody>
@@ -542,19 +542,19 @@
                         <table class="table table-sm">
                             <tr>
                                 <th>Cost Price</th>
-                                <td class="text-right">₹800.00</td>
+                                <td class="text-right">Rs800.00</td>
                             </tr>
                             <tr>
                                 <th>MRP</th>
-                                <td class="text-right">₹1,599.00</td>
+                                <td class="text-right">Rs1,599.00</td>
                             </tr>
                             <tr>
                                 <th>Sale Price</th>
-                                <td class="text-right text-primary"><strong>₹1,299.00</strong></td>
+                                <td class="text-right text-primary"><strong>Rs1,299.00</strong></td>
                             </tr>
                             <tr class="table-success">
                                 <th>Profit</th>
-                                <td class="text-right text-success"><strong>₹499.00</strong></td>
+                                <td class="text-right text-success"><strong>Rs499.00</strong></td>
                             </tr>
                             <tr>
                                 <th>Margin</th>
@@ -609,7 +609,7 @@
                                 <div class="timeline-marker bg-primary"></div>
                                 <div class="timeline-content">
                                     <small class="text-muted">Yesterday, 3:45 PM</small>
-                                    <p class="mb-1">Price updated from ₹1,599 to ₹1,299</p>
+                                    <p class="mb-1">Price updated from Rs1,599 to Rs1,299</p>
                                 </div>
                             </div>
                             <div class="timeline-item">
@@ -663,11 +663,11 @@
                         </div>
                         <div class="form-group">
                             <label>Unit Price</label>
-                            <input type="text" class="form-control" value="₹1,299.00" readonly>
+                            <input type="text" class="form-control" value="Rs1,299.00" readonly>
                         </div>
                         <div class="form-group">
                             <label>Total Amount</label>
-                            <input type="text" class="form-control" value="₹1,299.00" readonly>
+                            <input type="text" class="form-control" value="Rs1,299.00" readonly>
                         </div>
                     </form>
                 </div>
@@ -692,10 +692,10 @@
                 <div class="modal-body">
                     <form>
                         <div class="form-group">
-                            <label>Current Price: ₹1,299.00</label>
+                            <label>Current Price: Rs1,299.00</label>
                             <div class="input-group">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text">₹</span>
+                                    <span class="input-group-text">Rs</span>
                                 </div>
                                 <input type="number" class="form-control" value="1299" step="0.01">
                             </div>
@@ -760,60 +760,65 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         function changeMainImage(src) {
             document.getElementById('mainProductImage').src = src;
         }
-        
+
         $(document).ready(function() {
             // Print functionality
             $('#printProduct').click(function() {
                 window.print();
             });
-            
+
             // Calculate total amount in quick sale
             $('#quickSaleModal input[type="number"]').on('input', function() {
                 var quantity = $(this).val();
                 var price = 1299;
                 var total = quantity * price;
-                $('#quickSaleModal input[readonly]:last').val('₹' + total.toLocaleString('en-IN'));
+                $('#quickSaleModal input[readonly]:last').val('Rs' + total.toLocaleString('en-IN'));
             });
-            
+
             // Tab functionality
-            $('#productTab a').on('click', function (e) {
+            $('#productTab a').on('click', function(e) {
                 e.preventDefault();
                 $(this).tab('show');
             });
         });
     </script>
-    
+
     <style>
         .cursor-pointer {
             cursor: pointer;
         }
+
         .product-main-image {
             border: 1px solid #dee2e6;
             border-radius: 8px;
             padding: 10px;
             background: #f8f9fa;
         }
+
         .product-main-image img {
             width: 100%;
             height: 300px;
             object-fit: contain;
         }
+
         .timeline {
             position: relative;
             padding-left: 20px;
         }
+
         .timeline-item {
             position: relative;
             padding-bottom: 15px;
         }
+
         .timeline-marker {
             position: absolute;
             left: -20px;
@@ -822,13 +827,16 @@
             height: 12px;
             border-radius: 50%;
         }
+
         .timeline-content {
             padding-left: 10px;
         }
+
         @media print {
             .d-print-none {
                 display: none !important;
             }
+
             .card {
                 border: none !important;
             }

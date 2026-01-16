@@ -15,6 +15,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .supplier-header::before {
             content: '';
             position: absolute;
@@ -22,25 +23,28 @@
             right: -50%;
             width: 100%;
             height: 200%;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             transform: rotate(30deg);
         }
+
         .supplier-logo-lg {
             width: 120px;
             height: 120px;
             border-radius: 10px;
             object-fit: cover;
             border: 4px solid white;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
         }
+
         .info-card {
             background: white;
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             height: 100%;
         }
+
         .info-card h6 {
             color: #495057;
             font-weight: 600;
@@ -48,45 +52,54 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #f8f9fa;
         }
+
         .info-item {
             margin-bottom: 12px;
             padding-bottom: 12px;
             border-bottom: 1px dashed #e9ecef;
         }
+
         .info-item:last-child {
             margin-bottom: 0;
             padding-bottom: 0;
             border-bottom: none;
         }
+
         .info-label {
             font-weight: 500;
             color: #6c757d;
             font-size: 13px;
         }
+
         .info-value {
             font-weight: 500;
             color: #343a40;
         }
+
         .stats-card {
             text-align: center;
             padding: 20px;
             border-radius: 10px;
             background: white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             height: 100%;
         }
+
         .stats-value {
             font-size: 24px;
             font-weight: 600;
             margin: 10px 0;
         }
+
         .stats-label {
             color: #6c757d;
             font-size: 13px;
         }
+
         .nav-tabs-custom {
             border-bottom: 2px solid #dee2e6;
         }
+
         .nav-tabs-custom .nav-link {
             border: none;
             color: #6c757d;
@@ -95,31 +108,38 @@
             margin-right: 5px;
             border-radius: 8px 8px 0 0;
         }
+
         .nav-tabs-custom .nav-link.active {
             color: #007bff;
             background: white;
             border-bottom: 3px solid #007bff;
         }
+
         .tab-content {
             padding: 20px 0;
         }
+
         .table-actions {
             width: 120px;
         }
+
         .status-badge {
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 500;
         }
+
         .status-active {
             background: #d4edda;
             color: #155724;
         }
+
         .status-pending {
             background: #fff3cd;
             color: #856404;
         }
+
         .status-overdue {
             background: #f8d7da;
             color: #721c24;
@@ -132,8 +152,8 @@
         <div class="supplier-header">
             <div class="row align-items-center">
                 <div class="col-md-2 text-center">
-                    <img src="https://via.placeholder.com/120x120/007bff/ffffff?text=TF" 
-                         class="supplier-logo-lg" alt="Textile Factory Ltd.">
+                    <img src="https://via.placeholder.com/120x120/007bff/ffffff?text=TF"
+                        class="supplier-logo-lg" alt="Textile Factory Ltd.">
                 </div>
                 <div class="col-md-6">
                     <h2 class="mb-2">Textile Factory Ltd.</h2>
@@ -179,7 +199,7 @@
             <div class="col-md-3">
                 <div class="stats-card">
                     <i class="las la-shopping-cart fa-2x text-primary"></i>
-                    <div class="stats-value">₹1.25M</div>
+                    <div class="stats-value">Rs1.25M</div>
                     <div class="stats-label">Total Purchases</div>
                     <small class="text-muted">48 orders</small>
                 </div>
@@ -187,7 +207,7 @@
             <div class="col-md-3">
                 <div class="stats-card">
                     <i class="las la-money-bill-wave fa-2x text-warning"></i>
-                    <div class="stats-value">₹75K</div>
+                    <div class="stats-value">Rs75K</div>
                     <div class="stats-label">Outstanding</div>
                     <small class="text-danger">Due in 15 days</small>
                 </div>
@@ -195,7 +215,7 @@
             <div class="col-md-3">
                 <div class="stats-card">
                     <i class="las la-credit-card fa-2x text-success"></i>
-                    <div class="stats-value">₹500K</div>
+                    <div class="stats-value">Rs500K</div>
                     <div class="stats-label">Credit Limit</div>
                     <small class="text-muted">85% utilized</small>
                 </div>
@@ -336,15 +356,15 @@
                             <h6><i class="las la-chart-line mr-2"></i>Financial Information</h6>
                             <div class="info-item">
                                 <div class="info-label">Credit Limit</div>
-                                <div class="info-value">₹500,000</div>
+                                <div class="info-value">Rs500,000</div>
                             </div>
                             <div class="info-item">
                                 <div class="info-label">Current Balance</div>
-                                <div class="info-value text-warning">₹75,000</div>
+                                <div class="info-value text-warning">Rs75,000</div>
                             </div>
                             <div class="info-item">
                                 <div class="info-label">Total Purchases</div>
-                                <div class="info-value">₹1,250,000</div>
+                                <div class="info-value">Rs1,250,000</div>
                             </div>
                             <div class="info-item">
                                 <div class="info-label">Payment Terms</div>
@@ -356,7 +376,7 @@
                             </div>
                             <div class="info-item">
                                 <div class="info-label">Minimum Order Value</div>
-                                <div class="info-value">₹10,000</div>
+                                <div class="info-value">Rs10,000</div>
                             </div>
                             <div class="info-item">
                                 <div class="info-label">Delivery Days</div>
@@ -448,15 +468,15 @@
                                         <td>15 Jan 2024</td>
                                         <td>12 items</td>
                                         <td>
-                                            <strong>₹125,000</strong>
-                                            <div class="small text-muted">Paid: ₹75,000</div>
+                                            <strong>Rs125,000</strong>
+                                            <div class="small text-muted">Paid: Rs75,000</div>
                                         </td>
                                         <td>
                                             <span class="badge badge-success">Received</span>
                                         </td>
                                         <td>
                                             <span class="badge badge-warning">Partial</span>
-                                            <div class="small text-muted">Due: ₹50,000</div>
+                                            <div class="small text-muted">Due: Rs50,000</div>
                                         </td>
                                         <td class="table-actions">
                                             <div class="btn-group" role="group">
@@ -479,8 +499,8 @@
                                         <td>10 Jan 2024</td>
                                         <td>8 items</td>
                                         <td>
-                                            <strong>₹85,000</strong>
-                                            <div class="small text-muted">Paid: ₹85,000</div>
+                                            <strong>Rs85,000</strong>
+                                            <div class="small text-muted">Paid: Rs85,000</div>
                                         </td>
                                         <td>
                                             <span class="badge badge-success">Received</span>
@@ -509,8 +529,8 @@
                                         <td>05 Jan 2024</td>
                                         <td>15 items</td>
                                         <td>
-                                            <strong>₹150,000</strong>
-                                            <div class="small text-muted">Paid: ₹150,000</div>
+                                            <strong>Rs150,000</strong>
+                                            <div class="small text-muted">Paid: Rs150,000</div>
                                         </td>
                                         <td>
                                             <span class="badge badge-primary">Ordered</span>
@@ -544,7 +564,7 @@
                             </div>
                             <div class="col-md-3">
                                 <div class="stats-card">
-                                    <div class="stats-value">₹1.25M</div>
+                                    <div class="stats-value">Rs1.25M</div>
                                     <div class="stats-label">Total Value</div>
                                 </div>
                             </div>
@@ -603,8 +623,8 @@
                                         <td>20 Jan 2024</td>
                                         <td>PO-20240001</td>
                                         <td>
-                                            <strong>₹50,000</strong>
-                                            <div class="small text-muted">Balance: ₹25,000</div>
+                                            <strong>Rs50,000</strong>
+                                            <div class="small text-muted">Balance: Rs25,000</div>
                                         </td>
                                         <td>
                                             <span class="badge badge-info">Bank Transfer</span>
@@ -629,7 +649,7 @@
                                         <td>15 Jan 2024</td>
                                         <td>PO-20240002</td>
                                         <td>
-                                            <strong>₹85,000</strong>
+                                            <strong>Rs85,000</strong>
                                             <div class="small text-muted">Full Payment</div>
                                         </td>
                                         <td>
@@ -656,8 +676,8 @@
                                     <div class="d-flex justify-content-between align-items-center">
                                         <div>
                                             <h6 class="alert-heading"><i class="las la-exclamation-triangle mr-2"></i>Outstanding Amount</h6>
-                                            <p class="mb-0">Total outstanding: <strong class="h4">₹75,000</strong></p>
-                                            <small>Includes overdue amount of ₹25,000 (due: 5 Jan 2024)</small>
+                                            <p class="mb-0">Total outstanding: <strong class="h4">Rs75,000</strong></p>
+                                            <small>Includes overdue amount of Rs25,000 (due: 5 Jan 2024)</small>
                                         </div>
                                         <button type="button" class="btn btn-danger">
                                             <i class="las la-money-bill-wave mr-2"></i>Pay Now
@@ -681,15 +701,15 @@
                             <!-- Sample Product 1 -->
                             <div class="col-md-4 mb-4">
                                 <div class="card product-card">
-                                    <img src="https://via.placeholder.com/300x200/007bff/ffffff?text=Cotton+Shirt" 
-                                         class="card-img-top" alt="Cotton Shirt">
+                                    <img src="https://via.placeholder.com/300x200/007bff/ffffff?text=Cotton+Shirt"
+                                        class="card-img-top" alt="Cotton Shirt">
                                     <div class="card-body">
                                         <h6 class="card-title">Cotton Formal Shirt</h6>
                                         <p class="card-text text-muted small">Premium cotton fabric, formal wear</p>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div>
-                                                <strong>₹1,200</strong>
-                                                <div class="small text-muted">Cost: ₹800</div>
+                                                <strong>Rs1,200</strong>
+                                                <div class="small text-muted">Cost: Rs800</div>
                                             </div>
                                             <span class="badge badge-success">In Stock</span>
                                         </div>
@@ -703,15 +723,15 @@
                             <!-- Sample Product 2 -->
                             <div class="col-md-4 mb-4">
                                 <div class="card product-card">
-                                    <img src="https://via.placeholder.com/300x200/28a745/ffffff?text=Jeans" 
-                                         class="card-img-top" alt="Denim Jeans">
+                                    <img src="https://via.placeholder.com/300x200/28a745/ffffff?text=Jeans"
+                                        class="card-img-top" alt="Denim Jeans">
                                     <div class="card-body">
                                         <h6 class="card-title">Denim Jeans</h6>
                                         <p class="card-text text-muted small">Stretch denim, slim fit</p>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div>
-                                                <strong>₹1,800</strong>
-                                                <div class="small text-muted">Cost: ₹1,200</div>
+                                                <strong>Rs1,800</strong>
+                                                <div class="small text-muted">Cost: Rs1,200</div>
                                             </div>
                                             <span class="badge badge-warning">Low Stock</span>
                                         </div>
@@ -725,15 +745,15 @@
                             <!-- Sample Product 3 -->
                             <div class="col-md-4 mb-4">
                                 <div class="card product-card">
-                                    <img src="https://via.placeholder.com/300x200/ffc107/000000?text=T-Shirt" 
-                                         class="card-img-top" alt="T-Shirt">
+                                    <img src="https://via.placeholder.com/300x200/ffc107/000000?text=T-Shirt"
+                                        class="card-img-top" alt="T-Shirt">
                                     <div class="card-body">
                                         <h6 class="card-title">Cotton T-Shirt</h6>
                                         <p class="card-text text-muted small">100% cotton, round neck</p>
                                         <div class="d-flex justify-content-between align-items-center">
                                             <div>
-                                                <strong>₹500</strong>
-                                                <div class="small text-muted">Cost: ₹350</div>
+                                                <strong>Rs500</strong>
+                                                <div class="small text-muted">Cost: Rs350</div>
                                             </div>
                                             <span class="badge badge-success">In Stock</span>
                                         </div>
@@ -901,7 +921,7 @@
                                         <h6 class="mb-1">Purchase Order Created</h6>
                                         <small class="text-muted">2 days ago</small>
                                     </div>
-                                    <p class="mb-1">Purchase order PO-20240001 created for ₹125,000</p>
+                                    <p class="mb-1">Purchase order PO-20240001 created for Rs125,000</p>
                                     <small class="text-muted">By: Admin User</small>
                                 </div>
                             </div>
@@ -914,7 +934,7 @@
                                         <h6 class="mb-1">Payment Received</h6>
                                         <small class="text-muted">5 days ago</small>
                                     </div>
-                                    <p class="mb-1">Payment of ₹50,000 received against PO-20240001</p>
+                                    <p class="mb-1">Payment of Rs50,000 received against PO-20240001</p>
                                     <small class="text-muted">By: John Manager</small>
                                 </div>
                             </div>
@@ -940,7 +960,7 @@
                                         <h6 class="mb-1">Credit Limit Increased</h6>
                                         <small class="text-muted">2 weeks ago</small>
                                     </div>
-                                    <p class="mb-1">Credit limit increased from ₹300,000 to ₹500,000</p>
+                                    <p class="mb-1">Credit limit increased from Rs300,000 to Rs500,000</p>
                                     <small class="text-muted">By: Finance Manager</small>
                                 </div>
                             </div>
@@ -979,14 +999,14 @@
     <script>
         $(document).ready(function() {
             // Tab functionality
-            $('#supplierTabs a').on('click', function (e) {
+            $('#supplierTabs a').on('click', function(e) {
                 e.preventDefault();
                 $(this).tab('show');
             });
 
             // Update active tab on page load
             const hash = window.location.hash;
-            if(hash) {
+            if (hash) {
                 $('#supplierTabs a[href="' + hash + '"]').tab('show');
             }
 
@@ -994,7 +1014,7 @@
             $('a[href^="#"]').on('click', function(e) {
                 e.preventDefault();
                 const target = $(this.getAttribute('href'));
-                if(target.length) {
+                if (target.length) {
                     $('html, body').stop().animate({
                         scrollTop: target.offset().top - 100
                     }, 1000);

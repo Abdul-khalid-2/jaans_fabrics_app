@@ -36,8 +36,8 @@
                         <div class="d-flex justify-content-between align-items-center mb-4">
                             <div class="d-flex align-items-center">
                                 <div class="avatar avatar-lg mr-3">
-                                    <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
-                                         class="rounded" alt="Product" style="width: 60px; height: 60px; object-fit: cover;">
+                                    <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                                        class="rounded" alt="Product" style="width: 60px; height: 60px; object-fit: cover;">
                                 </div>
                                 <div>
                                     <h5 class="mb-0">Men's Cotton T-Shirt</h5>
@@ -128,7 +128,7 @@
                                         <label class="form-label">Cost Price <span class="text-danger">*</span></label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text">₹</span>
+                                                <span class="input-group-text">Rs</span>
                                             </div>
                                             <input type="number" class="form-control" value="800" step="0.01" required>
                                         </div>
@@ -139,7 +139,7 @@
                                         <label class="form-label">MRP <span class="text-danger">*</span></label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text">₹</span>
+                                                <span class="input-group-text">Rs</span>
                                             </div>
                                             <input type="number" class="form-control" value="1599" step="0.01" required>
                                         </div>
@@ -150,7 +150,7 @@
                                         <label class="form-label">Sale Price</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text">₹</span>
+                                                <span class="input-group-text">Rs</span>
                                             </div>
                                             <input type="number" class="form-control" value="1299" step="0.01">
                                         </div>
@@ -193,8 +193,8 @@
                             <div class="row mb-3">
                                 <div class="col-md-3 col-6 mb-3">
                                     <div class="image-preview">
-                                        <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
-                                             class="img-fluid rounded border" alt="Product Image">
+                                        <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                            class="img-fluid rounded border" alt="Product Image">
                                         <div class="image-actions">
                                             <button type="button" class="btn btn-sm btn-primary">
                                                 <i class="las la-star"></i>
@@ -207,8 +207,8 @@
                                 </div>
                                 <div class="col-md-3 col-6 mb-3">
                                     <div class="image-preview">
-                                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
-                                             class="img-fluid rounded border" alt="Product Image">
+                                        <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+                                            class="img-fluid rounded border" alt="Product Image">
                                         <div class="image-actions">
                                             <button type="button" class="btn btn-sm btn-outline-primary">
                                                 <i class="las la-star"></i>
@@ -221,9 +221,9 @@
                                 </div>
                                 <!-- Add Image Button -->
                                 <div class="col-md-3 col-6 mb-3">
-                                    <div class="add-image-placeholder border rounded d-flex align-items-center justify-content-center" 
-                                         style="height: 150px; cursor: pointer;" 
-                                         onclick="document.getElementById('addImage').click()">
+                                    <div class="add-image-placeholder border rounded d-flex align-items-center justify-content-center"
+                                        style="height: 150px; cursor: pointer;"
+                                        onclick="document.getElementById('addImage').click()">
                                         <div class="text-center">
                                             <i class="las la-plus-circle fa-2x text-muted"></i>
                                             <p class="mt-2 mb-0 text-muted">Add Image</p>
@@ -270,7 +270,7 @@
                         </div>
                         <div class="mb-3">
                             <small class="text-muted">Revenue Generated</small>
-                            <h4 class="mb-0 text-success">₹5,94,542</h4>
+                            <h4 class="mb-0 text-success">Rs5,94,542</h4>
                         </div>
                         <div class="mb-3">
                             <small class="text-muted">Profit Margin</small>
@@ -305,22 +305,22 @@
                                     <tr>
                                         <td>S (Red)</td>
                                         <td><span class="badge badge-success">42</span></td>
-                                        <td>₹1,299</td>
+                                        <td>Rs1,299</td>
                                     </tr>
                                     <tr>
                                         <td>M (Blue)</td>
                                         <td><span class="badge badge-success">35</span></td>
-                                        <td>₹1,299</td>
+                                        <td>Rs1,299</td>
                                     </tr>
                                     <tr>
                                         <td>L (Black)</td>
                                         <td><span class="badge badge-warning">8</span></td>
-                                        <td>₹1,299</td>
+                                        <td>Rs1,299</td>
                                     </tr>
                                     <tr>
                                         <td>XL (White)</td>
                                         <td><span class="badge badge-danger">2</span></td>
-                                        <td>₹1,299</td>
+                                        <td>Rs1,299</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -406,10 +406,10 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Form submission
@@ -417,18 +417,18 @@
                 e.preventDefault();
                 alert('Product updated successfully!');
             });
-            
+
             // Delete product confirmation
             $('#deleteProduct').click(function() {
-                if(confirm('Are you sure you want to delete this product? This action cannot be undone.')) {
+                if (confirm('Are you sure you want to delete this product? This action cannot be undone.')) {
                     alert('Product deleted successfully!');
                     window.location.href = "{{ route('products.index') }}";
                 }
             });
-            
+
             // Add image preview
             $('#addImage').change(function() {
-                if(this.files && this.files[0]) {
+                if (this.files && this.files[0]) {
                     var reader = new FileReader();
                     reader.onload = function(e) {
                         var newImage = `
@@ -452,7 +452,7 @@
                     reader.readAsDataURL(this.files[0]);
                 }
             });
-            
+
             // Set primary image
             $(document).on('click', '.image-actions .btn-outline-primary', function() {
                 $('.image-actions .btn-primary').removeClass('btn-primary').addClass('btn-outline-primary');
@@ -461,27 +461,29 @@
                 $(this).find('i').removeClass('las la-star').addClass('las la-star');
                 alert('Set as primary image');
             });
-            
+
             // Remove image
             $(document).on('click', '.image-actions .btn-danger', function() {
-                if(confirm('Remove this image?')) {
+                if (confirm('Remove this image?')) {
                     $(this).closest('.col-md-3').remove();
                 }
             });
         });
     </script>
-    
+
     <style>
         .image-preview {
             position: relative;
             border-radius: 8px;
             overflow: hidden;
         }
+
         .image-preview img {
             width: 100%;
             height: 150px;
             object-fit: cover;
         }
+
         .image-actions {
             position: absolute;
             top: 5px;
@@ -489,9 +491,11 @@
             opacity: 0;
             transition: opacity 0.3s;
         }
+
         .image-preview:hover .image-actions {
             opacity: 1;
         }
+
         .add-image-placeholder:hover {
             background-color: #f8f9fa;
         }

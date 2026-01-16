@@ -173,8 +173,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-md mr-3">
-                                            <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
-                                                 class="rounded" alt="Men's T-Shirt" style="width: 50px; height: 50px; object-fit: cover;">
+                                            <img src="https://images.unsplash.com/photo-1529374255404-311a2a4f1fd9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                                                class="rounded" alt="Men's T-Shirt" style="width: 50px; height: 50px; object-fit: cover;">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Men's Cotton T-Shirt</h6>
@@ -186,8 +186,8 @@
                                 <td>Nike</td>
                                 <td>
                                     <div class="d-flex flex-column">
-                                        <strong class="text-primary">₹1,299</strong>
-                                        <small class="text-muted"><s>₹1,599</s></small>
+                                        <strong class="text-primary">Rs1,299</strong>
+                                        <small class="text-muted"><s>Rs1,599</s></small>
                                     </div>
                                 </td>
                                 <td>
@@ -225,8 +225,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-md mr-3">
-                                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
-                                                 class="rounded" alt="Women's Dress" style="width: 50px; height: 50px; object-fit: cover;">
+                                            <img src="https://images.unsplash.com/photo-1490481651871-ab68de25d43d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                                                class="rounded" alt="Women's Dress" style="width: 50px; height: 50px; object-fit: cover;">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Women's Summer Dress</h6>
@@ -238,8 +238,8 @@
                                 <td>Zara</td>
                                 <td>
                                     <div class="d-flex flex-column">
-                                        <strong class="text-primary">₹2,499</strong>
-                                        <small class="text-muted"><s>₹3,199</s></small>
+                                        <strong class="text-primary">Rs2,499</strong>
+                                        <small class="text-muted"><s>Rs3,199</s></small>
                                     </div>
                                 </td>
                                 <td>
@@ -275,8 +275,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-md mr-3">
-                                            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
-                                                 class="rounded" alt="Kids Jacket" style="width: 50px; height: 50px; object-fit: cover;">
+                                            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                                                class="rounded" alt="Kids Jacket" style="width: 50px; height: 50px; object-fit: cover;">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Kids Winter Jacket</h6>
@@ -288,7 +288,7 @@
                                 <td>H&M</td>
                                 <td>
                                     <div class="d-flex flex-column">
-                                        <strong class="text-primary">₹1,899</strong>
+                                        <strong class="text-primary">Rs1,899</strong>
                                         <small class="text-muted">MRP</small>
                                     </div>
                                 </td>
@@ -327,8 +327,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-md mr-3">
-                                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
-                                                 class="rounded" alt="Jeans" style="width: 50px; height: 50px; object-fit: cover;">
+                                            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                                                class="rounded" alt="Jeans" style="width: 50px; height: 50px; object-fit: cover;">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Men's Slim Fit Jeans</h6>
@@ -340,7 +340,7 @@
                                 <td>Levi's</td>
                                 <td>
                                     <div class="d-flex flex-column">
-                                        <strong class="text-primary">₹2,999</strong>
+                                        <strong class="text-primary">Rs2,999</strong>
                                         <small class="text-muted">MRP</small>
                                     </div>
                                 </td>
@@ -377,8 +377,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-md mr-3">
-                                            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80" 
-                                                 class="rounded" alt="Shoes" style="width: 50px; height: 50px; object-fit: cover;">
+                                            <img src="https://images.unsplash.com/photo-1549298916-b41d501d3772?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=100&q=80"
+                                                class="rounded" alt="Shoes" style="width: 50px; height: 50px; object-fit: cover;">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Running Shoes</h6>
@@ -390,8 +390,8 @@
                                 <td>Adidas</td>
                                 <td>
                                     <div class="d-flex flex-column">
-                                        <strong class="text-primary">₹4,599</strong>
-                                        <small class="text-muted"><s>₹5,999</s></small>
+                                        <strong class="text-primary">Rs4,599</strong>
+                                        <small class="text-muted"><s>Rs5,999</s></small>
                                     </div>
                                 </td>
                                 <td>
@@ -447,13 +447,13 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <!-- Tooltip Initialization -->
     <script>
-        $(function () {
+        $(function() {
             $('[title]').tooltip();
         });
     </script>

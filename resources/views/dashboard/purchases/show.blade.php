@@ -237,9 +237,9 @@
             <div class="col-md-3">
                 <div class="stats-card">
                     <i class="las la-shopping-cart fa-2x text-primary"></i>
-                    <div class="stats-value">₹95,680</div>
+                    <div class="stats-value">Rs95,680</div>
                     <div class="stats-label">Total Amount</div>
-                    <small class="text-muted">Balance: ₹20,680</small>
+                    <small class="text-muted">Balance: Rs20,680</small>
                 </div>
             </div>
             <div class="col-md-3">
@@ -253,7 +253,7 @@
             <div class="col-md-3">
                 <div class="stats-card">
                     <i class="las la-money-bill-wave fa-2x text-warning"></i>
-                    <div class="stats-value">₹75,000</div>
+                    <div class="stats-value">Rs75,000</div>
                     <div class="stats-label">Amount Paid</div>
                     <small class="text-warning">Due: 20 Jan 2024</small>
                 </div>
@@ -398,35 +398,35 @@
                             <h6><i class="las la-calculator mr-2"></i>Financial Summary</h6>
                             <div class="info-item">
                                 <div class="info-label">Subtotal</div>
-                                <div class="info-value">₹76,000</div>
+                                <div class="info-value">Rs76,000</div>
                             </div>
                             <div class="info-item">
                                 <div class="info-label">Tax (18%)</div>
-                                <div class="info-value">₹13,680</div>
+                                <div class="info-value">Rs13,680</div>
                             </div>
                             <div class="info-item">
                                 <div class="info-label">Shipping Charge</div>
-                                <div class="info-value">₹5,000</div>
+                                <div class="info-value">Rs5,000</div>
                             </div>
                             <div class="info-item">
                                 <div class="info-label">Other Charges</div>
-                                <div class="info-value">₹3,000</div>
+                                <div class="info-value">Rs3,000</div>
                             </div>
                             <div class="info-item">
                                 <div class="info-label">Discount</div>
-                                <div class="info-value">₹2,000</div>
+                                <div class="info-value">Rs2,000</div>
                             </div>
                             <div class="info-item">
                                 <div class="info-label">Grand Total</div>
-                                <div class="info-value">₹95,680</div>
+                                <div class="info-value">Rs95,680</div>
                             </div>
                             <div class="info-item">
                                 <div class="info-label">Amount Paid</div>
-                                <div class="info-value text-success">₹75,000</div>
+                                <div class="info-value text-success">Rs75,000</div>
                             </div>
                             <div class="info-item">
                                 <div class="info-label">Balance Due</div>
-                                <div class="info-value text-warning">₹20,680</div>
+                                <div class="info-value text-warning">Rs20,680</div>
                             </div>
                         </div>
                     </div>
@@ -476,11 +476,11 @@
                                             </div>
                                         </td>
                                         <td>CTN-SHT-001</td>
-                                        <td>₹800</td>
+                                        <td>Rs800</td>
                                         <td>50</td>
                                         <td class="text-success">25</td>
                                         <td class="text-warning">25</td>
-                                        <td>₹40,000</td>
+                                        <td>Rs40,000</td>
                                         <td>
                                             <span class="badge badge-warning">Partial</span>
                                         </td>
@@ -499,11 +499,11 @@
                                             </div>
                                         </td>
                                         <td>DNM-JNS-002</td>
-                                        <td>₹1,200</td>
+                                        <td>Rs1,200</td>
                                         <td>30</td>
                                         <td class="text-success">15</td>
                                         <td class="text-warning">15</td>
-                                        <td>₹36,000</td>
+                                        <td>Rs36,000</td>
                                         <td>
                                             <span class="badge badge-warning">Partial</span>
                                         </td>
@@ -512,7 +512,7 @@
                                 <tfoot>
                                     <tr>
                                         <th colspan="6" class="text-right">Total:</th>
-                                        <th>₹76,000</th>
+                                        <th>Rs76,000</th>
                                         <th></th>
                                     </tr>
                                 </tfoot>
@@ -558,7 +558,7 @@
                                             <small class="text-muted">TXN: TXN123456</small>
                                         </td>
                                         <td>
-                                            <strong>₹50,000</strong>
+                                            <strong>Rs50,000</strong>
                                         </td>
                                         <td>
                                             <span class="badge badge-info">Bank Transfer</span>
@@ -582,7 +582,7 @@
                                             <small class="text-muted">Cheque: CHQ789012</small>
                                         </td>
                                         <td>
-                                            <strong>₹25,000</strong>
+                                            <strong>Rs25,000</strong>
                                         </td>
                                         <td>
                                             <span class="badge badge-warning">Cheque</span>
@@ -601,14 +601,14 @@
                                 <tfoot>
                                     <tr class="table-warning">
                                         <th colspan="2" class="text-right">Total Paid:</th>
-                                        <th>₹75,000</th>
+                                        <th>Rs75,000</th>
                                         <th colspan="2"></th>
                                         <th></th>
                                         <th></th>
                                     </tr>
                                     <tr class="table-danger">
                                         <th colspan="2" class="text-right">Balance Due:</th>
-                                        <th>₹20,680</th>
+                                        <th>Rs20,680</th>
                                         <th colspan="2"></th>
                                         <th></th>
                                         <th></th>
@@ -828,7 +828,7 @@
                                         <h6 class="mb-1">Purchase Order Created</h6>
                                         <small class="text-muted">15 Jan 2024, 10:30 AM</small>
                                     </div>
-                                    <p class="mb-1">Purchase order PO-20240001 created for ₹95,680</p>
+                                    <p class="mb-1">Purchase order PO-20240001 created for Rs95,680</p>
                                     <small class="text-muted">By: Admin User</small>
                                 </div>
                             </div>
@@ -841,7 +841,7 @@
                                         <h6 class="mb-1">Payment Received</h6>
                                         <small class="text-muted">16 Jan 2024, 02:15 PM</small>
                                     </div>
-                                    <p class="mb-1">Payment of ₹50,000 received via bank transfer</p>
+                                    <p class="mb-1">Payment of Rs50,000 received via bank transfer</p>
                                     <small class="text-muted">By: Admin User</small>
                                 </div>
                             </div>
@@ -867,7 +867,7 @@
                                         <h6 class="mb-1">Second Payment Received</h6>
                                         <small class="text-muted">18 Jan 2024, 04:30 PM</small>
                                     </div>
-                                    <p class="mb-1">Payment of ₹25,000 received via cheque</p>
+                                    <p class="mb-1">Payment of Rs25,000 received via cheque</p>
                                     <small class="text-muted">By: John Manager</small>
                                 </div>
                             </div>
@@ -890,7 +890,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Payment Amount (₹)</label>
+                        <label>Payment Amount (Rs)</label>
                         <input type="number" class="form-control" value="20680">
                     </div>
                     <div class="form-group">

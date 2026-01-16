@@ -11,21 +11,23 @@
             height: 150px;
             border-radius: 50%;
             border: 5px solid #fff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             object-fit: cover;
             cursor: pointer;
         }
+
         .avatar-upload {
             position: relative;
             display: inline-block;
         }
+
         .avatar-upload-overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             border-radius: 50%;
             display: flex;
             align-items: center;
@@ -35,26 +37,31 @@
             transition: opacity 0.3s;
             cursor: pointer;
         }
+
         .avatar-upload:hover .avatar-upload-overlay {
             opacity: 1;
         }
+
         .tab-content {
             padding: 20px;
             border: 1px solid #dee2e6;
             border-top: none;
             border-radius: 0 0 8px 8px;
         }
+
         .nav-tabs .nav-link {
             border: 1px solid #dee2e6;
             border-bottom: none;
             margin-right: 5px;
             border-radius: 8px 8px 0 0;
         }
+
         .nav-tabs .nav-link.active {
             background-color: #007bff;
             color: white;
             border-color: #007bff;
         }
+
         .address-card {
             border: 1px solid #dee2e6;
             border-radius: 8px;
@@ -63,15 +70,18 @@
             cursor: pointer;
             transition: all 0.3s;
         }
+
         .address-card:hover {
             border-color: #007bff;
-            background-color: rgba(0,123,255,0.05);
+            background-color: rgba(0, 123, 255, 0.05);
         }
+
         .address-card.selected {
             border-color: #007bff;
-            background-color: rgba(0,123,255,0.1);
-            box-shadow: 0 0 10px rgba(0,123,255,0.1);
+            background-color: rgba(0, 123, 255, 0.1);
+            box-shadow: 0 0 10px rgba(0, 123, 255, 0.1);
         }
+
         .color-option {
             width: 30px;
             height: 30px;
@@ -81,41 +91,50 @@
             cursor: pointer;
             display: inline-block;
         }
+
         .color-option.selected {
             border-color: #007bff;
-            box-shadow: 0 0 5px rgba(0,123,255,0.5);
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
         }
+
         .badge-tier {
             padding: 5px 12px;
             border-radius: 20px;
             font-weight: 600;
         }
+
         .badge-tier.bronze {
             background-color: #CD7F32;
             color: white;
         }
+
         .badge-tier.silver {
             background-color: #C0C0C0;
             color: black;
         }
+
         .badge-tier.gold {
             background-color: #FFD700;
             color: black;
         }
+
         .badge-tier.platinum {
             background-color: #E5E4E2;
             color: black;
         }
+
         .progress-loyalty {
             height: 20px;
             border-radius: 10px;
         }
+
         .form-section {
             background: #f8f9fa;
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
         }
+
         .form-section-title {
             font-weight: 600;
             color: #495057;
@@ -196,9 +215,9 @@
                                                 <!-- Profile Picture -->
                                                 <div class="form-group text-center">
                                                     <div class="avatar-upload mb-3">
-                                                        <img id="avatarPreview" 
-                                                             src="https://ui-avatars.com/api/?name=New+Customer&background=007bff&color=fff&size=150" 
-                                                             class="customer-avatar" alt="Customer Avatar">
+                                                        <img id="avatarPreview"
+                                                            src="https://ui-avatars.com/api/?name=New+Customer&background=007bff&color=fff&size=150"
+                                                            class="customer-avatar" alt="Customer Avatar">
                                                         <div class="avatar-upload-overlay" onclick="document.getElementById('avatarInput').click()">
                                                             <div class="text-center">
                                                                 <i class="las la-camera fa-2x"></i>
@@ -210,7 +229,7 @@
                                                     <small class="text-muted">Click to upload customer photo</small>
                                                 </div>
                                             </div>
-                                            
+
                                             <div class="col-md-9">
                                                 <div class="row">
                                                     <div class="col-md-6">
@@ -232,7 +251,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label class="form-label">Email Address</label>
@@ -250,7 +269,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label class="form-label">Alternate Phone</label>
@@ -263,7 +282,7 @@
                                                             <input type="date" class="form-control" name="date_of_birth">
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label class="form-label">Gender</label>
@@ -288,7 +307,7 @@
                                                             </select>
                                                         </div>
                                                     </div>
-                                                    
+
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label class="form-label">Anniversary Date</label>
@@ -311,7 +330,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-section">
                                         <h6 class="form-section-title">Address Information</h6>
                                         <div class="row">
@@ -328,7 +347,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="form-group">
@@ -349,7 +368,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -371,7 +390,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-section">
                                         <h6 class="form-section-title">Business Information</h6>
                                         <div class="row">
@@ -388,7 +407,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -413,14 +432,14 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Address Tab -->
                                 <div class="tab-pane fade" id="address-create" role="tabpanel">
                                     <div class="alert alert-info mb-4">
                                         <i class="las la-info-circle mr-2"></i>
                                         <strong>Note:</strong> You can add multiple addresses for the customer. One address will be set as default.
                                     </div>
-                                    
+
                                     <div class="form-section">
                                         <h6 class="form-section-title">Add New Address</h6>
                                         <div class="row">
@@ -445,17 +464,17 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <label class="form-label">Address Line 1 <span class="text-danger">*</span></label>
                                             <input type="text" class="form-control" name="addresses[0][address_line1]" id="addressLine1" placeholder="Street address, P.O. Box" required>
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <label class="form-label">Address Line 2</label>
                                             <input type="text" class="form-control" name="addresses[0][address_line2]" id="addressLine2" placeholder="Apartment, suite, unit, building, floor">
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -470,7 +489,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -491,12 +510,12 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <label class="form-label">Landmark</label>
                                             <input type="text" class="form-control" name="addresses[0][landmark]" id="landmark" placeholder="Nearby landmark">
                                         </div>
-                                        
+
                                         <div class="d-flex justify-content-end">
                                             <button type="button" class="btn btn-outline-secondary mr-2" onclick="clearAddressForm()">
                                                 Clear Form
@@ -506,7 +525,7 @@
                                             </button>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-section" id="addressListSection" style="display: none;">
                                         <h6 class="form-section-title">Added Addresses</h6>
                                         <div id="addressList">
@@ -514,7 +533,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Preferences Tab -->
                                 <div class="tab-pane fade" id="preferences-create" role="tabpanel">
                                     <div class="form-section">
@@ -551,7 +570,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -566,13 +585,13 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <label class="form-label">Shopping Preferences</label>
                                             <textarea class="form-control" name="shopping_preferences" rows="3" placeholder="Any specific shopping preferences, style preferences, etc."></textarea>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-section">
                                         <h6 class="form-section-title">Communication Preferences</h6>
                                         <div class="row">
@@ -596,7 +615,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-section">
                                         <h6 class="form-section-title">Special Requirements</h6>
                                         <div class="form-group">
@@ -604,7 +623,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Loyalty Tab -->
                                 <div class="tab-pane fade" id="loyalty-create" role="tabpanel">
                                     <div class="form-section">
@@ -629,7 +648,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -646,30 +665,30 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="alert alert-info mt-3">
                                             <i class="las la-info-circle mr-2"></i>
                                             <strong>Loyalty Benefits by Tier:</strong>
                                             <ul class="mb-0 mt-2">
-                                                <li><strong>Bronze:</strong> 1 point per ₹100 spent</li>
-                                                <li><strong>Silver:</strong> 1.5 points per ₹100 spent</li>
-                                                <li><strong>Gold:</strong> 2 points per ₹100 spent + Birthday Gift</li>
-                                                <li><strong>Platinum:</strong> 3 points per ₹100 spent + Exclusive Offers + Personal Shopper</li>
+                                                <li><strong>Bronze:</strong> 1 point per Rs100 spent</li>
+                                                <li><strong>Silver:</strong> 1.5 points per Rs100 spent</li>
+                                                <li><strong>Gold:</strong> 2 points per Rs100 spent + Birthday Gift</li>
+                                                <li><strong>Platinum:</strong> 3 points per Rs100 spent + Exclusive Offers + Personal Shopper</li>
                                             </ul>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-section">
                                         <h6 class="form-section-title">Tier Progress</h6>
                                         <div class="text-center mb-4">
                                             <div class="badge-tier bronze mb-3" style="font-size: 1.2rem;">BRONZE TIER</div>
                                             <div class="progress progress-loyalty mb-3">
-                                                <div class="progress-bar" role="progressbar" style="width: 10%" 
-                                                     aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar" role="progressbar" style="width: 10%"
+                                                    aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                             <small class="text-muted">100 / 1,000 points to Silver Tier</small>
                                         </div>
-                                        
+
                                         <div class="row text-center">
                                             <div class="col-md-4">
                                                 <h6 class="text-primary mb-1">Bronze</h6>
@@ -686,7 +705,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Financial Tab -->
                                 <div class="tab-pane fade" id="financial-create" role="tabpanel">
                                     <div class="form-section">
@@ -694,7 +713,7 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label">Credit Limit (₹)</label>
+                                                    <label class="form-label">Credit Limit (Rs)</label>
                                                     <input type="number" class="form-control" name="credit_limit" value="0" step="1000">
                                                     <small class="form-text text-muted">Maximum credit allowed (0 for no credit)</small>
                                                 </div>
@@ -706,31 +725,31 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label">Current Credit Used (₹)</label>
+                                                    <label class="form-label">Current Credit Used (Rs)</label>
                                                     <input type="number" class="form-control" name="current_credit" value="0" step="0.01" readonly>
                                                     <small class="form-text text-muted">Automatically calculated</small>
                                                 </div>
                                             </div>
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label">Outstanding Balance (₹)</label>
+                                                    <label class="form-label">Outstanding Balance (Rs)</label>
                                                     <input type="number" class="form-control" name="outstanding_balance" value="0" step="0.01" readonly>
                                                     <small class="form-text text-muted">Automatically calculated</small>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-section">
                                         <h6 class="form-section-title">Initial Statistics</h6>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label">Total Purchases (₹)</label>
+                                                    <label class="form-label">Total Purchases (Rs)</label>
                                                     <input type="number" class="form-control" name="total_purchases" value="0" step="0.01" readonly>
                                                     <small class="form-text text-muted">Will update with purchases</small>
                                                 </div>
@@ -743,11 +762,11 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
-                                                    <label class="form-label">Average Transaction Value (₹)</label>
+                                                    <label class="form-label">Average Transaction Value (Rs)</label>
                                                     <input type="number" class="form-control" name="average_transaction_value" value="0" step="0.01" readonly>
                                                     <small class="form-text text-muted">Will calculate after first purchase</small>
                                                 </div>
@@ -761,7 +780,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-section">
                                         <h6 class="form-section-title">Account Status</h6>
                                         <div class="row">
@@ -784,7 +803,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <label class="form-label">Blacklist Reason (if applicable)</label>
                                             <textarea class="form-control" name="blacklist_reason" rows="2" placeholder="Reason for blacklisting"></textarea>
@@ -802,25 +821,25 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         let addressCount = 0;
         const selectedColors = [];
-        
+
         $(document).ready(function() {
             // Tab functionality
-            $('#customerCreateTab a').on('click', function (e) {
+            $('#customerCreateTab a').on('click', function(e) {
                 e.preventDefault();
                 $(this).tab('show');
             });
-            
+
             // Avatar upload
             $('#avatarInput').change(function(e) {
                 const file = e.target.files[0];
-                if(file) {
+                if (file) {
                     const reader = new FileReader();
                     reader.onload = function(e) {
                         $('#avatarPreview').attr('src', e.target.result);
@@ -828,89 +847,92 @@
                     reader.readAsDataURL(file);
                 }
             });
-            
+
             // Loyalty tier change
             $('#loyaltyTier').change(function() {
                 const tier = $(this).val();
                 const badgeClass = getTierBadgeClass(tier);
                 $('.badge-tier').removeClass('bronze silver gold platinum').addClass(badgeClass).text(tier.toUpperCase() + ' TIER');
             });
-            
+
             // Color selection
             $('.color-option').click(function() {
                 $(this).toggleClass('selected');
                 updateSelectedColors();
             });
-            
+
             // Customer form submission
             $('#customerCreateForm').submit(function(e) {
                 e.preventDefault();
-                
+
                 // Basic validation
                 const requiredFields = ['full_name', 'phone'];
                 let isValid = true;
-                
+
                 requiredFields.forEach(field => {
                     const value = $(`[name="${field}"]`).val().trim();
-                    if(!value) {
+                    if (!value) {
                         isValid = false;
                         $(`[name="${field}"]`).addClass('is-invalid');
                     } else {
                         $(`[name="${field}"]`).removeClass('is-invalid');
                     }
                 });
-                
-                if(!isValid) {
+
+                if (!isValid) {
                     alert('Please fill in all required fields marked with *');
                     return false;
                 }
-                
+
                 // Collect form data
                 const formData = new FormData(this);
-                
+
                 // Add selected colors
                 formData.append('selected_colors', JSON.stringify(selectedColors));
-                
+
                 // Show loading
                 $('button[type="submit"]').prop('disabled', true).html('<i class="las la-spinner la-spin mr-2"></i>Saving...');
-                
+
                 // Simulate API call
                 setTimeout(() => {
                     console.log('Form data:', Object.fromEntries(formData));
                     alert('Customer created successfully!');
                     window.location.href = "{{ route('customers.index') }}";
                 }, 1500);
-                
+
                 // In real app, you would use AJAX or let the form submit normally
                 // return true; // Uncomment to allow normal form submission
             });
         });
-        
+
         // Generate customer code
         window.generateCustomerCode = function() {
             const timestamp = Date.now().toString();
             const code = 'CUST-' + timestamp.slice(-8);
             $('input[name="customer_code"]').val(code);
         };
-        
+
         // Color selection functions
         window.selectColor = function(element) {
             $(element).toggleClass('selected');
             updateSelectedColors();
         };
-        
+
         function updateSelectedColors() {
             selectedColors.length = 0;
             $('.color-option.selected').each(function() {
                 const color = $(this).css('background-color');
                 const title = $(this).attr('title');
-                selectedColors.push({ color, title });
+                selectedColors.push({
+                    color,
+                    title
+                });
             });
-            
+
             const colorNames = selectedColors.map(c => c.title).join(', ');
             $('#preferredColor').val(colorNames);
         }
-        
+
         // Address management
         window.addAddress = function() {
             const type = $('#addressType').val();
@@ -922,17 +944,17 @@
             const country = $('#country option:selected').text();
             const landmark = $('#landmark').val();
             const isDefault = $('#setDefault').is(':checked');
-            
+
             // Validation
-            if(!line1 || !city || !state || !pincode) {
+            if (!line1 || !city || !state || !pincode) {
                 alert('Please fill in all required address fields');
                 return;
             }
-            
+
             addressCount++;
             const addressId = `address-${addressCount}`;
             const badgeClass = getAddressTypeBadgeClass(type);
-            
+
             const addressCard = `
                 <div class="address-card" id="${addressId}">
                     <div class="d-flex justify-content-between align-items-start mb-2">
@@ -966,17 +988,17 @@
                     <input type="hidden" name="addresses[${addressCount}][is_default]" value="${isDefault ? '1' : '0'}">
                 </div>
             `;
-            
+
             $('#addressList').append(addressCard);
             $('#addressListSection').show();
-            
+
             // Clear form
             clearAddressForm();
-            
+
             // Reset default checkbox
             $('#setDefault').prop('checked', false);
         };
-        
+
         window.clearAddressForm = function() {
             $('#addressLine1').val('');
             $('#addressLine2').val('');
@@ -985,7 +1007,7 @@
             $('#pincode').val('');
             $('#landmark').val('');
         };
-        
+
         window.editAddress = function(addressId) {
             const card = $('#' + addressId);
             const type = card.find('input[name$="[type]"]').val();
@@ -997,7 +1019,7 @@
             const country = card.find('input[name$="[country_code]"]').val();
             const landmark = card.find('input[name$="[landmark]"]').val();
             const isDefault = card.find('input[name$="[is_default]"]').val() === '1';
-            
+
             // Fill form
             $('#addressType').val(type);
             $('#addressLine1').val(line1);
@@ -1008,49 +1030,59 @@
             $('#country').val(country);
             $('#landmark').val(landmark);
             $('#setDefault').prop('checked', isDefault);
-            
+
             // Remove old address
             removeAddress(addressId);
-            
+
             // Switch to address tab
             $('#address-create-tab').tab('show');
         };
-        
+
         window.removeAddress = function(addressId) {
-            if(confirm('Are you sure you want to remove this address?')) {
+            if (confirm('Are you sure you want to remove this address?')) {
                 $('#' + addressId).remove();
-                
+
                 // Hide address list section if empty
-                if($('#addressList').children().length === 0) {
+                if ($('#addressList').children().length === 0) {
                     $('#addressListSection').hide();
                 }
             }
         };
-        
+
         // Helper functions
         function getTierBadgeClass(tier) {
-            switch(tier) {
-                case 'bronze': return 'bronze';
-                case 'silver': return 'silver';
-                case 'gold': return 'gold';
-                case 'platinum': return 'platinum';
-                default: return 'secondary';
+            switch (tier) {
+                case 'bronze':
+                    return 'bronze';
+                case 'silver':
+                    return 'silver';
+                case 'gold':
+                    return 'gold';
+                case 'platinum':
+                    return 'platinum';
+                default:
+                    return 'secondary';
             }
         }
-        
+
         function getAddressTypeBadgeClass(type) {
-            switch(type) {
-                case 'home': return 'badge-success';
-                case 'work': return 'badge-info';
-                case 'billing': return 'badge-warning';
-                case 'shipping': return 'badge-primary';
-                default: return 'badge-secondary';
+            switch (type) {
+                case 'home':
+                    return 'badge-success';
+                case 'work':
+                    return 'badge-info';
+                case 'billing':
+                    return 'badge-warning';
+                case 'shipping':
+                    return 'badge-primary';
+                default:
+                    return 'badge-secondary';
             }
         }
-        
+
         // Form reset
         function resetForm() {
-            if(confirm('Are you sure you want to reset the form? All data will be lost.')) {
+            if (confirm('Are you sure you want to reset the form? All data will be lost.')) {
                 $('#customerCreateForm')[0].reset();
                 $('#avatarPreview').attr('src', 'https://ui-avatars.com/api/?name=New+Customer&background=007bff&color=fff&size=150');
                 $('#addressList').empty();
@@ -1061,7 +1093,7 @@
                 $('#preferredColor').val('');
             }
         }
-        
+
         // Attach reset function to window for button access
         window.resetForm = resetForm;
     </script>

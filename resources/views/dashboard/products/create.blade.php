@@ -112,7 +112,7 @@
                                         <label class="form-label">Cost Price <span class="text-danger">*</span></label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text">₹</span>
+                                                <span class="input-group-text">Rs</span>
                                             </div>
                                             <input type="number" class="form-control" placeholder="0.00" step="0.01" required>
                                         </div>
@@ -123,7 +123,7 @@
                                         <label class="form-label">MRP <span class="text-danger">*</span></label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text">₹</span>
+                                                <span class="input-group-text">Rs</span>
                                             </div>
                                             <input type="number" class="form-control" placeholder="0.00" step="0.01" required>
                                         </div>
@@ -134,7 +134,7 @@
                                         <label class="form-label">Sale Price</label>
                                         <div class="input-group">
                                             <div class="input-group-prepend">
-                                                <span class="input-group-text">₹</span>
+                                                <span class="input-group-text">Rs</span>
                                             </div>
                                             <input type="number" class="form-control" placeholder="0.00" step="0.01">
                                         </div>
@@ -204,8 +204,8 @@
                             <div class="row mb-4" id="imagePreview">
                                 <div class="col-md-3 col-6 mb-3">
                                     <div class="image-upload-preview">
-                                        <img src="https://via.placeholder.com/300x300/DDDDDD/555555?text=Image+Preview" 
-                                             class="img-fluid rounded border" alt="Preview">
+                                        <img src="https://via.placeholder.com/300x300/DDDDDD/555555?text=Image+Preview"
+                                            class="img-fluid rounded border" alt="Preview">
                                         <button type="button" class="btn btn-sm btn-danger btn-remove-image">
                                             <i class="las la-times"></i>
                                         </button>
@@ -352,37 +352,37 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <!-- Select2 -->
     <script src="{{ asset('backend/assets/vendor/select2/dist/js/select2.min.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Initialize Select2
             $('.select2-multiple').select2();
-            
+
             // Toggle variants section
             $('#hasVariants').change(function() {
-                if($(this).is(':checked')) {
+                if ($(this).is(':checked')) {
                     $('#variantsSection').slideDown();
                 } else {
                     $('#variantsSection').slideUp();
                 }
             });
-            
+
             // Image upload preview
             $('#productImages').on('change', function() {
                 var files = $(this)[0].files;
                 var preview = $('#imagePreview');
                 preview.empty();
-                
+
                 for (var i = 0; i < files.length; i++) {
                     var file = files[i];
                     var reader = new FileReader();
-                    
+
                     reader.onload = function(e) {
                         var imageHtml = `
                             <div class="col-md-3 col-6 mb-3">
@@ -397,16 +397,16 @@
                         `;
                         preview.append(imageHtml);
                     }
-                    
+
                     reader.readAsDataURL(file);
                 }
             });
-            
+
             // Remove image
             $(document).on('click', '.btn-remove-image', function() {
                 $(this).closest('.col-md-3').remove();
             });
-            
+
             // Form submission
             $('form').submit(function(e) {
                 e.preventDefault();
@@ -415,18 +415,20 @@
             });
         });
     </script>
-    
+
     <style>
         .image-upload-preview {
             position: relative;
             border-radius: 8px;
             overflow: hidden;
         }
+
         .image-upload-preview img {
             width: 100%;
             height: 120px;
             object-fit: cover;
         }
+
         .btn-remove-image {
             position: absolute;
             top: 5px;
@@ -435,6 +437,7 @@
             border-radius: 50%;
             font-size: 12px;
         }
+
         .select2-container--default .select2-selection--multiple {
             border: 1px solid #dee2e6;
             border-radius: 0.25rem;

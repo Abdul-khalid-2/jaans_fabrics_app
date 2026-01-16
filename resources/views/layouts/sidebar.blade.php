@@ -251,7 +251,7 @@
                                 <span>Reports Dashboard</span>
                             </a>
                         </li>
-                        
+
                         <!-- Sales Reports -->
                         <li class="{{ request()->routeIs('reports.sales.*') ? 'active' : '' }}">
                             <a href="#sales-reports" class="collapsed" data-toggle="collapse" aria-expanded="{{ request()->routeIs('reports.sales.*') ? 'true' : 'false' }}">
@@ -283,7 +283,7 @@
                                 </li>
                             </ul>
                         </li>
-                        
+
                         <!-- Inventory Reports -->
                         <li class="{{ request()->routeIs('reports.inventory.*') ? 'active' : '' }}">
                             <a href="#inventory-reports" class="collapsed" data-toggle="collapse" aria-expanded="{{ request()->routeIs('reports.inventory.*') ? 'true' : 'false' }}">
@@ -315,7 +315,7 @@
                                 </li>
                             </ul>
                         </li>
-                        
+
                         <!-- Customer Reports -->
                         <li class="{{ request()->routeIs('reports.customers.*') ? 'active' : '' }}">
                             <a href="#customer-reports" class="collapsed" data-toggle="collapse" aria-expanded="{{ request()->routeIs('reports.customers.*') ? 'true' : 'false' }}">
@@ -347,7 +347,7 @@
                                 </li>
                             </ul>
                         </li>
-                        
+
                         <!-- Staff Reports -->
                         <li class="{{ request()->routeIs('reports.staff.*') ? 'active' : '' }}">
                             <a href="{{ route('reports.staff.index') }}">
@@ -355,7 +355,7 @@
                                 <span>Staff Performance</span>
                             </a>
                         </li>
-                        
+
                         <!-- Financial Reports -->
                         <li class="{{ request()->routeIs('reports.financial.*') ? 'active' : '' }}">
                             <a href="#financial-reports" class="collapsed" data-toggle="collapse" aria-expanded="{{ request()->routeIs('reports.financial.*') ? 'true' : 'false' }}">
@@ -399,28 +399,40 @@
                         </svg>
                     </a>
                     <ul id="accounts" class="iq-submenu collapse {{ request()->is('accounts*') ? 'show' : '' }}" data-parent="#iq-sidebar-toggle">
-                        <li class="{{ request()->routeIs('accounts.index') ? 'active' : '' }}">
-                            <a href="{{ route('accounts.index') }}">
+                        <li class="{{ request()->routeIs('accounts.accounts.index') ? 'active' : '' }}">
+                            <a href="{{ route('accounts.accounts.index') }}">
                                 <i class="las la-minus"></i>
                                 <span>Chart of Accounts</span>
                             </a>
                         </li>
-                        <li class="{{ request()->routeIs('transactions.index') ? 'active' : '' }}">
-                            <a href="{{ route('transactions.index') }}">
+                        <li class="{{ request()->routeIs('accounts.types.index') ? 'active' : '' }}">
+                            <a href="{{ route('accounts.types.index') }}">
+                                <i class="las la-minus"></i>
+                                <span>Account Types</span>
+                            </a>
+                        </li>
+                        <li class="{{ request()->routeIs('accounts.transactions.index') ? 'active' : '' }}">
+                            <a href="{{ route('accounts.transactions.index') }}">
                                 <i class="las la-minus"></i>
                                 <span>Transactions</span>
                             </a>
                         </li>
-                        <li class="{{ request()->routeIs('journal-entries.index') ? 'active' : '' }}">
-                            <a href="{{ route('journal-entries.index') }}">
+                        <li class="{{ request()->routeIs('accounts.journal.entries.index') ? 'active' : '' }}">
+                            <a href="{{ route('accounts.journal.entries.index') }}">
                                 <i class="las la-minus"></i>
                                 <span>Journal Entries</span>
                             </a>
                         </li>
-                        <li class="{{ request()->routeIs('ledger.index') ? 'active' : '' }}">
-                            <a href="{{ route('ledger.index') }}">
+                        <li class="{{ request()->routeIs('accounts.ledger.index') ? 'active' : '' }}">
+                            <a href="{{ route('accounts.ledger.index') }}">
                                 <i class="las la-minus"></i>
                                 <span>General Ledger</span>
+                            </a>
+                        </li>
+                        <li class="{{ request()->routeIs('accounts.reports.balance-sheet') || request()->routeIs('accounts.reports.income-statement') || request()->routeIs('accounts.reports.cash-flow') ? 'active' : '' }}">
+                            <a href="{{ route('accounts.reports.balance-sheet') }}">
+                                <i class="las la-minus"></i>
+                                <span>Financial Reports</span>
                             </a>
                         </li>
                     </ul>

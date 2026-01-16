@@ -11,7 +11,7 @@ class JournalEntryController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.accounts.journal.index');
     }
 
     /**

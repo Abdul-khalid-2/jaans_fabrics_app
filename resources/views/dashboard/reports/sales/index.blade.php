@@ -10,21 +10,25 @@
         .report-card {
             border-radius: 10px;
             border: none;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             transition: transform 0.3s;
         }
+
         .report-card:hover {
             transform: translateY(-5px);
         }
+
         .filter-section {
             background: #f8f9fa;
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
         }
+
         .export-buttons .btn {
             min-width: 120px;
         }
+
         .date-range-picker {
             background: white;
             border: 1px solid #dee2e6;
@@ -90,7 +94,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-md-2">
                     <div class="form-group">
                         <label class="form-label">Branch</label>
@@ -102,7 +106,7 @@
                         </select>
                     </div>
                 </div>
-                
+
                 <div class="col-md-2">
                     <div class="form-group">
                         <label class="form-label">Payment Method</label>
@@ -115,7 +119,7 @@
                         </select>
                     </div>
                 </div>
-                
+
                 <div class="col-md-2">
                     <div class="form-group">
                         <label class="form-label">Sales Person</label>
@@ -127,7 +131,7 @@
                         </select>
                     </div>
                 </div>
-                
+
                 <div class="col-md-3">
                     <div class="form-group">
                         <label class="form-label">Customer Type</label>
@@ -141,7 +145,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="row mt-3">
                 <div class="col-md-12 text-right">
                     <button class="btn btn-secondary" onclick="resetFilters()">
@@ -325,7 +329,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Sale 2 -->
                             <tr>
                                 <td>14-01-2024</td>
@@ -348,7 +352,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Sale 3 -->
                             <tr>
                                 <td>13-01-2024</td>
@@ -371,7 +375,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Sale 4 -->
                             <tr>
                                 <td>12-01-2024</td>
@@ -394,7 +398,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Sale 5 -->
                             <tr>
                                 <td>11-01-2024</td>
@@ -417,7 +421,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Sale 6 -->
                             <tr>
                                 <td>10-01-2024</td>
@@ -440,7 +444,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Sale 7 -->
                             <tr>
                                 <td>09-01-2024</td>
@@ -463,7 +467,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Sale 8 -->
                             <tr>
                                 <td>08-01-2024</td>
@@ -486,7 +490,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Sale 9 -->
                             <tr>
                                 <td>07-01-2024</td>
@@ -509,7 +513,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Sale 10 -->
                             <tr>
                                 <td>06-01-2024</td>
@@ -545,7 +549,7 @@
                         </tfoot>
                     </table>
                 </div>
-                
+
                 <!-- Pagination -->
                 <div class="d-flex justify-content-between align-items-center mt-3">
                     <div>
@@ -606,7 +610,7 @@
                                         <td class="font-weight-bold text-success">Rs 145,280</td>
                                         <td>15-01-2024</td>
                                     </tr>
-                                    
+
                                     <!-- Customer 2 -->
                                     <tr>
                                         <td>
@@ -626,7 +630,7 @@
                                         <td class="font-weight-bold text-success">Rs 128,420</td>
                                         <td>14-01-2024</td>
                                     </tr>
-                                    
+
                                     <!-- Customer 3 -->
                                     <tr>
                                         <td>
@@ -646,7 +650,7 @@
                                         <td class="font-weight-bold text-success">Rs 98,750</td>
                                         <td>13-01-2024</td>
                                     </tr>
-                                    
+
                                     <!-- Customer 4 -->
                                     <tr>
                                         <td>
@@ -666,7 +670,7 @@
                                         <td class="font-weight-bold text-success">Rs 112,180</td>
                                         <td>12-01-2024</td>
                                     </tr>
-                                    
+
                                     <!-- Customer 5 -->
                                     <tr>
                                         <td>
@@ -692,7 +696,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-lg-6">
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
@@ -709,184 +713,186 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- Chart.js -->
     <script src="{{ asset('backend/assets/vendor/chart.js/Chart.min.js') }}"></script>
-    
+
     <!-- DataTables -->
     <script src="{{ asset('backend/assets/vendor/datatables/datatables.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
-    $(document).ready(function() {
-        // Initialize DataTable
-        $('#salesReportTable').DataTable({
-            pageLength: 10,
-            ordering: true,
-            order: [[0, 'desc']],
-            dom: '<"top"f>rt<"bottom"lip><"clear">',
-            language: {
-                search: "_INPUT_",
-                searchPlaceholder: "Search reports..."
-            }
-        });
-        
-        // Date range picker
-        $('#dateRangePicker').click(function(e) {
-            e.stopPropagation();
-            $('#dateRangeDropdown').toggle();
-        });
-        
-        $(document).click(function() {
-            $('#dateRangeDropdown').hide();
-        });
-        
-        // Initialize charts
-        initCharts();
-        
-        // Apply filters
-        window.generateReport = function() {
-            const filters = {
-                dateRange: $('#dateRangeText').text(),
-                branch: $('#branchFilter').val(),
-                paymentMethod: $('#paymentFilter').val(),
-                salesPerson: $('#salesPersonFilter').val(),
-                customerType: $('#customerTypeFilter').val()
+        $(document).ready(function() {
+            // Initialize DataTable
+            $('#salesReportTable').DataTable({
+                pageLength: 10,
+                ordering: true,
+                order: [
+                    [0, 'desc']
+                ],
+                dom: '<"top"f>rt<"bottom"lip><"clear">',
+                language: {
+                    search: "_INPUT_",
+                    searchPlaceholder: "Search reports..."
+                }
+            });
+
+            // Date range picker
+            $('#dateRangePicker').click(function(e) {
+                e.stopPropagation();
+                $('#dateRangeDropdown').toggle();
+            });
+
+            $(document).click(function() {
+                $('#dateRangeDropdown').hide();
+            });
+
+            // Initialize charts
+            initCharts();
+
+            // Apply filters
+            window.generateReport = function() {
+                const filters = {
+                    dateRange: $('#dateRangeText').text(),
+                    branch: $('#branchFilter').val(),
+                    paymentMethod: $('#paymentFilter').val(),
+                    salesPerson: $('#salesPersonFilter').val(),
+                    customerType: $('#customerTypeFilter').val()
+                };
+
+                console.log('Generating report with filters:', filters);
+
+                // Show loading
+                $('#salesReportTable_wrapper').html('<div class="text-center py-5"><i class="las la-spinner la-spin fa-2x text-primary"></i><p class="mt-2">Generating report...</p></div>');
+
+                // Simulate API call
+                setTimeout(() => {
+                    alert('Report generated with applied filters!');
+                    // Reload table data
+                    location.reload();
+                }, 1500);
             };
-            
-            console.log('Generating report with filters:', filters);
-            
-            // Show loading
-            $('#salesReportTable_wrapper').html('<div class="text-center py-5"><i class="las la-spinner la-spin fa-2x text-primary"></i><p class="mt-2">Generating report...</p></div>');
-            
-            // Simulate API call
-            setTimeout(() => {
-                alert('Report generated with applied filters!');
-                // Reload table data
-                location.reload();
-            }, 1500);
-        };
-        
-        // Reset filters
-        window.resetFilters = function() {
-            $('#branchFilter').val('');
-            $('#paymentFilter').val('');
-            $('#salesPersonFilter').val('');
-            $('#customerTypeFilter').val('');
-            $('#dateRangeText').text('This Month');
-            $('#fromDate').val('2024-01-01');
-            $('#toDate').val('2024-01-15');
-            
-            alert('Filters reset to default values!');
-        };
-        
-        // Export functions
-        window.exportToExcel = function() {
-            alert('Exporting to Excel...');
-            // Implement Excel export logic
-        };
-        
-        window.exportToPDF = function() {
-            alert('Exporting to PDF...');
-            // Implement PDF export logic
-        };
-        
-        window.printReport = function() {
-            window.print();
-        };
-        
-        window.saveReportTemplate = function() {
-            const templateName = prompt('Enter template name:');
-            if (templateName) {
-                alert('Template "' + templateName + '" saved successfully!');
-            }
-        };
-        
-        window.refreshReport = function() {
-            const reportType = $('#reportType').val();
-            alert('Refreshing ' + reportType + ' report...');
-            // Implement report refresh logic
-        };
-        
-        function initCharts() {
-            // Monthly Sales Chart
-            var ctx1 = document.getElementById('monthlySalesChart').getContext('2d');
-            new Chart(ctx1, {
-                type: 'bar',
-                data: {
-                    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-                    datasets: [{
-                        label: 'Sales (₹)',
-                        data: [45000, 52000, 48000, 61000, 72000, 68000, 75000, 82000, 78000, 85000, 92000, 98000],
-                        backgroundColor: 'rgba(78, 115, 223, 0.5)',
-                        borderColor: 'rgba(78, 115, 223, 1)',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            ticks: {
-                                callback: function(value) {
-                                    return '₹' + value/1000 + 'k';
+
+            // Reset filters
+            window.resetFilters = function() {
+                $('#branchFilter').val('');
+                $('#paymentFilter').val('');
+                $('#salesPersonFilter').val('');
+                $('#customerTypeFilter').val('');
+                $('#dateRangeText').text('This Month');
+                $('#fromDate').val('2024-01-01');
+                $('#toDate').val('2024-01-15');
+
+                alert('Filters reset to default values!');
+            };
+
+            // Export functions
+            window.exportToExcel = function() {
+                alert('Exporting to Excel...');
+                // Implement Excel export logic
+            };
+
+            window.exportToPDF = function() {
+                alert('Exporting to PDF...');
+                // Implement PDF export logic
+            };
+
+            window.printReport = function() {
+                window.print();
+            };
+
+            window.saveReportTemplate = function() {
+                const templateName = prompt('Enter template name:');
+                if (templateName) {
+                    alert('Template "' + templateName + '" saved successfully!');
+                }
+            };
+
+            window.refreshReport = function() {
+                const reportType = $('#reportType').val();
+                alert('Refreshing ' + reportType + ' report...');
+                // Implement report refresh logic
+            };
+
+            function initCharts() {
+                // Monthly Sales Chart
+                var ctx1 = document.getElementById('monthlySalesChart').getContext('2d');
+                new Chart(ctx1, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+                        datasets: [{
+                            label: 'Sales (Rs)',
+                            data: [45000, 52000, 48000, 61000, 72000, 68000, 75000, 82000, 78000, 85000, 92000, 98000],
+                            backgroundColor: 'rgba(78, 115, 223, 0.5)',
+                            borderColor: 'rgba(78, 115, 223, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    callback: function(value) {
+                                        return 'Rs' + value / 1000 + 'k';
+                                    }
                                 }
                             }
                         }
                     }
-                }
-            });
-            
-            // Payment Method Chart
-            var ctx2 = document.getElementById('paymentMethodChart').getContext('2d');
-            new Chart(ctx2, {
-                type: 'pie',
-                data: {
-                    labels: ['Cash', 'Card', 'UPI', 'Credit'],
-                    datasets: [{
-                        data: [35, 40, 15, 10],
-                        backgroundColor: [
-                            'rgba(40, 167, 69, 0.8)',
-                            'rgba(0, 123, 255, 0.8)',
-                            'rgba(23, 162, 184, 0.8)',
-                            'rgba(255, 193, 7, 0.8)'
-                        ]
-                    }]
-                }
-            });
-            
-            // Hourly Sales Chart
-            var ctx3 = document.getElementById('hourlySalesChart').getContext('2d');
-            new Chart(ctx3, {
-                type: 'line',
-                data: {
-                    labels: ['9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM'],
-                    datasets: [{
-                        label: 'Sales Amount',
-                        data: [2500, 4200, 3800, 5200, 4800, 3500, 4200, 5800, 6200, 7800, 6500, 4200],
-                        borderColor: 'rgba(220, 53, 69, 1)',
-                        backgroundColor: 'rgba(220, 53, 69, 0.1)',
-                        tension: 0.3
-                    }]
-                }
-            });
+                });
+
+                // Payment Method Chart
+                var ctx2 = document.getElementById('paymentMethodChart').getContext('2d');
+                new Chart(ctx2, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Cash', 'Card', 'UPI', 'Credit'],
+                        datasets: [{
+                            data: [35, 40, 15, 10],
+                            backgroundColor: [
+                                'rgba(40, 167, 69, 0.8)',
+                                'rgba(0, 123, 255, 0.8)',
+                                'rgba(23, 162, 184, 0.8)',
+                                'rgba(255, 193, 7, 0.8)'
+                            ]
+                        }]
+                    }
+                });
+
+                // Hourly Sales Chart
+                var ctx3 = document.getElementById('hourlySalesChart').getContext('2d');
+                new Chart(ctx3, {
+                    type: 'line',
+                    data: {
+                        labels: ['9 AM', '10 AM', '11 AM', '12 PM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM', '8 PM'],
+                        datasets: [{
+                            label: 'Sales Amount',
+                            data: [2500, 4200, 3800, 5200, 4800, 3500, 4200, 5800, 6200, 7800, 6500, 4200],
+                            borderColor: 'rgba(220, 53, 69, 1)',
+                            backgroundColor: 'rgba(220, 53, 69, 0.1)',
+                            tension: 0.3
+                        }]
+                    }
+                });
+            }
+        });
+
+        function applyDateRange() {
+            const fromDate = $('#fromDate').val();
+            const toDate = $('#toDate').val();
+
+            if (fromDate && toDate) {
+                const from = new Date(fromDate).toLocaleDateString();
+                const to = new Date(toDate).toLocaleDateString();
+                $('#dateRangeText').text(from + ' to ' + to);
+            }
+
+            $('#dateRangeDropdown').hide();
         }
-    });
-    
-    function applyDateRange() {
-        const fromDate = $('#fromDate').val();
-        const toDate = $('#toDate').val();
-        
-        if (fromDate && toDate) {
-            const from = new Date(fromDate).toLocaleDateString();
-            const to = new Date(toDate).toLocaleDateString();
-            $('#dateRangeText').text(from + ' to ' + to);
-        }
-        
-        $('#dateRangeDropdown').hide();
-    }
     </script>
     @endpush
 </x-app-layout>

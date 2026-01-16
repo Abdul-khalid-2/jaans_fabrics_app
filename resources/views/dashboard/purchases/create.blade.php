@@ -12,6 +12,7 @@
             padding: 20px;
             margin-bottom: 20px;
         }
+
         .form-section-title {
             font-weight: 600;
             color: #495057;
@@ -19,6 +20,7 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #dee2e6;
         }
+
         .supplier-card {
             border: 1px solid #dee2e6;
             border-radius: 8px;
@@ -27,14 +29,17 @@
             cursor: pointer;
             transition: all 0.3s;
         }
+
         .supplier-card:hover {
             border-color: #007bff;
             background: #f8f9fa;
         }
+
         .supplier-card.selected {
             border-color: #007bff;
             background: #e8f4ff;
         }
+
         .product-item {
             border: 1px solid #dee2e6;
             border-radius: 8px;
@@ -42,12 +47,14 @@
             margin-bottom: 15px;
             background: white;
         }
+
         .product-item-header {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 10px;
         }
+
         .product-image {
             width: 60px;
             height: 60px;
@@ -55,43 +62,51 @@
             object-fit: cover;
             margin-right: 15px;
         }
+
         .quantity-controls {
             display: flex;
             align-items: center;
         }
+
         .quantity-input {
             width: 80px;
             text-align: center;
         }
+
         .summary-card {
             background: white;
             border-radius: 8px;
             padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 20px;
         }
+
         .summary-item {
             display: flex;
             justify-content: space-between;
             padding: 10px 0;
             border-bottom: 1px dashed #dee2e6;
         }
+
         .summary-item.total {
             border-bottom: 2px solid #007bff;
             font-weight: 600;
             font-size: 18px;
         }
+
         .step-indicator {
             display: flex;
             align-items: center;
             margin-bottom: 30px;
         }
+
         .step {
             display: flex;
             align-items: center;
             flex: 1;
         }
+
         .step-number {
             width: 30px;
             height: 30px;
@@ -104,20 +119,24 @@
             font-weight: 600;
             margin-right: 10px;
         }
+
         .step.active .step-number {
             background: #007bff;
             color: white;
         }
+
         .step.completed .step-number {
             background: #28a745;
             color: white;
         }
+
         .step-line {
             flex: 1;
             height: 2px;
             background: #e9ecef;
             margin: 0 10px;
         }
+
         .step:last-child .step-line {
             display: none;
         }
@@ -176,11 +195,11 @@
             <div class="col-lg-8">
                 <form id="purchaseCreateForm" action="{{ route('purchases.store') }}" method="POST">
                     @csrf
-                    
+
                     <!-- Step 1: Supplier Selection -->
                     <div class="form-section" id="step1">
                         <h6 class="form-section-title">Select Supplier</h6>
-                        
+
                         <!-- Search Supplier -->
                         <div class="form-group">
                             <label>Search Supplier</label>
@@ -193,7 +212,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Quick Supplier Selection -->
                         <div class="mb-3">
                             <label class="form-label">Quick Select</label>
@@ -202,44 +221,44 @@
                                 <div class="col-md-6">
                                     <div class="supplier-card" data-supplier-id="1">
                                         <div class="d-flex align-items-center">
-                                            <img src="https://via.placeholder.com/50x50/007bff/ffffff?text=TF" 
-                                                 class="supplier-avatar mr-3" alt="Textile Factory">
+                                            <img src="https://via.placeholder.com/50x50/007bff/ffffff?text=TF"
+                                                class="supplier-avatar mr-3" alt="Textile Factory">
                                             <div>
                                                 <h6 class="mb-0">Textile Factory Ltd.</h6>
                                                 <small class="text-muted">John Doe | 9876543210</small>
-                                                <div class="small text-success">Credit: ₹500,000</div>
+                                                <div class="small text-success">Credit: Rs500,000</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Supplier 2 -->
                                 <div class="col-md-6">
                                     <div class="supplier-card" data-supplier-id="2">
                                         <div class="d-flex align-items-center">
-                                            <img src="https://via.placeholder.com/50x50/28a745/ffffff?text=FW" 
-                                                 class="supplier-avatar mr-3" alt="Fashion Wear">
+                                            <img src="https://via.placeholder.com/50x50/28a745/ffffff?text=FW"
+                                                class="supplier-avatar mr-3" alt="Fashion Wear">
                                             <div>
                                                 <h6 class="mb-0">Fashion Wear Imports</h6>
                                                 <small class="text-muted">Sarah Smith | 9876543211</small>
-                                                <div class="small text-success">Credit: ₹300,000</div>
+                                                <div class="small text-success">Credit: Rs300,000</div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- New Supplier Button -->
                         <div class="text-center mb-4">
                             <button type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#newSupplierModal">
                                 <i class="las la-plus mr-2"></i>Add New Supplier
                             </button>
                         </div>
-                        
+
                         <!-- Hidden Supplier Field -->
                         <input type="hidden" name="supplier_id" id="selectedSupplierId">
-                        
+
                         <!-- Selected Supplier Display -->
                         <div class="selected-supplier-info d-none" id="selectedSupplierInfo">
                             <div class="alert alert-info">
@@ -254,7 +273,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Next Button -->
                         <div class="text-right">
                             <button type="button" class="btn btn-primary" onclick="nextStep(2)">
@@ -262,11 +281,11 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <!-- Step 2: Product Selection -->
                     <div class="form-section d-none" id="step2">
                         <h6 class="form-section-title">Add Products</h6>
-                        
+
                         <!-- Product Search -->
                         <div class="form-group">
                             <label>Search Products</label>
@@ -279,7 +298,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Product Categories -->
                         <div class="mb-3">
                             <label class="form-label">Browse by Category</label>
@@ -298,21 +317,21 @@
                                 </label>
                             </div>
                         </div>
-                        
+
                         <!-- Product List -->
                         <div id="productList">
                             <!-- Product 1 -->
                             <div class="product-item" data-product-id="1">
                                 <div class="product-item-header">
                                     <div class="d-flex align-items-center">
-                                        <img src="https://via.placeholder.com/60x60/007bff/ffffff?text=S" 
-                                             class="product-image" alt="Product">
+                                        <img src="https://via.placeholder.com/60x60/007bff/ffffff?text=S"
+                                            class="product-image" alt="Product">
                                         <div>
                                             <h6 class="mb-0">Cotton Formal Shirt</h6>
                                             <small class="text-muted">SKU: CTN-SHT-001 | Size: M, L, XL</small>
                                             <div class="small">
-                                                <span class="text-danger">Cost: ₹800</span> | 
-                                                <span class="text-success">MRP: ₹1,200</span>
+                                                <span class="text-danger">Cost: Rs800</span> |
+                                                <span class="text-success">MRP: Rs1,200</span>
                                             </div>
                                             <div class="small text-warning">
                                                 <i class="las la-star"></i> 4.5 | Stock: 45
@@ -324,19 +343,19 @@
                                     </button>
                                 </div>
                             </div>
-                            
+
                             <!-- Product 2 -->
                             <div class="product-item" data-product-id="2">
                                 <div class="product-item-header">
                                     <div class="d-flex align-items-center">
-                                        <img src="https://via.placeholder.com/60x60/28a745/ffffff?text=J" 
-                                             class="product-image" alt="Product">
+                                        <img src="https://via.placeholder.com/60x60/28a745/ffffff?text=J"
+                                            class="product-image" alt="Product">
                                         <div>
                                             <h6 class="mb-0">Denim Jeans</h6>
                                             <small class="text-muted">SKU: DNM-JNS-002 | Size: 30, 32, 34</small>
                                             <div class="small">
-                                                <span class="text-danger">Cost: ₹1,200</span> | 
-                                                <span class="text-success">MRP: ₹1,800</span>
+                                                <span class="text-danger">Cost: Rs1,200</span> |
+                                                <span class="text-success">MRP: Rs1,800</span>
                                             </div>
                                             <div class="small text-warning">
                                                 <i class="las la-star"></i> 4.2 | Stock: 28
@@ -349,7 +368,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Cart Items -->
                         <div class="mt-4" id="cartSection">
                             <h6 class="form-section-title">Selected Products</h6>
@@ -371,7 +390,7 @@
                                 </table>
                             </div>
                         </div>
-                        
+
                         <!-- Navigation Buttons -->
                         <div class="d-flex justify-content-between mt-4">
                             <button type="button" class="btn btn-outline-secondary" onclick="prevStep(1)">
@@ -382,11 +401,11 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <!-- Step 3: Shipping & Payment -->
                     <div class="form-section d-none" id="step3">
                         <h6 class="form-section-title">Shipping & Payment Details</h6>
-                        
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -401,7 +420,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -426,12 +445,12 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label class="form-label">Shipping Address</label>
                             <textarea class="form-control" name="shipping_address" rows="2" placeholder="Enter shipping address"></textarea>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -446,9 +465,9 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <h6 class="form-section-title mt-4">Payment Details</h6>
-                        
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -463,22 +482,22 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="form-label">Initial Payment (₹)</label>
+                                    <label class="form-label">Initial Payment (Rs)</label>
                                     <input type="number" class="form-control" name="amount_paid" placeholder="0.00" min="0" step="0.01">
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label class="form-label">Payment Terms</label>
                             <input type="text" class="form-control" name="payment_terms" placeholder="e.g., Net 30" value="Net 30">
                         </div>
-                        
+
                         <div class="form-group">
                             <label class="form-label">Notes / Special Instructions</label>
                             <textarea class="form-control" name="notes" rows="3" placeholder="Enter any notes or special instructions"></textarea>
                         </div>
-                        
+
                         <!-- Navigation Buttons -->
                         <div class="d-flex justify-content-between mt-4">
                             <button type="button" class="btn btn-outline-secondary" onclick="prevStep(2)">
@@ -489,11 +508,11 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <!-- Step 4: Review & Submit -->
                     <div class="form-section d-none" id="step4">
                         <h6 class="form-section-title">Review Purchase Order</h6>
-                        
+
                         <!-- Order Summary -->
                         <div class="alert alert-info">
                             <h6><i class="las la-clipboard-check mr-2"></i>Order Summary</h6>
@@ -510,7 +529,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Products Review -->
                         <h6 class="mt-4">Products Ordered</h6>
                         <div class="table-responsive">
@@ -529,7 +548,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        
+
                         <!-- Financial Summary -->
                         <div class="row mt-4">
                             <div class="col-md-6 offset-md-6">
@@ -537,40 +556,40 @@
                                     <h6>Financial Summary</h6>
                                     <div class="summary-item">
                                         <span>Subtotal:</span>
-                                        <span id="reviewSubtotal">₹0.00</span>
+                                        <span id="reviewSubtotal">Rs0.00</span>
                                     </div>
                                     <div class="summary-item">
                                         <span>Tax (18%):</span>
-                                        <span id="reviewTax">₹0.00</span>
+                                        <span id="reviewTax">Rs0.00</span>
                                     </div>
                                     <div class="summary-item">
                                         <span>Shipping Charge:</span>
-                                        <span id="reviewShippingCharge">₹0.00</span>
+                                        <span id="reviewShippingCharge">Rs0.00</span>
                                     </div>
                                     <div class="summary-item">
                                         <span>Other Charges:</span>
-                                        <span id="reviewOtherCharges">₹0.00</span>
+                                        <span id="reviewOtherCharges">Rs0.00</span>
                                     </div>
                                     <div class="summary-item">
                                         <span>Discount:</span>
-                                        <span id="reviewDiscount">₹0.00</span>
+                                        <span id="reviewDiscount">Rs0.00</span>
                                     </div>
                                     <div class="summary-item total">
                                         <span>Grand Total:</span>
-                                        <span id="reviewGrandTotal">₹0.00</span>
+                                        <span id="reviewGrandTotal">Rs0.00</span>
                                     </div>
                                     <div class="summary-item">
                                         <span>Initial Payment:</span>
-                                        <span id="reviewInitialPayment">₹0.00</span>
+                                        <span id="reviewInitialPayment">Rs0.00</span>
                                     </div>
                                     <div class="summary-item">
                                         <span>Balance Due:</span>
-                                        <span id="reviewBalanceDue">₹0.00</span>
+                                        <span id="reviewBalanceDue">Rs0.00</span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Terms & Conditions -->
                         <div class="form-group mt-4">
                             <div class="custom-control custom-checkbox">
@@ -580,7 +599,7 @@
                                 </label>
                             </div>
                         </div>
-                        
+
                         <!-- Navigation Buttons -->
                         <div class="d-flex justify-content-between mt-4">
                             <button type="button" class="btn btn-outline-secondary" onclick="prevStep(3)">
@@ -593,77 +612,77 @@
                     </div>
                 </form>
             </div>
-            
+
             <!-- Right Column: Summary -->
             <div class="col-lg-4">
                 <div class="summary-card">
                     <h6>Purchase Summary</h6>
-                    
+
                     <div class="summary-item">
                         <span>Purchase Number:</span>
                         <span>PO-{{ date('YmdHis') }}</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Supplier:</span>
                         <span id="summarySupplier">Not selected</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Items:</span>
                         <span id="summaryItems">0</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Subtotal:</span>
-                        <span id="summarySubtotal">₹0.00</span>
+                        <span id="summarySubtotal">Rs0.00</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Tax (18%):</span>
-                        <span id="summaryTax">₹0.00</span>
+                        <span id="summaryTax">Rs0.00</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Shipping:</span>
-                        <span id="summaryShipping">₹0.00</span>
+                        <span id="summaryShipping">Rs0.00</span>
                     </div>
-                    
+
                     <div class="summary-item total">
                         <span>Grand Total:</span>
-                        <span id="summaryGrandTotal">₹0.00</span>
+                        <span id="summaryGrandTotal">Rs0.00</span>
                     </div>
-                    
+
                     <hr>
-                    
+
                     <!-- Additional Charges -->
                     <div class="form-group">
-                        <label class="form-label">Shipping Charge (₹)</label>
+                        <label class="form-label">Shipping Charge (Rs)</label>
                         <input type="number" class="form-control" id="shippingCharge" value="0" min="0" step="0.01" onchange="updateSummary()">
                     </div>
-                    
+
                     <div class="form-group">
-                        <label class="form-label">Other Charges (₹)</label>
+                        <label class="form-label">Other Charges (Rs)</label>
                         <input type="number" class="form-control" id="otherCharges" value="0" min="0" step="0.01" onchange="updateSummary()">
                     </div>
-                    
+
                     <div class="form-group">
-                        <label class="form-label">Discount (₹)</label>
+                        <label class="form-label">Discount (Rs)</label>
                         <input type="number" class="form-control" id="discount" value="0" min="0" step="0.01" onchange="updateSummary()">
                     </div>
-                    
+
                     <div class="form-group">
                         <label class="form-label">Tax Rate (%)</label>
                         <input type="number" class="form-control" id="taxRate" value="18" min="0" max="100" step="0.01" onchange="updateSummary()">
                     </div>
-                    
+
                     <!-- Save as Draft -->
                     <div class="form-group mt-4">
                         <button type="button" class="btn btn-outline-secondary btn-block">
                             <i class="las la-save mr-2"></i> Save as Draft
                         </button>
                     </div>
-                    
+
                     <!-- Quick Actions -->
                     <div class="mt-3">
                         <h6 class="mb-3">Quick Actions</h6>
@@ -713,29 +732,29 @@
         let currentStep = 1;
         let cart = [];
         let selectedSupplier = null;
-        
+
         $(document).ready(function() {
             // Initialize step indicator
             updateStepIndicator();
-            
+
             // Supplier selection
             $('.supplier-card').click(function() {
                 $('.supplier-card').removeClass('selected');
                 $(this).addClass('selected');
-                
+
                 const supplierId = $(this).data('supplier-id');
                 const supplierName = $(this).find('h6').text();
                 const supplierContact = $(this).find('small').text();
-                
+
                 selectedSupplier = {
                     id: supplierId,
                     name: supplierName,
                     contact: supplierContact
                 };
-                
+
                 $('#selectedSupplierId').val(supplierId);
                 $('#summarySupplier').text(supplierName);
-                
+
                 // Show selected supplier info
                 $('#supplierDetails').html(`
                     <div>${supplierName}</div>
@@ -743,26 +762,26 @@
                 `);
                 $('#selectedSupplierInfo').removeClass('d-none');
             });
-            
+
             // Add product to cart
             $(document).on('click', '.add-to-cart', function() {
                 const product = JSON.parse($(this).data('product'));
                 product.quantity = 1;
                 product.total = product.cost * product.quantity;
-                
+
                 // Check if product already in cart
                 const existingIndex = cart.findIndex(item => item.id === product.id);
-                if(existingIndex > -1) {
+                if (existingIndex > -1) {
                     cart[existingIndex].quantity++;
                     cart[existingIndex].total = cart[existingIndex].cost * cart[existingIndex].quantity;
                 } else {
                     cart.push(product);
                 }
-                
+
                 updateCartDisplay();
                 updateSummary();
             });
-            
+
             // Remove item from cart
             $(document).on('click', '.remove-item', function() {
                 const productId = $(this).data('product-id');
@@ -770,46 +789,46 @@
                 updateCartDisplay();
                 updateSummary();
             });
-            
+
             // Update quantity
             $(document).on('change', '.quantity-input', function() {
                 const productId = $(this).data('product-id');
                 const quantity = parseInt($(this).val()) || 0;
-                
+
                 const item = cart.find(item => item.id === productId);
-                if(item) {
+                if (item) {
                     item.quantity = quantity > 0 ? quantity : 1;
                     item.total = item.cost * item.quantity;
                     updateCartDisplay();
                     updateSummary();
                 }
             });
-            
+
             // Form submission
             $('#purchaseCreateForm').submit(function(e) {
                 e.preventDefault();
-                
+
                 // Validate form
-                if(!selectedSupplier) {
+                if (!selectedSupplier) {
                     alert('Please select a supplier');
                     showStep(1);
                     return false;
                 }
-                
-                if(cart.length === 0) {
+
+                if (cart.length === 0) {
                     alert('Please add at least one product');
                     showStep(2);
                     return false;
                 }
-                
-                if(!$('#termsAccepted').is(':checked')) {
+
+                if (!$('#termsAccepted').is(':checked')) {
                     alert('Please accept terms and conditions');
                     return false;
                 }
-                
+
                 // Show loading
                 $('button[type="submit"]').prop('disabled', true).html('<i class="las la-spinner la-spin mr-2"></i>Creating...');
-                
+
                 // Prepare form data
                 const formData = {
                     supplier_id: selectedSupplier.id,
@@ -828,90 +847,90 @@
                     discount: $('#discount').val(),
                     grand_total: calculateGrandTotal()
                 };
-                
+
                 // Simulate API call
                 setTimeout(() => {
                     console.log('Form data:', formData);
                     alert('Purchase order created successfully!');
                     window.location.href = "{{ route('purchases.index') }}";
                 }, 1500);
-                
+
                 return false;
             });
         });
-        
+
         // Step navigation
         window.nextStep = function(next) {
             // Validate current step
-            if(currentStep === 1 && !selectedSupplier) {
+            if (currentStep === 1 && !selectedSupplier) {
                 alert('Please select a supplier');
                 return;
             }
-            
-            if(currentStep === 2 && cart.length === 0) {
+
+            if (currentStep === 2 && cart.length === 0) {
                 alert('Please add at least one product');
                 return;
             }
-            
+
             // Update steps
             $(`#step${currentStep}`).addClass('d-none');
             $(`#step${next}`).removeClass('d-none');
-            
+
             // Update step indicator
             $(`.step[data-step="${currentStep}"]`).removeClass('active').addClass('completed');
             $(`.step[data-step="${next}"]`).addClass('active');
-            
+
             currentStep = next;
-            
+
             // If moving to step 4, update review
-            if(next === 4) {
+            if (next === 4) {
                 updateReview();
             }
         };
-        
+
         window.prevStep = function(prev) {
             $(`#step${currentStep}`).addClass('d-none');
             $(`#step${prev}`).removeClass('d-none');
-            
+
             $(`.step[data-step="${currentStep}"]`).removeClass('active');
             $(`.step[data-step="${prev}"]`).addClass('active').removeClass('completed');
-            
+
             currentStep = prev;
         };
-        
+
         window.showStep = function(step) {
             $('.form-section').addClass('d-none');
             $(`#step${step}`).removeClass('d-none');
-            
+
             $('.step').removeClass('active completed');
-            for(let i = 1; i < step; i++) {
+            for (let i = 1; i < step; i++) {
                 $(`.step[data-step="${i}"]`).addClass('completed');
             }
             $(`.step[data-step="${step}"]`).addClass('active');
-            
+
             currentStep = step;
         };
-        
+
         // Update step indicator
         function updateStepIndicator() {
             $('.step').each(function() {
                 const step = $(this).data('step');
-                if(step < currentStep) {
+                if (step < currentStep) {
                     $(this).removeClass('active').addClass('completed');
-                } else if(step === currentStep) {
+                } else if (step === currentStep) {
                     $(this).addClass('active').removeClass('completed');
                 } else {
                     $(this).removeClass('active completed');
                 }
             });
         }
-        
+
         // Update cart display
         function updateCartDisplay() {
             const cartItems = $('#cartItems');
             cartItems.empty();
-            
-            if(cart.length === 0) {
+
+            if (cart.length === 0) {
                 cartItems.html('<tr><td colspan="6" class="text-center text-muted">No products added</td></tr>');
                 $('#cartSection').hide();
             } else {
@@ -921,14 +940,14 @@
                         <tr>
                             <td>${item.name}</td>
                             <td>${item.sku}</td>
-                            <td>₹${item.cost.toFixed(2)}</td>
+                            <td>Rs${item.cost.toFixed(2)}</td>
                             <td>
                                 <div class="quantity-controls">
                                     <input type="number" class="form-control quantity-input" 
                                            data-product-id="${item.id}" value="${item.quantity}" min="1">
                                 </div>
                             </td>
-                            <td>₹${item.total.toFixed(2)}</td>
+                            <td>Rs${item.total.toFixed(2)}</td>
                             <td>
                                 <button type="button" class="btn btn-sm btn-outline-danger remove-item" data-product-id="${item.id}">
                                     <i class="las la-trash"></i>
@@ -938,72 +957,72 @@
                     `);
                 });
             }
-            
+
             $('#summaryItems').text(cart.length);
         }
-        
+
         // Calculate totals
         function calculateSubtotal() {
             return cart.reduce((sum, item) => sum + item.total, 0);
         }
-        
+
         function calculateTax() {
             const subtotal = calculateSubtotal();
             const taxRate = parseFloat($('#taxRate').val()) || 0;
             return (subtotal * taxRate) / 100;
         }
-        
+
         function calculateGrandTotal() {
             const subtotal = calculateSubtotal();
             const tax = calculateTax();
             const shipping = parseFloat($('#shippingCharge').val()) || 0;
             const other = parseFloat($('#otherCharges').val()) || 0;
             const discount = parseFloat($('#discount').val()) || 0;
-            
+
             return subtotal + tax + shipping + other - discount;
         }
-        
+
         // Update summary
         function updateSummary() {
             const subtotal = calculateSubtotal();
             const tax = calculateTax();
             const grandTotal = calculateGrandTotal();
-            
-            $('#summarySubtotal').text('₹' + subtotal.toFixed(2));
-            $('#summaryTax').text('₹' + tax.toFixed(2));
-            $('#summaryShipping').text('₹' + ($('#shippingCharge').val() || '0.00'));
-            $('#summaryGrandTotal').text('₹' + grandTotal.toFixed(2));
+
+            $('#summarySubtotal').text('Rs' + subtotal.toFixed(2));
+            $('#summaryTax').text('Rs' + tax.toFixed(2));
+            $('#summaryShipping').text('Rs' + ($('#shippingCharge').val() || '0.00'));
+            $('#summaryGrandTotal').text('Rs' + grandTotal.toFixed(2));
         }
-        
+
         // Update review
         function updateReview() {
             // Update supplier info
-            if(selectedSupplier) {
+            if (selectedSupplier) {
                 $('#reviewSupplier').text(selectedSupplier.name);
             }
-            
+
             // Update dates
             $('#reviewOrderDate').text($('input[name="order_date"]').val());
             $('#reviewDeliveryDate').text($('input[name="expected_delivery_date"]').val() || 'Not set');
             $('#reviewBranch').text($('select[name="branch_id"] option:selected').text());
             $('#reviewShipping').text($('select[name="shipping_method"] option:selected').text() || 'Not set');
-            
+
             // Update products
             const reviewProducts = $('#reviewProducts');
             reviewProducts.empty();
-            
+
             cart.forEach(item => {
                 reviewProducts.append(`
                     <tr>
                         <td>${item.name}</td>
                         <td>${item.sku}</td>
-                        <td>₹${item.cost.toFixed(2)}</td>
+                        <td>Rs${item.cost.toFixed(2)}</td>
                         <td>${item.quantity}</td>
-                        <td>₹${item.total.toFixed(2)}</td>
+                        <td>Rs${item.total.toFixed(2)}</td>
                     </tr>
                 `);
             });
-            
+
             // Update financial summary
             const subtotal = calculateSubtotal();
             const tax = calculateTax();
@@ -1013,17 +1032,17 @@
             const grandTotal = calculateGrandTotal();
             const initialPayment = parseFloat($('input[name="amount_paid"]').val()) || 0;
             const balanceDue = grandTotal - initialPayment;
-            
-            $('#reviewSubtotal').text('₹' + subtotal.toFixed(2));
-            $('#reviewTax').text('₹' + tax.toFixed(2));
-            $('#reviewShippingCharge').text('₹' + shipping.toFixed(2));
-            $('#reviewOtherCharges').text('₹' + other.toFixed(2));
-            $('#reviewDiscount').text('₹' + discount.toFixed(2));
-            $('#reviewGrandTotal').text('₹' + grandTotal.toFixed(2));
-            $('#reviewInitialPayment').text('₹' + initialPayment.toFixed(2));
-            $('#reviewBalanceDue').text('₹' + balanceDue.toFixed(2));
+
+            $('#reviewSubtotal').text('Rs' + subtotal.toFixed(2));
+            $('#reviewTax').text('Rs' + tax.toFixed(2));
+            $('#reviewShippingCharge').text('Rs' + shipping.toFixed(2));
+            $('#reviewOtherCharges').text('Rs' + other.toFixed(2));
+            $('#reviewDiscount').text('Rs' + discount.toFixed(2));
+            $('#reviewGrandTotal').text('Rs' + grandTotal.toFixed(2));
+            $('#reviewInitialPayment').text('Rs' + initialPayment.toFixed(2));
+            $('#reviewBalanceDue').text('Rs' + balanceDue.toFixed(2));
         }
-        
+
         // Helper functions
         window.changeSupplier = function() {
             $('#selectedSupplierInfo').addClass('d-none');
@@ -1032,44 +1051,61 @@
             $('#selectedSupplierId').val('');
             $('#summarySupplier').text('Not selected');
         };
-        
+
         window.addSampleProducts = function() {
             // Add sample products to cart
-            const sampleProducts = [
-                {id: 1, name: "Cotton Formal Shirt", sku: "CTN-SHT-001", cost: 800, mrp: 1200},
-                {id: 2, name: "Denim Jeans", sku: "DNM-JNS-002", cost: 1200, mrp: 1800},
-                {id: 3, name: "Cotton T-Shirt", sku: "CTN-TSH-003", cost: 350, mrp: 500}
+            const sampleProducts = [{
+                    id: 1,
+                    name: "Cotton Formal Shirt",
+                    sku: "CTN-SHT-001",
+                    cost: 800,
+                    mrp: 1200
+                },
+                {
+                    id: 2,
+                    name: "Denim Jeans",
+                    sku: "DNM-JNS-002",
+                    cost: 1200,
+                    mrp: 1800
+                },
+                {
+                    id: 3,
+                    name: "Cotton T-Shirt",
+                    sku: "CTN-TSH-003",
+                    cost: 350,
+                    mrp: 500
+                }
             ];
-            
+
             sampleProducts.forEach(product => {
                 product.quantity = Math.floor(Math.random() * 5) + 1;
                 product.total = product.cost * product.quantity;
-                
+
                 // Check if already in cart
                 const existingIndex = cart.findIndex(item => item.id === product.id);
-                if(existingIndex === -1) {
+                if (existingIndex === -1) {
                     cart.push(product);
                 }
             });
-            
+
             updateCartDisplay();
             updateSummary();
             alert('Sample products added to cart!');
         };
-        
+
         window.clearCart = function() {
-            if(cart.length > 0 && confirm('Clear all products from cart?')) {
+            if (cart.length > 0 && confirm('Clear all products from cart?')) {
                 cart = [];
                 updateCartDisplay();
                 updateSummary();
             }
         };
-        
+
         window.calculateTotals = function() {
             updateSummary();
             alert('Totals calculated!');
         };
-        
+
         window.submitPurchaseForm = function() {
             $('#purchaseCreateForm').submit();
         };

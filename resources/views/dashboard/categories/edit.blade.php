@@ -12,20 +12,22 @@
             border-radius: 8px;
             object-fit: cover;
             border: 3px solid #fff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             cursor: pointer;
         }
+
         .avatar-upload {
             position: relative;
             display: inline-block;
         }
+
         .avatar-upload-overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -35,15 +37,18 @@
             transition: opacity 0.3s;
             cursor: pointer;
         }
+
         .avatar-upload:hover .avatar-upload-overlay {
             opacity: 1;
         }
+
         .form-section {
             background: #f8f9fa;
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
         }
+
         .form-section-title {
             font-weight: 600;
             color: #495057;
@@ -51,6 +56,7 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #dee2e6;
         }
+
         .stats-card {
             background: white;
             border-radius: 8px;
@@ -59,15 +65,18 @@
             border: 1px solid #e3e6f0;
             transition: all 0.3s;
         }
+
         .stats-card:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transform: translateY(-2px);
         }
+
         .stats-number {
             font-size: 1.5rem;
             font-weight: 700;
             line-height: 1;
         }
+
         .stats-label {
             font-size: 0.875rem;
             color: #6c757d;
@@ -109,7 +118,7 @@
                         <form id="categoryEditForm" action="{{ route('categories.update', 1) }}" method="POST" enctype="multipart/form-data">
                             @csrf
                             @method('PUT')
-                            
+
                             <div class="form-section">
                                 <h6 class="form-section-title">Basic Information</h6>
                                 <div class="row">
@@ -117,9 +126,9 @@
                                         <!-- Category Image -->
                                         <div class="form-group text-center">
                                             <div class="avatar-upload mb-3">
-                                                <img id="categoryImagePreview" 
-                                                     src="https://via.placeholder.com/150x150/007bff/ffffff?text=Men's+Wear" 
-                                                     class="category-avatar" alt="Category Image">
+                                                <img id="categoryImagePreview"
+                                                    src="https://via.placeholder.com/150x150/007bff/ffffff?text=Men's+Wear"
+                                                    class="category-avatar" alt="Category Image">
                                                 <div class="avatar-upload-overlay" onclick="document.getElementById('categoryImageInput').click()">
                                                     <div class="text-center">
                                                         <i class="las la-camera fa-2x"></i>
@@ -131,7 +140,7 @@
                                             <small class="text-muted">Recommended: 300x300px, PNG/JPG</small>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-md-9">
                                         <div class="row">
                                             <div class="col-md-6">
@@ -147,7 +156,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -170,7 +179,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="form-group">
                                             <label class="form-label">Description</label>
                                             <textarea class="form-control" name="description" rows="3">All men's clothing including shirts, t-shirts, jeans, and formal wear</textarea>
@@ -178,7 +187,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-section">
                                 <h6 class="form-section-title">SEO & Metadata</h6>
                                 <div class="row">
@@ -197,20 +206,20 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Meta Description</label>
                                     <textarea class="form-control" name="meta_description" rows="2">Browse our collection of men's clothing including shirts, t-shirts, jeans, and formal wear. Latest fashion trends for men.</textarea>
                                     <small class="form-text text-muted">Recommended: 150-160 characters</small>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Slug URL</label>
                                     <input type="text" class="form-control" name="slug" value="mens-wear">
                                     <small class="form-text text-muted">URL-friendly version of category name</small>
                                 </div>
                             </div>
-                            
+
                             <div class="form-section">
                                 <h6 class="form-section-title">Settings</h6>
                                 <div class="row">
@@ -234,7 +243,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -254,7 +263,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="d-flex justify-content-between mt-4">
                                 <button type="button" class="btn btn-outline-danger" onclick="deleteCategory()">
                                     <i class="las la-trash mr-2"></i>Delete Category
@@ -267,7 +276,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-lg-4">
                 <!-- Category Statistics -->
                 <div class="card mb-4">
@@ -284,7 +293,7 @@
                             <div class="stats-label">Sub Categories</div>
                         </div>
                         <div class="stats-card">
-                            <div class="stats-number text-warning">₹12,45,800</div>
+                            <div class="stats-number text-warning">Rs12,45,800</div>
                             <div class="stats-label">Total Sales Value</div>
                         </div>
                         <div class="stats-card">
@@ -293,7 +302,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Sub Categories -->
                 <div class="card mb-4">
                     <div class="card-header d-flex justify-content-between align-items-center">
@@ -328,7 +337,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Quick Actions -->
                 <div class="card">
                     <div class="card-header">
@@ -399,7 +408,7 @@
                         </div>
                     </form>
                 </div>
-                                <div class="modal-footer">
+                <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
                     <button type="button" class="btn btn-primary">Add Sub-Category</button>
                 </div>
@@ -410,16 +419,16 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Category image upload
             $('#categoryImageInput').change(function(e) {
                 const file = e.target.files[0];
-                if(file) {
+                if (file) {
                     const reader = new FileReader();
                     reader.onload = function(e) {
                         $('#categoryImagePreview').attr('src', e.target.result);
@@ -427,21 +436,21 @@
                     reader.readAsDataURL(file);
                 }
             });
-            
+
             // Category form submission
             $('#categoryEditForm').submit(function(e) {
                 e.preventDefault();
-                
+
                 // Basic validation
                 const categoryName = $('input[name="category_name"]').val().trim();
-                if(!categoryName) {
+                if (!categoryName) {
                     alert('Please enter category name');
                     return false;
                 }
-                
+
                 // Show loading
                 $('button[type="submit"]').prop('disabled', true).html('<i class="las la-spinner la-spin mr-2"></i>Saving...');
-                
+
                 // Simulate API call
                 setTimeout(() => {
                     const formData = new FormData(this);
@@ -450,30 +459,30 @@
                     window.location.href = "{{ route('categories.show', 1) }}";
                 }, 1500);
             });
-            
+
             // Delete category function
             window.deleteCategory = function() {
-                if(confirm('Are you sure you want to delete this category?\n\nWarning: This will also delete all sub-categories and products under this category.')) {
+                if (confirm('Are you sure you want to delete this category?\n\nWarning: This will also delete all sub-categories and products under this category.')) {
                     // Show loading
                     $('body').append('<div class="loading-overlay"><div class="spinner"></div></div>');
-                    
+
                     setTimeout(() => {
                         alert('Category deleted successfully!');
                         window.location.href = "{{ route('categories.index') }}";
                     }, 1000);
                 }
             };
-            
+
             // Add sub-category modal
             $('#addSubCategoryModal').on('show.bs.modal', function() {
                 $('#subCategoryForm')[0].reset();
                 $('#subCategoryForm input[readonly]').val('CAT-' + Date.now().toString().slice(-8));
             });
-            
+
             // Auto-generate slug from category name
             $('input[name="category_name"]').on('blur', function() {
                 const categoryName = $(this).val().trim();
-                if(categoryName && !$('input[name="slug"]').val()) {
+                if (categoryName && !$('input[name="slug"]').val()) {
                     const slug = categoryName
                         .toLowerCase()
                         .replace(/[^\w\s]/gi, '')
@@ -481,16 +490,16 @@
                     $('input[name="slug"]').val(slug);
                 }
             });
-            
+
             // Duplicate category
             $('a:contains("Duplicate")').click(function(e) {
                 e.preventDefault();
-                if(confirm('Duplicate this category with all its settings?')) {
+                if (confirm('Duplicate this category with all its settings?')) {
                     alert('Category duplicated. Redirecting to new category...');
                     // In real app, this would create a copy and redirect
                 }
             });
-            
+
             // Move products
             $('a:contains("Move Products")').click(function(e) {
                 e.preventDefault();
@@ -498,7 +507,7 @@
             });
         });
     </script>
-    
+
     <style>
         .loading-overlay {
             position: fixed;
@@ -506,12 +515,13 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 9999;
         }
+
         .loading-overlay .spinner {
             width: 50px;
             height: 50px;
@@ -520,9 +530,15 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
+
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
     @endpush

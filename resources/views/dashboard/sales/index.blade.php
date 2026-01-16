@@ -38,7 +38,7 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h6 class="text-white mb-0">Today's Sales</h6>
-                                <h2 class="mb-0 text-white">₹45,820</h2>
+                                <h2 class="mb-0 text-white">Rs45,820</h2>
                                 <small class="text-white-50">12 orders</small>
                             </div>
                             <div class="bg-white rounded p-3">
@@ -54,7 +54,7 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h6 class="text-white mb-0">This Month</h6>
-                                <h2 class="mb-0 text-white">₹5,42,150</h2>
+                                <h2 class="mb-0 text-white">Rs5,42,150</h2>
                                 <small class="text-white-50">248 orders</small>
                             </div>
                             <div class="bg-white rounded p-3">
@@ -71,7 +71,7 @@
                             <div>
                                 <h6 class="text-white mb-0">Pending Orders</h6>
                                 <h2 class="mb-0 text-white">8</h2>
-                                <small class="text-white-50">₹24,500</small>
+                                <small class="text-white-50">Rs24,500</small>
                             </div>
                             <div class="bg-white rounded p-3">
                                 <i class="las la-clock fa-2x text-warning"></i>
@@ -86,7 +86,7 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h6 class="text-white mb-0">Returns</h6>
-                                <h2 class="mb-0 text-white">₹12,450</h2>
+                                <h2 class="mb-0 text-white">Rs12,450</h2>
                                 <small class="text-white-50">5 returns</small>
                             </div>
                             <div class="bg-white rounded p-3">
@@ -181,8 +181,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-sm mr-2">
-                                            <img src="https://ui-avatars.com/api/?name=John+Smith&background=007bff&color=fff" 
-                                                 class="rounded-circle" alt="John Smith">
+                                            <img src="https://ui-avatars.com/api/?name=John+Smith&background=007bff&color=fff"
+                                                class="rounded-circle" alt="John Smith">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">John Smith</h6>
@@ -193,13 +193,13 @@
                                 <td>
                                     <div class="d-flex flex-column">
                                         <strong>3 items</strong>
-                                        <small class="text-muted">₹1,299 × 2, ₹899 × 1</small>
+                                        <small class="text-muted">Rs1,299 × 2, Rs899 × 1</small>
                                     </div>
                                 </td>
                                 <td>
-                                    <strong class="text-success">₹3,497</strong>
+                                    <strong class="text-success">Rs3,497</strong>
                                     <br>
-                                    <small class="text-muted">Paid: ₹3,497</small>
+                                    <small class="text-muted">Paid: Rs3,497</small>
                                 </td>
                                 <td>
                                     <span class="badge badge-success">Paid</span>
@@ -245,8 +245,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-sm mr-2">
-                                            <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=28a745&color=fff" 
-                                                 class="rounded-circle" alt="Sarah Johnson">
+                                            <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=28a745&color=fff"
+                                                class="rounded-circle" alt="Sarah Johnson">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Sarah Johnson</h6>
@@ -257,13 +257,13 @@
                                 <td>
                                     <div class="d-flex flex-column">
                                         <strong>5 items</strong>
-                                        <small class="text-muted">₹2,499 × 1, ₹899 × 4</small>
+                                        <small class="text-muted">Rs2,499 × 1, Rs899 × 4</small>
                                     </div>
                                 </td>
                                 <td>
-                                    <strong class="text-success">₹6,095</strong>
+                                    <strong class="text-success">Rs6,095</strong>
                                     <br>
-                                    <small class="text-muted">Paid: ₹6,095</small>
+                                    <small class="text-muted">Paid: Rs6,095</small>
                                 </td>
                                 <td>
                                     <span class="badge badge-success">Paid</span>
@@ -309,8 +309,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-sm mr-2">
-                                            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center" 
-                                                 style="width: 32px; height: 32px;">
+                                            <div class="rounded-circle bg-light d-flex align-items-center justify-content-center"
+                                                style="width: 32px; height: 32px;">
                                                 <i class="las la-user text-muted"></i>
                                             </div>
                                         </div>
@@ -323,13 +323,13 @@
                                 <td>
                                     <div class="d-flex flex-column">
                                         <strong>2 items</strong>
-                                        <small class="text-muted">₹1,899 × 2</small>
+                                        <small class="text-muted">Rs1,899 × 2</small>
                                     </div>
                                 </td>
                                 <td>
-                                    <strong class="text-success">₹3,798</strong>
+                                    <strong class="text-success">Rs3,798</strong>
                                     <br>
-                                    <small class="text-muted">Paid: ₹3,798</small>
+                                    <small class="text-muted">Paid: Rs3,798</small>
                                 </td>
                                 <td>
                                     <span class="badge badge-success">Paid</span>
@@ -375,8 +375,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-sm mr-2">
-                                            <img src="https://ui-avatars.com/api/?name=Michael+Brown&background=ffc107&color=000" 
-                                                 class="rounded-circle" alt="Michael Brown">
+                                            <img src="https://ui-avatars.com/api/?name=Michael+Brown&background=ffc107&color=000"
+                                                class="rounded-circle" alt="Michael Brown">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Michael Brown</h6>
@@ -387,18 +387,18 @@
                                 <td>
                                     <div class="d-flex flex-column">
                                         <strong>1 item</strong>
-                                        <small class="text-muted">₹4,599 × 1</small>
+                                        <small class="text-muted">Rs4,599 × 1</small>
                                     </div>
                                 </td>
                                 <td>
-                                    <strong class="text-warning">₹4,599</strong>
+                                    <strong class="text-warning">Rs4,599</strong>
                                     <br>
-                                    <small class="text-muted">Paid: ₹2,000</small>
+                                    <small class="text-muted">Paid: Rs2,000</small>
                                 </td>
                                 <td>
                                     <span class="badge badge-warning">Partial</span>
                                     <br>
-                                    <small class="text-muted">Due: ₹2,599</small>
+                                    <small class="text-muted">Due: Rs2,599</small>
                                 </td>
                                 <td>
                                     <span class="badge badge-warning">Pending</span>
@@ -439,8 +439,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-sm mr-2">
-                                            <img src="https://ui-avatars.com/api/?name=Emma+Wilson&background=6f42c1&color=fff" 
-                                                 class="rounded-circle" alt="Emma Wilson">
+                                            <img src="https://ui-avatars.com/api/?name=Emma+Wilson&background=6f42c1&color=fff"
+                                                class="rounded-circle" alt="Emma Wilson">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Emma Wilson</h6>
@@ -451,13 +451,13 @@
                                 <td>
                                     <div class="d-flex flex-column">
                                         <strong>3 items</strong>
-                                        <small class="text-muted">₹2,999 × 1, ₹1,299 × 2</small>
+                                        <small class="text-muted">Rs2,999 × 1, Rs1,299 × 2</small>
                                     </div>
                                 </td>
                                 <td>
-                                    <strong class="text-danger">₹5,597</strong>
+                                    <strong class="text-danger">Rs5,597</strong>
                                     <br>
-                                    <small class="text-muted">Refunded: ₹1,299</small>
+                                    <small class="text-muted">Refunded: Rs1,299</small>
                                 </td>
                                 <td>
                                     <span class="badge badge-info">Refunded</span>
@@ -503,8 +503,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-sm mr-2">
-                                            <img src="https://ui-avatars.com/api/?name=David+Miller&background=17a2b8&color=fff" 
-                                                 class="rounded-circle" alt="David Miller">
+                                            <img src="https://ui-avatars.com/api/?name=David+Miller&background=17a2b8&color=fff"
+                                                class="rounded-circle" alt="David Miller">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">David Miller</h6>
@@ -515,11 +515,11 @@
                                 <td>
                                     <div class="d-flex flex-column">
                                         <strong>4 items</strong>
-                                        <small class="text-muted">₹899 × 4</small>
+                                        <small class="text-muted">Rs899 × 4</small>
                                     </div>
                                 </td>
                                 <td>
-                                    <strong class="text-secondary">₹3,596</strong>
+                                    <strong class="text-secondary">Rs3,596</strong>
                                     <br>
                                     <small class="text-muted">Cancelled</small>
                                 </td>
@@ -570,14 +570,14 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <!-- Date Range Picker -->
     <script src="{{ asset('backend/assets/vendor/daterangepicker/moment.min.js') }}"></script>
     <script src="{{ asset('backend/assets/vendor/daterangepicker/daterangepicker.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Initialize date range picker
@@ -587,7 +587,7 @@
                     format: 'DD/MM/YYYY'
                 }
             });
-            
+
             // Tooltip initialization
             $('[title]').tooltip();
         });

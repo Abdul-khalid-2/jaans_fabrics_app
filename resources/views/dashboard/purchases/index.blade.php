@@ -12,84 +12,104 @@
             margin-bottom: 20px;
             transition: all 0.3s;
         }
+
         .purchase-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
+
         .purchase-card.ordered {
             border-left-color: #007bff;
         }
+
         .purchase-card.received {
             border-left-color: #28a745;
         }
+
         .purchase-card.partial {
             border-left-color: #ffc107;
         }
+
         .purchase-card.cancelled {
             border-left-color: #dc3545;
         }
+
         .purchase-header {
             padding: 15px;
             border-bottom: 1px solid #dee2e6;
         }
+
         .purchase-body {
             padding: 15px;
         }
+
         .purchase-footer {
             padding: 10px 15px;
             background: #f8f9fa;
             border-top: 1px solid #dee2e6;
             border-radius: 0 0 8px 8px;
         }
+
         .status-badge {
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 500;
         }
+
         .status-ordered {
             background: #d1ecf1;
             color: #0c5460;
         }
+
         .status-received {
             background: #d4edda;
             color: #155724;
         }
+
         .status-partial {
             background: #fff3cd;
             color: #856404;
         }
+
         .status-cancelled {
             background: #f8d7da;
             color: #721c24;
         }
+
         .payment-badge {
             padding: 3px 8px;
             border-radius: 4px;
             font-size: 11px;
         }
+
         .payment-paid {
             background: #d4edda;
             color: #155724;
         }
+
         .payment-pending {
             background: #fff3cd;
             color: #856404;
         }
+
         .payment-partial {
             background: #ffeaa7;
             color: #856404;
         }
+
         .payment-overdue {
             background: #f8d7da;
             color: #721c24;
         }
+
         .supplier-avatar {
             width: 40px;
             height: 40px;
             border-radius: 4px;
             object-fit: cover;
         }
+
         .action-btn {
             width: 35px;
             height: 35px;
@@ -98,30 +118,36 @@
             align-items: center;
             justify-content: center;
         }
+
         .quick-stats {
             background: white;
             border-radius: 8px;
             padding: 15px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             text-align: center;
             height: 100%;
         }
+
         .quick-stats i {
             font-size: 24px;
             margin-bottom: 10px;
         }
+
         .quick-stats-value {
             font-size: 20px;
             font-weight: 600;
             margin: 5px 0;
         }
+
         .quick-stats-label {
             color: #6c757d;
             font-size: 13px;
         }
+
         .filter-tags {
             margin-bottom: 20px;
         }
+
         .filter-tag {
             display: inline-block;
             background: #e9ecef;
@@ -131,6 +157,7 @@
             margin-bottom: 8px;
             font-size: 13px;
         }
+
         .filter-tag i {
             cursor: pointer;
             margin-left: 5px;
@@ -179,17 +206,17 @@
             <div class="col-md-3">
                 <div class="quick-stats">
                     <i class="las la-money-bill-wave text-success"></i>
-                    <div class="quick-stats-value">₹2.85M</div>
+                    <div class="quick-stats-value">Rs2.85M</div>
                     <div class="quick-stats-label">Total Value</div>
-                    <small class="text-muted">This month: ₹425K</small>
+                    <small class="text-muted">This month: Rs425K</small>
                 </div>
             </div>
             <div class="col-md-3">
                 <div class="quick-stats">
                     <i class="las la-exclamation-triangle text-warning"></i>
-                    <div class="quick-stats-value">₹185K</div>
+                    <div class="quick-stats-value">Rs185K</div>
                     <div class="quick-stats-label">Pending Payments</div>
-                    <small class="text-danger">Overdue: ₹25K</small>
+                    <small class="text-danger">Overdue: Rs25K</small>
                 </div>
             </div>
             <div class="col-md-3">
@@ -268,7 +295,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="row">
                     <div class="col-md-3">
                         <div class="form-group">
@@ -287,11 +314,11 @@
                             <label>Amount Range</label>
                             <select class="form-control" id="amountFilter">
                                 <option value="">Any Amount</option>
-                                <option value="0-10000">Below ₹10,000</option>
-                                <option value="10000-50000">₹10,000 - ₹50,000</option>
-                                <option value="50000-100000">₹50,000 - ₹1,00,000</option>
-                                <option value="100000-500000">₹1,00,000 - ₹5,00,000</option>
-                                <option value="500000+">Above ₹5,00,000</option>
+                                <option value="0-10000">Below Rs10,000</option>
+                                <option value="10000-50000">Rs10,000 - Rs50,000</option>
+                                <option value="50000-100000">Rs50,000 - Rs1,00,000</option>
+                                <option value="100000-500000">Rs1,00,000 - Rs5,00,000</option>
+                                <option value="500000+">Above Rs5,00,000</option>
                             </select>
                         </div>
                     </div>
@@ -303,12 +330,12 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Active Filters -->
                 <div class="filter-tags" id="activeFilters">
                     <!-- Filters will be added here dynamically -->
                 </div>
-                
+
                 <div class="text-right">
                     <button type="button" class="btn btn-outline-secondary" onclick="resetFilters()">
                         <i class="las la-redo mr-2"></i>Reset Filters
@@ -369,14 +396,14 @@
                     </div>
                     <div class="purchase-body">
                         <div class="d-flex align-items-center mb-3">
-                            <img src="https://via.placeholder.com/40x40/007bff/ffffff?text=TF" 
-                                 class="supplier-avatar mr-3" alt="Textile Factory">
+                            <img src="https://via.placeholder.com/40x40/007bff/ffffff?text=TF"
+                                class="supplier-avatar mr-3" alt="Textile Factory">
                             <div>
                                 <h6 class="mb-0">Textile Factory Ltd.</h6>
                                 <small class="text-muted">John Doe</small>
                             </div>
                         </div>
-                        
+
                         <div class="row mb-3">
                             <div class="col-6">
                                 <div class="small text-muted">Items</div>
@@ -384,16 +411,16 @@
                             </div>
                             <div class="col-6">
                                 <div class="small text-muted">Total Amount</div>
-                                <div class="font-weight-bold">₹125,000</div>
+                                <div class="font-weight-bold">Rs125,000</div>
                             </div>
                         </div>
-                        
+
                         <div class="mb-3">
                             <div class="small text-muted">Expected Delivery</div>
                             <div class="font-weight-bold">20 Jan 2024</div>
                             <small class="text-muted">5 days remaining</small>
                         </div>
-                        
+
                         <div class="d-flex justify-content-between">
                             <div>
                                 <span class="payment-badge payment-partial">Partial Payment</span>
@@ -440,14 +467,14 @@
                     </div>
                     <div class="purchase-body">
                         <div class="d-flex align-items-center mb-3">
-                            <img src="https://via.placeholder.com/40x40/28a745/ffffff?text=FW" 
-                                 class="supplier-avatar mr-3" alt="Fashion Wear">
+                            <img src="https://via.placeholder.com/40x40/28a745/ffffff?text=FW"
+                                class="supplier-avatar mr-3" alt="Fashion Wear">
                             <div>
                                 <h6 class="mb-0">Fashion Wear Imports</h6>
                                 <small class="text-muted">Sarah Smith</small>
                             </div>
                         </div>
-                        
+
                         <div class="row mb-3">
                             <div class="col-6">
                                 <div class="small text-muted">Items</div>
@@ -455,16 +482,16 @@
                             </div>
                             <div class="col-6">
                                 <div class="small text-muted">Total Amount</div>
-                                <div class="font-weight-bold">₹85,000</div>
+                                <div class="font-weight-bold">Rs85,000</div>
                             </div>
                         </div>
-                        
+
                         <div class="mb-3">
                             <div class="small text-muted">Received On</div>
                             <div class="font-weight-bold">12 Jan 2024</div>
                             <small class="text-success">On time</small>
                         </div>
-                        
+
                         <div class="d-flex justify-content-between">
                             <div>
                                 <span class="payment-badge payment-paid">Paid</span>
@@ -511,14 +538,14 @@
                     </div>
                     <div class="purchase-body">
                         <div class="d-flex align-items-center mb-3">
-                            <img src="https://via.placeholder.com/40x40/ffc107/000000?text=LD" 
-                                 class="supplier-avatar mr-3" alt="Local Distributor">
+                            <img src="https://via.placeholder.com/40x40/ffc107/000000?text=LD"
+                                class="supplier-avatar mr-3" alt="Local Distributor">
                             <div>
                                 <h6 class="mb-0">Local Distributors Co.</h6>
                                 <small class="text-muted">Mike Johnson</small>
                             </div>
                         </div>
-                        
+
                         <div class="row mb-3">
                             <div class="col-6">
                                 <div class="small text-muted">Items</div>
@@ -529,16 +556,16 @@
                             </div>
                             <div class="col-6">
                                 <div class="small text-muted">Total Amount</div>
-                                <div class="font-weight-bold">₹150,000</div>
+                                <div class="font-weight-bold">Rs150,000</div>
                             </div>
                         </div>
-                        
+
                         <div class="mb-3">
                             <div class="small text-muted">Next Delivery</div>
                             <div class="font-weight-bold">15 Jan 2024</div>
                             <small class="text-warning">5 items pending</small>
                         </div>
-                        
+
                         <div class="d-flex justify-content-between">
                             <div>
                                 <span class="payment-badge payment-pending">Pending</span>
@@ -585,14 +612,14 @@
                     </div>
                     <div class="purchase-body">
                         <div class="d-flex align-items-center mb-3">
-                            <img src="https://via.placeholder.com/40x40/dc3545/ffffff?text=WV" 
-                                 class="supplier-avatar mr-3" alt="Wholesale Vendor">
+                            <img src="https://via.placeholder.com/40x40/dc3545/ffffff?text=WV"
+                                class="supplier-avatar mr-3" alt="Wholesale Vendor">
                             <div>
                                 <h6 class="mb-0">Wholesale Vendors Inc.</h6>
                                 <small class="text-muted">Robert Brown</small>
                             </div>
                         </div>
-                        
+
                         <div class="row mb-3">
                             <div class="col-6">
                                 <div class="small text-muted">Items</div>
@@ -600,16 +627,16 @@
                             </div>
                             <div class="col-6">
                                 <div class="small text-muted">Total Amount</div>
-                                <div class="font-weight-bold">₹95,000</div>
+                                <div class="font-weight-bold">Rs95,000</div>
                             </div>
                         </div>
-                        
+
                         <div class="mb-3">
                             <div class="small text-muted">Cancelled On</div>
                             <div class="font-weight-bold">30 Dec 2023</div>
                             <small class="text-danger">Supplier issue</small>
                         </div>
-                        
+
                         <div class="d-flex justify-content-between">
                             <div>
                                 <span class="payment-badge payment-overdue">Refunded</span>
@@ -666,8 +693,8 @@
                                 <td>15 Jan 2024</td>
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        <img src="https://via.placeholder.com/30x30/007bff/ffffff?text=TF" 
-                                             class="supplier-avatar mr-2" alt="Textile Factory">
+                                        <img src="https://via.placeholder.com/30x30/007bff/ffffff?text=TF"
+                                            class="supplier-avatar mr-2" alt="Textile Factory">
                                         <div>
                                             <div>Textile Factory Ltd.</div>
                                             <small class="text-muted">John Doe</small>
@@ -676,8 +703,8 @@
                                 </td>
                                 <td>12 items</td>
                                 <td>
-                                    <strong>₹125,000</strong>
-                                    <div class="small text-muted">Paid: ₹75,000</div>
+                                    <strong>Rs125,000</strong>
+                                    <div class="small text-muted">Paid: Rs75,000</div>
                                 </td>
                                 <td>
                                     <span class="status-badge status-ordered">Ordered</span>
@@ -712,8 +739,8 @@
                                 <td>10 Jan 2024</td>
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        <img src="https://via.placeholder.com/30x30/28a745/ffffff?text=FW" 
-                                             class="supplier-avatar mr-2" alt="Fashion Wear">
+                                        <img src="https://via.placeholder.com/30x30/28a745/ffffff?text=FW"
+                                            class="supplier-avatar mr-2" alt="Fashion Wear">
                                         <div>
                                             <div>Fashion Wear Imports</div>
                                             <small class="text-muted">Sarah Smith</small>
@@ -722,7 +749,7 @@
                                 </td>
                                 <td>8 items</td>
                                 <td>
-                                    <strong>₹85,000</strong>
+                                    <strong>Rs85,000</strong>
                                     <div class="small text-success">Fully paid</div>
                                 </td>
                                 <td>
@@ -789,7 +816,7 @@
             // View mode toggle
             $('input[name="viewMode"]').change(function() {
                 const viewMode = $(this).val();
-                if(viewMode === 'grid') {
+                if (viewMode === 'grid') {
                     $('#purchasesGridView').removeClass('d-none');
                     $('#purchasesListView').addClass('d-none');
                 } else {
@@ -822,7 +849,7 @@
             $('#activeFilters').empty();
 
             // Add filter tags
-            if(status) {
+            if (status) {
                 $('#activeFilters').append(`
                     <span class="filter-tag">
                         Status: ${$('#statusFilter option:selected').text()}
@@ -831,7 +858,7 @@
                 `);
             }
 
-            if(payment) {
+            if (payment) {
                 $('#activeFilters').append(`
                     <span class="filter-tag">
                         Payment: ${$('#paymentFilter option:selected').text()}
@@ -840,7 +867,7 @@
                 `);
             }
 
-            if(supplier) {
+            if (supplier) {
                 $('#activeFilters').append(`
                     <span class="filter-tag">
                         Supplier: ${$('#supplierFilter option:selected').text()}
@@ -849,7 +876,7 @@
                 `);
             }
 
-            if(branch) {
+            if (branch) {
                 $('#activeFilters').append(`
                     <span class="filter-tag">
                         Branch: ${$('#branchFilter option:selected').text()}
@@ -858,7 +885,7 @@
                 `);
             }
 
-            if(fromDate) {
+            if (fromDate) {
                 $('#activeFilters').append(`
                     <span class="filter-tag">
                         From: ${fromDate}
@@ -867,7 +894,7 @@
                 `);
             }
 
-            if(toDate) {
+            if (toDate) {
                 $('#activeFilters').append(`
                     <span class="filter-tag">
                         To: ${toDate}
@@ -876,7 +903,7 @@
                 `);
             }
 
-            if(amount) {
+            if (amount) {
                 $('#activeFilters').append(`
                     <span class="filter-tag">
                         Amount: ${$('#amountFilter option:selected').text()}
@@ -911,7 +938,7 @@
         // Sort purchases
         window.sortPurchases = function(sortBy, order = 'desc') {
             let message = `Sorted by ${sortBy}`;
-            if(order) {
+            if (order) {
                 message += ` (${order === 'desc' ? 'descending' : 'ascending'})`;
             }
             alert(message + ' - This would sort the purchase orders in real application.');
@@ -925,14 +952,14 @@
         // Bulk actions
         window.bulkAction = function(action) {
             const selected = $('.purchase-checkbox:checked').length;
-            if(selected === 0) {
+            if (selected === 0) {
                 alert('Please select at least one purchase order');
                 return;
             }
 
-            switch(action) {
+            switch (action) {
                 case 'delete':
-                    if(confirm(`Delete ${selected} purchase order(s)?`)) {
+                    if (confirm(`Delete ${selected} purchase order(s)?`)) {
                         alert('Selected purchase orders deleted!');
                     }
                     break;
@@ -941,7 +968,7 @@
                     break;
                 case 'status':
                     const status = prompt('Enter new status (ordered/received/partial/cancelled):');
-                    if(status) {
+                    if (status) {
                         alert(`Status updated to ${status} for ${selected} purchase order(s)`);
                     }
                     break;

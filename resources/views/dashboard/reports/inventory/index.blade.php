@@ -80,7 +80,7 @@
                             <div class="col-md-3 col-6 mb-3">
                                 <div class="border rounded p-3">
                                     <div class="text-muted">Total Stock Value</div>
-                                    <div class="h4 font-weight-bold">₹ 245,800</div>
+                                    <div class="h4 font-weight-bold">Rs245,800</div>
                                     <small class="text-success"><i class="las la-arrow-up"></i> 8.5% increase</small>
                                 </div>
                             </div>

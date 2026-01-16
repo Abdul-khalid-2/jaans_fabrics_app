@@ -12,7 +12,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        //
+        return view('dashboard.categories.index');
     }
 
     /**
@@ -20,7 +20,7 @@ class CategoryController extends Controller
      */
     public function create()
     {
-        //
+        return view('dashboard.categories.create');
     }
 
     /**
@@ -34,17 +34,19 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Category $category)
+    // public function show(Category $category)
+    public function show()
     {
-        //
+        return view('dashboard.categories.show');
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Category $category)
+    // public function edit(Category $category)
+    public function edit()
     {
-        //
+        return view('dashboard.categories.edit');
     }
 
     /**

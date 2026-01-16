@@ -10,16 +10,19 @@
         .transaction-type-btn {
             min-width: 100px;
         }
+
         .amount-input-group {
             position: relative;
         }
+
         .amount-input-group .form-control {
             padding-left: 40px;
             font-size: 1.5rem;
             font-weight: 600;
         }
+
         .amount-input-group::before {
-            content: "₹";
+            content: "Rs";
             position: absolute;
             left: 15px;
             top: 50%;
@@ -28,12 +31,14 @@
             font-weight: 600;
             z-index: 5;
         }
+
         .form-section {
             background: #f8f9fa;
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
         }
+
         .form-section-title {
             font-weight: 600;
             color: #495057;
@@ -41,17 +46,21 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #dee2e6;
         }
+
         .account-balance {
             font-size: 0.9rem;
             color: #6c757d;
             margin-top: 5px;
         }
+
         .account-balance.positive {
             color: #28a745;
         }
+
         .account-balance.negative {
             color: #dc3545;
         }
+
         .reference-badge {
             font-size: 0.8rem;
             padding: 5px 10px;
@@ -59,9 +68,11 @@
             background: #e9ecef;
             cursor: pointer;
         }
+
         .reference-badge:hover {
             background: #dee2e6;
         }
+
         .transaction-preview {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -105,7 +116,7 @@
                     <p class="mb-0" id="previewDetails">Enter transaction details</p>
                 </div>
                 <div class="text-right">
-                    <h3 class="mb-0" id="previewAmount">₹0.00</h3>
+                    <h3 class="mb-0" id="previewAmount">Rs0.00</h3>
                     <small id="previewType">Debit Transaction</small>
                 </div>
             </div>
@@ -117,68 +128,68 @@
                     <div class="card-body">
                         <form id="transactionCreateForm" action="{{ route('accounts.transactions.store') }}" method="POST">
                             @csrf
-                            
+
                             <!-- Transaction Type Selection -->
                             <div class="form-section">
                                 <h6 class="form-section-title">Transaction Type</h6>
-                                
+
                                 <div class="btn-group btn-group-toggle w-100 mb-4" data-toggle="buttons">
                                     <label class="btn btn-outline-success transaction-type-btn active">
-                                        <input type="radio" name="transaction_type" value="debit" checked> 
+                                        <input type="radio" name="transaction_type" value="debit" checked>
                                         <i class="las la-arrow-down mr-2"></i> Debit
                                     </label>
                                     <label class="btn btn-outline-danger transaction-type-btn">
-                                        <input type="radio" name="transaction_type" value="credit"> 
+                                        <input type="radio" name="transaction_type" value="credit">
                                         <i class="las la-arrow-up mr-2"></i> Credit
                                     </label>
                                     <label class="btn btn-outline-info transaction-type-btn">
-                                        <input type="radio" name="transaction_type" value="journal"> 
+                                        <input type="radio" name="transaction_type" value="journal">
                                         <i class="las la-exchange-alt mr-2"></i> Journal
                                     </label>
                                 </div>
-                                
+
                                 <div class="alert alert-info" id="typeExplanation">
                                     <i class="las la-info-circle mr-2"></i>
                                     <strong>Debit:</strong> Increases asset/expense accounts, decreases liability/equity/revenue accounts
                                 </div>
                             </div>
-                            
+
                             <!-- Basic Information -->
                             <div class="form-section">
                                 <h6 class="form-section-title">Transaction Details</h6>
-                                
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Transaction Date <span class="text-danger">*</span></label>
-                                            <input type="text" class="form-control datepicker" 
-                                                   name="transaction_date" value="{{ date('Y-m-d') }}" required>
+                                            <input type="text" class="form-control datepicker"
+                                                name="transaction_date" value="{{ date('Y-m-d') }}" required>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Transaction Time</label>
-                                            <input type="time" class="form-control" 
-                                                   name="transaction_time" value="{{ date('H:i') }}">
+                                            <input type="time" class="form-control"
+                                                name="transaction_time" value="{{ date('H:i') }}">
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Description <span class="text-danger">*</span></label>
-                                    <input type="text" class="form-control" name="description" 
-                                           placeholder="Enter transaction description" required
-                                           oninput="updatePreview('description', this.value)">
+                                    <input type="text" class="form-control" name="description"
+                                        placeholder="Enter transaction description" required
+                                        oninput="updatePreview('description', this.value)">
                                 </div>
-                                
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Amount <span class="text-danger">*</span></label>
                                             <div class="amount-input-group">
-                                                <input type="number" class="form-control" name="amount" 
-                                                       placeholder="0.00" step="0.01" min="0" required
-                                                       oninput="updatePreview('amount', this.value)">
+                                                <input type="number" class="form-control" name="amount"
+                                                    placeholder="0.00" step="0.01" min="0" required
+                                                    oninput="updatePreview('amount', this.value)">
                                             </div>
                                         </div>
                                     </div>
@@ -186,8 +197,8 @@
                                         <div class="form-group">
                                             <label class="form-label">Transaction Number</label>
                                             <div class="input-group">
-                                                <input type="text" class="form-control" name="transaction_number" 
-                                                       value="TRX-{{ date('YmdHis') }}" readonly>
+                                                <input type="text" class="form-control" name="transaction_number"
+                                                    value="TRX-{{ date('YmdHis') }}" readonly>
                                                 <div class="input-group-append">
                                                     <button type="button" class="btn btn-outline-secondary" onclick="generateTransactionNumber()">
                                                         <i class="las la-sync"></i>
@@ -198,15 +209,15 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Account Selection -->
                             <div class="form-section">
                                 <h6 class="form-section-title">Account Details</h6>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Account <span class="text-danger">*</span></label>
                                     <select class="form-control" name="account_id" id="accountSelect" required
-                                            onchange="updateAccountBalance(this.value)">
+                                        onchange="updateAccountBalance(this.value)">
                                         <option value="">Select Account</option>
                                         <optgroup label="Cash & Bank">
                                             <option value="1">Cash in Hand (1001)</option>
@@ -231,7 +242,7 @@
                                         Select an account to view balance
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Branch</label>
                                     <select class="form-control" name="branch_id">
@@ -241,11 +252,11 @@
                                     </select>
                                 </div>
                             </div>
-                            
+
                             <!-- Reference Information -->
                             <div class="form-section">
                                 <h6 class="form-section-title">Reference Information</h6>
-                                
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -266,12 +277,12 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-label">Reference ID</label>
-                                            <input type="text" class="form-control" name="reference_id" 
-                                                   placeholder="Enter reference ID" id="referenceId">
+                                            <input type="text" class="form-control" name="reference_id"
+                                                placeholder="Enter reference ID" id="referenceId">
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="mb-3">
                                     <small class="text-muted">Quick References:</small>
                                     <div class="mt-2">
@@ -286,18 +297,18 @@
                                         </span>
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Reference Details</label>
-                                    <textarea class="form-control" name="reference_details" rows="2" 
-                                              placeholder="Additional reference information"></textarea>
+                                    <textarea class="form-control" name="reference_details" rows="2"
+                                        placeholder="Additional reference information"></textarea>
                                 </div>
                             </div>
-                            
+
                             <!-- Additional Information -->
                             <div class="form-section">
                                 <h6 class="form-section-title">Additional Information</h6>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Attachments</label>
                                     <div class="custom-file">
@@ -306,13 +317,13 @@
                                     </div>
                                     <small class="form-text text-muted">Upload supporting documents (max 5 files, 2MB each)</small>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Internal Notes</label>
-                                    <textarea class="form-control" name="notes" rows="3" 
-                                              placeholder="Internal notes and comments"></textarea>
+                                    <textarea class="form-control" name="notes" rows="3"
+                                        placeholder="Internal notes and comments"></textarea>
                                 </div>
-                                
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -337,21 +348,21 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Recurring Transaction (Optional) -->
                             <div class="form-section">
                                 <h6 class="form-section-title">Recurring Transaction</h6>
-                                
+
                                 <div class="form-group">
                                     <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" 
-                                               name="is_recurring" id="isRecurring" value="1">
+                                        <input type="checkbox" class="custom-control-input"
+                                            name="is_recurring" id="isRecurring" value="1">
                                         <label class="custom-control-label" for="isRecurring">
                                             This is a recurring transaction
                                         </label>
                                     </div>
                                 </div>
-                                
+
                                 <div id="recurringOptions" style="display: none;">
                                     <div class="row">
                                         <div class="col-md-6">
@@ -369,20 +380,20 @@
                                         <div class="col-md-6">
                                             <div class="form-group">
                                                 <label class="form-label">End Date</label>
-                                                <input type="text" class="form-control datepicker" 
-                                                       name="recurring_end_date" placeholder="Select end date">
+                                                <input type="text" class="form-control datepicker"
+                                                    name="recurring_end_date" placeholder="Select end date">
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <label class="form-label">Number of Occurrences</label>
-                                        <input type="number" class="form-control" name="recurring_occurrences" 
-                                               min="1" max="120" value="12">
+                                        <input type="number" class="form-control" name="recurring_occurrences"
+                                            min="1" max="120" value="12">
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="d-flex justify-content-between mt-4">
                                 <button type="button" class="btn btn-outline-secondary" onclick="resetForm()">
                                     <i class="las la-redo mr-2"></i>Reset Form
@@ -401,13 +412,13 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- Flatpickr -->
     <script src="{{ asset('backend/assets/vendor/flatpickr/dist/flatpickr.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Initialize datepicker
@@ -415,80 +426,80 @@
                 dateFormat: "Y-m-d",
                 defaultDate: "today"
             });
-            
+
             // Transaction type change
             $('input[name="transaction_type"]').change(function() {
                 updateTransactionTypeExplanation(this.value);
                 updatePreview('type', this.value);
             });
-            
+
             // Recurring transaction toggle
             $('#isRecurring').change(function() {
-                if(this.checked) {
+                if (this.checked) {
                     $('#recurringOptions').slideDown();
                 } else {
                     $('#recurringOptions').slideUp();
                 }
             });
-            
+
             // File input label
             $('.custom-file-input').on('change', function() {
                 let fileName = $(this).val().split('\\').pop();
                 $(this).next('.custom-file-label').addClass("selected").html(fileName);
             });
-            
+
             // Form submission
             $('#transactionCreateForm').submit(function(e) {
                 e.preventDefault();
-                
+
                 // Validation
                 const description = $('input[name="description"]').val().trim();
                 const amount = $('input[name="amount"]').val();
                 const accountId = $('#accountSelect').val();
                 const transactionType = $('input[name="transaction_type"]:checked').val();
-                
-                if(!description) {
+
+                if (!description) {
                     alert('Please enter transaction description');
                     $('input[name="description"]').focus();
                     return false;
                 }
-                
-                if(!amount || parseFloat(amount) <= 0) {
+
+                if (!amount || parseFloat(amount) <= 0) {
                     alert('Please enter a valid amount');
                     $('input[name="amount"]').focus();
                     return false;
                 }
-                
-                if(!accountId) {
+
+                if (!accountId) {
                     alert('Please select an account');
                     $('#accountSelect').focus();
                     return false;
                 }
-                
+
                 // Confirm large transactions
-                if(parseFloat(amount) > 100000) {
-                    if(!confirm(`This is a large transaction (₹${parseFloat(amount).toLocaleString()}). Continue?`)) {
+                if (parseFloat(amount) > 100000) {
+                    if (!confirm(`This is a large transaction (Rs${parseFloat(amount).toLocaleString()}). Continue?`)) {
                         return false;
                     }
                 }
-                
+
                 // Show loading
                 $('button[type="submit"]').prop('disabled', true).html('<i class="las la-spinner la-spin mr-2"></i>Saving...');
-                
+
                 // Collect form data
                 const formData = new FormData(this);
-                
+
                 // Simulate API call
                 setTimeout(() => {
                     console.log('Form data:', Object.fromEntries(formData));
                     alert('Transaction created successfully!');
                     window.location.href = "{{ route('accounts.transactions.index') }}";
                 }, 1500);
-                
+
                 return false;
             });
         });
-        
+
         // Update transaction type explanation
         window.updateTransactionTypeExplanation = function(type) {
             const explanations = {
@@ -498,31 +509,61 @@
             };
             $('#typeExplanation').html(`<i class="las la-info-circle mr-2"></i>${explanations[type] || ''}`);
         };
-        
+
         // Update account balance information
         window.updateAccountBalance = function(accountId) {
             const accountBalances = {
-                '1': { balance: 125000, type: 'debit' },
-                '2': { balance: 850000, type: 'debit' },
-                '3': { balance: 250000, type: 'debit' },
-                '4': { balance: 150000, type: 'debit' },
-                '5': { balance: 50000, type: 'credit' },
-                '6': { balance: 200000, type: 'credit' },
-                '7': { balance: 75000, type: 'credit' },
-                '8': { balance: 0, type: 'debit' },
-                '9': { balance: 0, type: 'debit' },
-                '10': { balance: 0, type: 'debit' }
+                '1': {
+                    balance: 125000,
+                    type: 'debit'
+                },
+                '2': {
+                    balance: 850000,
+                    type: 'debit'
+                },
+                '3': {
+                    balance: 250000,
+                    type: 'debit'
+                },
+                '4': {
+                    balance: 150000,
+                    type: 'debit'
+                },
+                '5': {
+                    balance: 50000,
+                    type: 'credit'
+                },
+                '6': {
+                    balance: 200000,
+                    type: 'credit'
+                },
+                '7': {
+                    balance: 75000,
+                    type: 'credit'
+                },
+                '8': {
+                    balance: 0,
+                    type: 'debit'
+                },
+                '9': {
+                    balance: 0,
+                    type: 'debit'
+                },
+                '10': {
+                    balance: 0,
+                    type: 'debit'
+                }
             };
-            
+
             const info = $('#accountBalanceInfo');
-            if(accountId && accountBalances[accountId]) {
+            if (accountId && accountBalances[accountId]) {
                 const acc = accountBalances[accountId];
-                const balanceText = `Balance: ₹${acc.balance.toLocaleString()} (${acc.type} balance)`;
+                const balanceText = `Balance: Rs${acc.balance.toLocaleString()} (${acc.type} balance)`;
                 info.text(balanceText);
                 info.removeClass('positive negative');
-                if(acc.balance > 0) {
+                if (acc.balance > 0) {
                     info.addClass('positive');
-                } else if(acc.balance < 0) {
+                } else if (acc.balance < 0) {
                     info.addClass('negative');
                 }
             } else {
@@ -530,31 +571,31 @@
                 info.removeClass('positive negative');
             }
         };
-        
+
         // Set reference from quick badges
         window.setReference = function(type, id) {
             $('#referenceType').val(type);
             $('#referenceId').val(id);
-            
+
             // Update preview
             updatePreview('reference', `${type}: ${id}`);
         };
-        
+
         // Generate transaction number
         window.generateTransactionNumber = function() {
             const timestamp = Date.now().toString();
             const number = 'TRX-' + timestamp.slice(-14);
             $('input[name="transaction_number"]').val(number);
         };
-        
+
         // Update preview
         window.updatePreview = function(type, value) {
-            switch(type) {
+            switch (type) {
                 case 'description':
                     $('#previewDescription').text(value || 'New Transaction');
                     break;
                 case 'amount':
-                    $('#previewAmount').text('₹' + (parseFloat(value || 0).toFixed(2)));
+                    $('#previewAmount').text('Rs' + (parseFloat(value || 0).toFixed(2)));
                     break;
                 case 'type':
                     const typeNames = {
@@ -569,10 +610,10 @@
                     break;
             }
         };
-        
+
         // Reset form
         window.resetForm = function() {
-            if(confirm('Are you sure you want to reset the form? All data will be lost.')) {
+            if (confirm('Are you sure you want to reset the form? All data will be lost.')) {
                 $('#transactionCreateForm')[0].reset();
                 updateTransactionTypeExplanation('debit');
                 updatePreview('description', '');

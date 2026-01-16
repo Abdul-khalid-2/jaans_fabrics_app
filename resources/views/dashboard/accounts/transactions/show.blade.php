@@ -129,7 +129,7 @@
                 </div>
                 <div class="col-md-4 text-right">
                     <div class="amount-badge debit-badge">
-                        ₹5,000
+                        Rs5,000
                     </div>
                     <p class="mb-0 mt-2">March 20, 2024 10:30 AM</p>
                 </div>
@@ -190,7 +190,7 @@
                             <div class="mb-3">
                                 <div class="detail-label">Amount</div>
                                 <div class="detail-value text-success">
-                                    <h4 class="mb-0">₹5,000</h4>
+                                    <h4 class="mb-0">Rs5,000</h4>
                                 </div>
                             </div>
                             <div class="mb-3">
@@ -314,19 +314,19 @@
                     <div class="mb-3">
                         <div class="detail-label">Account Balance Before</div>
                         <div class="detail-value">
-                            ₹120,000
+                            Rs120,000
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="detail-label">Transaction Amount</div>
                         <div class="detail-value text-success">
-                            +₹5,000 (Debit)
+                            +Rs5,000 (Debit)
                         </div>
                     </div>
                     <div class="mb-3">
                         <div class="detail-label">Account Balance After</div>
                         <div class="detail-value">
-                            <strong>₹125,000</strong>
+                            <strong>Rs125,000</strong>
                         </div>
                     </div>
                     <div class="mt-4">
@@ -374,14 +374,14 @@
                                 <small class="text-muted">Invoice Payment</small>
                                 <div>TRX-20240320-002</div>
                             </div>
-                            <span class="badge badge-success">₹2,500</span>
+                            <span class="badge badge-success">Rs2,500</span>
                         </a>
                         <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                             <div>
                                 <small class="text-muted">Refund</small>
                                 <div>TRX-20240319-005</div>
                             </div>
-                            <span class="badge badge-danger">₹1,000</span>
+                            <span class="badge badge-danger">Rs1,000</span>
                         </a>
                     </div>
                     <div class="mt-3">
@@ -518,7 +518,7 @@
                     <div class="alert alert-danger">
                         <strong>Transaction Details:</strong><br>
                         Number: <strong>TRX-20240320-001</strong><br>
-                        Amount: <strong>₹5,000</strong><br>
+                        Amount: <strong>Rs5,000</strong><br>
                         Account: <strong>Cash in Hand (1001)</strong><br>
                         Date: <strong>March 20, 2024</strong>
                     </div>
@@ -661,7 +661,7 @@
                             <p><strong>Date:</strong> March 20, 2024 10:30 AM</p>
                             <p><strong>Type:</strong> Debit Transaction</p>
                             <p><strong>Status:</strong> Approved</p>
-                            <p><strong>Amount:</strong> <span style="font-size: 1.5rem; font-weight: bold;">₹5,000</span></p>
+                            <p><strong>Amount:</strong> <span style="font-size: 1.5rem; font-weight: bold;">Rs5,000</span></p>
                         </div>
                         <div class="details">
                             <h4>Transaction Details</h4>

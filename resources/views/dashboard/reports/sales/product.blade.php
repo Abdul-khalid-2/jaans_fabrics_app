@@ -48,7 +48,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-2">
                         <div class="form-group">
                             <label class="form-label">Category</label>
@@ -61,7 +61,7 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-2">
                         <div class="form-group">
                             <label class="form-label">Brand</label>
@@ -74,7 +74,7 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-2">
                         <div class="form-group">
                             <label class="form-label">Sort By</label>
@@ -85,7 +85,7 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-3">
                         <div class="form-group">
                             <label>&nbsp;</label>
@@ -110,7 +110,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-3">
                 <div class="card border-left-success shadow h-100 py-2">
                     <div class="card-body">
@@ -121,7 +121,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-3">
                 <div class="card border-left-info shadow h-100 py-2">
                     <div class="card-body">
@@ -132,7 +132,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-3">
                 <div class="card border-left-warning shadow h-100 py-2">
                     <div class="card-body">
@@ -239,7 +239,7 @@
                                     </span>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 2 -->
                             <tr>
                                 <td>
@@ -271,7 +271,7 @@
                                     </span>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 3 -->
                             <tr>
                                 <td>
@@ -303,7 +303,7 @@
                                     </span>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 4 -->
                             <tr>
                                 <td>
@@ -335,7 +335,7 @@
                                     </span>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 5 -->
                             <tr>
                                 <td>
@@ -367,7 +367,7 @@
                                     </span>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 6 -->
                             <tr>
                                 <td>
@@ -399,7 +399,7 @@
                                     </span>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 7 -->
                             <tr>
                                 <td>
@@ -431,7 +431,7 @@
                                     </span>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 8 -->
                             <tr>
                                 <td>
@@ -463,7 +463,7 @@
                                     </span>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 9 -->
                             <tr>
                                 <td>
@@ -495,7 +495,7 @@
                                     </span>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 10 -->
                             <tr>
                                 <td>
@@ -589,7 +589,7 @@
                                     </button>
                                 </td>
                             </tr>
-                            
+
                             <!-- Slow Product 2 -->
                             <tr>
                                 <td>
@@ -615,7 +615,7 @@
                                     </button>
                                 </td>
                             </tr>
-                            
+
                             <!-- Slow Product 3 -->
                             <tr>
                                 <td>
@@ -641,7 +641,7 @@
                                     </button>
                                 </td>
                             </tr>
-                            
+
                             <!-- Slow Product 4 -->
                             <tr>
                                 <td>
@@ -667,7 +667,7 @@
                                     </button>
                                 </td>
                             </tr>
-                            
+
                             <!-- Slow Product 5 -->
                             <tr>
                                 <td>
@@ -703,124 +703,132 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- Chart.js -->
     <script src="{{ asset('backend/assets/vendor/chart.js/Chart.min.js') }}"></script>
-    
+
     <!-- DataTables -->
     <script src="{{ asset('backend/assets/vendor/datatables/datatables.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
-    $(document).ready(function() {
-        // Initialize DataTable
-        $('#productSalesTable').DataTable({
-            pageLength: 10,
-            ordering: true,
-            order: [[5, 'desc']], // Sort by Revenue by default
-            dom: '<"top"f>rt<"bottom"lip><"clear">'
-        });
-        
-        // Initialize charts
-        initProductCharts();
-        
-        // Load product report
-        window.loadProductReport = function() {
-            const fromDate = $('#productFromDate').val();
-            const toDate = $('#productToDate').val();
-            const category = $('#categoryFilter').val();
-            const brand = $('#brandFilter').val();
-            const sortBy = $('#sortBy').val();
-            
-            console.log('Loading product report:', { fromDate, toDate, category, brand, sortBy });
-            
-            // Show loading
-            $('#productSalesTable_wrapper').html('<div class="text-center py-5"><i class="las la-spinner la-spin fa-2x text-primary"></i><p class="mt-2">Loading product report...</p></div>');
-            
-            // Simulate API call
-            setTimeout(() => {
-                alert('Product report loaded for selected filters');
-                // Reload charts with new data
-                initProductCharts();
-            }, 1000);
-        };
-        
-        function initProductCharts() {
-            // Top Products Chart
-            var ctx1 = document.getElementById('topProductsChart').getContext('2d');
-            new Chart(ctx1, {
-                type: $('#chartType').val(),
-                data: {
-                    labels: ['Premium T-Shirt', 'Designer Jeans', 'Running Shoes', 'Winter Jacket', 'Formal Shirt', 'Summer Dress', 'Kid\'s T-Shirt', 'Sports Shoes', 'Casual Shirt', 'Leather Jacket'],
-                    datasets: [{
-                        label: 'Revenue (₹)',
-                        data: [45600, 38400, 64800, 32400, 28800, 25600, 19200, 17600, 14400, 12800],
-                        backgroundColor: 'rgba(78, 115, 223, 0.5)',
-                        borderColor: 'rgba(78, 115, 223, 1)',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            ticks: {
-                                callback: function(value) {
-                                    return '₹' + value/1000 + 'k';
+        $(document).ready(function() {
+            // Initialize DataTable
+            $('#productSalesTable').DataTable({
+                pageLength: 10,
+                ordering: true,
+                order: [
+                    [5, 'desc']
+                ], // Sort by Revenue by default
+                dom: '<"top"f>rt<"bottom"lip><"clear">'
+            });
+
+            // Initialize charts
+            initProductCharts();
+
+            // Load product report
+            window.loadProductReport = function() {
+                const fromDate = $('#productFromDate').val();
+                const toDate = $('#productToDate').val();
+                const category = $('#categoryFilter').val();
+                const brand = $('#brandFilter').val();
+                const sortBy = $('#sortBy').val();
+
+                console.log('Loading product report:', {
+                    fromDate,
+                    toDate,
+                    category,
+                    brand,
+                    sortBy
+                });
+
+                // Show loading
+                $('#productSalesTable_wrapper').html('<div class="text-center py-5"><i class="las la-spinner la-spin fa-2x text-primary"></i><p class="mt-2">Loading product report...</p></div>');
+
+                // Simulate API call
+                setTimeout(() => {
+                    alert('Product report loaded for selected filters');
+                    // Reload charts with new data
+                    initProductCharts();
+                }, 1000);
+            };
+
+            function initProductCharts() {
+                // Top Products Chart
+                var ctx1 = document.getElementById('topProductsChart').getContext('2d');
+                new Chart(ctx1, {
+                    type: $('#chartType').val(),
+                    data: {
+                        labels: ['Premium T-Shirt', 'Designer Jeans', 'Running Shoes', 'Winter Jacket', 'Formal Shirt', 'Summer Dress', 'Kid\'s T-Shirt', 'Sports Shoes', 'Casual Shirt', 'Leather Jacket'],
+                        datasets: [{
+                            label: 'Revenue (Rs)',
+                            data: [45600, 38400, 64800, 32400, 28800, 25600, 19200, 17600, 14400, 12800],
+                            backgroundColor: 'rgba(78, 115, 223, 0.5)',
+                            borderColor: 'rgba(78, 115, 223, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    callback: function(value) {
+                                        return 'Rs' + value / 1000 + 'k';
+                                    }
                                 }
                             }
                         }
                     }
-                }
-            });
-            
-            // Category Sales Chart
-            var ctx2 = document.getElementById('categorySalesChart').getContext('2d');
-            new Chart(ctx2, {
-                type: 'pie',
-                data: {
-                    labels: ['Men\'s Wear', 'Women\'s Wear', 'Kid\'s Wear', 'Accessories'],
-                    datasets: [{
-                        data: [45, 35, 15, 5],
-                        backgroundColor: [
-                            'rgba(78, 115, 223, 0.8)',
-                            'rgba(220, 53, 69, 0.8)',
-                            'rgba(40, 167, 69, 0.8)',
-                            'rgba(255, 193, 7, 0.8)'
-                        ]
-                    }]
-                }
-            });
-            
-            // Chart type change
-            $('#chartType').change(function() {
-                initProductCharts();
-            });
-        }
-        
-        window.exportProductReport = function() {
-            alert('Exporting product report to Excel...');
-        };
-        
-        window.printProductReport = function() {
-            window.print();
-        };
-        
-        window.toggleColumns = function() {
-            alert('Toggle columns functionality - to be implemented');
-        };
-        
-        window.showProfitColumns = function() {
-            $('th:nth-child(8), th:nth-child(9), th:nth-child(10)').toggle();
-            $('td:nth-child(8), td:nth-child(9), td:nth-child(10)').toggle();
-        };
-        
-        window.downloadTableData = function() {
-            alert('Downloading table data as CSV...');
-        };
-    });
+                });
+
+                // Category Sales Chart
+                var ctx2 = document.getElementById('categorySalesChart').getContext('2d');
+                new Chart(ctx2, {
+                    type: 'pie',
+                    data: {
+                        labels: ['Men\'s Wear', 'Women\'s Wear', 'Kid\'s Wear', 'Accessories'],
+                        datasets: [{
+                            data: [45, 35, 15, 5],
+                            backgroundColor: [
+                                'rgba(78, 115, 223, 0.8)',
+                                'rgba(220, 53, 69, 0.8)',
+                                'rgba(40, 167, 69, 0.8)',
+                                'rgba(255, 193, 7, 0.8)'
+                            ]
+                        }]
+                    }
+                });
+
+                // Chart type change
+                $('#chartType').change(function() {
+                    initProductCharts();
+                });
+            }
+
+            window.exportProductReport = function() {
+                alert('Exporting product report to Excel...');
+            };
+
+            window.printProductReport = function() {
+                window.print();
+            };
+
+            window.toggleColumns = function() {
+                alert('Toggle columns functionality - to be implemented');
+            };
+
+            window.showProfitColumns = function() {
+                $('th:nth-child(8), th:nth-child(9), th:nth-child(10)').toggle();
+                $('td:nth-child(8), td:nth-child(9), td:nth-child(10)').toggle();
+            };
+
+            window.downloadTableData = function() {
+                alert('Downloading table data as CSV...');
+            };
+        });
     </script>
     @endpush
 </x-app-layout>

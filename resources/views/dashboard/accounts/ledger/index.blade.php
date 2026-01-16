@@ -14,76 +14,95 @@
             margin-bottom: 30px;
             overflow: hidden;
         }
+
         .ledger-header {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             padding: 20px;
         }
+
         .ledger-body {
             padding: 0;
         }
+
         .ledger-row {
             display: flex;
             border-bottom: 1px solid #dee2e6;
             transition: background-color 0.2s;
         }
+
         .ledger-row:hover {
             background-color: #f8f9fa;
         }
+
         .ledger-row.header {
             background: #f8f9fa;
             font-weight: 600;
             border-bottom: 2px solid #dee2e6;
         }
+
         .ledger-cell {
             padding: 12px 15px;
             flex: 1;
         }
+
         .ledger-cell.date {
             flex: 0.8;
         }
+
         .ledger-cell.description {
             flex: 2;
         }
-        .ledger-cell.debit, .ledger-cell.credit {
+
+        .ledger-cell.debit,
+        .ledger-cell.credit {
             flex: 1;
             text-align: right;
         }
+
         .ledger-cell.balance {
             flex: 1.2;
             text-align: right;
             font-weight: 600;
         }
+
         .amount-debit {
             color: #28a745;
         }
+
         .amount-credit {
             color: #dc3545;
         }
+
         .balance-positive {
             color: #28a745;
         }
+
         .balance-negative {
             color: #dc3545;
         }
+
         .account-selector {
             background: white;
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
         }
+
         .period-summary {
             background: #f8f9fa;
             border-radius: 8px;
             padding: 15px;
             margin-bottom: 20px;
         }
+
         .filter-section {
             background: #f8f9fa;
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
         }
+
         .ledger-total {
             background: #e9ecef;
             font-weight: 600;
@@ -154,8 +173,8 @@
                     <div class="form-group">
                         <label>Period</label>
                         <div class="input-group">
-                            <input type="text" class="form-control datepicker" id="periodRange" 
-                                   value="2024-03-01 to 2024-03-20">
+                            <input type="text" class="form-control datepicker" id="periodRange"
+                                value="2024-03-01 to 2024-03-20">
                             <div class="input-group-append">
                                 <span class="input-group-text"><i class="las la-calendar"></i></span>
                             </div>
@@ -163,7 +182,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="text-center mt-3">
                 <button type="button" class="btn btn-outline-primary mr-2" onclick="loadAccountLedger('all')">
                     <i class="las la-book mr-2"></i>View General Ledger
@@ -180,25 +199,25 @@
                 <div class="col-md-3">
                     <div class="text-center">
                         <h6 class="text-muted mb-1">Opening Balance</h6>
-                        <h4 class="mb-0">₹1,250,000</h4>
+                        <h4 class="mb-0">Rs1,250,000</h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="text-center">
                         <h6 class="text-muted mb-1">Total Debits</h6>
-                        <h4 class="mb-0 text-success">₹850,000</h4>
+                        <h4 class="mb-0 text-success">Rs850,000</h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="text-center">
                         <h6 class="text-muted mb-1">Total Credits</h6>
-                        <h4 class="mb-0 text-danger">₹825,000</h4>
+                        <h4 class="mb-0 text-danger">Rs825,000</h4>
                     </div>
                 </div>
                 <div class="col-md-3">
                     <div class="text-center">
                         <h6 class="text-muted mb-1">Closing Balance</h6>
-                        <h4 class="mb-0">₹1,275,000</h4>
+                        <h4 class="mb-0">Rs1,275,000</h4>
                     </div>
                 </div>
             </div>
@@ -220,7 +239,7 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Reference Type</label>
@@ -233,7 +252,7 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label>Branch</label>
@@ -245,7 +264,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -253,7 +272,7 @@
                                 <input type="number" class="form-control" name="amount_min" placeholder="Min amount">
                             </div>
                         </div>
-                        
+
                         <div class="col-md-6">
                             <div class="form-group">
                                 <label>Maximum Amount</label>
@@ -261,7 +280,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="d-flex justify-content-between">
                         <button type="button" class="btn btn-outline-secondary" onclick="resetFilters()">
                             <i class="las la-redo mr-2"></i>Reset Filters
@@ -289,7 +308,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="ledger-body">
                 <!-- Header Row -->
                 <div class="ledger-row header">
@@ -300,7 +319,7 @@
                     <div class="ledger-cell credit">Credit</div>
                     <div class="ledger-cell balance">Balance</div>
                 </div>
-                
+
                 <!-- Opening Balance Row -->
                 <div class="ledger-row">
                     <div class="ledger-cell date">2024-03-01</div>
@@ -310,9 +329,9 @@
                     <div class="ledger-cell description">Opening balance for period</div>
                     <div class="ledger-cell debit"></div>
                     <div class="ledger-cell credit"></div>
-                    <div class="ledger-cell balance balance-positive">₹1,250,000</div>
+                    <div class="ledger-cell balance balance-positive">Rs1,250,000</div>
                 </div>
-                
+
                 <!-- Transaction Rows -->
                 <div class="ledger-row">
                     <div class="ledger-cell date">2024-03-20</div>
@@ -324,11 +343,11 @@
                         <br>
                         <small class="text-muted">Ref: TRX-20240320-001</small>
                     </div>
-                    <div class="ledger-cell debit amount-debit">₹5,000</div>
+                    <div class="ledger-cell debit amount-debit">Rs5,000</div>
                     <div class="ledger-cell credit"></div>
-                    <div class="ledger-cell balance balance-positive">₹1,255,000</div>
+                    <div class="ledger-cell balance balance-positive">Rs1,255,000</div>
                 </div>
-                
+
                 <div class="ledger-row">
                     <div class="ledger-cell date">2024-03-19</div>
                     <div class="ledger-cell">
@@ -340,10 +359,10 @@
                         <small class="text-muted">Ref: TRX-20240319-002</small>
                     </div>
                     <div class="ledger-cell debit"></div>
-                    <div class="ledger-cell credit amount-credit">₹2,500</div>
-                    <div class="ledger-cell balance balance-positive">₹1,252,500</div>
+                    <div class="ledger-cell credit amount-credit">Rs2,500</div>
+                    <div class="ledger-cell balance balance-positive">Rs1,252,500</div>
                 </div>
-                
+
                 <div class="ledger-row">
                     <div class="ledger-cell date">2024-03-18</div>
                     <div class="ledger-cell">
@@ -354,11 +373,11 @@
                         <br>
                         <small class="text-muted">Ref: TRX-20240318-003</small>
                     </div>
-                    <div class="ledger-cell debit amount-debit">₹50,000</div>
+                    <div class="ledger-cell debit amount-debit">Rs50,000</div>
                     <div class="ledger-cell credit"></div>
-                    <div class="ledger-cell balance balance-positive">₹1,202,500</div>
+                    <div class="ledger-cell balance balance-positive">Rs1,202,500</div>
                 </div>
-                
+
                 <div class="ledger-row">
                     <div class="ledger-cell date">2024-03-17</div>
                     <div class="ledger-cell">
@@ -370,12 +389,12 @@
                         <small class="text-muted">Ref: TRX-20240317-004</small>
                     </div>
                     <div class="ledger-cell debit"></div>
-                    <div class="ledger-cell credit amount-credit">₹75,000</div>
-                    <div class="ledger-cell balance balance-positive">₹1,277,500</div>
+                    <div class="ledger-cell credit amount-credit">Rs75,000</div>
+                    <div class="ledger-cell balance balance-positive">Rs1,277,500</div>
                 </div>
-                
+
                 <!-- More transaction rows... -->
-                
+
                 <!-- Closing Balance Row -->
                 <div class="ledger-row" style="background: #f8f9fa;">
                     <div class="ledger-cell date">2024-03-20</div>
@@ -385,21 +404,21 @@
                     <div class="ledger-cell description">Closing balance for period</div>
                     <div class="ledger-cell debit"></div>
                     <div class="ledger-cell credit"></div>
-                    <div class="ledger-cell balance balance-positive">₹1,275,000</div>
+                    <div class="ledger-cell balance balance-positive">Rs1,275,000</div>
                 </div>
             </div>
-            
+
             <!-- Totals Footer -->
             <div class="ledger-total">
                 <div class="row">
                     <div class="col-md-4">
-                        <strong>Total Debits:</strong> ₹850,000
+                        <strong>Total Debits:</strong> Rs850,000
                     </div>
                     <div class="col-md-4">
-                        <strong>Total Credits:</strong> ₹825,000
+                        <strong>Total Credits:</strong> Rs825,000
                     </div>
                     <div class="col-md-4 text-right">
-                        <strong>Net Change:</strong> <span class="balance-positive">+₹25,000</span>
+                        <strong>Net Change:</strong> <span class="balance-positive">+Rs25,000</span>
                     </div>
                 </div>
             </div>
@@ -436,7 +455,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
@@ -444,29 +463,29 @@
                         <div class="list-group list-group-flush">
                             <div class="list-group-item d-flex justify-content-between px-0">
                                 <span>Equipment Purchase</span>
-                                <span class="text-danger">₹250,000</span>
+                                <span class="text-danger">Rs250,000</span>
                             </div>
                             <div class="list-group-item d-flex justify-content-between px-0">
                                 <span>Monthly Sales</span>
-                                <span class="text-success">₹150,000</span>
+                                <span class="text-success">Rs150,000</span>
                             </div>
                             <div class="list-group-item d-flex justify-content-between px-0">
                                 <span>Inventory Purchase</span>
-                                <span class="text-danger">₹75,000</span>
+                                <span class="text-danger">Rs75,000</span>
                             </div>
                             <div class="list-group-item d-flex justify-content-between px-0">
                                 <span>Loan Payment</span>
-                                <span class="text-danger">₹50,000</span>
+                                <span class="text-danger">Rs50,000</span>
                             </div>
                             <div class="list-group-item d-flex justify-content-between px-0">
                                 <span>Customer Payment</span>
-                                <span class="text-success">₹45,000</span>
+                                <span class="text-success">Rs45,000</span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-4">
                 <div class="card">
                     <div class="card-body">
@@ -502,13 +521,13 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- Flatpickr -->
     <script src="{{ asset('backend/assets/vendor/flatpickr/dist/flatpickr.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Initialize datepicker
@@ -517,19 +536,19 @@
                 dateFormat: "Y-m-d",
                 defaultDate: ["2024-03-01", "2024-03-20"]
             });
-            
+
             // Initialize tooltips
             $('[data-toggle="tooltip"]').tooltip();
         });
-        
+
         // Load account ledger
         window.loadAccountLedger = function(accountId) {
             const period = $('#periodRange').val();
-            
-            if(accountId === 'all') {
+
+            if (accountId === 'all') {
                 alert('Loading general ledger for all accounts...');
                 // In real app: reload page with general ledger
-            } else if(accountId) {
+            } else if (accountId) {
                 alert(`Loading ledger for account ${accountId}...`);
                 // In real app: redirect to account ledger page
                 window.location.href = `/accounts/ledger/account/${accountId}?period=${period}`;
@@ -537,35 +556,35 @@
                 alert('Please select an account or choose "All Accounts"');
             }
         };
-        
+
         // Apply filters
         window.applyFilters = function() {
             const formData = new FormData(document.getElementById('filterForm'));
             const filters = Object.fromEntries(formData);
             console.log('Applying filters:', filters);
-            
+
             // In real app, this would reload the ledger with filters
             alert('Filters applied! Loading filtered ledger...');
             $('#filterSection').collapse('hide');
         };
-        
+
         // Reset filters
         window.resetFilters = function() {
-            if(confirm('Reset all filters to default?')) {
+            if (confirm('Reset all filters to default?')) {
                 $('#filterForm')[0].reset();
                 alert('Filters reset successfully');
             }
         };
-        
+
         // Export ledger
         window.exportLedger = function() {
             const format = prompt('Export format (csv, excel, pdf):', 'pdf');
-            if(format) {
+            if (format) {
                 alert(`Exporting ledger in ${format} format...`);
                 // In real app: window.location.href = `/accounts/ledger/export?format=${format}`;
             }
         };
-        
+
         // Print ledger
         window.printLedger = function() {
             const printWindow = window.open('', '_blank');
@@ -613,31 +632,31 @@
                                     <td>Opening balance for period</td>
                                     <td></td>
                                     <td></td>
-                                    <td class="balance">₹1,250,000</td>
+                                    <td class="balance">Rs1,250,000</td>
                                 </tr>
                                 <tr>
                                     <td>2024-03-20</td>
                                     <td>Cash in Hand (1001)</td>
                                     <td>Cash sale - Invoice #INV-20240320-045</td>
-                                    <td class="debit">₹5,000</td>
+                                    <td class="debit">Rs5,000</td>
                                     <td></td>
-                                    <td class="balance">₹1,255,000</td>
+                                    <td class="balance">Rs1,255,000</td>
                                 </tr>
                                 <tr>
                                     <td>2024-03-19</td>
                                     <td>Bank Account - HDFC (1002)</td>
                                     <td>Supplier payment</td>
                                     <td></td>
-                                    <td class="credit">₹2,500</td>
-                                    <td class="balance">₹1,252,500</td>
+                                    <td class="credit">Rs2,500</td>
+                                    <td class="balance">Rs1,252,500</td>
                                 </tr>
                             </tbody>
                             <tfoot>
                                 <tr class="total-row">
                                     <td colspan="3">Totals</td>
-                                    <td class="debit">₹850,000</td>
-                                    <td class="credit">₹825,000</td>
-                                    <td class="balance">₹1,275,000</td>
+                                    <td class="debit">Rs850,000</td>
+                                    <td class="credit">Rs825,000</td>
+                                    <td class="balance">Rs1,275,000</td>
                                 </tr>
                             </tfoot>
                         </table>
@@ -651,13 +670,13 @@
             printWindow.document.close();
             printWindow.print();
         };
-        
+
         // Quick period selection
         window.setPeriod = function(period) {
             const now = new Date();
             let startDate, endDate;
-            
-            switch(period) {
+
+            switch (period) {
                 case 'today':
                     startDate = endDate = now.toISOString().split('T')[0];
                     break;
@@ -679,7 +698,7 @@
                     endDate = new Date(now.getFullYear(), 11, 31).toISOString().split('T')[0];
                     break;
             }
-            
+
             $('#periodRange').val(`${startDate} to ${endDate}`);
             loadAccountLedger($('#accountSelect').val() || 'all');
         };

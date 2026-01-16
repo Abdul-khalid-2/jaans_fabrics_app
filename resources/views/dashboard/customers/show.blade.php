@@ -11,47 +11,57 @@
             height: 150px;
             border-radius: 50%;
             border: 5px solid #fff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
         }
+
         .customer-avatar-sm {
             width: 60px;
             height: 60px;
             border-radius: 50%;
         }
+
         .badge-tier {
             padding: 5px 12px;
             border-radius: 20px;
             font-weight: 600;
         }
+
         .badge-tier.bronze {
             background-color: #CD7F32;
             color: white;
         }
+
         .badge-tier.silver {
             background-color: #C0C0C0;
             color: black;
         }
+
         .badge-tier.gold {
             background-color: #FFD700;
             color: black;
         }
+
         .badge-tier.platinum {
             background-color: #E5E4E2;
             color: black;
         }
+
         .info-card {
             border-radius: 10px;
             border: 1px solid #e3e6f0;
             transition: all 0.3s;
         }
+
         .info-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+
         .activity-timeline {
             position: relative;
             padding-left: 30px;
         }
+
         .activity-timeline::before {
             content: '';
             position: absolute;
@@ -61,6 +71,7 @@
             width: 2px;
             background-color: #e3e6f0;
         }
+
         .activity-dot {
             position: absolute;
             left: -20px;
@@ -69,40 +80,47 @@
             border-radius: 50%;
             background-color: #007bff;
             border: 2px solid white;
-            box-shadow: 0 0 0 3px rgba(0,123,255,0.1);
+            box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
         }
+
         .purchase-item {
             border-left: 3px solid #007bff;
             padding-left: 15px;
             margin-bottom: 15px;
         }
+
         .stats-number {
             font-size: 2rem;
             font-weight: 700;
             line-height: 1;
         }
+
         .stats-label {
             font-size: 0.875rem;
             color: #6c757d;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
         .progress-loyalty {
             height: 20px;
             border-radius: 10px;
         }
+
         .tab-pane {
             padding: 20px;
             border: 1px solid #dee2e6;
             border-top: none;
             border-radius: 0 0 8px 8px;
         }
+
         .nav-tabs .nav-link {
             border: 1px solid #dee2e6;
             border-bottom: none;
             margin-right: 5px;
             border-radius: 8px 8px 0 0;
         }
+
         .nav-tabs .nav-link.active {
             background-color: #007bff;
             color: white;
@@ -130,8 +148,8 @@
                     <a href="{{ route('customers.edit', 1) }}" class="btn btn-primary">
                         <i class="las la-edit mr-2"></i>Edit Customer
                     </a>
-                    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" 
-                            data-toggle="dropdown" aria-expanded="false">
+                    <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
+                        data-toggle="dropdown" aria-expanded="false">
                         <span class="sr-only">Toggle Dropdown</span>
                     </button>
                     <div class="dropdown-menu dropdown-menu-right">
@@ -157,8 +175,8 @@
                     <div class="card-body">
                         <div class="row align-items-center">
                             <div class="col-md-2 text-center">
-                                <img src="https://ui-avatars.com/api/?name=John+Smith&background=007bff&color=fff&size=150" 
-                                     class="customer-avatar" alt="John Smith">
+                                <img src="https://ui-avatars.com/api/?name=John+Smith&background=007bff&color=fff&size=150"
+                                    class="customer-avatar" alt="John Smith">
                                 <div class="mt-3">
                                     <span class="badge badge-success">Active</span>
                                     <span class="badge badge-warning ml-1">VIP</span>
@@ -192,7 +210,7 @@
                                 <div class="row">
                                     <div class="col-6 text-center">
                                         <div class="info-card p-3 mb-3">
-                                            <div class="stats-number text-primary">₹1,24,850</div>
+                                            <div class="stats-number text-primary">Rs1,24,850</div>
                                             <div class="stats-label">Total Spent</div>
                                         </div>
                                     </div>
@@ -210,7 +228,7 @@
                                     </div>
                                     <div class="col-6 text-center">
                                         <div class="info-card p-3">
-                                            <div class="stats-number text-info">₹2,950</div>
+                                            <div class="stats-number text-info">Rs2,950</div>
                                             <div class="stats-label">Avg. Order</div>
                                         </div>
                                     </div>
@@ -283,7 +301,7 @@
                                         </div>
                                         <div class="row text-center mt-4">
                                             <div class="col-md-3">
-                                                <h4 class="text-primary mb-1">₹24,850</h4>
+                                                <h4 class="text-primary mb-1">Rs24,850</h4>
                                                 <small class="text-muted">Last 30 Days</small>
                                             </div>
                                             <div class="col-md-3">
@@ -291,11 +309,11 @@
                                                 <small class="text-muted">Orders This Month</small>
                                             </div>
                                             <div class="col-md-3">
-                                                <h4 class="text-warning mb-1">₹3,106</h4>
+                                                <h4 class="text-warning mb-1">Rs3,106</h4>
                                                 <small class="text-muted">Avg. Monthly Spend</small>
                                             </div>
                                             <div class="col-md-3">
-                                                <h4 class="text-info mb-1">₹12,450</h4>
+                                                <h4 class="text-info mb-1">Rs12,450</h4>
                                                 <small class="text-muted">Largest Purchase</small>
                                             </div>
                                         </div>
@@ -326,7 +344,7 @@
                                                         <td>15 Nov 2024</td>
                                                         <td>INV-2024-001245</td>
                                                         <td>3</td>
-                                                        <td class="text-success">₹4,127</td>
+                                                        <td class="text-success">Rs4,127</td>
                                                         <td><span class="badge badge-success">Paid</span></td>
                                                         <td>
                                                             <a href="#" class="btn btn-sm btn-info">
@@ -338,7 +356,7 @@
                                                         <td>10 Nov 2024</td>
                                                         <td>INV-2024-001238</td>
                                                         <td>2</td>
-                                                        <td class="text-success">₹3,598</td>
+                                                        <td class="text-success">Rs3,598</td>
                                                         <td><span class="badge badge-success">Paid</span></td>
                                                         <td>
                                                             <a href="#" class="btn btn-sm btn-info">
@@ -350,7 +368,7 @@
                                                         <td>05 Nov 2024</td>
                                                         <td>INV-2024-001225</td>
                                                         <td>5</td>
-                                                        <td class="text-success">₹8,450</td>
+                                                        <td class="text-success">Rs8,450</td>
                                                         <td><span class="badge badge-success">Paid</span></td>
                                                         <td>
                                                             <a href="#" class="btn btn-sm btn-info">
@@ -362,7 +380,7 @@
                                                         <td>28 Oct 2024</td>
                                                         <td>INV-2024-001218</td>
                                                         <td>1</td>
-                                                        <td class="text-success">₹2,150</td>
+                                                        <td class="text-success">Rs2,150</td>
                                                         <td><span class="badge badge-success">Paid</span></td>
                                                         <td>
                                                             <a href="#" class="btn btn-sm btn-info">
@@ -374,7 +392,7 @@
                                                         <td>20 Oct 2024</td>
                                                         <td>INV-2024-001205</td>
                                                         <td>4</td>
-                                                        <td class="text-success">₹6,820</td>
+                                                        <td class="text-success">Rs6,820</td>
                                                         <td><span class="badge badge-success">Paid</span></td>
                                                         <td>
                                                             <a href="#" class="btn btn-sm btn-info">
@@ -562,7 +580,7 @@
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <small class="text-muted d-block mb-1">Total Purchases</small>
-                                                <h5 class="text-success">₹1,24,850</h5>
+                                                <h5 class="text-success">Rs1,24,850</h5>
                                             </div>
                                             <div class="col-md-6">
                                                 <small class="text-muted d-block mb-1">Total Orders</small>
@@ -572,7 +590,7 @@
                                         <div class="row mb-3">
                                             <div class="col-md-6">
                                                 <small class="text-muted d-block mb-1">Average Order Value</small>
-                                                <h5>₹2,950</h5>
+                                                <h5>Rs2,950</h5>
                                             </div>
                                             <div class="col-md-6">
                                                 <small class="text-muted d-block mb-1">Last Purchase Date</small>
@@ -582,11 +600,11 @@
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <small class="text-muted d-block mb-1">Credit Limit</small>
-                                                <h5 class="text-info">₹50,000</h5>
+                                                <h5 class="text-info">Rs50,000</h5>
                                             </div>
                                             <div class="col-md-6">
                                                 <small class="text-muted d-block mb-1">Outstanding Balance</small>
-                                                <h5 class="text-danger">₹0.00</h5>
+                                                <h5 class="text-danger">Rs0.00</h5>
                                             </div>
                                         </div>
                                     </div>
@@ -603,8 +621,8 @@
                                         <div class="text-center mb-4">
                                             <div class="badge-tier platinum mb-3" style="font-size: 1.2rem;">PLATINUM TIER</div>
                                             <div class="progress progress-loyalty mb-3">
-                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" 
-                                                     aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 85%"
+                                                    aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                             <small class="text-muted">5,240 / 6,000 points to Diamond Tier</small>
                                         </div>
@@ -623,7 +641,7 @@
                                             <div class="col-md-12">
                                                 <small class="text-muted d-block mb-1">Loyalty Benefits</small>
                                                 <ul class="list-unstyled mb-0">
-                                                    <li><i class="las la-check text-success mr-2"></i> 3 points per ₹100 spent</li>
+                                                    <li><i class="las la-check text-success mr-2"></i> 3 points per Rs100 spent</li>
                                                     <li><i class="las la-check text-success mr-2"></i> Birthday Gift</li>
                                                     <li><i class="las la-check text-success mr-2"></i> Exclusive Offers</li>
                                                     <li><i class="las la-check text-success mr-2"></i> Personal Shopper</li>
@@ -710,7 +728,7 @@
                                                         <img src="https://via.placeholder.com/40" class="rounded" alt="Product">
                                                     </div>
                                                 </td>
-                                                <td class="text-success"><strong>₹4,127</strong></td>
+                                                <td class="text-success"><strong>Rs4,127</strong></td>
                                                 <td><span class="badge badge-success">Card</span></td>
                                                 <td><span class="badge badge-success">Completed</span></td>
                                                 <td>
@@ -728,7 +746,7 @@
                                                         <img src="https://via.placeholder.com/40" class="rounded" alt="Product">
                                                     </div>
                                                 </td>
-                                                <td class="text-success"><strong>₹3,598</strong></td>
+                                                <td class="text-success"><strong>Rs3,598</strong></td>
                                                 <td><span class="badge badge-info">UPI</span></td>
                                                 <td><span class="badge badge-success">Completed</span></td>
                                                 <td>
@@ -749,7 +767,7 @@
                                                         <img src="https://via.placeholder.com/40" class="rounded" alt="Product">
                                                     </div>
                                                 </td>
-                                                <td class="text-success"><strong>₹8,450</strong></td>
+                                                <td class="text-success"><strong>Rs8,450</strong></td>
                                                 <td><span class="badge badge-primary">Cash</span></td>
                                                 <td><span class="badge badge-success">Completed</span></td>
                                                 <td>
@@ -766,7 +784,7 @@
                                                         <img src="https://via.placeholder.com/40" class="rounded" alt="Product">
                                                     </div>
                                                 </td>
-                                                <td class="text-success"><strong>₹2,150</strong></td>
+                                                <td class="text-success"><strong>Rs2,150</strong></td>
                                                 <td><span class="badge badge-warning">Credit</span></td>
                                                 <td><span class="badge badge-success">Completed</span></td>
                                                 <td>
@@ -786,7 +804,7 @@
                                                         <img src="https://via.placeholder.com/40" class="rounded" alt="Product">
                                                     </div>
                                                 </td>
-                                                <td class="text-success"><strong>₹6,820</strong></td>
+                                                <td class="text-success"><strong>Rs6,820</strong></td>
                                                 <td><span class="badge badge-success">Card</span></td>
                                                 <td><span class="badge badge-success">Completed</span></td>
                                                 <td>
@@ -811,7 +829,7 @@
                                     <div class="col-md-3 col-6">
                                         <div class="card bg-light border">
                                             <div class="card-body text-center">
-                                                <h5 class="text-success">₹1,24,850</h5>
+                                                <h5 class="text-success">Rs1,24,850</h5>
                                                 <small class="text-muted">Total Spent</small>
                                             </div>
                                         </div>
@@ -819,7 +837,7 @@
                                     <div class="col-md-3 col-6">
                                         <div class="card bg-light border">
                                             <div class="card-body text-center">
-                                                <h5 class="text-info">₹2,950</h5>
+                                                <h5 class="text-info">Rs2,950</h5>
                                                 <small class="text-muted">Avg. Order Value</small>
                                             </div>
                                         </div>
@@ -827,7 +845,7 @@
                                     <div class="col-md-3 col-6">
                                         <div class="card bg-light border">
                                             <div class="card-body text-center">
-                                                <h5 class="text-warning">₹12,450</h5>
+                                                <h5 class="text-warning">Rs12,450</h5>
                                                 <small class="text-muted">Largest Order</small>
                                             </div>
                                         </div>
@@ -936,7 +954,7 @@
                                                     </div>
                                                     <div>
                                                         <h6 class="mb-1">3x Points</h6>
-                                                        <p class="mb-0 text-muted">Earn 3 points for every ₹100 spent</p>
+                                                        <p class="mb-0 text-muted">Earn 3 points for every Rs100 spent</p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1011,8 +1029,8 @@
                                             <div class="badge-tier platinum mb-3" style="font-size: 1.5rem; padding: 10px 20px;">PLATINUM</div>
                                             <p class="text-muted mb-3">You are currently in Platinum tier</p>
                                             <div class="progress progress-loyalty mb-2">
-                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 85%" 
-                                                     aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                                <div class="progress-bar bg-warning" role="progressbar" style="width: 85%"
+                                                    aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
                                             </div>
                                             <small class="text-muted">5,240 / 6,000 points to Diamond Tier</small>
                                         </div>
@@ -1063,7 +1081,7 @@
                                             <small class="text-muted d-block mb-2">Points Value</small>
                                             <div class="d-flex justify-content-between">
                                                 <span>1 Point =</span>
-                                                <strong>₹1.00</strong>
+                                                <strong>Rs1.00</strong>
                                             </div>
                                         </div>
                                         <button class="btn btn-warning btn-block">Redeem Points</button>
@@ -1309,7 +1327,7 @@
                                                 <div class="d-flex justify-content-between">
                                                     <div>
                                                         <h6 class="mb-1">New Purchase</h6>
-                                                        <p class="mb-0">Invoice #INV-2024-001245 for ₹4,127</p>
+                                                        <p class="mb-0">Invoice #INV-2024-001245 for Rs4,127</p>
                                                     </div>
                                                     <div class="text-right">
                                                         <small class="text-muted">15 Nov 2024, 14:30</small>
@@ -1405,7 +1423,7 @@
                                                 <div class="d-flex justify-content-between">
                                                     <div>
                                                         <h6 class="mb-1">Large Purchase</h6>
-                                                        <p class="mb-0">Invoice #INV-2024-001205 for ₹6,820</p>
+                                                        <p class="mb-0">Invoice #INV-2024-001205 for Rs6,820</p>
                                                     </div>
                                                     <div class="text-right">
                                                         <small class="text-muted">20 Oct 2024, 17:15</small>
@@ -1702,65 +1720,65 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Tab functionality
-            $('#customerDetailTab a').on('click', function (e) {
+            $('#customerDetailTab a').on('click', function(e) {
                 e.preventDefault();
                 $(this).tab('show');
             });
-            
+
             // Initialize tooltips
             $('[title]').tooltip();
-            
+
             // Print invoice button
             $('.btn-print').on('click', function(e) {
                 e.preventDefault();
                 alert('Print functionality would be implemented here');
             });
-            
+
             // View invoice button
             $('.btn-view').on('click', function(e) {
                 e.preventDefault();
                 alert('View invoice functionality would be implemented here');
             });
-            
+
             // Set default address button
             $('.btn-set-default').on('click', function() {
-                if(confirm('Set this as the default address?')) {
+                if (confirm('Set this as the default address?')) {
                     $(this).closest('.card').find('.badge-default').removeClass('badge-success').addClass('badge-secondary').text('Click to set as default');
                     $(this).addClass('btn-success').removeClass('btn-outline-success').text('Default Address');
                     alert('Address set as default');
                 }
             });
-            
+
             // Delete address button
             $('.btn-delete-address').on('click', function(e) {
                 e.stopPropagation();
-                if(confirm('Are you sure you want to delete this address?')) {
+                if (confirm('Are you sure you want to delete this address?')) {
                     $(this).closest('.card').fadeOut();
                 }
             });
-            
+
             // Points adjustment
             $('.btn-add-points').on('click', function() {
                 const points = $(this).closest('.input-group').find('input').val();
-                if(points && points > 0) {
+                if (points && points > 0) {
                     alert(`Adding ${points} points to customer`);
                 }
             });
-            
+
             $('.btn-subtract-points').on('click', function() {
                 const points = $(this).closest('.input-group').find('input').val();
-                if(points && points > 0) {
+                if (points && points > 0) {
                     alert(`Subtracting ${points} points from customer`);
                 }
             });
-            
+
             // Redeem points button
             $('.btn-redeem-points').on('click', function() {
                 alert('Points redemption functionality would be implemented here');

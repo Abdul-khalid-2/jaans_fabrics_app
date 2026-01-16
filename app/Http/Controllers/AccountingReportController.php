@@ -9,9 +9,25 @@ class AccountingReportController extends Controller
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function balanceSheet()
     {
-        //
+        return view('dashboard.accounts.reports.balance-sheet');
+    }
+    public function incomeStatement()
+    {
+        return view('dashboard.accounts.reports.income-statement');
+    }
+    public function cashFlow()
+    {
+        return view('dashboard.accounts.reports.cash-flow');
+    }
+    public function receivablesAging()
+    {
+        return view('dashboard.accounts.reports.receivables-aging');
+    }
+    public function payablesAging()
+    {
+        return view('dashboard.accounts.reports.payables-aging');
     }
 
     /**

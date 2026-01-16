@@ -94,7 +94,7 @@
                             <div class="col-md-3 col-6 mb-3">
                                 <div class="border rounded p-3">
                                     <div class="text-muted">Avg. Order Value</div>
-                                    <div class="h4 font-weight-bold">₹ 3,560</div>
+                                    <div class="h4 font-weight-bold">Rs3,560</div>
                                     <small class="text-success"><i class="las la-rupee-sign"></i> Per transaction</small>
                                 </div>
                             </div>

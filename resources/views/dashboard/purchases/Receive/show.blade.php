@@ -15,6 +15,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .receiving-header::before {
             content: '';
             position: absolute;
@@ -22,17 +23,19 @@
             right: -50%;
             width: 100%;
             height: 200%;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             transform: rotate(30deg);
         }
+
         .info-card {
             background: white;
             border-radius: 10px;
             padding: 20px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
             height: 100%;
         }
+
         .info-card h6 {
             color: #495057;
             font-weight: 600;
@@ -40,59 +43,71 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #f8f9fa;
         }
+
         .info-item {
             margin-bottom: 12px;
             padding-bottom: 12px;
             border-bottom: 1px dashed #e9ecef;
         }
+
         .info-item:last-child {
             margin-bottom: 0;
             padding-bottom: 0;
             border-bottom: none;
         }
+
         .info-label {
             font-weight: 500;
             color: #6c757d;
             font-size: 13px;
         }
+
         .info-value {
             font-weight: 500;
             color: #343a40;
         }
+
         .condition-badge {
             padding: 4px 12px;
             border-radius: 4px;
             font-size: 12px;
         }
+
         .condition-good {
             background: #d4edda;
             color: #155724;
         }
+
         .condition-damaged {
             background: #f8d7da;
             color: #721c24;
         }
+
         .condition-expired {
             background: #fff3cd;
             color: #856404;
         }
+
         .stats-card {
             text-align: center;
             padding: 20px;
             border-radius: 10px;
             background: white;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             height: 100%;
         }
+
         .stats-value {
             font-size: 24px;
             font-weight: 600;
             margin: 10px 0;
         }
+
         .stats-label {
             color: #6c757d;
             font-size: 13px;
         }
+
         .product-image {
             width: 60px;
             height: 60px;
@@ -149,7 +164,7 @@
             <div class="col-md-3">
                 <div class="stats-card">
                     <i class="las la-money-bill-wave fa-2x text-success"></i>
-                    <div class="stats-value">₹36,000</div>
+                    <div class="stats-value">Rs36,000</div>
                     <div class="stats-label">Total Value</div>
                     <small class="text-muted">Cost value</small>
                 </div>
@@ -258,8 +273,8 @@
                             <tr>
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        <img src="https://via.placeholder.com/40x40/007bff/ffffff?text=S" 
-                                             class="product-image mr-2">
+                                        <img src="https://via.placeholder.com/40x40/007bff/ffffff?text=S"
+                                            class="product-image mr-2">
                                         <div>
                                             <div>Cotton Formal Shirt</div>
                                             <small class="text-muted">Size: M, Color: White</small>
@@ -267,7 +282,7 @@
                                     </div>
                                 </td>
                                 <td>CTN-SHT-001</td>
-                                <td>₹800</td>
+                                <td>Rs800</td>
                                 <td>50</td>
                                 <td class="text-success">25</td>
                                 <td>
@@ -275,15 +290,15 @@
                                 </td>
                                 <td>BATCH-001</td>
                                 <td>N/A</td>
-                                <td>₹20,000</td>
+                                <td>Rs20,000</td>
                             </tr>
 
                             <!-- Product 2 -->
                             <tr>
                                 <td>
                                     <div class="d-flex align-items-center">
-                                        <img src="https://via.placeholder.com/40x40/28a745/ffffff?text=J" 
-                                             class="product-image mr-2">
+                                        <img src="https://via.placeholder.com/40x40/28a745/ffffff?text=J"
+                                            class="product-image mr-2">
                                         <div>
                                             <div>Denim Jeans</div>
                                             <small class="text-muted">Size: 32, Color: Blue</small>
@@ -291,7 +306,7 @@
                                     </div>
                                 </td>
                                 <td>DNM-JNS-002</td>
-                                <td>₹1,200</td>
+                                <td>Rs1,200</td>
                                 <td>30</td>
                                 <td class="text-success">15</td>
                                 <td>
@@ -299,13 +314,13 @@
                                 </td>
                                 <td>BATCH-002</td>
                                 <td>N/A</td>
-                                <td>₹18,000</td>
+                                <td>Rs18,000</td>
                             </tr>
                         </tbody>
                         <tfoot>
                             <tr class="table-success">
                                 <th colspan="8" class="text-right">Total Received Value:</th>
-                                <th>₹38,000</th>
+                                <th>Rs38,000</th>
                             </tr>
                         </tfoot>
                     </table>

@@ -12,6 +12,7 @@
             padding: 20px;
             margin-bottom: 20px;
         }
+
         .form-section-title {
             font-weight: 600;
             color: #495057;
@@ -19,6 +20,7 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #dee2e6;
         }
+
         .product-item {
             border: 1px solid #dee2e6;
             border-radius: 8px;
@@ -26,50 +28,60 @@
             margin-bottom: 15px;
             background: white;
         }
+
         .summary-card {
             background: white;
             border-radius: 8px;
             padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 20px;
         }
+
         .summary-item {
             display: flex;
             justify-content: space-between;
             padding: 10px 0;
             border-bottom: 1px dashed #dee2e6;
         }
+
         .summary-item.total {
             border-bottom: 2px solid #007bff;
             font-weight: 600;
             font-size: 18px;
         }
+
         .status-badge {
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 500;
         }
+
         .status-ordered {
             background: #d1ecf1;
             color: #0c5460;
         }
+
         .status-received {
             background: #d4edda;
             color: #155724;
         }
+
         .status-partial {
             background: #fff3cd;
             color: #856404;
         }
+
         .status-cancelled {
             background: #f8d7da;
             color: #721c24;
         }
+
         .history-timeline {
             margin-top: 20px;
         }
+
         .history-item {
             padding: 10px;
             border-left: 3px solid #007bff;
@@ -142,10 +154,10 @@
                 <form id="purchaseEditForm" action="{{ route('purchases.update', 1) }}" method="POST">
                     @csrf
                     @method('PUT')
-                    
+
                     <div class="form-section">
                         <h6 class="form-section-title">Basic Information</h6>
-                        
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -168,7 +180,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -184,10 +196,10 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="form-section">
                         <h6 class="form-section-title">Products</h6>
-                        
+
                         <div class="table-responsive">
                             <table class="table">
                                 <thead>
@@ -206,8 +218,8 @@
                                     <tr>
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <img src="https://via.placeholder.com/40x40/007bff/ffffff?text=S" 
-                                                     class="mr-2" style="width:40px;height:40px;border-radius:4px;">
+                                                <img src="https://via.placeholder.com/40x40/007bff/ffffff?text=S"
+                                                    class="mr-2" style="width:40px;height:40px;border-radius:4px;">
                                                 <div>
                                                     <div>Cotton Formal Shirt</div>
                                                     <small class="text-muted">Size: M, Color: White</small>
@@ -225,20 +237,20 @@
                                             <div class="text-success">25</div>
                                             <small class="text-muted">Pending: 25</small>
                                         </td>
-                                        <td>₹40,000</td>
+                                        <td>Rs40,000</td>
                                         <td>
                                             <button type="button" class="btn btn-sm btn-outline-danger">
                                                 <i class="las la-trash"></i>
                                             </button>
                                         </td>
                                     </tr>
-                                    
+
                                     <!-- Product 2 -->
                                     <tr>
                                         <td>
                                             <div class="d-flex align-items-center">
-                                                <img src="https://via.placeholder.com/40x40/28a745/ffffff?text=J" 
-                                                     class="mr-2" style="width:40px;height:40px;border-radius:4px;">
+                                                <img src="https://via.placeholder.com/40x40/28a745/ffffff?text=J"
+                                                    class="mr-2" style="width:40px;height:40px;border-radius:4px;">
                                                 <div>
                                                     <div>Denim Jeans</div>
                                                     <small class="text-muted">Size: 32, Color: Blue</small>
@@ -256,7 +268,7 @@
                                             <div class="text-success">15</div>
                                             <small class="text-muted">Pending: 15</small>
                                         </td>
-                                        <td>₹36,000</td>
+                                        <td>Rs36,000</td>
                                         <td>
                                             <button type="button" class="btn btn-sm btn-outline-danger">
                                                 <i class="las la-trash"></i>
@@ -266,17 +278,17 @@
                                 </tbody>
                             </table>
                         </div>
-                        
+
                         <div class="text-right mt-3">
                             <button type="button" class="btn btn-outline-primary">
                                 <i class="las la-plus mr-2"></i>Add Product
                             </button>
                         </div>
                     </div>
-                    
+
                     <div class="form-section">
                         <h6 class="form-section-title">Shipping & Payment</h6>
-                        
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -295,7 +307,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -320,32 +332,32 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="form-label">Amount Paid (₹)</label>
+                                    <label class="form-label">Amount Paid (Rs)</label>
                                     <input type="number" class="form-control" name="amount_paid" value="75000">
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label class="form-label">Balance Due (₹)</label>
+                                    <label class="form-label">Balance Due (Rs)</label>
                                     <input type="number" class="form-control" value="50000" readonly>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label class="form-label">Notes</label>
                             <textarea class="form-control" name="notes" rows="3">Please ensure quality check before delivery.</textarea>
                         </div>
                     </div>
-                    
+
                     <!-- History Timeline -->
                     <div class="form-section">
                         <h6 class="form-section-title">History</h6>
-                        
+
                         <div class="history-timeline">
                             <div class="history-item">
                                 <div class="d-flex justify-content-between">
@@ -354,15 +366,15 @@
                                 </div>
                                 <small class="text-muted">By: Admin User</small>
                             </div>
-                            
+
                             <div class="history-item">
                                 <div class="d-flex justify-content-between">
                                     <strong>Partial Payment Received</strong>
                                     <small class="text-muted">16 Jan 2024, 02:15 PM</small>
                                 </div>
-                                <small class="text-muted">Amount: ₹75,000 | By: John Manager</small>
+                                <small class="text-muted">Amount: Rs75,000 | By: John Manager</small>
                             </div>
-                            
+
                             <div class="history-item">
                                 <div class="d-flex justify-content-between">
                                     <strong>Partial Goods Received</strong>
@@ -372,7 +384,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="d-flex justify-content-between mt-4">
                         <div>
                             <button type="button" class="btn btn-outline-danger" onclick="deletePurchase()">
@@ -390,54 +402,54 @@
                     </div>
                 </form>
             </div>
-            
+
             <!-- Right Column: Summary -->
             <div class="col-lg-4">
                 <div class="summary-card">
                     <h6>Order Summary</h6>
-                    
+
                     <div class="summary-item">
                         <span>Subtotal:</span>
-                        <span>₹76,000</span>
+                        <span>Rs76,000</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Tax (18%):</span>
-                        <span>₹13,680</span>
+                        <span>Rs13,680</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Shipping:</span>
-                        <span>₹5,000</span>
+                        <span>Rs5,000</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Other Charges:</span>
-                        <span>₹3,000</span>
+                        <span>Rs3,000</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Discount:</span>
-                        <span>₹2,000</span>
+                        <span>Rs2,000</span>
                     </div>
-                    
+
                     <div class="summary-item total">
                         <span>Grand Total:</span>
-                        <span>₹95,680</span>
+                        <span>Rs95,680</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Amount Paid:</span>
-                        <span class="text-success">₹75,000</span>
+                        <span class="text-success">Rs75,000</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Balance Due:</span>
-                        <span class="text-warning">₹20,680</span>
+                        <span class="text-warning">Rs20,680</span>
                     </div>
-                    
+
                     <hr>
-                    
+
                     <!-- Quick Actions -->
                     <div class="mt-3">
                         <h6 class="mb-3">Quick Actions</h6>
@@ -473,7 +485,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label>Payment Amount (₹)</label>
+                        <label>Payment Amount (Rs)</label>
                         <input type="number" class="form-control" value="20680">
                     </div>
                     <div class="form-group">
@@ -510,26 +522,26 @@
             // Form submission
             $('#purchaseEditForm').submit(function(e) {
                 e.preventDefault();
-                
+
                 // Show loading
                 $('button[type="submit"]').prop('disabled', true).html('<i class="las la-spinner la-spin mr-2"></i>Updating...');
-                
+
                 // Simulate API call
                 setTimeout(() => {
                     alert('Purchase order updated successfully!');
                     window.location.href = "{{ route('purchases.show', 1) }}";
                 }, 1500);
-                
+
                 return false;
             });
         });
-        
+
         // Delete purchase
         window.deletePurchase = function() {
-            if(confirm('Are you sure you want to delete this purchase order? This action cannot be undone.')) {
+            if (confirm('Are you sure you want to delete this purchase order? This action cannot be undone.')) {
                 // Show loading
                 $('button').prop('disabled', true);
-                
+
                 // Simulate delete action
                 setTimeout(() => {
                     alert('Purchase order deleted successfully!');
@@ -537,7 +549,7 @@
                 }, 1500);
             }
         };
-        
+
         // Recalculate totals
         window.recalculateTotals = function() {
             // This would recalculate based on product quantities and prices

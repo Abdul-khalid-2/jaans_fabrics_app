@@ -12,20 +12,22 @@
             border-radius: 8px;
             object-fit: cover;
             border: 3px solid #fff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             cursor: pointer;
         }
+
         .avatar-upload {
             position: relative;
             display: inline-block;
         }
+
         .avatar-upload-overlay {
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             border-radius: 8px;
             display: flex;
             align-items: center;
@@ -35,15 +37,18 @@
             transition: opacity 0.3s;
             cursor: pointer;
         }
+
         .avatar-upload:hover .avatar-upload-overlay {
             opacity: 1;
         }
+
         .form-section {
             background: #f8f9fa;
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
         }
+
         .form-section-title {
             font-weight: 600;
             color: #495057;
@@ -51,12 +56,14 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #dee2e6;
         }
+
         .bank-details {
             background: #e8f4ff;
             border-left: 4px solid #007bff;
             padding: 15px;
             border-radius: 4px;
         }
+
         .contact-info {
             background: #e8f8f0;
             border-left: 4px solid #28a745;
@@ -96,7 +103,7 @@
                     <div class="card-body">
                         <form id="supplierCreateForm" action="{{ route('suppliers.store') }}" method="POST" enctype="multipart/form-data">
                             @csrf
-                            
+
                             <div class="form-section">
                                 <h6 class="form-section-title">Basic Information</h6>
                                 <div class="row">
@@ -104,9 +111,9 @@
                                         <!-- Supplier Logo -->
                                         <div class="form-group text-center">
                                             <div class="avatar-upload mb-3">
-                                                <img id="supplierLogoPreview" 
-                                                     src="https://via.placeholder.com/150x150/007bff/ffffff?text=LOGO" 
-                                                     class="supplier-avatar" alt="Supplier Logo">
+                                                <img id="supplierLogoPreview"
+                                                    src="https://via.placeholder.com/150x150/007bff/ffffff?text=LOGO"
+                                                    class="supplier-avatar" alt="Supplier Logo">
                                                 <div class="avatar-upload-overlay" onclick="document.getElementById('supplierLogoInput').click()">
                                                     <div class="text-center">
                                                         <i class="las la-camera fa-2x"></i>
@@ -118,7 +125,7 @@
                                             <small class="text-muted">Recommended: 300x300px, PNG/JPG</small>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="col-md-9">
                                         <div class="row">
                                             <div class="col-md-6">
@@ -141,7 +148,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-4">
                                                 <div class="form-group">
@@ -176,7 +183,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <div class="form-group">
@@ -194,7 +201,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-section">
                                 <h6 class="form-section-title">Contact Information</h6>
                                 <div class="contact-info">
@@ -218,7 +225,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -237,12 +244,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="form-group">
                                         <label class="form-label">Address</label>
                                         <textarea class="form-control" name="address" rows="2" placeholder="Enter full address"></textarea>
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col-md-4">
                                             <div class="form-group">
@@ -265,7 +272,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-section">
                                 <h6 class="form-section-title">Bank Details</h6>
                                 <div class="bank-details">
@@ -283,7 +290,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -298,7 +305,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div class="row">
                                         <div class="col-md-6">
                                             <div class="form-group">
@@ -320,13 +327,13 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-section">
                                 <h6 class="form-section-title">Financial Information</h6>
                                 <div class="row">
                                     <div class="col-md-4">
                                         <div class="form-group">
-                                            <label class="form-label">Credit Limit (₹)</label>
+                                            <label class="form-label">Credit Limit (Rs)</label>
                                             <input type="number" class="form-control" name="credit_limit" placeholder="0.00" min="0" step="0.01">
                                         </div>
                                     </div>
@@ -343,11 +350,11 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="form-label">Minimum Order Value (₹)</label>
+                                            <label class="form-label">Minimum Order Value (Rs)</label>
                                             <input type="number" class="form-control" name="minimum_order_value" placeholder="0.00" min="0" step="0.01">
                                         </div>
                                     </div>
@@ -359,7 +366,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-section">
                                 <h6 class="form-section-title">Additional Information</h6>
                                 <div class="row">
@@ -382,18 +389,18 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Blacklist Reason</label>
                                     <textarea class="form-control" name="blacklist_reason" rows="2" placeholder="If blacklisted, specify reason"></textarea>
                                 </div>
-                                
+
                                 <div class="form-group">
                                     <label class="form-label">Notes / Remarks</label>
                                     <textarea class="form-control" name="notes" rows="3" placeholder="Enter any additional notes"></textarea>
                                 </div>
                             </div>
-                            
+
                             <div class="form-section">
                                 <h6 class="form-section-title">Branch Assignment</h6>
                                 <div class="row">
@@ -432,7 +439,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -446,7 +453,7 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="d-flex justify-content-between mt-4">
                                 <button type="button" class="btn btn-outline-secondary" onclick="resetForm()">
                                     <i class="las la-redo mr-2"></i>Reset Form
@@ -470,7 +477,7 @@
             // Supplier logo upload
             $('#supplierLogoInput').change(function(e) {
                 const file = e.target.files[0];
-                if(file) {
+                if (file) {
                     const reader = new FileReader();
                     reader.onload = function(e) {
                         $('#supplierLogoPreview').attr('src', e.target.result);
@@ -478,87 +485,87 @@
                     reader.readAsDataURL(file);
                 }
             });
-            
+
             // Star rating
             $('.rating-stars i').click(function() {
                 const rating = $(this).data('rating');
                 $('input[name="rating"]').val(rating);
-                
+
                 $('.rating-stars i').each(function() {
                     const starRating = $(this).data('rating');
-                    if(starRating <= rating) {
+                    if (starRating <= rating) {
                         $(this).removeClass('lar la-star').addClass('las la-star');
                     } else {
                         $(this).removeClass('las la-star').addClass('lar la-star');
                     }
                 });
             });
-            
+
             // Auto-generate company code from name
             $('input[name="company_name"]').on('blur', function() {
                 const companyName = $(this).val();
-                if(companyName && !$('input[name="supplier_code"]').val().includes('SUP-')) {
+                if (companyName && !$('input[name="supplier_code"]').val().includes('SUP-')) {
                     const initials = companyName.match(/\b(\w)/g).join('').toUpperCase();
                     const code = initials + '-' + Date.now().toString().slice(-6);
                     $('input[name="supplier_code"]').val(code);
                 }
             });
-            
+
             // Form submission
             $('#supplierCreateForm').submit(function(e) {
                 e.preventDefault();
-                
+
                 // Basic validation
                 const companyName = $('input[name="company_name"]').val().trim();
                 const phone = $('input[name="phone"]').val().trim();
-                
-                if(!companyName) {
+
+                if (!companyName) {
                     alert('Please enter company name');
                     $('input[name="company_name"]').focus();
                     return false;
                 }
-                
-                if(!phone) {
+
+                if (!phone) {
                     alert('Please enter phone number');
                     $('input[name="phone"]').focus();
                     return false;
                 }
-                
+
                 // Validate phone number format
                 const phoneRegex = /^[0-9]{10}$/;
-                if(!phoneRegex.test(phone.replace(/\D/g, ''))) {
+                if (!phoneRegex.test(phone.replace(/\D/g, ''))) {
                     alert('Please enter a valid 10-digit phone number');
                     $('input[name="phone"]').focus();
                     return false;
                 }
-                
+
                 // Show loading
                 $('button[type="submit"]').prop('disabled', true).html('<i class="las la-spinner la-spin mr-2"></i>Saving...');
-                
+
                 // Collect form data
                 const formData = new FormData(this);
-                
+
                 // Simulate API call
                 setTimeout(() => {
                     console.log('Form data:', Object.fromEntries(formData));
                     alert('Supplier created successfully!');
                     window.location.href = "{{ route('suppliers.index') }}";
                 }, 1500);
-                
+
                 return false;
             });
         });
-        
+
         // Generate supplier code
         window.generateSupplierCode = function() {
             const timestamp = Date.now().toString();
             const code = 'SUP-' + timestamp.slice(-10);
             $('input[name="supplier_code"]').val(code);
         };
-        
+
         // Reset form
         window.resetForm = function() {
-            if(confirm('Are you sure you want to reset the form? All data will be lost.')) {
+            if (confirm('Are you sure you want to reset the form? All data will be lost.')) {
                 $('#supplierCreateForm')[0].reset();
                 $('#supplierLogoPreview').attr('src', 'https://via.placeholder.com/150x150/007bff/ffffff?text=LOGO');
                 $('input[name="supplier_code"]').val('SUP-' + Date.now().toString().slice(-10));

@@ -52,7 +52,7 @@
                             <div class="col mr-2">
                                 <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                                     Today's Sales</div>
-                                <div class="h5 mb-0 font-weight-bold text-gray-800">₹ 45,680</div>
+                                <div class="h5 mb-0 font-weight-bold text-gray-800">Rs45,680</div>
                                 <div class="mt-2 mb-0 text-muted text-xs">
                                     <span class="text-success mr-2"><i class="fa fa-arrow-up"></i> 12.5%</span>
                                     <span>from yesterday</span>
@@ -180,7 +180,7 @@
                                         <td>INV-2024-00125</td>
                                         <td>John Doe</td>
                                         <td>Today, 10:30 AM</td>
-                                        <td>₹ 5,450</td>
+                                        <td>Rs5,450</td>
                                         <td><span class="badge badge-success">Paid</span></td>
                                         <td>
                                             <a href="#" class="btn btn-sm btn-outline-primary">
@@ -192,7 +192,7 @@
                                         <td>INV-2024-00124</td>
                                         <td>Jane Smith</td>
                                         <td>Today, 9:15 AM</td>
-                                        <td>₹ 8,920</td>
+                                        <td>Rs8,920</td>
                                         <td><span class="badge badge-success">Paid</span></td>
                                         <td>
                                             <a href="#" class="btn btn-sm btn-outline-primary">
@@ -204,7 +204,7 @@
                                         <td>INV-2024-00123</td>
                                         <td>Robert Johnson</td>
                                         <td>Yesterday, 4:45 PM</td>
-                                        <td>₹ 12,350</td>
+                                        <td>Rs12,350</td>
                                         <td><span class="badge badge-warning">Pending</span></td>
                                         <td>
                                             <a href="#" class="btn btn-sm btn-outline-primary">
@@ -216,7 +216,7 @@
                                         <td>INV-2024-00122</td>
                                         <td>Sarah Williams</td>
                                         <td>Yesterday, 2:20 PM</td>
-                                        <td>₹ 3,250</td>
+                                        <td>Rs3,250</td>
                                         <td><span class="badge badge-success">Paid</span></td>
                                         <td>
                                             <a href="#" class="btn btn-sm btn-outline-primary">
@@ -287,7 +287,7 @@
                             <div class="col-md-3 col-6 mb-3">
                                 <div class="border rounded p-3">
                                     <div class="text-muted">Avg. Order Value</div>
-                                    <div class="h4 font-weight-bold">₹ 3,560</div>
+                                    <div class="h4 font-weight-bold">Rs3,560</div>
                                     <small class="text-success"><i class="las la-arrow-up"></i> 4.5% increase</small>
                                 </div>
                             </div>
@@ -301,7 +301,7 @@
                             <div class="col-md-3 col-6 mb-3">
                                 <div class="border rounded p-3">
                                     <div class="text-muted">Inventory Value</div>
-                                    <div class="h4 font-weight-bold">₹ 245,800</div>
+                                    <div class="h4 font-weight-bold">Rs245,800</div>
                                     <small class="text-info">1825 items in stock</small>
                                 </div>
                             </div>
@@ -322,13 +322,13 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- Chart.js -->
     <script src="{{ asset('backend/assets/vendor/chart.js/Chart.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <!-- Dashboard Charts -->
     <script>
         $(document).ready(function() {
@@ -336,41 +336,44 @@
             $('#dateRange').change(function() {
                 loadDashboardData($(this).val(), $('#branchFilter').val());
             });
-            
+
             // Initialize branch filter
             $('#branchFilter').change(function() {
                 loadDashboardData($('#dateRange').val(), $(this).val());
             });
-            
+
             // Load initial data
             loadDashboardData('this_week', '1');
         });
-        
+
         function loadDashboardData(dateRange, branchId) {
             // Show loading
             $('.chart-area').html('<div class="text-center py-5"><i class="las la-spinner la-spin fa-2x text-primary"></i><p class="mt-2">Loading data...</p></div>');
-            
+
             // Simulate API call
             setTimeout(() => {
-                console.log('Loading data for:', { dateRange, branchId });
+                console.log('Loading data for:', {
+                    dateRange,
+                    branchId
+                });
                 // In real app, you would fetch data via AJAX and update charts
                 alert('Dashboard data refreshed for ' + dateRange + ' and branch ' + branchId);
-                
+
                 // Reload chart components
                 $('.chart-area').load('{{ route("dashboard.charts.sales") }}?range=' + dateRange + '&branch=' + branchId);
             }, 1000);
         }
-        
+
         function exportChart() {
             // Implement chart export functionality
             alert('Chart exported successfully!');
         }
-        
+
         function toggleChartType() {
             // Implement chart type toggling
             alert('Chart type toggled!');
         }
-        
+
         // Real-time updates simulation
         setInterval(() => {
             // Update some dynamic values
@@ -378,7 +381,7 @@
             const currentSales = parseInt(salesElement.text().replace(/[^0-9]/g, ''));
             const randomIncrement = Math.floor(Math.random() * 500) + 100;
             const newSales = currentSales + randomIncrement;
-            salesElement.text('₹ ' + newSales.toLocaleString());
+            salesElement.text('Rs ' + newSales.toLocaleString());
         }, 30000); // Update every 30 seconds
     </script>
     @endpush

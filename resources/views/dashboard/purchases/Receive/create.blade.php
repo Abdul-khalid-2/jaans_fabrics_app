@@ -12,6 +12,7 @@
             padding: 20px;
             margin-bottom: 20px;
         }
+
         .form-section-title {
             font-weight: 600;
             color: #495057;
@@ -19,6 +20,7 @@
             padding-bottom: 10px;
             border-bottom: 2px solid #dee2e6;
         }
+
         .product-item {
             border: 1px solid #dee2e6;
             border-radius: 8px;
@@ -26,52 +28,62 @@
             margin-bottom: 15px;
             background: white;
         }
+
         .quantity-controls {
             display: flex;
             align-items: center;
             gap: 10px;
         }
+
         .quantity-input {
             width: 80px;
             text-align: center;
         }
+
         .condition-badge {
             padding: 4px 12px;
             border-radius: 4px;
             font-size: 12px;
             cursor: pointer;
         }
+
         .condition-good {
             background: #d4edda;
             color: #155724;
         }
+
         .condition-damaged {
             background: #f8d7da;
             color: #721c24;
         }
+
         .condition-expired {
             background: #fff3cd;
             color: #856404;
         }
+
         .summary-card {
             background: white;
             border-radius: 8px;
             padding: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
             position: sticky;
             top: 20px;
         }
+
         .summary-item {
             display: flex;
             justify-content: space-between;
             padding: 10px 0;
             border-bottom: 1px dashed #dee2e6;
         }
+
         .summary-item.total {
             border-bottom: 2px solid #007bff;
             font-weight: 600;
             font-size: 18px;
         }
+
         .purchase-info {
             background: #e8f4ff;
             border-left: 4px solid #007bff;
@@ -79,20 +91,24 @@
             border-radius: 4px;
             margin-bottom: 20px;
         }
+
         .receive-status {
             font-size: 12px;
             padding: 2px 8px;
             border-radius: 10px;
             margin-left: 5px;
         }
+
         .status-pending {
             background: #fff3cd;
             color: #856404;
         }
+
         .status-received {
             background: #d4edda;
             color: #155724;
         }
+
         .status-partial {
             background: #ffeaa7;
             color: #856404;
@@ -148,10 +164,10 @@
             <div class="col-lg-8">
                 <form id="receiveForm" action="{{ route('purchases.receive.store', 1) }}" method="POST">
                     @csrf
-                    
+
                     <div class="form-section">
                         <h6 class="form-section-title">Receiving Details</h6>
-                        
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -166,7 +182,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
@@ -190,37 +206,37 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="form-group">
                             <label class="form-label">Delivery Person</label>
                             <input type="text" class="form-control" name="delivery_person" placeholder="Enter delivery person name">
                         </div>
-                        
+
                         <div class="form-group">
                             <label class="form-label">Vehicle Number</label>
                             <input type="text" class="form-control" name="vehicle_number" placeholder="Enter vehicle number">
                         </div>
-                        
+
                         <div class="form-group">
                             <label class="form-label">Notes</label>
                             <textarea class="form-control" name="notes" rows="3" placeholder="Enter any notes about this delivery"></textarea>
                         </div>
                     </div>
-                    
+
                     <div class="form-section">
                         <h6 class="form-section-title">Products to Receive</h6>
-                        
+
                         <!-- Product 1 -->
                         <div class="product-item">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div class="d-flex align-items-center">
-                                    <img src="https://via.placeholder.com/60x60/007bff/ffffff?text=S" 
-                                         style="width:60px;height:60px;border-radius:4px;margin-right:15px;">
+                                    <img src="https://via.placeholder.com/60x60/007bff/ffffff?text=S"
+                                        style="width:60px;height:60px;border-radius:4px;margin-right:15px;">
                                     <div>
                                         <h6 class="mb-0">Cotton Formal Shirt</h6>
                                         <small class="text-muted">SKU: CTN-SHT-001 | Size: M, Color: White</small>
                                         <div class="small">
-                                            <span class="text-danger">Cost: ₹800</span> | 
+                                            <span class="text-danger">Cost: Rs800</span> |
                                             <span>Ordered: 50</span> |
                                             <span class="text-success">Received: 25</span> |
                                             <span class="text-warning">Pending: 25</span>
@@ -231,14 +247,14 @@
                                     <div class="receive-status status-partial">Partial</div>
                                 </div>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="form-label">Quantity Received</label>
                                         <div class="quantity-controls">
-                                            <input type="number" class="form-control quantity-input" 
-                                                   name="products[1][quantity]" value="10" min="0" max="25">
+                                            <input type="number" class="form-control quantity-input"
+                                                name="products[1][quantity]" value="10" min="0" max="25">
                                             <small class="text-muted">Max: 25</small>
                                         </div>
                                     </div>
@@ -260,12 +276,12 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label class="form-label">Batch Number</label>
                                 <input type="text" class="form-control" name="products[1][batch_number]" placeholder="Enter batch number">
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -280,29 +296,29 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label class="form-label">Rejection Reason (if any)</label>
                                 <textarea class="form-control" name="products[1][rejection_reason]" rows="2" placeholder="If rejected, specify reason"></textarea>
                             </div>
-                            
+
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" name="products[1][restock]" id="restock1" checked>
                                 <label class="form-check-label" for="restock1">Restock to inventory</label>
                             </div>
                         </div>
-                        
+
                         <!-- Product 2 -->
                         <div class="product-item">
                             <div class="d-flex justify-content-between align-items-start mb-3">
                                 <div class="d-flex align-items-center">
-                                    <img src="https://via.placeholder.com/60x60/28a745/ffffff?text=J" 
-                                         style="width:60px;height:60px;border-radius:4px;margin-right:15px;">
+                                    <img src="https://via.placeholder.com/60x60/28a745/ffffff?text=J"
+                                        style="width:60px;height:60px;border-radius:4px;margin-right:15px;">
                                     <div>
                                         <h6 class="mb-0">Denim Jeans</h6>
                                         <small class="text-muted">SKU: DNM-JNS-002 | Size: 32, Color: Blue</small>
                                         <div class="small">
-                                            <span class="text-danger">Cost: ₹1,200</span> | 
+                                            <span class="text-danger">Cost: Rs1,200</span> |
                                             <span>Ordered: 30</span> |
                                             <span class="text-success">Received: 15</span> |
                                             <span class="text-warning">Pending: 15</span>
@@ -313,14 +329,14 @@
                                     <div class="receive-status status-partial">Partial</div>
                                 </div>
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label class="form-label">Quantity Received</label>
                                         <div class="quantity-controls">
-                                            <input type="number" class="form-control quantity-input" 
-                                                   name="products[2][quantity]" value="5" min="0" max="15">
+                                            <input type="number" class="form-control quantity-input"
+                                                name="products[2][quantity]" value="5" min="0" max="15">
                                             <small class="text-muted">Max: 15</small>
                                         </div>
                                     </div>
@@ -342,12 +358,12 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label class="form-label">Batch Number</label>
                                 <input type="text" class="form-control" name="products[2][batch_number]" placeholder="Enter batch number">
                             </div>
-                            
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
@@ -362,38 +378,38 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group">
                                 <label class="form-label">Rejection Reason (if any)</label>
                                 <textarea class="form-control" name="products[2][rejection_reason]" rows="2" placeholder="If rejected, specify reason"></textarea>
                             </div>
-                            
+
                             <div class="form-check">
                                 <input type="checkbox" class="form-check-input" name="products[2][restock]" id="restock2" checked>
                                 <label class="form-check-label" for="restock2">Restock to inventory</label>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Damaged Items Section -->
                     <div class="form-section">
                         <h6 class="form-section-title">Damaged/Rejected Items</h6>
-                        
+
                         <div class="form-group">
                             <label class="form-label">Total Damaged Items</label>
                             <input type="number" class="form-control" name="total_damaged" value="0" min="0">
                         </div>
-                        
+
                         <div class="form-group">
-                            <label class="form-label">Damaged Items Value (₹)</label>
+                            <label class="form-label">Damaged Items Value (Rs)</label>
                             <input type="number" class="form-control" name="damaged_value" value="0" min="0" step="0.01">
                         </div>
-                        
+
                         <div class="form-group">
                             <label class="form-label">Rejection Reason</label>
                             <textarea class="form-control" name="rejection_reason" rows="3" placeholder="Specify reason for damaged/rejected items"></textarea>
                         </div>
-                        
+
                         <div class="form-group">
                             <label class="form-label">Action for Damaged Items</label>
                             <select class="form-control" name="damaged_action">
@@ -404,7 +420,7 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <div class="d-flex justify-content-between mt-4">
                         <button type="button" class="btn btn-outline-secondary" onclick="window.history.back()">
                             <i class="las la-arrow-left mr-2"></i> Back
@@ -415,49 +431,49 @@
                     </div>
                 </form>
             </div>
-            
+
             <!-- Right Column: Summary -->
             <div class="col-lg-4">
                 <div class="summary-card">
                     <h6>Receiving Summary</h6>
-                    
+
                     <div class="summary-item">
                         <span>Total Items to Receive:</span>
                         <span id="totalItems">40</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Items Being Received:</span>
                         <span id="receivingItems">15</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Good Condition:</span>
                         <span id="goodItems">15</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Damaged Items:</span>
                         <span id="damagedItems">0</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Total Value:</span>
-                        <span id="totalValue">₹17,000</span>
+                        <span id="totalValue">Rs17,000</span>
                     </div>
-                    
+
                     <div class="summary-item">
                         <span>Damaged Value:</span>
-                        <span id="damagedValue">₹0.00</span>
+                        <span id="damagedValue">Rs0.00</span>
                     </div>
-                    
+
                     <div class="summary-item total">
                         <span>Net Value:</span>
-                        <span id="netValue">₹17,000</span>
+                        <span id="netValue">Rs17,000</span>
                     </div>
-                    
+
                     <hr>
-                    
+
                     <!-- Quick Actions -->
                     <div class="mt-3">
                         <h6 class="mb-3">Quick Actions</h6>
@@ -473,7 +489,7 @@
                             </button>
                         </div>
                     </div>
-                    
+
                     <!-- Receiving Status -->
                     <div class="mt-4">
                         <h6 class="mb-3">Receiving Progress</h6>
@@ -500,117 +516,117 @@
         $(document).ready(function() {
             // Update summary on quantity change
             $('.quantity-input').on('change', updateSummary);
-            
+
             // Update condition counts
             $('input[type="radio"][name*="condition"]').on('change', updateSummary);
-            
+
             // Form submission
             $('#receiveForm').submit(function(e) {
                 e.preventDefault();
-                
+
                 // Validate form
                 const receivedBy = $('select[name="received_by"]').val();
-                if(!receivedBy) {
+                if (!receivedBy) {
                     alert('Please select who received the goods');
                     return false;
                 }
-                
+
                 const totalReceiving = parseInt($('#receivingItems').text()) || 0;
-                if(totalReceiving === 0) {
+                if (totalReceiving === 0) {
                     alert('Please enter quantity for at least one product');
                     return false;
                 }
-                
+
                 // Show loading
                 $('button[type="submit"]').prop('disabled', true).html('<i class="las la-spinner la-spin mr-2"></i>Processing...');
-                
+
                 // Prepare form data
                 const formData = $(this).serializeArray();
-                
+
                 // Simulate API call
                 setTimeout(() => {
                     console.log('Form data:', formData);
                     alert('Goods received successfully!');
                     window.location.href = "{{ route('purchases.show', 1) }}";
                 }, 1500);
-                
+
                 return false;
             });
         });
-        
+
         // Update summary
         function updateSummary() {
             let receivingItems = 0;
             let goodItems = 0;
             let damagedItems = 0;
             let totalValue = 0;
-            
+
             // Calculate for each product
             $('.product-item').each(function() {
                 const quantityInput = $(this).find('.quantity-input');
                 const quantity = parseInt(quantityInput.val()) || 0;
-                const cost = parseFloat($(this).find('.text-danger').text().replace('Cost: ₹', '')) || 0;
+                const cost = parseFloat($(this).find('.text-danger').text().replace('Cost: Rs', '')) || 0;
                 const condition = $(this).find('input[type="radio"][name*="condition"]:checked').val();
-                
+
                 receivingItems += quantity;
                 totalValue += quantity * cost;
-                
-                if(condition === 'good') {
+
+                if (condition === 'good') {
                     goodItems += quantity;
-                } else if(condition === 'damaged' || condition === 'expired') {
+                } else if (condition === 'damaged' || condition === 'expired') {
                     damagedItems += quantity;
                 }
             });
-            
+
             // Update summary display
             $('#receivingItems').text(receivingItems);
             $('#goodItems').text(goodItems);
             $('#damagedItems').text(damagedItems);
-            $('#totalValue').text('₹' + totalValue.toFixed(2));
-            
+            $('#totalValue').text('Rs' + totalValue.toFixed(2));
+
             // Update damaged value (assuming 100% loss for damaged items)
             const damagedValue = damagedItems * 100; // This should be calculated properly
-            $('#damagedValue').text('₹' + damagedValue.toFixed(2));
-            $('#netValue').text('₹' + (totalValue - damagedValue).toFixed(2));
-            
+            $('#damagedValue').text('Rs' + damagedValue.toFixed(2));
+            $('#netValue').text('Rs' + (totalValue - damagedValue).toFixed(2));
+
             // Update damaged items field
             $('input[name="total_damaged"]').val(damagedItems);
             $('input[name="damaged_value"]').val(damagedValue);
         }
-        
+
         // Quick actions
         window.receiveAllGood = function() {
             $('.quantity-input').each(function() {
                 const max = parseInt($(this).attr('max')) || 0;
                 $(this).val(max);
             });
-            
+
             $('input[type="radio"][name*="condition"][value="good"]').prop('checked', true);
             $('.btn-outline-success').addClass('active');
             $('.btn-outline-danger, .btn-outline-warning').removeClass('active');
-            
+
             updateSummary();
             alert('All items set to maximum quantity and good condition!');
         };
-        
+
         window.receivePartial = function() {
             $('.quantity-input').each(function() {
                 const max = parseInt($(this).attr('max')) || 0;
                 const half = Math.ceil(max * 0.5);
                 $(this).val(half);
             });
-            
+
             updateSummary();
             alert('All items set to 50% of remaining quantity!');
         };
-        
+
         window.clearAll = function() {
-            if(confirm('Clear all quantities?')) {
+            if (confirm('Clear all quantities?')) {
                 $('.quantity-input').val(0);
                 updateSummary();
             }
         };
-        
+
         // Auto-calculate damaged value
         $('input[name="total_damaged"]').on('change', function() {
             const damagedCount = parseInt($(this).val()) || 0;

@@ -10,6 +10,7 @@
         .balance-sheet-section {
             margin-bottom: 30px;
         }
+
         .section-header {
             background: #f8f9fa;
             padding: 10px 15px;
@@ -17,24 +18,30 @@
             margin-bottom: 15px;
             font-weight: 600;
         }
+
         .account-row {
             padding: 8px 15px;
             border-bottom: 1px solid #e9ecef;
         }
+
         .account-row:hover {
             background-color: #f8f9fa;
         }
+
         .account-name {
             padding-left: 20px;
         }
+
         .sub-account {
             padding-left: 40px;
         }
+
         .total-row {
             background: #e9ecef;
             font-weight: 600;
             padding: 10px 15px;
         }
+
         .grand-total {
             background: #007bff;
             color: white;
@@ -42,21 +49,26 @@
             font-size: 1.2rem;
             border-radius: 5px;
         }
+
         .amount-positive {
             color: #28a745;
         }
+
         .amount-negative {
             color: #dc3545;
         }
+
         .balance-check {
             font-size: 0.9rem;
             padding: 5px 10px;
             border-radius: 3px;
         }
+
         .balance-check.good {
             background: #d4edda;
             color: #155724;
         }
+
         .balance-check.bad {
             background: #f8d7da;
             color: #721c24;
@@ -73,8 +85,8 @@
                 <nav aria-label="breadcrumb">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="{{ route('dashboard') }}">Dashboard</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('accounts.reports.index') }}">Reports</a></li>
-                        <li class="breadcrumb-item"><a href="{{ route('accounts.reports.index') }}">Financial Reports</a></li>
+                        <li class="breadcrumb-item"><a href="#">Reports</a></li>
+                        <li class="breadcrumb-item"><a href="{{ route('reports.financial.index') }}">Financial Reports</a></li>
                         <li class="breadcrumb-item active">Balance Sheet</li>
                     </ol>
                 </nav>
@@ -122,107 +134,107 @@
                         <!-- Current Assets -->
                         <div class="balance-sheet-section">
                             <div class="section-header">Current Assets</div>
-                            
+
                             <div class="account-row">
                                 <div class="row">
                                     <div class="col-8 account-name">
                                         <i class="las la-wallet text-primary mr-2"></i>Cash and Cash Equivalents
                                     </div>
                                     <div class="col-4 text-right">
-                                        <strong class="amount-positive">₹125,000</strong>
+                                        <strong class="amount-positive">Rs125,000</strong>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="account-row sub-account">
                                 <div class="row">
                                     <div class="col-8">Cash in Hand</div>
-                                    <div class="col-4 text-right">₹25,000</div>
+                                    <div class="col-4 text-right">Rs25,000</div>
                                 </div>
                             </div>
-                            
+
                             <div class="account-row sub-account">
                                 <div class="row">
                                     <div class="col-8">Bank Accounts</div>
-                                    <div class="col-4 text-right">₹100,000</div>
+                                    <div class="col-4 text-right">Rs100,000</div>
                                 </div>
                             </div>
-                            
+
                             <div class="account-row">
                                 <div class="row">
                                     <div class="col-8 account-name">
                                         <i class="las la-file-invoice-dollar text-info mr-2"></i>Accounts Receivable
                                     </div>
                                     <div class="col-4 text-right">
-                                        <strong class="amount-positive">₹75,000</strong>
+                                        <strong class="amount-positive">Rs75,000</strong>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="account-row">
                                 <div class="row">
                                     <div class="col-8 account-name">
                                         <i class="las la-boxes text-warning mr-2"></i>Inventory
                                     </div>
                                     <div class="col-4 text-right">
-                                        <strong class="amount-positive">₹850,000</strong>
+                                        <strong class="amount-positive">Rs850,000</strong>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="account-row total-row">
                                 <div class="row">
                                     <div class="col-8">
                                         <strong>Total Current Assets</strong>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <strong class="amount-positive">₹1,050,000</strong>
+                                        <strong class="amount-positive">Rs1,050,000</strong>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Fixed Assets -->
                         <div class="balance-sheet-section">
                             <div class="section-header">Fixed Assets</div>
-                            
+
                             <div class="account-row">
                                 <div class="row">
                                     <div class="col-8 account-name">
                                         <i class="las la-building text-secondary mr-2"></i>Property, Plant & Equipment
                                     </div>
                                     <div class="col-4 text-right">
-                                        <strong class="amount-positive">₹200,000</strong>
+                                        <strong class="amount-positive">Rs200,000</strong>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="account-row sub-account">
                                 <div class="row">
                                     <div class="col-8">Furniture & Fixtures</div>
-                                    <div class="col-4 text-right">₹80,000</div>
+                                    <div class="col-4 text-right">Rs80,000</div>
                                 </div>
                             </div>
-                            
+
                             <div class="account-row sub-account">
                                 <div class="row">
                                     <div class="col-8">Less: Accumulated Depreciation</div>
-                                    <div class="col-4 text-right">(₹20,000)</div>
+                                    <div class="col-4 text-right">(Rs20,000)</div>
                                 </div>
                             </div>
-                            
+
                             <div class="account-row total-row">
                                 <div class="row">
                                     <div class="col-8">
                                         <strong>Total Fixed Assets</strong>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <strong class="amount-positive">₹180,000</strong>
+                                        <strong class="amount-positive">Rs180,000</strong>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Total Assets -->
                         <div class="grand-total mt-4">
                             <div class="row">
@@ -230,14 +242,14 @@
                                     <h4 class="mb-0">TOTAL ASSETS</h4>
                                 </div>
                                 <div class="col-4 text-right">
-                                    <h3 class="mb-0">₹1,230,000</h3>
+                                    <h3 class="mb-0">Rs1,230,000</h3>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Liabilities & Equity Column -->
             <div class="col-lg-6">
                 <div class="card">
@@ -248,117 +260,117 @@
                         <!-- Current Liabilities -->
                         <div class="balance-sheet-section">
                             <div class="section-header">Current Liabilities</div>
-                            
+
                             <div class="account-row">
                                 <div class="row">
                                     <div class="col-8 account-name">
                                         <i class="las la-file-invoice-dollar text-danger mr-2"></i>Accounts Payable
                                     </div>
                                     <div class="col-4 text-right">
-                                        <strong class="amount-negative">₹150,000</strong>
+                                        <strong class="amount-negative">Rs150,000</strong>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="account-row">
                                 <div class="row">
                                     <div class="col-8 account-name">
                                         <i class="las la-credit-card text-warning mr-2"></i>Short-term Loans
                                     </div>
                                     <div class="col-4 text-right">
-                                        <strong class="amount-negative">₹50,000</strong>
+                                        <strong class="amount-negative">Rs50,000</strong>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="account-row">
                                 <div class="row">
                                     <div class="col-8 account-name">
                                         <i class="las la-percentage text-info mr-2"></i>Tax Payable
                                     </div>
                                     <div class="col-4 text-right">
-                                        <strong class="amount-negative">₹30,000</strong>
+                                        <strong class="amount-negative">Rs30,000</strong>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="account-row total-row">
                                 <div class="row">
                                     <div class="col-8">
                                         <strong>Total Current Liabilities</strong>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <strong class="amount-negative">₹230,000</strong>
+                                        <strong class="amount-negative">Rs230,000</strong>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Long-term Liabilities -->
                         <div class="balance-sheet-section">
                             <div class="section-header">Long-term Liabilities</div>
-                            
+
                             <div class="account-row">
                                 <div class="row">
                                     <div class="col-8 account-name">
                                         <i class="las la-hand-holding-usd text-secondary mr-2"></i>Long-term Loans
                                     </div>
                                     <div class="col-4 text-right">
-                                        <strong class="amount-negative">₹400,000</strong>
+                                        <strong class="amount-negative">Rs400,000</strong>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="account-row total-row">
                                 <div class="row">
                                     <div class="col-8">
                                         <strong>Total Long-term Liabilities</strong>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <strong class="amount-negative">₹400,000</strong>
+                                        <strong class="amount-negative">Rs400,000</strong>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Equity -->
                         <div class="balance-sheet-section">
                             <div class="section-header">Owner's Equity</div>
-                            
+
                             <div class="account-row">
                                 <div class="row">
                                     <div class="col-8 account-name">
                                         <i class="las la-user-tie text-success mr-2"></i>Owner's Capital
                                     </div>
                                     <div class="col-4 text-right">
-                                        <strong class="amount-positive">₹500,000</strong>
+                                        <strong class="amount-positive">Rs500,000</strong>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="account-row">
                                 <div class="row">
                                     <div class="col-8 account-name">
                                         <i class="las la-chart-line text-info mr-2"></i>Retained Earnings
                                     </div>
                                     <div class="col-4 text-right">
-                                        <strong class="amount-positive">₹100,000</strong>
+                                        <strong class="amount-positive">Rs100,000</strong>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="account-row total-row">
                                 <div class="row">
                                     <div class="col-8">
                                         <strong>Total Equity</strong>
                                     </div>
                                     <div class="col-4 text-right">
-                                        <strong class="amount-positive">₹600,000</strong>
+                                        <strong class="amount-positive">Rs600,000</strong>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Total Liabilities & Equity -->
                         <div class="grand-total mt-4">
                             <div class="row">
@@ -366,7 +378,7 @@
                                     <h4 class="mb-0">TOTAL LIABILITIES & EQUITY</h4>
                                 </div>
                                 <div class="col-4 text-right">
-                                    <h3 class="mb-0">₹1,230,000</h3>
+                                    <h3 class="mb-0">Rs1,230,000</h3>
                                 </div>
                             </div>
                         </div>
@@ -427,7 +439,7 @@
                     </div>
                     <div class="card-body">
                         <ul class="mb-0">
-                            <li>All amounts are in Indian Rupees (₹)</li>
+                            <li>All amounts are in Indian Rupees (Rs)</li>
                             <li>Report generated on: {{ date('F d, Y h:i A') }}</li>
                             <li>Values are rounded to the nearest rupee</li>
                             <li>This is an unaudited financial statement</li>
@@ -495,32 +507,32 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Print button
             window.printReport = function() {
                 window.print();
             };
-            
+
             // Export button
             window.exportReport = function() {
                 const format = prompt('Select export format (PDF, Excel, CSV):', 'PDF');
-                if(format) {
+                if (format) {
                     alert(`Exporting balance sheet in ${format} format...`);
                     // In real app: window.location.href = `/accounts/reports/balance-sheet/export?format=${format}`;
                 }
             };
-            
+
             // Apply filters
             window.applyFilters = function() {
                 const formData = new FormData(document.getElementById('filterForm'));
                 const filters = Object.fromEntries(formData);
                 console.log('Applying filters:', filters);
-                
+
                 alert('Generating report with selected filters...');
                 $('#filterModal').modal('hide');
                 // In real app: reload page with filters or make API call

@@ -50,7 +50,7 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-2">
                         <div class="form-group">
                             <label class="form-label">Category</label>
@@ -62,7 +62,7 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-2">
                         <div class="form-group">
                             <label class="form-label">Brand</label>
@@ -74,7 +74,7 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-2">
                         <div class="form-group">
                             <label class="form-label">Stock Status</label>
@@ -87,7 +87,7 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-2">
                         <div class="form-group">
                             <label class="form-label">Sort By</label>
@@ -98,7 +98,7 @@
                             </select>
                         </div>
                     </div>
-                    
+
                     <div class="col-md-2">
                         <div class="form-group">
                             <label>&nbsp;</label>
@@ -288,7 +288,7 @@
                                     </button>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 2 -->
                             <tr class="stock-row" data-status="normal">
                                 <td>
@@ -317,7 +317,7 @@
                                     </button>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 3 -->
                             <tr class="stock-row" data-status="normal">
                                 <td>
@@ -346,7 +346,7 @@
                                     </button>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 4 -->
                             <tr class="stock-row" data-status="over">
                                 <td>
@@ -375,7 +375,7 @@
                                     </button>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 5 -->
                             <tr class="stock-row" data-status="low">
                                 <td>
@@ -404,7 +404,7 @@
                                     </button>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 6 -->
                             <tr class="stock-row" data-status="normal">
                                 <td>
@@ -433,7 +433,7 @@
                                     </button>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 7 -->
                             <tr class="stock-row" data-status="out">
                                 <td>
@@ -462,7 +462,7 @@
                                     </button>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 8 -->
                             <tr class="stock-row" data-status="normal">
                                 <td>
@@ -491,7 +491,7 @@
                                     </button>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 9 -->
                             <tr class="stock-row" data-status="low">
                                 <td>
@@ -520,7 +520,7 @@
                                     </button>
                                 </td>
                             </tr>
-                            
+
                             <!-- Product 10 -->
                             <tr class="stock-row" data-status="normal">
                                 <td>
@@ -600,7 +600,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Alert 2 -->
                     <div class="col-md-4 mb-3">
                         <div class="card border-warning">
@@ -627,7 +627,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Alert 3 -->
                     <div class="col-md-4 mb-3">
                         <div class="card border-warning">
@@ -654,7 +654,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Alert 4 -->
                     <div class="col-md-4 mb-3">
                         <div class="card border-warning">
@@ -681,7 +681,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Alert 5 -->
                     <div class="col-md-4 mb-3">
                         <div class="card border-warning">
@@ -708,7 +708,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Alert 6 -->
                     <div class="col-md-4 mb-3">
                         <div class="card border-warning">
@@ -743,149 +743,157 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- Chart.js -->
     <script src="{{ asset('backend/assets/vendor/chart.js/Chart.min.js') }}"></script>
-    
+
     <!-- DataTables -->
     <script src="{{ asset('backend/assets/vendor/datatables/datatables.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
-    $(document).ready(function() {
-        // Initialize DataTable
-        $('#stockLevelsTable').DataTable({
-            pageLength: 10,
-            ordering: true,
-            order: [[4, 'asc']], // Sort by Current Stock (lowest first)
-            dom: '<"top"f>rt<"bottom"lip><"clear">'
-        });
-        
-        // Initialize charts
-        initStockCharts();
-        
-        // Load stock report
-        window.loadStockReport = function() {
-            const branch = $('#stockBranchFilter').val();
-            const category = $('#stockCategoryFilter').val();
-            const brand = $('#stockBrandFilter').val();
-            const status = $('#stockStatusFilter').val();
-            const sortBy = $('#stockSortBy').val();
-            
-            console.log('Loading stock report:', { branch, category, brand, status, sortBy });
-            
-            // Show loading
-            $('#stockLevelsTable_wrapper').html('<div class="text-center py-5"><i class="las la-spinner la-spin fa-2x text-primary"></i><p class="mt-2">Loading stock report...</p></div>');
-            
-            // Simulate API call
-            setTimeout(() => {
-                alert('Stock report loaded with applied filters');
-                // Reload charts with new data
-                initStockCharts();
-            }, 1000);
-        };
-        
-        function initStockCharts() {
-            // Stock Status Chart
-            var ctx1 = document.getElementById('stockStatusChart').getContext('2d');
-            new Chart(ctx1, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Normal Stock', 'Low Stock', 'Out of Stock', 'Overstock'],
-                    datasets: [{
-                        data: [1560, 85, 5, 31],
-                        backgroundColor: [
-                            'rgba(40, 167, 69, 0.8)',
-                            'rgba(255, 193, 7, 0.8)',
-                            'rgba(220, 53, 69, 0.8)',
-                            'rgba(23, 162, 184, 0.8)'
-                        ]
-                    }]
-                }
+        $(document).ready(function() {
+            // Initialize DataTable
+            $('#stockLevelsTable').DataTable({
+                pageLength: 10,
+                ordering: true,
+                order: [
+                    [4, 'asc']
+                ], // Sort by Current Stock (lowest first)
+                dom: '<"top"f>rt<"bottom"lip><"clear">'
             });
-            
-            // Category Value Chart
-            var ctx2 = document.getElementById('categoryValueChart').getContext('2d');
-            new Chart(ctx2, {
-                type: 'bar',
-                data: {
-                    labels: ['Men\'s Wear', 'Women\'s Wear', 'Kid\'s Wear', 'Accessories'],
-                    datasets: [{
-                        label: 'Stock Value (₹)',
-                        data: [120000, 80000, 30000, 15800],
-                        backgroundColor: 'rgba(78, 115, 223, 0.5)',
-                        borderColor: 'rgba(78, 115, 223, 1)',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            ticks: {
-                                callback: function(value) {
-                                    return '₹' + value/1000 + 'k';
+
+            // Initialize charts
+            initStockCharts();
+
+            // Load stock report
+            window.loadStockReport = function() {
+                const branch = $('#stockBranchFilter').val();
+                const category = $('#stockCategoryFilter').val();
+                const brand = $('#stockBrandFilter').val();
+                const status = $('#stockStatusFilter').val();
+                const sortBy = $('#stockSortBy').val();
+
+                console.log('Loading stock report:', {
+                    branch,
+                    category,
+                    brand,
+                    status,
+                    sortBy
+                });
+
+                // Show loading
+                $('#stockLevelsTable_wrapper').html('<div class="text-center py-5"><i class="las la-spinner la-spin fa-2x text-primary"></i><p class="mt-2">Loading stock report...</p></div>');
+
+                // Simulate API call
+                setTimeout(() => {
+                    alert('Stock report loaded with applied filters');
+                    // Reload charts with new data
+                    initStockCharts();
+                }, 1000);
+            };
+
+            function initStockCharts() {
+                // Stock Status Chart
+                var ctx1 = document.getElementById('stockStatusChart').getContext('2d');
+                new Chart(ctx1, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Normal Stock', 'Low Stock', 'Out of Stock', 'Overstock'],
+                        datasets: [{
+                            data: [1560, 85, 5, 31],
+                            backgroundColor: [
+                                'rgba(40, 167, 69, 0.8)',
+                                'rgba(255, 193, 7, 0.8)',
+                                'rgba(220, 53, 69, 0.8)',
+                                'rgba(23, 162, 184, 0.8)'
+                            ]
+                        }]
+                    }
+                });
+
+                // Category Value Chart
+                var ctx2 = document.getElementById('categoryValueChart').getContext('2d');
+                new Chart(ctx2, {
+                    type: 'bar',
+                    data: {
+                        labels: ['Men\'s Wear', 'Women\'s Wear', 'Kid\'s Wear', 'Accessories'],
+                        datasets: [{
+                            label: 'Stock Value (Rs)',
+                            data: [120000, 80000, 30000, 15800],
+                            backgroundColor: 'rgba(78, 115, 223, 0.5)',
+                            borderColor: 'rgba(78, 115, 223, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    callback: function(value) {
+                                        return 'Rs' + value / 1000 + 'k';
+                                    }
                                 }
                             }
                         }
                     }
-                }
-            });
-        }
-        
-        window.exportStockReport = function() {
-            alert('Exporting stock report to Excel...');
-        };
-        
-        window.printStockReport = function() {
-            window.print();
-        };
-        
-        window.generateReorderList = function() {
-            const lowStockItems = $('.stock-row[data-status="low"], .stock-row[data-status="out"]').length;
-            alert('Generating reorder list for ' + lowStockItems + ' items...');
-        };
-        
-        window.printReorderList = function() {
-            alert('Printing reorder list...');
-        };
-        
-        window.showLowStockOnly = function() {
-            $('.stock-row').hide();
-            $('.stock-row[data-status="low"], .stock-row[data-status="out"]').show();
-            alert('Showing low and out of stock items only');
-        };
-        
-        window.showOutOfStockOnly = function() {
-            $('.stock-row').hide();
-            $('.stock-row[data-status="out"]').show();
-            alert('Showing out of stock items only');
-        };
-        
-        window.showAllStock = function() {
-            $('.stock-row').show();
-            alert('Showing all stock items');
-        };
-        
-        window.reorderProduct = function(sku) {
-            alert('Initiating reorder for SKU: ' + sku);
-            // Open purchase order creation
-            window.open('/purchases/create?sku=' + sku, '_blank');
-        };
-        
-        window.viewProduct = function(sku) {
-            alert('Viewing product: ' + sku);
-            // Open product details
-            window.open('/products/' + sku, '_blank');
-        };
-        
-        window.quickReorder = function(sku) {
-            alert('Quick reorder for: ' + sku);
-            // Quick reorder functionality
-        };
-    });
+                });
+            }
+
+            window.exportStockReport = function() {
+                alert('Exporting stock report to Excel...');
+            };
+
+            window.printStockReport = function() {
+                window.print();
+            };
+
+            window.generateReorderList = function() {
+                const lowStockItems = $('.stock-row[data-status="low"], .stock-row[data-status="out"]').length;
+                alert('Generating reorder list for ' + lowStockItems + ' items...');
+            };
+
+            window.printReorderList = function() {
+                alert('Printing reorder list...');
+            };
+
+            window.showLowStockOnly = function() {
+                $('.stock-row').hide();
+                $('.stock-row[data-status="low"], .stock-row[data-status="out"]').show();
+                alert('Showing low and out of stock items only');
+            };
+
+            window.showOutOfStockOnly = function() {
+                $('.stock-row').hide();
+                $('.stock-row[data-status="out"]').show();
+                alert('Showing out of stock items only');
+            };
+
+            window.showAllStock = function() {
+                $('.stock-row').show();
+                alert('Showing all stock items');
+            };
+
+            window.reorderProduct = function(sku) {
+                alert('Initiating reorder for SKU: ' + sku);
+                // Open purchase order creation
+                window.open('/purchases/create?sku=' + sku, '_blank');
+            };
+
+            window.viewProduct = function(sku) {
+                alert('Viewing product: ' + sku);
+                // Open product details
+                window.open('/products/' + sku, '_blank');
+            };
+
+            window.quickReorder = function(sku) {
+                alert('Quick reorder for: ' + sku);
+                // Quick reorder functionality
+            };
+        });
     </script>
     @endpush
 </x-app-layout>

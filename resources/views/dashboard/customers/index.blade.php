@@ -202,8 +202,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-md mr-3">
-                                            <img src="https://ui-avatars.com/api/?name=John+Smith&background=007bff&color=fff&size=100" 
-                                                 class="rounded-circle" alt="John Smith">
+                                            <img src="https://ui-avatars.com/api/?name=John+Smith&background=007bff&color=fff&size=100"
+                                                class="rounded-circle" alt="John Smith">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">John Smith</h6>
@@ -238,14 +238,14 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <strong class="text-success">₹2,45,680</strong>
+                                    <strong class="text-success">Rs2,45,680</strong>
                                     <br>
                                     <small class="text-muted">45 purchases</small>
                                 </td>
                                 <td>
                                     <div class="d-flex flex-column">
                                         <strong>15 Nov 2024</strong>
-                                        <small class="text-muted">₹4,127</small>
+                                        <small class="text-muted">Rs4,127</small>
                                     </div>
                                 </td>
                                 <td>
@@ -276,8 +276,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-md mr-3">
-                                            <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=28a745&color=fff&size=100" 
-                                                 class="rounded-circle" alt="Sarah Johnson">
+                                            <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=28a745&color=fff&size=100"
+                                                class="rounded-circle" alt="Sarah Johnson">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Sarah Johnson</h6>
@@ -312,14 +312,14 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <strong class="text-success">₹1,23,450</strong>
+                                    <strong class="text-success">Rs1,23,450</strong>
                                     <br>
                                     <small class="text-muted">28 purchases</small>
                                 </td>
                                 <td>
                                     <div class="d-flex flex-column">
                                         <strong>14 Nov 2024</strong>
-                                        <small class="text-muted">₹6,095</small>
+                                        <small class="text-muted">Rs6,095</small>
                                     </div>
                                 </td>
                                 <td>
@@ -350,8 +350,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-md mr-3">
-                                            <img src="https://ui-avatars.com/api/?name=Michael+Brown&background=ffc107&color=000&size=100" 
-                                                 class="rounded-circle" alt="Michael Brown">
+                                            <img src="https://ui-avatars.com/api/?name=Michael+Brown&background=ffc107&color=000&size=100"
+                                                class="rounded-circle" alt="Michael Brown">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Michael Brown</h6>
@@ -386,14 +386,14 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <strong class="text-success">₹4,56,780</strong>
+                                    <strong class="text-success">Rs4,56,780</strong>
                                     <br>
                                     <small class="text-muted">12 purchases</small>
                                 </td>
                                 <td>
                                     <div class="d-flex flex-column">
                                         <strong>10 Nov 2024</strong>
-                                        <small class="text-muted">₹45,600</small>
+                                        <small class="text-muted">Rs45,600</small>
                                     </div>
                                 </td>
                                 <td>
@@ -424,8 +424,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-md mr-3">
-                                            <img src="https://ui-avatars.com/api/?name=Emma+Wilson&background=6f42c1&color=fff&size=100" 
-                                                 class="rounded-circle" alt="Emma Wilson">
+                                            <img src="https://ui-avatars.com/api/?name=Emma+Wilson&background=6f42c1&color=fff&size=100"
+                                                class="rounded-circle" alt="Emma Wilson">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Emma Wilson</h6>
@@ -460,20 +460,20 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <strong class="text-success">₹89,450</strong>
+                                    <strong class="text-success">Rs89,450</strong>
                                     <br>
                                     <small class="text-muted">18 purchases</small>
                                 </td>
                                 <td>
                                     <div class="d-flex flex-column">
                                         <strong>05 Nov 2024</strong>
-                                        <small class="text-muted">₹12,500</small>
+                                        <small class="text-muted">Rs12,500</small>
                                     </div>
                                 </td>
                                 <td>
                                     <span class="badge badge-warning">Credit</span>
                                     <br>
-                                    <small class="text-danger">Due: ₹2,599</small>
+                                    <small class="text-danger">Due: Rs2,599</small>
                                 </td>
                                 <td>
                                     <div class="d-flex">
@@ -498,8 +498,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-md mr-3">
-                                            <img src="https://ui-avatars.com/api/?name=David+Miller&background=17a2b8&color=fff&size=100" 
-                                                 class="rounded-circle" alt="David Miller">
+                                            <img src="https://ui-avatars.com/api/?name=David+Miller&background=17a2b8&color=fff&size=100"
+                                                class="rounded-circle" alt="David Miller">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">David Miller</h6>
@@ -534,14 +534,14 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <strong class="text-success">₹23,450</strong>
+                                    <strong class="text-success">Rs23,450</strong>
                                     <br>
                                     <small class="text-muted">8 purchases</small>
                                 </td>
                                 <td>
                                     <div class="d-flex flex-column">
                                         <strong>15 Aug 2024</strong>
-                                        <small class="text-muted">₹3,798</small>
+                                        <small class="text-muted">Rs3,798</small>
                                     </div>
                                 </td>
                                 <td>
@@ -572,8 +572,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="avatar avatar-md mr-3">
-                                            <img src="https://ui-avatars.com/api/?name=Robert+Taylor&background=dc3545&color=fff&size=100" 
-                                                 class="rounded-circle" alt="Robert Taylor">
+                                            <img src="https://ui-avatars.com/api/?name=Robert+Taylor&background=dc3545&color=fff&size=100"
+                                                class="rounded-circle" alt="Robert Taylor">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Robert Taylor</h6>
@@ -608,14 +608,14 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <strong class="text-success">₹45,670</strong>
+                                    <strong class="text-success">Rs45,670</strong>
                                     <br>
                                     <small class="text-muted">15 purchases</small>
                                 </td>
                                 <td>
                                     <div class="d-flex flex-column">
                                         <strong>20 Jun 2024</strong>
-                                        <small class="text-muted">₹8,950</small>
+                                        <small class="text-muted">Rs8,950</small>
                                     </div>
                                 </td>
                                 <td>
@@ -675,14 +675,14 @@
                         <h5>Import Customer Data</h5>
                         <p class="text-muted">Upload CSV file with customer information</p>
                     </div>
-                    
+
                     <div class="form-group">
                         <label>Download Template</label>
                         <a href="#" class="btn btn-outline-primary btn-block">
                             <i class="las la-download mr-2"></i>Download CSV Template
                         </a>
                     </div>
-                    
+
                     <div class="form-group">
                         <label>Upload CSV File</label>
                         <div class="custom-file">
@@ -691,7 +691,7 @@
                         </div>
                         <small class="form-text text-muted">Maximum file size: 5MB</small>
                     </div>
-                    
+
                     <div class="form-group">
                         <label>Import Options</label>
                         <div class="custom-control custom-checkbox">
@@ -780,7 +780,7 @@ Cloth Shop Team</textarea>
                         <i class="las la-exclamation-triangle mr-2"></i>
                         Are you sure you want to blacklist this customer?
                     </div>
-                    
+
                     <form>
                         <div class="form-group">
                             <label>Customer</label>
@@ -820,10 +820,10 @@ Cloth Shop Team</textarea>
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Customer search
@@ -831,12 +831,12 @@ Cloth Shop Team</textarea>
                 const searchTerm = $(this).val().toLowerCase();
                 filterCustomers();
             });
-            
+
             // Filter customers
             $('#filterBtn').click(function() {
                 filterCustomers();
             });
-            
+
             // Reset filters
             $('#resetBtn').click(function() {
                 $('#customerSearch').val('');
@@ -847,66 +847,66 @@ Cloth Shop Team</textarea>
                 $('[data-group="all"]').addClass('active');
                 filterCustomers();
             });
-            
+
             // Customer groups
             $('[data-group]').click(function() {
                 $('[data-group]').removeClass('active');
                 $(this).addClass('active');
                 filterCustomers();
             });
-            
+
             // File input label
             $('#customerCSV').on('change', function() {
                 const fileName = $(this).val().split('\\').pop();
                 $(this).next('.custom-file-label').text(fileName || 'Choose file');
             });
-            
+
             // Tooltip initialization
             $('[title]').tooltip();
-            
+
             function filterCustomers() {
                 const searchTerm = $('#customerSearch').val().toLowerCase();
                 const customerType = $('#customerTypeFilter').val();
                 const loyaltyTier = $('#loyaltyFilter').val();
                 const status = $('#statusFilter').val();
                 const activeGroup = $('[data-group].active').data('group');
-                
+
                 $('#customersTable tbody tr').each(function() {
                     const row = $(this);
                     const customerName = row.find('h6').text().toLowerCase();
                     const customerCode = row.find('.text-muted').first().text().toLowerCase();
                     const customerPhone = row.find('small').eq(0).text().toLowerCase();
                     const customerEmail = row.find('small').eq(1).text().toLowerCase();
-                    
+
                     const typeBadge = row.find('td:nth-child(3) .badge').text().toLowerCase();
                     const loyaltyText = row.find('td:nth-child(4) small').text().toLowerCase();
                     const statusBadge = row.find('td:nth-child(7) .badge').text().toLowerCase();
-                    
+
                     let show = true;
-                    
+
                     // Search filter
-                    if (searchTerm && !customerName.includes(searchTerm) && 
-                        !customerCode.includes(searchTerm) && 
-                        !customerPhone.includes(searchTerm) && 
+                    if (searchTerm && !customerName.includes(searchTerm) &&
+                        !customerCode.includes(searchTerm) &&
+                        !customerPhone.includes(searchTerm) &&
                         !customerEmail.includes(searchTerm)) {
                         show = false;
                     }
-                    
+
                     // Customer type filter
                     if (customerType && !typeBadge.includes(customerType)) {
                         show = false;
                     }
-                    
+
                     // Loyalty tier filter
                     if (loyaltyTier && !loyaltyText.includes(loyaltyTier)) {
                         show = false;
                     }
-                    
+
                     // Status filter
                     if (status && !statusBadge.includes(status)) {
                         show = false;
                     }
-                    
+
                     // Group filter (simplified example)
                     if (activeGroup === 'inactive' && !statusBadge.includes('inactive')) {
                         show = false;
@@ -915,11 +915,11 @@ Cloth Shop Team</textarea>
                     } else if (activeGroup === 'blacklisted' && !statusBadge.includes('blacklisted')) {
                         show = false;
                     }
-                    
+
                     row.toggle(show);
                 });
             }
-            
+
             // Initialize filtering
             filterCustomers();
         });

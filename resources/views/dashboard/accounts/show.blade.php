@@ -14,31 +14,36 @@
             padding: 30px;
             margin-bottom: 30px;
         }
+
         .account-icon {
             width: 80px;
             height: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 50%;
             font-size: 2.5rem;
             margin-bottom: 20px;
         }
+
         .stat-card {
             border-radius: 10px;
             padding: 20px;
             margin-bottom: 20px;
             transition: all 0.3s;
         }
+
         .stat-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
+
         .transaction-timeline {
             position: relative;
             padding-left: 30px;
         }
+
         .transaction-timeline::before {
             content: "";
             position: absolute;
@@ -48,10 +53,12 @@
             width: 2px;
             background: #dee2e6;
         }
+
         .timeline-item {
             position: relative;
             margin-bottom: 25px;
         }
+
         .timeline-item::before {
             content: "";
             position: absolute;
@@ -63,15 +70,18 @@
             background: #007bff;
             border: 2px solid white;
         }
+
         .balance-change {
             font-size: 0.9rem;
             padding: 2px 8px;
             border-radius: 4px;
         }
+
         .balance-increase {
             background: #d4edda;
             color: #155724;
         }
+
         .balance-decrease {
             background: #f8d7da;
             color: #721c24;
@@ -100,7 +110,7 @@
                     </div>
                 </div>
                 <div class="col-md-4 text-right">
-                    <h1 class="mb-0">₹125,000</h1>
+                    <h1 class="mb-0">Rs125,000</h1>
                     <p class="mb-0">Current Balance</p>
                     <div class="mt-3">
                         <span class="badge badge-light">Debit Balance</span>
@@ -148,7 +158,7 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h6 class="text-uppercase mb-0">Opening Balance</h6>
-                                <h2 class="mb-0">₹100,000</h2>
+                                <h2 class="mb-0">Rs100,000</h2>
                             </div>
                             <div>
                                 <i class="las la-sign-in-alt fa-2x opacity-5"></i>
@@ -160,45 +170,45 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-xl-3 col-md-6">
                 <div class="card stat-card bg-gradient-success text-white">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h6 class="text-uppercase mb-0">Total Credits</h6>
-                                <h2 class="mb-0">₹850,000</h2>
+                                <h2 class="mb-0">Rs850,000</h2>
                             </div>
                             <div>
                                 <i class="las la-arrow-up fa-2x opacity-5"></i>
                             </div>
                         </div>
                         <p class="mb-0 mt-2">
-                            <span class="text-white">This Month: ₹125,000</span>
+                            <span class="text-white">This Month: Rs125,000</span>
                         </p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-xl-3 col-md-6">
                 <div class="card stat-card bg-gradient-danger text-white">
                     <div class="card-body">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h6 class="text-uppercase mb-0">Total Debits</h2>
-                                <h2 class="mb-0">₹825,000</h2>
+                                    <h2 class="mb-0">Rs825,000</h2>
                             </div>
                             <div>
                                 <i class="las la-arrow-down fa-2x opacity-5"></i>
                             </div>
                         </div>
                         <p class="mb-0 mt-2">
-                            <span class="text-white">This Month: ₹100,000</span>
+                            <span class="text-white">This Month: Rs100,000</span>
                         </p>
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-xl-3 col-md-6">
                 <div class="card stat-card bg-gradient-info text-white">
                     <div class="card-body">
@@ -261,14 +271,14 @@
                                 <strong>2024-03-20</strong>
                             </div>
                         </div>
-                        
+
                         <div class="mt-4">
                             <h6>Description</h6>
                             <p class="text-muted">Main cash register used for daily transactions, petty cash, and immediate payments. Reconciled daily.</p>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Quick Links -->
                 <div class="card mt-4">
                     <div class="card-header">
@@ -292,7 +302,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Recent Transactions -->
             <div class="col-lg-8">
                 <div class="card">
@@ -326,9 +336,9 @@
                                         <td>2024-03-20</td>
                                         <td><span class="badge badge-light">TRX-20240320-001</span></td>
                                         <td>Cash sale - Invoice #INV-20240320-045</td>
-                                        <td class="text-success">₹5,000</td>
+                                        <td class="text-success">Rs5,000</td>
                                         <td></td>
-                                        <td>₹125,000</td>
+                                        <td>Rs125,000</td>
                                         <td>
                                             <a href="#" class="btn btn-sm btn-outline-primary">
                                                 <i class="las la-eye"></i>
@@ -340,8 +350,8 @@
                                         <td><span class="badge badge-light">TRX-20240319-002</span></td>
                                         <td>Petty cash expense - Office supplies</td>
                                         <td></td>
-                                        <td class="text-danger">₹2,500</td>
-                                        <td>₹120,000</td>
+                                        <td class="text-danger">Rs2,500</td>
+                                        <td>Rs120,000</td>
                                         <td>
                                             <a href="#" class="btn btn-sm btn-outline-primary">
                                                 <i class="las la-eye"></i>
@@ -352,7 +362,7 @@
                                 </tbody>
                             </table>
                         </div>
-                        
+
                         <div class="text-center mt-3">
                             <a href="{{ route('accounts.transactions.index') }}?account_id=1" class="btn btn-outline-primary">
                                 <i class="las la-list mr-2"></i>View All Transactions
@@ -360,7 +370,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Transaction Timeline -->
                 <div class="card mt-4">
                     <div class="card-header">
@@ -376,12 +386,12 @@
                                         <small class="text-muted">Today, 10:30 AM</small>
                                     </div>
                                     <div class="text-right">
-                                        <h5 class="mb-1 text-success">₹5,000</h5>
-                                        <span class="balance-change balance-increase">+₹5,000</span>
+                                        <h5 class="mb-1 text-success">Rs5,000</h5>
+                                        <span class="balance-change balance-increase">+Rs5,000</span>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="timeline-item">
                                 <div class="d-flex justify-content-between">
                                     <div>
@@ -390,8 +400,8 @@
                                         <small class="text-muted">Yesterday, 3:45 PM</small>
                                     </div>
                                     <div class="text-right">
-                                        <h5 class="mb-1 text-danger">₹2,500</h5>
-                                        <span class="balance-change balance-decrease">-₹2,500</span>
+                                        <h5 class="mb-1 text-danger">Rs2,500</h5>
+                                        <span class="balance-change balance-decrease">-Rs2,500</span>
                                     </div>
                                 </div>
                             </div>
@@ -406,26 +416,28 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- DataTable -->
     <script src="{{ asset('backend/assets/vendor/datatables.net/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('backend/assets/vendor/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-    
+
     <!-- Chart.js -->
     <script src="{{ asset('backend/assets/vendor/chart.js/dist/Chart.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Initialize DataTable
             $('#transactionsTable').DataTable({
                 pageLength: 10,
-                order: [[0, 'desc']],
+                order: [
+                    [0, 'desc']
+                ],
                 responsive: true
             });
-            
+
             // Initialize chart
             const ctx = document.getElementById('balanceChart').getContext('2d');
             const balanceChart = new Chart(ctx, {
@@ -450,7 +462,7 @@
                             beginAtZero: false,
                             ticks: {
                                 callback: function(value) {
-                                    return '₹' + value.toLocaleString();
+                                    return 'Rs' + value.toLocaleString();
                                 }
                             }
                         }
@@ -459,7 +471,7 @@
                         tooltip: {
                             callbacks: {
                                 label: function(context) {
-                                    return 'Balance: ₹' + context.parsed.y.toLocaleString();
+                                    return 'Balance: Rs' + context.parsed.y.toLocaleString();
                                 }
                             }
                         }
@@ -467,14 +479,14 @@
                 }
             });
         });
-        
+
         // Filter transactions
         window.filterTransactions = function(days) {
             console.log('Filtering transactions for last', days, 'days');
             // In real app: reload table with filtered data
             alert('Filter applied! Showing last ' + days + ' days');
         };
-        
+
         // Print account statement
         window.printAccountStatement = function() {
             const printWindow = window.open('', '_blank');
@@ -500,7 +512,7 @@
                             <p>Statement Period: ${new Date().toLocaleDateString()}</p>
                         </div>
                         <div class="account-info">
-                            <p><strong>Current Balance:</strong> ₹125,000</p>
+                            <p><strong>Current Balance:</strong> Rs125,000</p>
                             <p><strong>Account Type:</strong> Asset - Cash Account</p>
                             <p><strong>Branch:</strong> Main Branch</p>
                         </div>
@@ -518,16 +530,16 @@
                                 <tr>
                                     <td>2024-03-20</td>
                                     <td>Cash sale - Invoice #INV-20240320-045</td>
-                                    <td>₹5,000</td>
+                                    <td>Rs5,000</td>
                                     <td></td>
-                                    <td>₹125,000</td>
+                                    <td>Rs125,000</td>
                                 </tr>
                                 <tr>
                                     <td>2024-03-19</td>
                                     <td>Petty cash expense - Office supplies</td>
                                     <td></td>
-                                    <td>₹2,500</td>
-                                    <td>₹120,000</td>
+                                    <td>Rs2,500</td>
+                                    <td>Rs120,000</td>
                                 </tr>
                             </tbody>
                         </table>
@@ -541,7 +553,7 @@
             printWindow.document.close();
             printWindow.print();
         };
-        
+
         // Export account data
         window.exportAccountData = function(format) {
             alert(`Exporting account data in ${format} format...`);

@@ -12,48 +12,59 @@
             padding: 20px;
             background: white;
         }
+
         .invoice-header {
             border-bottom: 2px solid #007bff;
             padding-bottom: 20px;
             margin-bottom: 30px;
         }
+
         .invoice-title {
             font-size: 28px;
             font-weight: bold;
             color: #007bff;
         }
+
         .invoice-status {
             font-size: 14px;
             padding: 5px 15px;
             border-radius: 20px;
         }
+
         .company-logo {
             max-height: 80px;
         }
+
         .invoice-table th {
             border-top: none;
             border-bottom: 2px solid #dee2e6;
         }
+
         .totals-table td {
             border: none;
             padding: 5px 0;
         }
+
         .totals-table tr:last-child td {
             border-top: 2px solid #007bff;
             font-weight: bold;
             font-size: 18px;
         }
+
         @media print {
             .no-print {
                 display: none !important;
             }
+
             .invoice-container {
                 max-width: 100%;
                 padding: 0;
             }
+
             body {
                 background: white !important;
             }
+
             .card {
                 border: none !important;
                 box-shadow: none !important;
@@ -98,8 +109,8 @@
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="d-flex align-items-center mb-3">
-                                    <img src="https://via.placeholder.com/150x50/007bff/ffffff?text=CLOTH+SHOP" 
-                                         alt="Company Logo" class="company-logo mr-3">
+                                    <img src="https://via.placeholder.com/150x50/007bff/ffffff?text=CLOTH+SHOP"
+                                        alt="Company Logo" class="company-logo mr-3">
                                     <div>
                                         <h2 class="invoice-title mb-0">CLOTH SHOP</h2>
                                         <p class="mb-0">Your Fashion Destination</p>
@@ -187,9 +198,9 @@
                                         <small class="text-muted">SKU: TS-MEN-001 | Size: M | Color: Blue</small>
                                     </td>
                                     <td class="text-center">2</td>
-                                    <td class="text-right">₹1,299.00</td>
-                                    <td class="text-right">₹0.00</td>
-                                    <td class="text-right">₹2,598.00</td>
+                                    <td class="text-right">Rs1,299.00</td>
+                                    <td class="text-right">Rs0.00</td>
+                                    <td class="text-right">Rs2,598.00</td>
                                 </tr>
                                 <tr>
                                     <td>2</td>
@@ -199,13 +210,13 @@
                                         <small class="text-muted">SKU: BL-ACC-006 | Color: Black</small>
                                     </td>
                                     <td class="text-center">1</td>
-                                    <td class="text-right">₹899.00</td>
-                                    <td class="text-right">₹0.00</td>
-                                    <td class="text-right">₹899.00</td>
+                                    <td class="text-right">Rs899.00</td>
+                                    <td class="text-right">Rs0.00</td>
+                                    <td class="text-right">Rs899.00</td>
                                 </tr>
                                 <tr>
                                     <td colspan="4" class="text-right"><strong>Subtotal</strong></td>
-                                    <td colspan="2" class="text-right"><strong>₹3,497.00</strong></td>
+                                    <td colspan="2" class="text-right"><strong>Rs3,497.00</strong></td>
                                 </tr>
                             </tbody>
                         </table>
@@ -224,11 +235,11 @@
                                         </tr>
                                         <tr>
                                             <td>Amount Received:</td>
-                                            <td class="text-right">₹3,500.00</td>
+                                            <td class="text-right">Rs3,500.00</td>
                                         </tr>
                                         <tr>
                                             <td>Change Given:</td>
-                                            <td class="text-right text-success">₹3.00</td>
+                                            <td class="text-right text-success">Rs3.00</td>
                                         </tr>
                                         <tr>
                                             <td>Transaction ID:</td>
@@ -254,35 +265,35 @@
                                     <table class="totals-table w-100">
                                         <tr>
                                             <td>Subtotal:</td>
-                                            <td class="text-right">₹3,497.00</td>
+                                            <td class="text-right">Rs3,497.00</td>
                                         </tr>
                                         <tr>
                                             <td>Discount (0%):</td>
-                                            <td class="text-right">₹0.00</td>
+                                            <td class="text-right">Rs0.00</td>
                                         </tr>
                                         <tr>
                                             <td>Taxable Amount:</td>
-                                            <td class="text-right">₹3,497.00</td>
+                                            <td class="text-right">Rs3,497.00</td>
                                         </tr>
                                         <tr>
                                             <td>CGST (9%):</td>
-                                            <td class="text-right">₹314.73</td>
+                                            <td class="text-right">Rs314.73</td>
                                         </tr>
                                         <tr>
                                             <td>SGST (9%):</td>
-                                            <td class="text-right">₹314.73</td>
+                                            <td class="text-right">Rs314.73</td>
                                         </tr>
                                         <tr>
                                             <td>Total Tax (18%):</td>
-                                            <td class="text-right">₹629.46</td>
+                                            <td class="text-right">Rs629.46</td>
                                         </tr>
                                         <tr>
                                             <td>Round Off:</td>
-                                            <td class="text-right">₹0.54</td>
+                                            <td class="text-right">Rs0.54</td>
                                         </tr>
                                         <tr class="bg-light">
                                             <td><strong>Grand Total:</strong></td>
-                                            <td class="text-right"><strong class="text-primary">₹4,127.00</strong></td>
+                                            <td class="text-right"><strong class="text-primary">Rs4,127.00</strong></td>
                                         </tr>
                                     </table>
                                 </div>
@@ -434,7 +445,7 @@ Cloth Shop Team</textarea>
                         </div>
                         <div class="form-group">
                             <label>Message</label>
-                            <textarea class="form-control" rows="4" maxlength="160">Dear John Smith, thank you for your purchase of ₹4,127.00. Invoice: INV-2024-00123. Visit again! - Cloth Shop</textarea>
+                            <textarea class="form-control" rows="4" maxlength="160">Dear John Smith, thank you for your purchase of Rs4,127.00. Invoice: INV-2024-00123. Visit again! - Cloth Shop</textarea>
                             <small class="form-text text-muted">160 characters remaining</small>
                         </div>
                     </form>
@@ -538,16 +549,16 @@ Cloth Shop Team</textarea>
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         function downloadPDF() {
             alert('PDF download functionality would be implemented here');
             // In real app, this would generate and download PDF
         }
-        
+
         // Character counter for SMS
         $('#smsModal textarea').on('input', function() {
             const length = $(this).val().length;

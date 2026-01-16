@@ -15,6 +15,7 @@
             position: relative;
             overflow: hidden;
         }
+
         .category-header::before {
             content: '';
             position: absolute;
@@ -22,9 +23,10 @@
             right: -50%;
             width: 200px;
             height: 200px;
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             border-radius: 50%;
         }
+
         .category-header::after {
             content: '';
             position: absolute;
@@ -32,41 +34,47 @@
             left: -30%;
             width: 150px;
             height: 150px;
-            background: rgba(255,255,255,0.05);
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 50%;
         }
+
         .category-image {
             width: 120px;
             height: 120px;
             border-radius: 10px;
             object-fit: cover;
             border: 4px solid white;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
+
         .stats-card {
             background: white;
             border-radius: 10px;
             padding: 20px;
             margin-bottom: 20px;
             border: none;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
             transition: all 0.3s;
         }
+
         .stats-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
         }
+
         .stats-number {
             font-size: 2rem;
             font-weight: 700;
             line-height: 1;
         }
+
         .stats-label {
             font-size: 0.875rem;
             color: #6c757d;
             text-transform: uppercase;
             letter-spacing: 0.5px;
         }
+
         .product-card {
             border: 1px solid #e3e6f0;
             border-radius: 8px;
@@ -74,49 +82,58 @@
             transition: all 0.3s;
             height: 100%;
         }
+
         .product-card:hover {
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
             transform: translateY(-5px);
         }
+
         .product-image {
             height: 180px;
             object-fit: cover;
             width: 100%;
         }
+
         .tab-content {
             padding: 20px;
             border: 1px solid #dee2e6;
             border-top: none;
             border-radius: 0 0 8px 8px;
         }
+
         .nav-tabs .nav-link {
             border: 1px solid #dee2e6;
             border-bottom: none;
             margin-right: 5px;
             border-radius: 8px 8px 0 0;
         }
+
         .nav-tabs .nav-link.active {
             background-color: #007bff;
             color: white;
             border-color: #007bff;
         }
+
         .category-breadcrumb {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             padding: 8px 15px;
             border-radius: 5px;
             font-size: 0.9rem;
         }
+
         .sub-category-card {
             border: 1px solid #e3e6f0;
             border-radius: 8px;
             padding: 15px;
             transition: all 0.3s;
         }
+
         .sub-category-card:hover {
             border-color: #007bff;
-            background-color: rgba(0,123,255,0.05);
+            background-color: rgba(0, 123, 255, 0.05);
             transform: translateX(5px);
         }
+
         .chart-container {
             height: 300px;
             position: relative;
@@ -129,8 +146,8 @@
         <div class="category-header">
             <div class="row align-items-center">
                 <div class="col-md-2 text-center">
-                    <img src="https://via.placeholder.com/120x120/007bff/ffffff?text=Men's+Wear" 
-                         class="category-image" alt="Men's Wear">
+                    <img src="https://via.placeholder.com/120x120/007bff/ffffff?text=Men's+Wear"
+                        class="category-image" alt="Men's Wear">
                 </div>
                 <div class="col-md-7">
                     <h2 class="mb-2">Men's Wear</h2>
@@ -150,8 +167,8 @@
                         <a href="{{ route('categories.edit', 1) }}" class="btn btn-light">
                             <i class="las la-edit mr-1"></i>Edit
                         </a>
-                        <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split" 
-                                data-toggle="dropdown" aria-expanded="false">
+                        <button type="button" class="btn btn-light dropdown-toggle dropdown-toggle-split"
+                            data-toggle="dropdown" aria-expanded="false">
                             <span class="sr-only">Toggle Dropdown</span>
                         </button>
                         <div class="dropdown-menu dropdown-menu-right">
@@ -186,7 +203,7 @@
             </div>
             <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
                 <div class="stats-card">
-                    <div class="stats-number text-warning">₹12,45,800</div>
+                    <div class="stats-number text-warning">Rs12,45,800</div>
                     <div class="stats-label">Total Sales</div>
                     <small class="text-muted">Last 12 months</small>
                 </div>
@@ -251,7 +268,7 @@
                                         </div>
                                         <div class="row text-center mt-4">
                                             <div class="col-md-4">
-                                                <h5 class="text-primary mb-1">₹2,45,800</h5>
+                                                <h5 class="text-primary mb-1">Rs2,45,800</h5>
                                                 <small class="text-muted">Last 30 Days</small>
                                             </div>
                                             <div class="col-md-4">
@@ -299,7 +316,7 @@
                                                             </div>
                                                         </td>
                                                         <td>MSHIRT-001</td>
-                                                        <td class="text-success">₹1,299</td>
+                                                        <td class="text-success">Rs1,299</td>
                                                         <td>
                                                             <div class="progress" style="height: 5px;">
                                                                 <div class="progress-bar bg-success" style="width: 60%"></div>
@@ -324,7 +341,7 @@
                                                             </div>
                                                         </td>
                                                         <td>MTSHIRT-001</td>
-                                                        <td class="text-success">₹499</td>
+                                                        <td class="text-success">Rs499</td>
                                                         <td>
                                                             <div class="progress" style="height: 5px;">
                                                                 <div class="progress-bar bg-warning" style="width: 30%"></div>
@@ -349,7 +366,7 @@
                                                             </div>
                                                         </td>
                                                         <td>MJNS-001</td>
-                                                        <td class="text-success">₹1,899</td>
+                                                        <td class="text-success">Rs1,899</td>
                                                         <td>
                                                             <div class="progress" style="height: 5px;">
                                                                 <div class="progress-bar bg-success" style="width: 80%"></div>
@@ -413,7 +430,7 @@
                                         <div class="row">
                                             <div class="col-6 mb-3">
                                                 <div class="text-center">
-                                                    <div class="stats-number text-primary">₹2,45,800</div>
+                                                    <div class="stats-number text-primary">Rs2,45,800</div>
                                                     <small class="text-muted">Monthly Sales</small>
                                                 </div>
                                             </div>
@@ -495,13 +512,13 @@
                                     <!-- Product Card 1 -->
                                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                                         <div class="product-card">
-                                            <img src="https://via.placeholder.com/300x180/007bff/ffffff?text=Men's+Shirt" 
-                                                 class="product-image" alt="Men's Shirt">
+                                            <img src="https://via.placeholder.com/300x180/007bff/ffffff?text=Men's+Shirt"
+                                                class="product-image" alt="Men's Shirt">
                                             <div class="p-3">
                                                 <h6 class="mb-1">Men's Formal Shirt</h6>
                                                 <p class="text-muted mb-2" style="font-size: 0.8rem;">Blue Striped Cotton</p>
                                                 <div class="d-flex justify-content-between align-items-center mb-2">
-                                                    <span class="text-success font-weight-bold">₹1,299</span>
+                                                    <span class="text-success font-weight-bold">Rs1,299</span>
                                                     <span class="badge badge-success">In Stock</span>
                                                 </div>
                                                 <div class="progress mb-2" style="height: 5px;">
@@ -528,13 +545,13 @@
                                     <!-- Product Card 2 -->
                                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                                         <div class="product-card">
-                                            <img src="https://via.placeholder.com/300x180/28a745/ffffff?text=Men's+T-Shirt" 
-                                                 class="product-image" alt="Men's T-Shirt">
+                                            <img src="https://via.placeholder.com/300x180/28a745/ffffff?text=Men's+T-Shirt"
+                                                class="product-image" alt="Men's T-Shirt">
                                             <div class="p-3">
                                                 <h6 class="mb-1">Men's T-Shirt</h6>
                                                 <p class="text-muted mb-2" style="font-size: 0.8rem;">Black Cotton</p>
                                                 <div class="d-flex justify-content-between align-items-center mb-2">
-                                                    <span class="text-success font-weight-bold">₹499</span>
+                                                    <span class="text-success font-weight-bold">Rs499</span>
                                                     <span class="badge badge-warning">Low Stock</span>
                                                 </div>
                                                 <div class="progress mb-2" style="height: 5px;">
@@ -561,13 +578,13 @@
                                     <!-- Product Card 3 -->
                                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                                         <div class="product-card">
-                                            <img src="https://via.placeholder.com/300x180/ffc107/000000?text=Men's+Jeans" 
-                                                 class="product-image" alt="Men's Jeans">
+                                            <img src="https://via.placeholder.com/300x180/ffc107/000000?text=Men's+Jeans"
+                                                class="product-image" alt="Men's Jeans">
                                             <div class="p-3">
                                                 <h6 class="mb-1">Men's Jeans</h6>
                                                 <p class="text-muted mb-2" style="font-size: 0.8rem;">Blue Denim</p>
                                                 <div class="d-flex justify-content-between align-items-center mb-2">
-                                                    <span class="text-success font-weight-bold">₹1,899</span>
+                                                    <span class="text-success font-weight-bold">Rs1,899</span>
                                                     <span class="badge badge-success">In Stock</span>
                                                 </div>
                                                 <div class="progress mb-2" style="height: 5px;">
@@ -594,13 +611,13 @@
                                     <!-- Product Card 4 -->
                                     <div class="col-xl-3 col-lg-4 col-md-6 mb-4">
                                         <div class="product-card">
-                                            <img src="https://via.placeholder.com/300x180/dc3545/ffffff?text=Men's+Jacket" 
-                                                 class="product-image" alt="Men's Jacket">
+                                            <img src="https://via.placeholder.com/300x180/dc3545/ffffff?text=Men's+Jacket"
+                                                class="product-image" alt="Men's Jacket">
                                             <div class="p-3">
                                                 <h6 class="mb-1">Men's Winter Jacket</h6>
                                                 <p class="text-muted mb-2" style="font-size: 0.8rem;">Black Puffer</p>
                                                 <div class="d-flex justify-content-between align-items-center mb-2">
-                                                    <span class="text-success font-weight-bold">₹2,999</span>
+                                                    <span class="text-success font-weight-bold">Rs2,999</span>
                                                     <span class="badge badge-danger">Out of Stock</span>
                                                 </div>
                                                 <div class="progress mb-2" style="height: 5px;">
@@ -698,8 +715,8 @@
                                         <div class="sub-category-card mb-3">
                                             <div class="row align-items-center">
                                                 <div class="col-md-2 text-center">
-                                                    <img src="https://via.placeholder.com/80x80/007bff/ffffff?text=Shirts" 
-                                                         class="rounded" alt="Shirts" style="width: 80px; height: 80px; object-fit: cover;">
+                                                    <img src="https://via.placeholder.com/80x80/007bff/ffffff?text=Shirts"
+                                                        class="rounded" alt="Shirts" style="width: 80px; height: 80px; object-fit: cover;">
                                                 </div>
                                                 <div class="col-md-6">
                                                     <h5 class="mb-1">Shirts</h5>
@@ -732,8 +749,8 @@
                                         <div class="sub-category-card mb-3">
                                             <div class="row align-items-center">
                                                 <div class="col-md-2 text-center">
-                                                    <img src="https://via.placeholder.com/80x80/28a745/ffffff?text=T-Shirts" 
-                                                         class="rounded" alt="T-Shirts" style="width: 80px; height: 80px; object-fit: cover;">
+                                                    <img src="https://via.placeholder.com/80x80/28a745/ffffff?text=T-Shirts"
+                                                        class="rounded" alt="T-Shirts" style="width: 80px; height: 80px; object-fit: cover;">
                                                 </div>
                                                 <div class="col-md-6">
                                                     <h5 class="mb-1">T-Shirts</h5>
@@ -766,8 +783,8 @@
                                         <div class="sub-category-card">
                                             <div class="row align-items-center">
                                                 <div class="col-md-2 text-center">
-                                                    <img src="https://via.placeholder.com/80x80/ffc107/000000?text=Jeans" 
-                                                         class="rounded" alt="Jeans" style="width: 80px; height: 80px; object-fit: cover;">
+                                                    <img src="https://via.placeholder.com/80x80/ffc107/000000?text=Jeans"
+                                                        class="rounded" alt="Jeans" style="width: 80px; height: 80px; object-fit: cover;">
                                                 </div>
                                                 <div class="col-md-6">
                                                     <h5 class="mb-1">Jeans</h5>
@@ -875,7 +892,7 @@
                                         <div class="row mb-4">
                                             <div class="col-md-3 col-6 text-center">
                                                 <div class="stats-card">
-                                                    <div class="stats-number text-primary">₹12,45,800</div>
+                                                    <div class="stats-number text-primary">Rs12,45,800</div>
                                                     <div class="stats-label">Total Sales</div>
                                                     <small class="text-success">+12.5% growth</small>
                                                 </div>
@@ -902,7 +919,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <!-- Performance Charts -->
                                         <div class="row">
                                             <div class="col-md-6">
@@ -976,23 +993,23 @@
                                             <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                                                 <div>
                                                     <h6 class="mb-0">Men's Formal Shirt</h6>
-                                                    <small class="text-muted">₹1,299</small>
+                                                    <small class="text-muted">Rs1,299</small>
                                                 </div>
-                                                <span class="badge badge-primary">₹2,45,800</span>
+                                                <span class="badge badge-primary">Rs2,45,800</span>
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                                                 <div>
                                                     <h6 class="mb-0">Men's Jeans</h6>
-                                                    <small class="text-muted">₹1,899</small>
+                                                    <small class="text-muted">Rs1,899</small>
                                                 </div>
-                                                <span class="badge badge-primary">₹1,89,500</span>
+                                                <span class="badge badge-primary">Rs1,89,500</span>
                                             </a>
                                             <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
                                                 <div>
                                                     <h6 class="mb-0">Men's T-Shirt</h6>
-                                                    <small class="text-muted">₹499</small>
+                                                    <small class="text-muted">Rs499</small>
                                                 </div>
-                                                <span class="badge badge-primary">₹1,23,400</span>
+                                                <span class="badge badge-primary">Rs1,23,400</span>
                                             </a>
                                         </div>
                                     </div>
@@ -1019,7 +1036,7 @@
                                                 </select>
                                                 <small class="form-text text-muted">Inactive categories won't be shown to customers</small>
                                             </div>
-                                            
+
                                             <div class="form-group">
                                                 <label class="form-label">Display in Navigation</label>
                                                 <select class="form-control">
@@ -1028,13 +1045,13 @@
                                                 </select>
                                                 <small class="form-text text-muted">Show category in website navigation menu</small>
                                             </div>
-                                            
+
                                             <div class="form-group">
                                                 <label class="form-label">Display Order</label>
                                                 <input type="number" class="form-control" value="1">
                                                 <small class="form-text text-muted">Lower numbers display first</small>
                                             </div>
-                                            
+
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="featuredCategory" checked>
@@ -1042,7 +1059,7 @@
                                                 </div>
                                                 <small class="form-text text-muted">Show on homepage or featured sections</small>
                                             </div>
-                                            
+
                                             <div class="form-group">
                                                 <div class="custom-control custom-checkbox">
                                                     <input type="checkbox" class="custom-control-input" id="showInFilters" checked>
@@ -1050,13 +1067,13 @@
                                                 </div>
                                                 <small class="form-text text-muted">Include category in product filters</small>
                                             </div>
-                                            
+
                                             <button type="submit" class="btn btn-primary">Update Settings</button>
                                         </form>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-lg-6">
                                 <!-- SEO Settings -->
                                 <div class="card mb-4">
@@ -1069,27 +1086,27 @@
                                                 <label class="form-label">Meta Title</label>
                                                 <input type="text" class="form-control" value="Men's Clothing Collection">
                                             </div>
-                                            
+
                                             <div class="form-group">
                                                 <label class="form-label">Meta Keywords</label>
                                                 <input type="text" class="form-control" value="men's wear, clothing, shirts, t-shirts, jeans">
                                             </div>
-                                            
+
                                             <div class="form-group">
                                                 <label class="form-label">Meta Description</label>
                                                 <textarea class="form-control" rows="3">Browse our collection of men's clothing including shirts, t-shirts, jeans, and formal wear. Latest fashion trends for men.</textarea>
                                             </div>
-                                            
+
                                             <div class="form-group">
                                                 <label class="form-label">URL Slug</label>
                                                 <input type="text" class="form-control" value="mens-wear">
                                             </div>
-                                            
+
                                             <button type="submit" class="btn btn-primary">Update SEO</button>
                                         </form>
                                     </div>
                                 </div>
-                                
+
                                 <!-- Danger Zone -->
                                 <div class="card border-danger">
                                     <div class="card-header bg-danger text-white">
@@ -1159,30 +1176,30 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Tab functionality
-            $('#categoryTab a').on('click', function (e) {
+            $('#categoryTab a').on('click', function(e) {
                 e.preventDefault();
                 $(this).tab('show');
             });
-            
+
             // Delete category function
             window.deleteCategory = function() {
-                if(confirm('⚠️ WARNING: Are you sure you want to delete this category?\n\n' +
-                          'This action will permanently delete:\n' +
-                          '• This category and all its sub-categories\n' +
-                          '• All products under this category\n' +
-                          '• All associated sales data\n\n' +
-                          'This action cannot be undone!')) {
-                    
+                if (confirm('⚠️ WARNING: Are you sure you want to delete this category?\n\n' +
+                        'This action will permanently delete:\n' +
+                        '• This category and all its sub-categories\n' +
+                        '• All products under this category\n' +
+                        '• All associated sales data\n\n' +
+                        'This action cannot be undone!')) {
+
                     // Show loading
                     $('body').append('<div class="loading-overlay"><div class="spinner"></div></div>');
-                    
+
                     // Simulate API call
                     setTimeout(() => {
                         $('.loading-overlay').remove();
@@ -1191,53 +1208,53 @@
                     }, 1500);
                 }
             };
-            
+
             // Add sub-category modal
             $('#addSubCategoryModal').on('show.bs.modal', function() {
                 $('#subCategoryForm')[0].reset();
                 $('#subCategoryForm input[readonly]').val('CAT-' + Date.now().toString().slice(-8));
             });
-            
+
             // Add sub-category button
             $('button:contains("Add Sub-Category")').filter(function() {
                 return $(this).text() === 'Add Sub-Category';
             }).click(function() {
                 const name = $('#subCategoryForm input[placeholder="Enter sub-category name"]').val().trim();
-                if(!name) {
+                if (!name) {
                     alert('Please enter sub-category name');
                     return;
                 }
-                
+
                 alert('Sub-category added successfully!');
                 $('#addSubCategoryModal').modal('hide');
-                
+
                 // In real app, you would add the sub-category to the list
             });
-            
+
             // Export data
             $('a:contains("Export Data")').click(function(e) {
                 e.preventDefault();
                 alert('Export functionality would be implemented here');
             });
-            
+
             // View reports
             $('a:contains("View Reports")').click(function(e) {
                 e.preventDefault();
                 alert('Reports functionality would be implemented here');
             });
-            
+
             // Filter button
             $('button:contains("Filter")').click(function() {
                 alert('Filter functionality would be implemented here');
             });
-            
+
             // Export button
             $('button:contains("Export")').click(function() {
                 alert('Export functionality would be implemented here');
             });
         });
     </script>
-    
+
     <style>
         .loading-overlay {
             position: fixed;
@@ -1245,12 +1262,13 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.5);
             display: flex;
             align-items: center;
             justify-content: center;
             z-index: 9999;
         }
+
         .loading-overlay .spinner {
             width: 50px;
             height: 50px;
@@ -1259,9 +1277,15 @@
             border-radius: 50%;
             animation: spin 1s linear infinite;
         }
+
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
     @endpush

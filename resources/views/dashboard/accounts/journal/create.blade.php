@@ -43,7 +43,7 @@
         }
 
         .amount-input-group::before {
-            content: "₹";
+            content: "Rs";
             position: absolute;
             left: 15px;
             top: 50%;
@@ -171,7 +171,7 @@
                     <small id="previewDate">{{ date('Y-m-d') }}</small>
                 </div>
                 <div class="text-right">
-                    <h4 class="mb-0" id="previewTotal">₹0.00</h4>
+                    <h4 class="mb-0" id="previewTotal">Rs0.00</h4>
                     <small id="balanceStatus">Enter transaction details</small>
                 </div>
             </div>
@@ -278,7 +278,7 @@
                                         <div class="card bg-light">
                                             <div class="card-body text-center">
                                                 <h6 class="mb-1">Total Debits</h6>
-                                                <h3 class="mb-0 text-success" id="totalDebits">₹0.00</h3>
+                                                <h3 class="mb-0 text-success" id="totalDebits">Rs0.00</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -286,7 +286,7 @@
                                         <div class="card bg-light">
                                             <div class="card-body text-center">
                                                 <h6 class="mb-1">Total Credits</h6>
-                                                <h3 class="mb-0 text-danger" id="totalCredits">₹0.00</h3>
+                                                <h3 class="mb-0 text-danger" id="totalCredits">Rs0.00</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -299,7 +299,7 @@
                                             <i class="las la-balance-scale fa-2x"></i>
                                         </div>
                                         <div>
-                                            <h5 class="mb-1" id="balanceDifference">Difference: ₹0.00</h5>
+                                            <h5 class="mb-1" id="balanceDifference">Difference: Rs0.00</h5>
                                             <p class="mb-0" id="balanceMessage">Add journal entries</p>
                                         </div>
                                         <div>
@@ -393,11 +393,11 @@
                                         <tfoot>
                                             <tr>
                                                 <td colspan="2" class="text-right"><strong>Total Debits:</strong></td>
-                                                <td class="debit-amount" id="previewDebitTotal">₹0.00</td>
+                                                <td class="debit-amount" id="previewDebitTotal">Rs0.00</td>
                                             </tr>
                                             <tr>
                                                 <td colspan="2" class="text-right"><strong>Total Credits:</strong></td>
-                                                <td class="credit-amount" id="previewCreditTotal">₹0.00</td>
+                                                <td class="credit-amount" id="previewCreditTotal">Rs0.00</td>
                                             </tr>
                                         </tfoot>
                                     </table>
@@ -671,21 +671,21 @@
         window.updateAccountBalance = function(index, accountId) {
             // Mock account balances
             const balances = {
-                '1': '₹125,000 (Debit)',
-                '2': '₹850,000 (Debit)',
-                '3': '₹250,000 (Debit)',
-                '4': '₹500,000 (Debit)',
-                '5': '₹150,000 (Credit)',
-                '6': '₹300,000 (Credit)',
-                '7': '₹50,000 (Credit)',
-                '8': '₹400,000 (Credit)',
-                '9': '₹200,000 (Credit)',
-                '10': '₹1,200,000 (Credit)',
-                '11': '₹300,000 (Credit)',
-                '12': '₹250,000 (Debit)',
-                '13': '₹120,000 (Debit)',
-                '14': '₹60,000 (Debit)',
-                '15': '₹40,000 (Debit)'
+                '1': 'Rs125,000 (Debit)',
+                '2': 'Rs850,000 (Debit)',
+                '3': 'Rs250,000 (Debit)',
+                '4': 'Rs500,000 (Debit)',
+                '5': 'Rs150,000 (Credit)',
+                '6': 'Rs300,000 (Credit)',
+                '7': 'Rs50,000 (Credit)',
+                '8': 'Rs400,000 (Credit)',
+                '9': 'Rs200,000 (Credit)',
+                '10': 'Rs1,200,000 (Credit)',
+                '11': 'Rs300,000 (Credit)',
+                '12': 'Rs250,000 (Debit)',
+                '13': 'Rs120,000 (Debit)',
+                '14': 'Rs60,000 (Debit)',
+                '15': 'Rs40,000 (Debit)'
             };
 
             const balanceElement = $(`#balance_${index}`);
@@ -713,14 +713,14 @@
             });
 
             // Update display
-            $('#totalDebits').text('₹' + totalDebits.toFixed(2));
-            $('#totalCredits').text('₹' + totalCredits.toFixed(2));
-            $('#previewDebitTotal').text('₹' + totalDebits.toFixed(2));
-            $('#previewCreditTotal').text('₹' + totalCredits.toFixed(2));
+            $('#totalDebits').text('Rs' + totalDebits.toFixed(2));
+            $('#totalCredits').text('Rs' + totalCredits.toFixed(2));
+            $('#previewDebitTotal').text('Rs' + totalDebits.toFixed(2));
+            $('#previewCreditTotal').text('Rs' + totalCredits.toFixed(2));
 
             // Update preview total
             const total = Math.max(totalDebits, totalCredits);
-            $('#previewTotal').text('₹' + total.toFixed(2));
+            $('#previewTotal').text('Rs' + total.toFixed(2));
 
             // Check balance
             const difference = Math.abs(totalDebits - totalCredits);
@@ -732,17 +732,17 @@
             if (difference === 0 && totalDebits > 0 && totalCredits > 0) {
                 balanceCheck.removeClass('unbalanced').addClass('balanced');
                 balanceMessage.text('✓ Journal entry is balanced').addClass('text-success');
-                balanceDifference.text('Difference: ₹0.00').addClass('text-success');
+                balanceDifference.text('Difference: Rs0.00').addClass('text-success');
                 saveButton.prop('disabled', false);
             } else if (totalDebits === 0 && totalCredits === 0) {
                 balanceCheck.removeClass('balanced unbalanced');
                 balanceMessage.text('Add journal entries').removeClass('text-success text-danger');
-                balanceDifference.text('Difference: ₹0.00');
+                balanceDifference.text('Difference: Rs0.00');
                 saveButton.prop('disabled', true);
             } else {
                 balanceCheck.removeClass('balanced').addClass('unbalanced');
                 balanceMessage.text('✗ Debits and Credits do not match').addClass('text-danger');
-                balanceDifference.text(`Difference: ₹${difference.toFixed(2)}`).addClass('text-danger');
+                balanceDifference.text(`Difference: Rs${difference.toFixed(2)}`).addClass('text-danger');
                 saveButton.prop('disabled', true);
             }
 
@@ -776,7 +776,7 @@
                 lastEntry.find('.amount-input').val(newAmount.toFixed(2));
                 updateTotals();
 
-                alert(`Adjusted last entry to balance the journal. New amount: ₹${newAmount.toFixed(2)}`);
+                alert(`Adjusted last entry to balance the journal. New amount: Rs${newAmount.toFixed(2)}`);
             }
         };
 
@@ -811,7 +811,7 @@
                             </span>
                         </td>
                         <td class="${type === 'debit' ? 'debit-amount' : 'credit-amount'}">
-                            ₹${amount.toFixed(2)}
+                            Rs${amount.toFixed(2)}
                         </td>
                     </tr>
                 `;
@@ -933,8 +933,8 @@
             if (hasErrors) return false;
 
             // Check if balanced
-            const totalDebits = parseFloat($('#totalDebits').text().replace('₹', '')) || 0;
-            const totalCredits = parseFloat($('#totalCredits').text().replace('₹', '')) || 0;
+            const totalDebits = parseFloat($('#totalDebits').text().replace('Rs', '')) || 0;
+            const totalCredits = parseFloat($('#totalCredits').text().replace('Rs', '')) || 0;
 
             if (Math.abs(totalDebits - totalCredits) > 0.01) {
                 alert('Journal entry is not balanced. Total debits must equal total credits.');

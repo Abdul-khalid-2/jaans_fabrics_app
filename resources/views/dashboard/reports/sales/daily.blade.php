@@ -227,7 +227,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Transaction 2 -->
                             <tr>
                                 <td>10:30</td>
@@ -245,7 +245,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Transaction 3 -->
                             <tr>
                                 <td>11:45</td>
@@ -263,7 +263,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Transaction 4 -->
                             <tr>
                                 <td>12:20</td>
@@ -281,7 +281,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Transaction 5 -->
                             <tr>
                                 <td>14:30</td>
@@ -299,7 +299,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Transaction 6 -->
                             <tr>
                                 <td>15:45</td>
@@ -317,7 +317,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Transaction 7 -->
                             <tr>
                                 <td>16:20</td>
@@ -335,7 +335,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Transaction 8 -->
                             <tr>
                                 <td>17:30</td>
@@ -353,7 +353,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Transaction 9 -->
                             <tr>
                                 <td>18:45</td>
@@ -371,7 +371,7 @@
                                     </a>
                                 </td>
                             </tr>
-                            
+
                             <!-- Transaction 10 -->
                             <tr>
                                 <td>19:20</td>
@@ -436,7 +436,7 @@
                                         <td class="font-weight-bold">18</td>
                                         <td class="font-weight-bold text-success">Rs 12,600</td>
                                     </tr>
-                                    
+
                                     <!-- Product 2 -->
                                     <tr>
                                         <td>
@@ -452,7 +452,7 @@
                                         <td class="font-weight-bold">12</td>
                                         <td class="font-weight-bold text-success">Rs 8,400</td>
                                     </tr>
-                                    
+
                                     <!-- Product 3 -->
                                     <tr>
                                         <td>
@@ -468,7 +468,7 @@
                                         <td class="font-weight-bold">8</td>
                                         <td class="font-weight-bold text-success">Rs 16,800</td>
                                     </tr>
-                                    
+
                                     <!-- Product 4 -->
                                     <tr>
                                         <td>
@@ -484,7 +484,7 @@
                                         <td class="font-weight-bold">5</td>
                                         <td class="font-weight-bold text-success">Rs 12,500</td>
                                     </tr>
-                                    
+
                                     <!-- Product 5 -->
                                     <tr>
                                         <td>
@@ -506,7 +506,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-lg-6">
                 <div class="card shadow mb-4">
                     <div class="card-header py-3">
@@ -542,7 +542,7 @@
                                         <td>Rs 3,568</td>
                                         <td class="font-weight-bold text-success">Rs 784</td>
                                     </tr>
-                                    
+
                                     <!-- Staff 2 -->
                                     <tr>
                                         <td>
@@ -560,7 +560,7 @@
                                         <td>Rs 4,236</td>
                                         <td class="font-weight-bold text-success">Rs 623</td>
                                     </tr>
-                                    
+
                                     <!-- Staff 3 -->
                                     <tr>
                                         <td>
@@ -578,7 +578,7 @@
                                         <td>Rs 2,847</td>
                                         <td class="font-weight-bold text-success">Rs 543</td>
                                     </tr>
-                                    
+
                                     <!-- Staff 4 -->
                                     <tr>
                                         <td>
@@ -608,104 +608,110 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- Chart.js -->
     <script src="{{ asset('backend/assets/vendor/chart.js/Chart.min.js') }}"></script>
-    
+
     <!-- DataTables -->
     <script src="{{ asset('backend/assets/vendor/datatables/datatables.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
-    $(document).ready(function() {
-        // Initialize DataTable
-        $('#dailyTransactionsTable').DataTable({
-            pageLength: 10,
-            ordering: true,
-            order: [[0, 'desc']],
-            dom: '<"top">rt<"bottom"lip><"clear">'
-        });
-        
-        // Initialize charts
-        initDailyCharts();
-        
-        // Load daily report
-        window.loadDailyReport = function() {
-            const reportDate = $('#reportDate').val();
-            const compareWith = $('#compareWith').val();
-            const branch = $('#dailyBranchFilter').val();
-            
-            console.log('Loading daily report for:', { reportDate, compareWith, branch });
-            
-            // Show loading
-            $('#dailyTransactionsTable_wrapper').html('<div class="text-center py-5"><i class="las la-spinner la-spin fa-2x text-primary"></i><p class="mt-2">Loading daily report...</p></div>');
-            
-            // Simulate API call
-            setTimeout(() => {
-                alert('Daily report loaded for ' + reportDate);
-                // Reload charts with new data
-                initDailyCharts();
-            }, 1000);
-        };
-        
-        function initDailyCharts() {
-            // Hourly Breakdown Chart
-            var ctx1 = document.getElementById('hourlyBreakdownChart').getContext('2d');
-            new Chart(ctx1, {
-                type: 'bar',
-                data: {
-                    labels: ['9-10', '10-11', '11-12', '12-1', '1-2', '2-3', '3-4', '4-5', '5-6', '6-7', '7-8', '8-9'],
-                    datasets: [{
-                        label: 'Sales Amount (₹)',
-                        data: [2500, 4200, 3800, 5200, 4800, 3500, 4200, 5800, 6200, 7800, 6500, 4200],
-                        backgroundColor: 'rgba(78, 115, 223, 0.5)',
-                        borderColor: 'rgba(78, 115, 223, 1)',
-                        borderWidth: 1
-                    }]
-                },
-                options: {
-                    scales: {
-                        y: {
-                            beginAtZero: true,
-                            ticks: {
-                                callback: function(value) {
-                                    return '₹' + value;
+        $(document).ready(function() {
+            // Initialize DataTable
+            $('#dailyTransactionsTable').DataTable({
+                pageLength: 10,
+                ordering: true,
+                order: [
+                    [0, 'desc']
+                ],
+                dom: '<"top">rt<"bottom"lip><"clear">'
+            });
+
+            // Initialize charts
+            initDailyCharts();
+
+            // Load daily report
+            window.loadDailyReport = function() {
+                const reportDate = $('#reportDate').val();
+                const compareWith = $('#compareWith').val();
+                const branch = $('#dailyBranchFilter').val();
+
+                console.log('Loading daily report for:', {
+                    reportDate,
+                    compareWith,
+                    branch
+                });
+
+                // Show loading
+                $('#dailyTransactionsTable_wrapper').html('<div class="text-center py-5"><i class="las la-spinner la-spin fa-2x text-primary"></i><p class="mt-2">Loading daily report...</p></div>');
+
+                // Simulate API call
+                setTimeout(() => {
+                    alert('Daily report loaded for ' + reportDate);
+                    // Reload charts with new data
+                    initDailyCharts();
+                }, 1000);
+            };
+
+            function initDailyCharts() {
+                // Hourly Breakdown Chart
+                var ctx1 = document.getElementById('hourlyBreakdownChart').getContext('2d');
+                new Chart(ctx1, {
+                    type: 'bar',
+                    data: {
+                        labels: ['9-10', '10-11', '11-12', '12-1', '1-2', '2-3', '3-4', '4-5', '5-6', '6-7', '7-8', '8-9'],
+                        datasets: [{
+                            label: 'Sales Amount (Rs)',
+                            data: [2500, 4200, 3800, 5200, 4800, 3500, 4200, 5800, 6200, 7800, 6500, 4200],
+                            backgroundColor: 'rgba(78, 115, 223, 0.5)',
+                            borderColor: 'rgba(78, 115, 223, 1)',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                ticks: {
+                                    callback: function(value) {
+                                        return 'Rs' + value;
+                                    }
                                 }
                             }
                         }
                     }
-                }
-            });
-            
-            // Daily Payment Chart
-            var ctx2 = document.getElementById('dailyPaymentChart').getContext('2d');
-            new Chart(ctx2, {
-                type: 'doughnut',
-                data: {
-                    labels: ['Cash', 'Card', 'UPI', 'Credit'],
-                    datasets: [{
-                        data: [35, 40, 20, 5],
-                        backgroundColor: [
-                            'rgba(40, 167, 69, 0.8)',
-                            'rgba(0, 123, 255, 0.8)',
-                            'rgba(23, 162, 184, 0.8)',
-                            'rgba(255, 193, 7, 0.8)'
-                        ]
-                    }]
-                }
-            });
-        }
-        
-        window.exportDailyReport = function() {
-            alert('Exporting daily report to Excel...');
-        };
-        
-        window.printDailyReport = function() {
-            window.print();
-        };
-    });
+                });
+
+                // Daily Payment Chart
+                var ctx2 = document.getElementById('dailyPaymentChart').getContext('2d');
+                new Chart(ctx2, {
+                    type: 'doughnut',
+                    data: {
+                        labels: ['Cash', 'Card', 'UPI', 'Credit'],
+                        datasets: [{
+                            data: [35, 40, 20, 5],
+                            backgroundColor: [
+                                'rgba(40, 167, 69, 0.8)',
+                                'rgba(0, 123, 255, 0.8)',
+                                'rgba(23, 162, 184, 0.8)',
+                                'rgba(255, 193, 7, 0.8)'
+                            ]
+                        }]
+                    }
+                });
+            }
+
+            window.exportDailyReport = function() {
+                alert('Exporting daily report to Excel...');
+            };
+
+            window.printDailyReport = function() {
+                window.print();
+            };
+        });
     </script>
     @endpush
 </x-app-layout>

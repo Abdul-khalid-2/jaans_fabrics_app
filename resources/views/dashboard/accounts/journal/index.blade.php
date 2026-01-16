@@ -14,53 +14,65 @@
             transition: all 0.3s;
             margin-bottom: 20px;
         }
+
         .journal-card:hover {
             transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
         }
+
         .journal-header {
             background: #f8f9fa;
             padding: 15px;
             border-bottom: 1px solid #dee2e6;
             border-radius: 8px 8px 0 0;
         }
+
         .journal-item {
             padding: 15px;
             border-bottom: 1px solid #f8f9fa;
         }
+
         .journal-item:last-child {
             border-bottom: none;
         }
+
         .debit-item {
             border-left: 3px solid #28a745;
         }
+
         .credit-item {
             border-left: 3px solid #dc3545;
         }
+
         .amount-debit {
             color: #28a745;
             font-weight: 600;
         }
+
         .amount-credit {
             color: #dc3545;
             font-weight: 600;
         }
+
         .balance-check {
             padding: 15px;
             background: #e9ecef;
             border-radius: 0 0 8px 8px;
         }
+
         .filter-section {
             background: #f8f9fa;
             border-radius: 8px;
             padding: 20px;
             margin-bottom: 20px;
         }
+
         .journal-status {
             font-size: 0.8rem;
             padding: 5px 10px;
             border-radius: 20px;
         }
+
         .totals-row {
             background: #f8f9fa;
             font-weight: 600;
@@ -115,7 +127,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-xl-3 col-md-6">
                 <div class="card card-stats">
                     <div class="card-body">
@@ -137,14 +149,14 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-xl-3 col-md-6">
                 <div class="card card-stats">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
                                 <h5 class="card-title text-uppercase text-muted mb-0">Total Debits</h5>
-                                <span class="h2 font-weight-bold mb-0">₹2.5M</span>
+                                <span class="h2 font-weight-bold mb-0">Rs2.5M</span>
                             </div>
                             <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-success text-white rounded-circle shadow">
@@ -159,14 +171,14 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-xl-3 col-md-6">
                 <div class="card card-stats">
                     <div class="card-body">
                         <div class="row">
                             <div class="col">
                                 <h5 class="card-title text-uppercase text-muted mb-0">Total Credits</h5>
-                                <span class="h2 font-weight-bold mb-0">₹2.5M</span>
+                                <span class="h2 font-weight-bold mb-0">Rs2.5M</span>
                             </div>
                             <div class="col-auto">
                                 <div class="icon icon-shape bg-gradient-danger text-white rounded-circle shadow">
@@ -199,7 +211,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Status</label>
@@ -211,7 +223,7 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Branch</label>
@@ -222,7 +234,7 @@
                                 </select>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Created By</label>
@@ -234,7 +246,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="row">
                         <div class="col-md-6">
                             <div class="form-group">
@@ -242,14 +254,14 @@
                                 <input type="text" class="form-control" name="search" placeholder="Search in descriptions">
                             </div>
                         </div>
-                        
+
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Minimum Amount</label>
                                 <input type="number" class="form-control" name="amount_min" placeholder="Min amount">
                             </div>
                         </div>
-                        
+
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Maximum Amount</label>
@@ -257,7 +269,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="d-flex justify-content-between">
                         <button type="button" class="btn btn-outline-secondary" onclick="resetFilters()">
                             <i class="las la-redo mr-2"></i>Reset Filters
@@ -331,7 +343,7 @@
                                 </div>
                                 <p class="mb-0 mt-2">Monthly depreciation expense for equipment</p>
                             </div>
-                            
+
                             <div class="journal-item debit-item">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
@@ -339,12 +351,12 @@
                                         <small class="text-muted">Account: 5004 - Depreciation Expense</small>
                                     </div>
                                     <div class="text-right">
-                                        <h5 class="amount-debit mb-0">₹10,000</h5>
+                                        <h5 class="amount-debit mb-0">Rs10,000</h5>
                                         <small>Debit</small>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="journal-item credit-item">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
@@ -352,19 +364,19 @@
                                         <small class="text-muted">Account: 1008 - Accumulated Depreciation</small>
                                     </div>
                                     <div class="text-right">
-                                        <h5 class="amount-credit mb-0">₹10,000</h5>
+                                        <h5 class="amount-credit mb-0">Rs10,000</h5>
                                         <small>Credit</small>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="balance-check">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <strong>Total Debits:</strong> ₹10,000
+                                        <strong>Total Debits:</strong> Rs10,000
                                     </div>
                                     <div>
-                                        <strong>Total Credits:</strong> ₹10,000
+                                        <strong>Total Credits:</strong> Rs10,000
                                     </div>
                                     <div>
                                         <span class="badge badge-success">
@@ -374,7 +386,7 @@
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Journal Entry 2 -->
                         <div class="journal-card">
                             <div class="journal-header">
@@ -413,7 +425,7 @@
                                 </div>
                                 <p class="mb-0 mt-2">Monthly interest income from bank deposits</p>
                             </div>
-                            
+
                             <div class="journal-item debit-item">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
@@ -421,12 +433,12 @@
                                         <small class="text-muted">Account: 1002 - Bank Account - HDFC</small>
                                     </div>
                                     <div class="text-right">
-                                        <h5 class="amount-debit mb-0">₹5,250</h5>
+                                        <h5 class="amount-debit mb-0">Rs5,250</h5>
                                         <small>Debit</small>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="journal-item credit-item">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
@@ -434,19 +446,19 @@
                                         <small class="text-muted">Account: 4001 - Interest Income</small>
                                     </div>
                                     <div class="text-right">
-                                        <h5 class="amount-credit mb-0">₹5,250</h5>
+                                        <h5 class="amount-credit mb-0">Rs5,250</h5>
                                         <small>Credit</small>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <div class="balance-check">
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div>
-                                        <strong>Total Debits:</strong> ₹5,250
+                                        <strong>Total Debits:</strong> Rs5,250
                                     </div>
                                     <div>
-                                        <strong>Total Credits:</strong> ₹5,250
+                                        <strong>Total Credits:</strong> Rs5,250
                                     </div>
                                     <div>
                                         <span class="badge badge-success">
@@ -458,7 +470,7 @@
                         </div>
                         <!-- More journal entries... -->
                     </div>
-                    
+
                     <div class="card-footer">
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
@@ -516,8 +528,8 @@
                                         <td><span class="badge badge-light">JE-20240320-001</span></td>
                                         <td>2024-03-20</td>
                                         <td>Adjusting Entry - Depreciation</td>
-                                        <td class="amount-debit">₹10,000</td>
-                                        <td class="amount-credit">₹10,000</td>
+                                        <td class="amount-debit">Rs10,000</td>
+                                        <td class="amount-credit">Rs10,000</td>
                                         <td><span class="badge badge-success">Approved</span></td>
                                         <td>Admin User</td>
                                         <td>
@@ -540,8 +552,8 @@
                                         <td><span class="badge badge-light">JE-20240319-002</span></td>
                                         <td>2024-03-19</td>
                                         <td>Bank Interest Income</td>
-                                        <td class="amount-debit">₹5,250</td>
-                                        <td class="amount-credit">₹5,250</td>
+                                        <td class="amount-debit">Rs5,250</td>
+                                        <td class="amount-credit">Rs5,250</td>
                                         <td><span class="badge badge-warning">Pending</span></td>
                                         <td>Accountant</td>
                                         <td>
@@ -565,8 +577,8 @@
                                 <tfoot>
                                     <tr class="totals-row">
                                         <td colspan="3" class="text-right"><strong>Totals:</strong></td>
-                                        <td class="amount-debit"><strong>₹15,250</strong></td>
-                                        <td class="amount-credit"><strong>₹15,250</strong></td>
+                                        <td class="amount-debit"><strong>Rs15,250</strong></td>
+                                        <td class="amount-credit"><strong>Rs15,250</strong></td>
                                         <td colspan="3"></td>
                                     </tr>
                                 </tfoot>
@@ -581,17 +593,17 @@
     @push('js')
     <!-- Backend Bundle JavaScript -->
     <script src="{{ asset('backend/assets/js/backend-bundle.min.js') }}"></script>
-    
+
     <!-- DataTable -->
     <script src="{{ asset('backend/assets/vendor/datatables.net/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('backend/assets/vendor/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
-    
+
     <!-- Flatpickr -->
     <script src="{{ asset('backend/assets/vendor/flatpickr/dist/flatpickr.min.js') }}"></script>
-    
+
     <!-- app JavaScript -->
     <script src="{{ asset('backend/assets/js/app.js') }}"></script>
-    
+
     <script>
         $(document).ready(function() {
             // Initialize datepicker
@@ -600,72 +612,74 @@
                 dateFormat: "Y-m-d",
                 defaultDate: ["2024-03-01", "2024-03-20"]
             });
-            
+
             // Initialize DataTable
             $('#journalTable').DataTable({
                 pageLength: 10,
                 responsive: true,
-                order: [[1, 'desc']]
+                order: [
+                    [1, 'desc']
+                ]
             });
-            
+
             // Initialize tooltips
             $('[data-toggle="tooltip"]').tooltip();
         });
-        
+
         // Apply filters
         window.applyFilters = function() {
             const formData = new FormData(document.getElementById('filterForm'));
             const filters = Object.fromEntries(formData);
             console.log('Applying filters:', filters);
-            
+
             // In real app, this would reload the journal entries with filters
             alert('Filters applied! Loading filtered journal entries...');
             $('#filterSection').collapse('hide');
         };
-        
+
         // Reset filters
         window.resetFilters = function() {
-            if(confirm('Reset all filters to default?')) {
+            if (confirm('Reset all filters to default?')) {
                 $('#filterForm')[0].reset();
                 $('#dateRange').val('');
                 alert('Filters reset successfully');
             }
         };
-        
+
         // Export journal entries
         window.exportJournal = function() {
             const format = prompt('Export format (csv, excel, pdf):', 'excel');
-            if(format) {
+            if (format) {
                 alert(`Exporting journal entries in ${format} format...`);
                 // In real app: window.location.href = `/accounts/journal/export?format=${format}`;
             }
         };
-        
+
         // Print journal entries
         window.printJournal = function() {
             window.print();
         };
-        
+
         // Quick status update
         window.updateJournalStatus = function(journalId, newStatus) {
-            if(confirm(`Change status to ${newStatus}?`)) {
+            if (confirm(`Change status to ${newStatus}?`)) {
                 // In real app: API call to update status
                 alert(`Journal entry status updated to ${newStatus}`);
                 location.reload();
             }
         };
-        
+
         // Duplicate journal entry
         window.duplicateJournal = function(journalId) {
-            if(confirm('Create a copy of this journal entry?')) {
+            if (confirm('Create a copy of this journal entry?')) {
                 // In real app: API call to duplicate
                 window.location.href = `/accounts/journal/entries/create?duplicate=${journalId}`;
             }
         };
-        
+
         // Post to ledger
         window.postToLedger = function(journalId) {
-            if(confirm('Post this journal entry to general ledger?')) {
+            if (confirm('Post this journal entry to general ledger?')) {
                 // In real app: API call to post to ledger
                 alert('Journal entry posted to ledger successfully');
                 location.reload();

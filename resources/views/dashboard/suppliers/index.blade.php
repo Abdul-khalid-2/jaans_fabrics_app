@@ -13,24 +13,29 @@
             object-fit: cover;
             border: 1px solid #dee2e6;
         }
+
         .status-badge {
             padding: 4px 12px;
             border-radius: 20px;
             font-size: 12px;
             font-weight: 500;
         }
+
         .status-active {
             background: #d4edda;
             color: #155724;
         }
+
         .status-inactive {
             background: #f8d7da;
             color: #721c24;
         }
+
         .rating-stars {
             color: #ffc107;
             font-size: 14px;
         }
+
         .action-btn {
             width: 35px;
             height: 35px;
@@ -164,8 +169,8 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h6 class="text-white">Total Purchases</h6>
-                                <h3 class="mb-0 text-white">₹2.85M</h3>
-                                <small class="text-white">Last 30 days: ₹425K</small>
+                                <h3 class="mb-0 text-white">Rs2.85M</h3>
+                                <small class="text-white">Last 30 days: Rs425K</small>
                             </div>
                             <i class="las la-shopping-cart fa-3x opacity-50"></i>
                         </div>
@@ -178,7 +183,7 @@
                         <div class="d-flex justify-content-between align-items-center">
                             <div>
                                 <h6>Outstanding Amount</h6>
-                                <h3 class="mb-0">₹185K</h3>
+                                <h3 class="mb-0">Rs185K</h3>
                                 <small>Due in 30 days</small>
                             </div>
                             <i class="las la-money-bill-wave fa-3x opacity-50"></i>
@@ -237,8 +242,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="mr-3">
-                                            <img src="https://via.placeholder.com/50x50/007bff/ffffff?text=TF" 
-                                                 class="supplier-logo" alt="Textile Factory">
+                                            <img src="https://via.placeholder.com/50x50/007bff/ffffff?text=TF"
+                                                class="supplier-logo" alt="Textile Factory">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Textile Factory Ltd.</h6>
@@ -266,11 +271,11 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="font-weight-bold">₹1,250,000</div>
+                                    <div class="font-weight-bold">Rs1,250,000</div>
                                     <small class="text-muted">Last: 2 days ago</small>
                                 </td>
                                 <td>
-                                    <div class="font-weight-bold text-warning">₹75,000</div>
+                                    <div class="font-weight-bold text-warning">Rs75,000</div>
                                     <small class="text-danger">Due: 15 days</small>
                                 </td>
                                 <td>
@@ -302,8 +307,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="mr-3">
-                                            <img src="https://via.placeholder.com/50x50/28a745/ffffff?text=FW" 
-                                                 class="supplier-logo" alt="Fashion Wear">
+                                            <img src="https://via.placeholder.com/50x50/28a745/ffffff?text=FW"
+                                                class="supplier-logo" alt="Fashion Wear">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Fashion Wear Imports</h6>
@@ -331,11 +336,11 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="font-weight-bold">₹850,000</div>
+                                    <div class="font-weight-bold">Rs850,000</div>
                                     <small class="text-muted">Last: 1 week ago</small>
                                 </td>
                                 <td>
-                                    <div class="font-weight-bold text-success">₹0</div>
+                                    <div class="font-weight-bold text-success">Rs0</div>
                                     <small class="text-muted">No dues</small>
                                 </td>
                                 <td>
@@ -367,8 +372,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="mr-3">
-                                            <img src="https://via.placeholder.com/50x50/ffc107/000000?text=LD" 
-                                                 class="supplier-logo" alt="Local Distributor">
+                                            <img src="https://via.placeholder.com/50x50/ffc107/000000?text=LD"
+                                                class="supplier-logo" alt="Local Distributor">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Local Distributors Co.</h6>
@@ -396,11 +401,11 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="font-weight-bold">₹650,000</div>
+                                    <div class="font-weight-bold">Rs650,000</div>
                                     <small class="text-muted">Last: 3 weeks ago</small>
                                 </td>
                                 <td>
-                                    <div class="font-weight-bold text-danger">₹45,000</div>
+                                    <div class="font-weight-bold text-danger">Rs45,000</div>
                                     <small class="text-danger">Overdue: 10 days</small>
                                 </td>
                                 <td>
@@ -432,8 +437,8 @@
                                 <td>
                                     <div class="d-flex align-items-center">
                                         <div class="mr-3">
-                                            <img src="https://via.placeholder.com/50x50/dc3545/ffffff?text=WV" 
-                                                 class="supplier-logo" alt="Wholesale Vendor">
+                                            <img src="https://via.placeholder.com/50x50/dc3545/ffffff?text=WV"
+                                                class="supplier-logo" alt="Wholesale Vendor">
                                         </div>
                                         <div>
                                             <h6 class="mb-0">Wholesale Vendors Inc.</h6>
@@ -461,11 +466,11 @@
                                     </div>
                                 </td>
                                 <td>
-                                    <div class="font-weight-bold">₹1,800,000</div>
+                                    <div class="font-weight-bold">Rs1,800,000</div>
                                     <small class="text-muted">Last: Yesterday</small>
                                 </td>
                                 <td>
-                                    <div class="font-weight-bold text-warning">₹65,000</div>
+                                    <div class="font-weight-bold text-warning">Rs65,000</div>
                                     <small class="text-muted">Due: 25 days</small>
                                 </td>
                                 <td>
@@ -527,7 +532,7 @@
 
             // Individual checkbox logic
             $('table input[type="checkbox"]').change(function() {
-                if(!this.checked) {
+                if (!this.checked) {
                     $('#selectAll').prop('checked', false);
                 } else {
                     const total = $('table input[type="checkbox"]:not(#selectAll)').length;
@@ -541,29 +546,29 @@
                 e.preventDefault();
                 const action = $(this).data('action');
                 const checkedIds = [];
-                
+
                 $('table input[type="checkbox"]:not(#selectAll):checked').each(function() {
                     checkedIds.push($(this).attr('id'));
                 });
 
-                if(checkedIds.length === 0) {
+                if (checkedIds.length === 0) {
                     alert('Please select at least one supplier');
                     return;
                 }
 
-                if(action === 'delete') {
-                    if(confirm(`Are you sure you want to delete ${checkedIds.length} supplier(s)?`)) {
+                if (action === 'delete') {
+                    if (confirm(`Are you sure you want to delete ${checkedIds.length} supplier(s)?`)) {
                         // Perform delete action
                         console.log('Deleting:', checkedIds);
                         alert('Selected suppliers deleted successfully!');
                     }
-                } else if(action === 'export') {
+                } else if (action === 'export') {
                     // Perform export action
                     console.log('Exporting:', checkedIds);
                     alert('Exporting selected suppliers...');
-                } else if(action === 'status') {
+                } else if (action === 'status') {
                     const status = prompt('Enter new status (active/inactive/blacklisted):');
-                    if(status) {
+                    if (status) {
                         console.log('Updating status:', checkedIds, 'to', status);
                         alert(`Status updated to ${status} for selected suppliers`);
                     }
