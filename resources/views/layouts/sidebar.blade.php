@@ -245,41 +245,141 @@
                         </svg>
                     </a>
                     <ul id="reports" class="iq-submenu collapse {{ request()->is('reports*') ? 'show' : '' }}" data-parent="#iq-sidebar-toggle">
-                        <li class="{{ request()->routeIs('reports.sales') ? 'active' : '' }}">
-                            <a href="{{ route('reports.sales') }}">
-                                <i class="las la-minus"></i>
-                                <span>Sales Report</span>
+                        <li class="{{ request()->routeIs('reports.index') ? 'active' : '' }}">
+                            <a href="{{ route('reports.index') }}">
+                                <i class="las la-home"></i>
+                                <span>Reports Dashboard</span>
                             </a>
                         </li>
-                        <li class="{{ request()->routeIs('reports.inventory') ? 'active' : '' }}">
-                            <a href="{{ route('reports.inventory') }}">
-                                <i class="las la-minus"></i>
-                                <span>Inventory Report</span>
+                        
+                        <!-- Sales Reports -->
+                        <li class="{{ request()->routeIs('reports.sales.*') ? 'active' : '' }}">
+                            <a href="#sales-reports" class="collapsed" data-toggle="collapse" aria-expanded="{{ request()->routeIs('reports.sales.*') ? 'true' : 'false' }}">
+                                <i class="las la-shopping-cart"></i>
+                                <span>Sales Reports</span>
+                                <svg class="svg-icon iq-arrow-right" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="10 15 15 20 20 15"></polyline>
+                                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
+                                </svg>
                             </a>
+                            <ul id="sales-reports" class="iq-submenu collapse {{ request()->routeIs('reports.sales.*') ? 'show' : '' }}" data-parent="#reports">
+                                <li class="{{ request()->routeIs('reports.sales.index') ? 'active' : '' }}">
+                                    <a href="{{ route('reports.sales.index') }}">
+                                        <i class="las la-minus"></i>
+                                        <span>Sales Overview</span>
+                                    </a>
+                                </li>
+                                <li class="{{ request()->routeIs('reports.sales.daily') ? 'active' : '' }}">
+                                    <a href="{{ route('reports.sales.daily') }}">
+                                        <i class="las la-minus"></i>
+                                        <span>Daily Sales</span>
+                                    </a>
+                                </li>
+                                <li class="{{ request()->routeIs('reports.sales.product') ? 'active' : '' }}">
+                                    <a href="{{ route('reports.sales.product') }}">
+                                        <i class="las la-minus"></i>
+                                        <span>Product-wise Sales</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="{{ request()->routeIs('reports.customers') ? 'active' : '' }}">
-                            <a href="{{ route('reports.customers') }}">
-                                <i class="las la-minus"></i>
-                                <span>Customer Report</span>
+                        
+                        <!-- Inventory Reports -->
+                        <li class="{{ request()->routeIs('reports.inventory.*') ? 'active' : '' }}">
+                            <a href="#inventory-reports" class="collapsed" data-toggle="collapse" aria-expanded="{{ request()->routeIs('reports.inventory.*') ? 'true' : 'false' }}">
+                                <i class="las la-warehouse"></i>
+                                <span>Inventory Reports</span>
+                                <svg class="svg-icon iq-arrow-right" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="10 15 15 20 20 15"></polyline>
+                                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
+                                </svg>
                             </a>
+                            <ul id="inventory-reports" class="iq-submenu collapse {{ request()->routeIs('reports.inventory.*') ? 'show' : '' }}" data-parent="#reports">
+                                <li class="{{ request()->routeIs('reports.inventory.index') ? 'active' : '' }}">
+                                    <a href="{{ route('reports.inventory.index') }}">
+                                        <i class="las la-minus"></i>
+                                        <span>Inventory Overview</span>
+                                    </a>
+                                </li>
+                                <li class="{{ request()->routeIs('reports.inventory.stock-levels') ? 'active' : '' }}">
+                                    <a href="{{ route('reports.inventory.stock-levels') }}">
+                                        <i class="las la-minus"></i>
+                                        <span>Stock Levels</span>
+                                    </a>
+                                </li>
+                                <li class="{{ request()->routeIs('reports.inventory.movements') ? 'active' : '' }}">
+                                    <a href="{{ route('reports.inventory.movements') }}">
+                                        <i class="las la-minus"></i>
+                                        <span>Inventory Movements</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
-                        <li class="{{ request()->routeIs('reports.staff') ? 'active' : '' }}">
-                            <a href="{{ route('reports.staff') }}">
-                                <i class="las la-minus"></i>
+                        
+                        <!-- Customer Reports -->
+                        <li class="{{ request()->routeIs('reports.customers.*') ? 'active' : '' }}">
+                            <a href="#customer-reports" class="collapsed" data-toggle="collapse" aria-expanded="{{ request()->routeIs('reports.customers.*') ? 'true' : 'false' }}">
+                                <i class="las la-users"></i>
+                                <span>Customer Reports</span>
+                                <svg class="svg-icon iq-arrow-right" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="10 15 15 20 20 15"></polyline>
+                                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
+                                </svg>
+                            </a>
+                            <ul id="customer-reports" class="iq-submenu collapse {{ request()->routeIs('reports.customers.*') ? 'show' : '' }}" data-parent="#reports">
+                                <li class="{{ request()->routeIs('reports.customers.index') ? 'active' : '' }}">
+                                    <a href="{{ route('reports.customers.index') }}">
+                                        <i class="las la-minus"></i>
+                                        <span>Customer Overview</span>
+                                    </a>
+                                </li>
+                                <li class="{{ request()->routeIs('reports.customers.sales') ? 'active' : '' }}">
+                                    <a href="{{ route('reports.customers.sales') }}">
+                                        <i class="las la-minus"></i>
+                                        <span>Purchase History</span>
+                                    </a>
+                                </li>
+                                <li class="{{ request()->routeIs('reports.customers.loyalty') ? 'active' : '' }}">
+                                    <a href="{{ route('reports.customers.loyalty') }}">
+                                        <i class="las la-minus"></i>
+                                        <span>Loyalty Tracking</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        
+                        <!-- Staff Reports -->
+                        <li class="{{ request()->routeIs('reports.staff.*') ? 'active' : '' }}">
+                            <a href="{{ route('reports.staff.index') }}">
+                                <i class="las la-user-friends"></i>
                                 <span>Staff Performance</span>
                             </a>
                         </li>
-                        <li class="{{ request()->routeIs('reports.profit-loss') ? 'active' : '' }}">
-                            <a href="{{ route('reports.profit-loss') }}">
-                                <i class="las la-minus"></i>
-                                <span>Profit & Loss</span>
+                        
+                        <!-- Financial Reports -->
+                        <li class="{{ request()->routeIs('reports.financial.*') ? 'active' : '' }}">
+                            <a href="#financial-reports" class="collapsed" data-toggle="collapse" aria-expanded="{{ request()->routeIs('reports.financial.*') ? 'true' : 'false' }}">
+                                <i class="las la-chart-line"></i>
+                                <span>Financial Reports</span>
+                                <svg class="svg-icon iq-arrow-right" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="10 15 15 20 20 15"></polyline>
+                                    <path d="M4 4h7a4 4 0 0 1 4 4v12"></path>
+                                </svg>
                             </a>
-                        </li>
-                        <li class="{{ request()->routeIs('reports.financial') ? 'active' : '' }}">
-                            <a href="{{ route('reports.financial') }}">
-                                <i class="las la-minus"></i>
-                                <span>Financial Report</span>
-                            </a>
+                            <ul id="financial-reports" class="iq-submenu collapse {{ request()->routeIs('reports.financial.*') ? 'show' : '' }}" data-parent="#reports">
+                                <li class="{{ request()->routeIs('reports.financial.index') ? 'active' : '' }}">
+                                    <a href="{{ route('reports.financial.index') }}">
+                                        <i class="las la-minus"></i>
+                                        <span>Financial Overview</span>
+                                    </a>
+                                </li>
+                                <li class="{{ request()->routeIs('reports.financial.profit-loss') ? 'active' : '' }}">
+                                    <a href="{{ route('reports.financial.profit-loss') }}">
+                                        <i class="las la-minus"></i>
+                                        <span>Profit & Loss</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </li>

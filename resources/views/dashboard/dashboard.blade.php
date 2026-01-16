@@ -146,8 +146,7 @@
                                 <a class="dropdown-item" href="#" onclick="exportChart()">Export Chart</a>
                                 <a class="dropdown-item" href="#" onclick="toggleChartType()">Toggle Chart Type</a>
                                 <div class="dropdown-divider"></div>
-                                {{-- 'reports.sales.index' --}}
-                                <a class="dropdown-item" href="{{ route('reports.sales') }}">View Full Report</a>
+                                <a class="dropdown-item" href="{{ route('reports.sales.index') }}">View Full Report</a>
                             </div>
                         </div>
                     </div>

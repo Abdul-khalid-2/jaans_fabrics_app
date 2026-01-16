@@ -32,9 +32,11 @@ use App\Http\Controllers\TaxSettingsController;
 use App\Http\Controllers\UserManagementController;
 use App\Http\Controllers\BackupController;
 use App\Http\Controllers\CustomerReportController;
+use App\Http\Controllers\FinancialReportController;
 use App\Http\Controllers\InventoryReportController;
 use App\Http\Controllers\PurchaseReceiveController;
 use App\Http\Controllers\SalesReportController;
+use App\Http\Controllers\StaffReportController;
 use App\Http\Controllers\StockAdjustmentController;
 use App\Http\Controllers\StockMovementController;
 
@@ -78,13 +80,6 @@ Route::middleware(['auth'])->group(function () {
     // Purchase Routes
     Route::prefix('purchases')->name('purchases.')->group(function () {
         Route::resource('/', PurchaseController::class);
-        // Route::get('/', [PurchaseController::class, 'index'])->name('index');
-        // Route::get('/create', [PurchaseController::class, 'create'])->name('create');
-        // Route::post('/', [PurchaseController::class, 'store'])->name('store');
-        // Route::get('/{purchase}', [PurchaseController::class, 'show'])->name('show');
-        // Route::get('/{purchase}/edit', [PurchaseController::class, 'edit'])->name('edit');
-        // Route::put('/{purchase}', [PurchaseController::class, 'update'])->name('update');
-        // Route::delete('/{purchase}', [PurchaseController::class, 'destroy'])->name('destroy');
 
         // Purchase Receiving Routes
         Route::prefix('{purchase}/receive')->name('receive.')->group(function () {
@@ -119,23 +114,30 @@ Route::middleware(['auth'])->group(function () {
 
         // Inventory Reports
         Route::prefix('inventory')->name('inventory.')->group(function () {
+            Route::get('/', [InventoryReportController::class, 'index'])->name('index');
             Route::get('/stock-levels', [InventoryReportController::class, 'stockLevels'])->name('stock-levels');
             Route::get('/movements', [InventoryReportController::class, 'movements'])->name('movements');
         });
 
         // Customer Reports
         Route::prefix('customers')->name('customers.')->group(function () {
+            Route::get('/', [CustomerReportController::class, 'index'])->name('index');
             Route::get('/sales', [CustomerReportController::class, 'sales'])->name('sales');
             Route::get('/loyalty', [CustomerReportController::class, 'loyalty'])->name('loyalty');
         });
+
+        // Staff Reports
+        Route::prefix('staff')->name('staff.')->group(function () {
+            Route::get('/', [StaffReportController::class, 'index'])->name('index');
+        });
+
+        // Financial Reports
+        Route::prefix('financial')->name('financial.')->group(function () {
+            Route::get('/', [FinancialReportController::class, 'index'])->name('index');
+            Route::get('/profit-loss', [FinancialReportController::class, 'profitLoss'])->name('profit-loss');
+        });
     });
 });
-// Route::prefix('purchases-receive/{purchase}/receive')->name('purchases.receive.')->group(function () {
-
-//         Route::get('/create', [PurchaseReceiveController::class, 'create'])->name('create');
-//         Route::post('/', [PurchaseReceiveController::class, 'store'])->name('store');
-//         Route::get('/{receive}', [PurchaseReceiveController::class, 'show'])->name('show');
-//     });
 
 // Collections Routes
 Route::resource('collections', CollectionController::class);
@@ -177,16 +179,7 @@ Route::get('/payroll/{salary_payment}/edit', [PayrollController::class, 'edit'])
 Route::put('/payroll/{salary_payment}', [PayrollController::class, 'update'])->name('payroll.update');
 Route::delete('/payroll/{salary_payment}', [PayrollController::class, 'destroy'])->name('payroll.destroy');
 
-// Reports Routes
-Route::prefix('reports')->group(function () {
-    Route::get('/sales', [ReportController::class, 'sales'])->name('reports.sales');
-    Route::get('/inventory', [ReportController::class, 'inventory'])->name('reports.inventory');
-    Route::get('/customers', [ReportController::class, 'customers'])->name('reports.customers');
-    Route::get('/staff', [ReportController::class, 'staff'])->name('reports.staff');
-    Route::get('/profit-loss', [ReportController::class, 'profitLoss'])->name('reports.profit-loss');
-    Route::get('/financial', [ReportController::class, 'financial'])->name('reports.financial');
-    Route::get('/export/{type}', [ReportController::class, 'export'])->name('reports.export');
-});
+
 
 // Accounts Routes
 Route::resource('accounts', AccountController::class);
