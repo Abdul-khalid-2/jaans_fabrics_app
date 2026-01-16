@@ -20,6 +20,8 @@ use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\PayrollController;
 use App\Http\Controllers\ReportController;
 use App\Http\Controllers\AccountController;
+use App\Http\Controllers\AccountingReportController;
+use App\Http\Controllers\AccountTypeController;
 use App\Http\Controllers\TransactionController;
 use App\Http\Controllers\JournalEntryController;
 use App\Http\Controllers\LedgerController;
@@ -137,6 +139,46 @@ Route::middleware(['auth'])->group(function () {
             Route::get('/profit-loss', [FinancialReportController::class, 'profitLoss'])->name('profit-loss');
         });
     });
+
+
+    // Accounts Routes
+    Route::prefix('accounts')->name('accounts.')->group(function () {
+        // Chart of Accounts
+        Route::resource('/', AccountController::class);
+
+        // Account Types
+        Route::prefix('types')->name('types.')->group(function () {
+            Route::resource('/', AccountTypeController::class);
+        });
+
+        // Transactions
+        Route::prefix('transactions')->name('transactions.')->group(function () {
+            Route::resource('transactions/', TransactionController::class);
+        });
+
+        // Journal Entries
+        Route::prefix('journal')->name('journal.')->group(function () {
+            Route::resource('entries', JournalEntryController::class);
+        });
+
+        // Ledger
+        Route::prefix('ledger')->name('ledger.')->group(function () {
+            Route::get('/', [LedgerController::class, 'index'])->name('index');
+            Route::get('/account/{account}', [LedgerController::class, 'accountLedger'])->name('account');
+            Route::get('/trial-balance', [LedgerController::class, 'trialBalance'])->name('trial-balance');
+        });
+
+        // Reports
+        Route::prefix('reports')->name('reports.')->group(function () {
+            Route::get('/balance-sheet', [AccountingReportController::class, 'balanceSheet'])->name('balance-sheet');
+            Route::get('/income-statement', [AccountingReportController::class, 'incomeStatement'])->name('income-statement');
+            Route::get('/cash-flow', [AccountingReportController::class, 'cashFlow'])->name('cash-flow');
+            Route::prefix('aging')->name('aging.')->group(function () {
+                Route::get('/receivables', [AccountingReportController::class, 'receivablesAging'])->name('receivables');
+                Route::get('/payables', [AccountingReportController::class, 'payablesAging'])->name('payables');
+            });
+        });
+    });
 });
 
 // Collections Routes
@@ -188,12 +230,12 @@ Route::resource('accounts', AccountController::class);
 Route::resource('transactions', TransactionController::class);
 
 // Journal Entries Routes
-Route::resource('journal-entries', JournalEntryController::class);
+// Route::resource('journal-entries', JournalEntryController::class);
 
 // Ledger Routes
-Route::get('/ledger', [LedgerController::class, 'index'])->name('ledger.index');
-Route::get('/ledger/{account}', [LedgerController::class, 'show'])->name('ledger.show');
-Route::get('/ledger/export/{account}', [LedgerController::class, 'export'])->name('ledger.export');
+// Route::get('/ledger', [LedgerController::class, 'index'])->name('ledger.index');
+// Route::get('/ledger/{account}', [LedgerController::class, 'show'])->name('ledger.show');
+// Route::get('/ledger/export/{account}', [LedgerController::class, 'export'])->name('ledger.export');
 
 // Expenses Routes
 Route::resource('expenses', ExpenseController::class);
