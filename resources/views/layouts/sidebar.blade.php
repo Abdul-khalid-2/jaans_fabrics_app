@@ -190,6 +190,7 @@
                 </li>
 
                 <!-- Staff -->
+                <!-- Staff -->
                 <li class="{{ request()->is('staff*') ? 'active' : '' }}">
                     <a href="#staff" class="collapsed" data-toggle="collapse" aria-expanded="{{ request()->is('staff*') ? 'true' : 'false' }}">
                         <svg class="svg-icon" width="20" height="20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
@@ -216,14 +217,14 @@
                                 <span>Add Staff</span>
                             </a>
                         </li>
-                        <li class="{{ request()->routeIs('attendance.index') ? 'active' : '' }}">
-                            <a href="{{ route('attendance.index') }}">
+                        <li class="{{ request()->routeIs('staff.attendance.index') ? 'active' : '' }}">
+                            <a href="{{ route('staff.attendance.index') }}">
                                 <i class="las la-minus"></i>
                                 <span>Attendance</span>
                             </a>
                         </li>
-                        <li class="{{ request()->routeIs('payroll.index') ? 'active' : '' }}">
-                            <a href="{{ route('payroll.index') }}">
+                        <li class="{{ request()->routeIs('staff.payroll.index') ? 'active' : '' }}">
+                            <a href="{{ route('staff.payroll.index') }}">
                                 <i class="las la-minus"></i>
                                 <span>Payroll</span>
                             </a>

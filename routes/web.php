@@ -41,6 +41,8 @@ use App\Http\Controllers\SalesReportController;
 use App\Http\Controllers\StaffReportController;
 use App\Http\Controllers\StockAdjustmentController;
 use App\Http\Controllers\StockMovementController;
+use App\Http\Controllers\StaffAttendanceController;
+use App\Http\Controllers\StaffPayrollController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -181,6 +183,28 @@ Route::middleware(['auth'])->group(function () {
             });
         });
     });
+
+
+
+    // Staff Routes
+    Route::prefix('staff')->name('staff.')->group(function () {
+        // Staff Management
+        Route::resource('/', StaffController::class);
+        // Staff Attendance
+        Route::prefix('attendance')->name('attendance.')->group(function () {
+            Route::resource('/', StaffAttendanceController::class);
+        });
+
+        // Staff Payroll
+        Route::prefix('payroll')->name('payroll.')->group(function () {
+            Route::resource('/', StaffPayrollController::class);
+        });
+
+        // Bulk Actions
+        Route::post('/bulk-import', [StaffController::class, 'bulkImport'])->name('bulk.import');
+        Route::post('/bulk-attendance', [StaffAttendanceController::class, 'bulkAttendance'])->name('bulk.attendance');
+        Route::post('/process-salary', [StaffPayrollController::class, 'processSalary'])->name('process.salary');
+    });
 });
 
 // Collections Routes
@@ -203,7 +227,7 @@ Route::get('/pos/get-customers', [PosController::class, 'getCustomers'])->name('
 Route::resource('customer-groups', CustomerGroupController::class);
 
 // Staff Routes
-Route::resource('staff', StaffController::class);
+
 
 // Attendance Routes
 Route::get('/attendance', [AttendanceController::class, 'index'])->name('attendance.index');
