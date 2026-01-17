@@ -188,17 +188,38 @@ Route::middleware(['auth'])->group(function () {
 
     // Staff Routes
     Route::prefix('staff')->name('staff.')->group(function () {
-        // Staff Management
-        Route::resource('/', StaffController::class);
         // Staff Attendance
         Route::prefix('attendance')->name('attendance.')->group(function () {
-            Route::resource('/', StaffAttendanceController::class);
+            Route::get('/', [StaffAttendanceController::class, 'index'])->name('index');
+            Route::get('/create', [StaffAttendanceController::class, 'create'])->name('create');
+            Route::post('/', [StaffAttendanceController::class, 'store'])->name('store');
+            Route::get('/{id}', [StaffAttendanceController::class, 'show'])->name('show');
+            Route::get('/{id}/edit', [StaffAttendanceController::class, 'edit'])->name('edit');
+            Route::put('/{id}', [StaffAttendanceController::class, 'update'])->name('update');
         });
 
         // Staff Payroll
         Route::prefix('payroll')->name('payroll.')->group(function () {
-            Route::resource('/', StaffPayrollController::class);
+            Route::get('/', [StaffPayrollController::class, 'index'])->name('index');
+            Route::get('/create', [StaffPayrollController::class, 'create'])->name('create');
+            Route::post('/', [StaffPayrollController::class, 'store'])->name('store');
+            Route::get('/{id}', [StaffPayrollController::class, 'show'])->name('show');
+            Route::get('/{id}/edit', [StaffPayrollController::class, 'edit'])->name('edit');
+            Route::put('/{id}', [StaffPayrollController::class, 'update'])->name('update');
         });
+
+        // Staff Management
+        Route::get('/', [StaffController::class, 'index'])->name('index');
+        Route::get('/create', [StaffController::class, 'create'])->name('create');
+        Route::post('/', [StaffController::class, 'store'])->name('store');
+        Route::get('/{id}', [StaffController::class, 'show'])->name('show');
+        Route::get('/{id}/edit', [StaffController::class, 'edit'])->name('edit');
+        Route::put('/{id}', [StaffController::class, 'update'])->name('update');
+        Route::delete('/{id}', [StaffController::class, 'destroy'])->name('destroy');
+
+
+
+
 
         // Bulk Actions
         Route::post('/bulk-import', [StaffController::class, 'bulkImport'])->name('bulk.import');
@@ -230,13 +251,6 @@ Route::resource('customer-groups', CustomerGroupController::class);
 
 
 // Attendance Routes
-Route::get('/attendance', [AttendanceController::class, 'index'])->name('attendance.index');
-Route::get('/attendance/create', [AttendanceController::class, 'create'])->name('attendance.create');
-Route::post('/attendance', [AttendanceController::class, 'store'])->name('attendance.store');
-Route::get('/attendance/{attendance}/edit', [AttendanceController::class, 'edit'])->name('attendance.edit');
-Route::put('/attendance/{attendance}', [AttendanceController::class, 'update'])->name('attendance.update');
-Route::delete('/attendance/{attendance}', [AttendanceController::class, 'destroy'])->name('attendance.destroy');
-Route::post('/attendance/mark', [AttendanceController::class, 'markAttendance'])->name('attendance.mark');
 
 // Payroll Routes
 Route::get('/payroll', [PayrollController::class, 'index'])->name('payroll.index');

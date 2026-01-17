@@ -42,7 +42,8 @@ class StaffController extends Controller
     /**
      * Display the specified staff member.
      */
-    public function show(string $id)
+    // public function show(string $id)
+    public function show()
     {
         // Return the staff show view
         return view('dashboard.staff.show');
@@ -51,7 +52,8 @@ class StaffController extends Controller
     /**
      * Show the form for editing the specified staff member.
      */
-    public function edit(string $id)
+    // public function edit(string $id)
+    public function edit()
     {
         // Return the edit staff view
         return view('dashboard.staff.edit');
